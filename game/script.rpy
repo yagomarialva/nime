@@ -1,5 +1,5 @@
 ﻿# script.rpy
-image bg room = "images/cenarios/first_room.png"
+image bg room = "images/cenarios/room.jpg"
 image p happy = "images/characters/personagem_happy.png"
 # image bg park 
 
