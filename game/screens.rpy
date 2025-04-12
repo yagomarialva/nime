@@ -351,14 +351,11 @@ style navigation_button_text:
 
 screen main_menu():
 
-    ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    # Fundo personalizado
+    add "images/menu.png"
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
