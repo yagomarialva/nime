@@ -9,3 +9,5 @@ saves/
 # Ignora todos os arquivos que terminam com .rpyc em qualquer pasta
 *.rpyc
 **/*.rpyc
+
+**/log.txt
