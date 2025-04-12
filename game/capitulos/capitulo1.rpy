@@ -25,6 +25,7 @@ label capitulo1:
             "Vamos a Biblioteca !!":
                 p "Vamos !! Preciso pegar uns livros emprestados lá "
                 # jump biblioteca, aqui ganha poucos pontos   
+                
                 jump capitulo2
         
     # j "Oi, tudo bem?"
