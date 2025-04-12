@@ -2,6 +2,9 @@ label capitulo1:
     scene bg room with fade
     show p happy at center
 
+    # scene bg room_day with fade
+    # play music "audio/intro_theme.mp3" fadein 1.0
+
     p "Olá, seja bem-vindo ao meu jogo!"
     p "Está é a faculdade sexo, você quer conhecer alguns pontos dela comigo cara ?!"
     menu:
