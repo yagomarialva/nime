@@ -1,3 +1,14 @@
-game/cache
-game/saves
-log.txt
+
+# Ignora qualquer pasta chamada 'cache' em qualquer nível
+**/cache/
+cache/
+
+# Ignora qualquer pasta chamada 'saves' em qualquer nível
+**/saves/
+saves/
+
+# Ignora todos os arquivos que terminam com .rpyc em qualquer pasta
+*.rpyc
+*/.rpyc
+
+**/log.txt
