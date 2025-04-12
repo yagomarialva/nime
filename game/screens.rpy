@@ -24,7 +24,6 @@ style hyperlink_text:
 style gui_text:
     properties gui.text_properties("interface")
 
-
 style button:
     properties gui.button_properties("button")
 
@@ -355,7 +354,7 @@ screen main_menu():
 
     # Fundo personalizado
     add "images/menu.png"
-
+    add "images/main_menu.png"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.

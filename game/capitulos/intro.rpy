@@ -1,4 +1,4 @@
-define sombra = Character("???", color="#A9A9A9")  # Personagem misterioso e sombreado
+define sombra = Character("Narrador", color="#A9A9A9")  # Personagem misterioso e sombreado
 
 label prologo:
 
