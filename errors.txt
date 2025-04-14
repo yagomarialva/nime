@@ -1,0 +1,22 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/capitulos/capitulo1.rpy", line 15: expected statement.
+    "Nicole e Camille no café":
+                              ^
+
+File "game/capitulos/capitulo1.rpy", line 17: expected statement.
+    "Katia e Samantha no cinema":
+                                ^
+
+File "game/capitulos/capitulo1.rpy", line 19: expected statement.
+    "Larissa e Huey na quadra":
+                              ^
+
+File "game/capitulos/capitulo1.rpy", line 21: expected statement.
+    "Huey e Katia na galeria de arte":
+                                     ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Mon Apr 14 13:51:15 2025

@@ -18,11 +18,11 @@ define camille = Character("Camille", color="#32CD32")
 
 # Personagens
 image samantha happy = "images/characters/samantha/Samantha_falando_olho_aberto.png"
-image nicole neutral = "images/characters/samantha/Nicole_neutra.png"
-image katia neutral = "images/characters/samantha/Katia_neutra.png"
-image larissa happy = "images/characters/samantha/Larissa_feliz.png"
-image huey neutral = "images/characters/samantha/Huey_neutra.png"
-image camille neutral = "images/characters/samantha/Camille_neutra.png"
+image nicole neutral = "images/characters/nicole/Nicole_neutra.png"
+image katia neutral = "images/characters/katia/Katia_neutra.png"
+image larissa happy = "images/characters/larissa/Larissa_feliz.png"
+image huey neutral = "images/characters/huey/Huey_neutra.png"
+image camille neutral = "images/characters/camille/Camille_neutra.png"
 
 # Pontos de afinidade
 default points_samantha = 0
