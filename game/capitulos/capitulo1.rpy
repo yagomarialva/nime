@@ -185,9 +185,99 @@ label evento_katia:
             katia "Uma ótima ideia. Podemos selecionar uma temática específica."
             samantha "Estou dentro! Vai ser divertido."
 
+    # Cena adicional 1
+    scene bg cinema_lobby with dissolve
+    narrator "Após o filme, fomos para o lobby do cinema, onde começamos a discutir nossas impressões."
+    show katia neutral at left
+    show samantha happy at right
+    menu:
+        "Perguntar a Katia sobre a direção do filme":
+            $ points_katia += 1
+            katia "A direção foi impecável. Cada cena parecia uma pintura cuidadosamente composta."
+        "Perguntar a Samantha sobre a trilha sonora":
+            $ points_samantha += 1
+            samantha "A trilha sonora foi incrível! Ela realmente intensificou as emoções do filme."
+        "Compartilhar sua interpretação do final":
+            $ points_katia += 1
+            $ points_samantha += 1
+            katia "Interessante... nunca tinha pensado por esse ângulo."
+            samantha "Adorei sua perspectiva! Faz muito sentido."
+
+    # Cena adicional 2
+    scene bg cinema_cafe with dissolve
+    narrator "Decidimos tomar um café no cinema enquanto continuávamos a conversa."
+    show katia neutral at left
+    show samantha happy at right
+    menu:
+        "Perguntar a Katia sobre seus filmes favoritos":
+            $ points_katia += 1
+            katia "Eu adoro filmes que desafiam a mente, como os de David Lynch."
+        "Perguntar a Samantha sobre jogos baseados em filmes":
+            $ points_samantha += 1
+            samantha "Existem alguns jogos incríveis inspirados em filmes. Posso te mostrar depois!"
+        "Sugerir criar um curta-metragem juntos":
+            $ points_katia += 1
+            $ points_samantha += 1
+            katia "Isso seria incrível! Já estou cheia de ideias."
+            samantha "Eu adoraria ajudar com a trilha sonora ou até mesmo atuar!"
+
+    # Cena adicional 3
+    scene bg cinema_exhibition with dissolve
+    narrator "Exploramos uma pequena exposição de pôsteres de filmes clássicos no cinema."
+    show katia neutral at left
+    show samantha happy at right
+    menu:
+        "Perguntar a Katia sobre o design dos pôsteres":
+            $ points_katia += 1
+            katia "Os pôsteres antigos têm uma estética única. Eles realmente capturam a essência do filme."
+        "Perguntar a Samantha sobre a evolução do marketing de filmes":
+            $ points_samantha += 1
+            samantha "Hoje em dia, o marketing é tão importante quanto o próprio filme. É fascinante!"
+        "Comentar sobre como os pôsteres influenciam a percepção do público":
+            $ points_katia += 1
+            $ points_samantha += 1
+            katia "Exatamente! Um bom pôster pode fazer toda a diferença."
+            samantha "Concordo! É como a capa de um livro, só que para filmes."
+
+    # Cena adicional 4
+    scene bg cinema_arcade with dissolve
+    narrator "Passamos por uma área de fliperamas no cinema, e Samantha ficou animada."
+    show katia neutral at left
+    show samantha happy at right
+    menu:
+        "Desafiar Samantha para um jogo de terror no fliperama":
+            $ points_samantha += 1
+            samantha "Você vai se arrepender de me desafiar! Eu sou ótima nesses jogos."
+        "Perguntar a Katia se ela gosta de jogos antigos":
+            $ points_katia += 1
+            katia "Não sou muito de jogar, mas adoro a estética dos jogos retrô."
+        "Sugerir um torneio entre os três":
+            $ points_katia += 1
+            $ points_samantha += 1
+            katia "Por que não? Pode ser divertido."
+            samantha "Estou dentro! Prepare-se para perder."
+
+    # Cena adicional 5
+    scene bg cinema_exit with dissolve
+    narrator "Ao final da noite, saímos do cinema e nos despedimos."
+    show katia neutral at left
+    show samantha happy at right
+    menu:
+        "Agradecer a Katia pelo convite":
+            $ points_katia += 1
+            katia "Foi um prazer. Espero que possamos fazer isso de novo."
+        "Agradecer a Samantha por se juntar a vocês":
+            $ points_samantha += 1
+            samantha "Eu adorei! Vamos repetir isso em breve."
+        "Sugerir um próximo encontro para assistir outro filme":
+            $ points_katia += 1
+            $ points_samantha += 1
+            katia "Ótima ideia. Já tenho alguns filmes em mente."
+            samantha "Com certeza! Mal posso esperar."
+
     hide katia
     hide samantha
-    narrator "A sessão terminou com discussões animadas sobre cinema e cultura pop. Uma noite memorável para todos."
+    narrator "A noite foi cheia de conversas interessantes e momentos divertidos. Uma experiência que ficará na memória."
     jump capitulo2
 
 # --- Evento Larissa e Huey ---
@@ -272,191 +362,3 @@ label evento_huey:
     narrator "A visita terminou com boas ideias e novos olhares. A arte cumpriu seu papel: provocar, inspirar e unir."
     return
 
-
-# label capitulo1:
-#     scene bg campus with fade
-
-#     narrator "O primeiro dia na Universidade de Solária começa. O sol brilha forte sobre os jardins, e os alunos se reúnem animados para o semestre de Arte e Comunicação."
-
-#     show samantha happy at center
-#     samantha "Ei, você é novo aqui também? Me chamo Samantha! Acho que vamos nos ver bastante nas aulas."
-
-#     hide samantha
-#     narrator "Durante a manhã, você conhece outras estudantes interessantes, cada uma com seu estilo e interesses únicos."
-
-#     narrator "Com quem você passará a tarde?"
-#     # Escolha de evento
-#     menu:
-#         "Nicole e Camille no café":
-#             jump evento_nicole
-#         "Katia e Samantha no cinema":
-#             jump evento_katia
-#         "Larissa e Huey na quadra":
-#             jump evento_larissa
-#         "Huey e Katia na galeria de arte":
-#             jump evento_huey
-
-# # --- Evento Nicole e Camille ---
-# label evento_nicole:
-#     $ points_nicole += 1
-#     scene bg cafe with dissolve
-#     show nicole neutral at left
-#     show camille neutral at right
-
-#     narrator "Nicole me convidou para continuar a conversa no café da universidade. Camille também se juntou, atraída pelo tema de sustentabilidade."
-
-#     nicole "Estou organizando um projeto para ajudar artistas a entender melhor como monetizar sua arte sem perder a essência."
-
-#     camille "A conexão entre arte e energia é mais profunda do que parece. Sustentabilidade também é espiritualidade."
-
-#     menu:
-#         "Perguntar a Nicole sobre investimento em arte":
-#             $ points_nicole += 1
-#             nicole "Excelente pergunta! Muitos ignoram o valor patrimonial da arte. Podemos discutir isso em uma oficina!"
-
-#         "Falar com Camille sobre chakras e criatividade":
-#             $ points_camille += 1
-#             camille "Ah, sim. Cada chakra influencia um aspecto criativo. O plexo solar, por exemplo, está ligado à autoconfiança na expressão."
-
-#         "Sugerir unir espiritualidade e planejamento no mesmo projeto":
-#             $ points_nicole += 1
-#             $ points_camille += 1
-#             nicole "Gostei disso. Estratégia e intuição. Talvez possamos criar algo juntos."
-#             camille "Isso parece harmonioso. Gosto da ideia."
-
-#         "Contar uma ideia sua para um aplicativo de meditação com monetização criativa":
-#             $ points_camille += 1
-#             camille "Genial. Isso ajudaria muitos artistas sensíveis a manterem equilíbrio e renda ao mesmo tempo."
-
-#         "Perguntar como manter autenticidade artística sem se perder no mercado":
-#             $ points_nicole += 1
-#             nicole "É o dilema de todo criador. Podemos conversar mais sobre branding pessoal e valores."
-
-#     hide nicole
-#     hide camille
-#     narrator "Após a conversa inspiradora, o trio se despediu com novas ideias na mente. Nicole já fazia planos, e Camille parecia ter captado boas vibrações."
-#     jump capitulo2
-
-# # --- Evento Katia e Samantha ---
-# label evento_katia:
-#     $ points_katia += 1
-#     scene bg cinema with dissolve
-#     show katia neutral at left
-#     show samantha happy at right
-
-#     narrator "Katia me convidou para assistir a um filme cult no cinema da cidade. Samantha apareceu de surpresa, curiosa sobre o evento."
-
-#     katia "Este é um clássico do terror psicológico. Prepare-se para uma experiência intensa."
-
-#     samantha "Uau, adoro filmes que mexem com a mente! Posso me juntar a vocês?"
-
-#     menu:
-#         "Discutir simbolismos do filme com Katia":
-#             $ points_katia += 1
-#             katia "Você percebeu a metáfora sobre a perda da identidade? Poucos notam isso."
-
-#         "Conversar com Samantha sobre trilhas sonoras de filmes":
-#             $ points_samantha += 1
-#             samantha "A música realmente amplifica as emoções. Tenho algumas playlists que combinam com esse clima."
-
-#         "Comparar o filme com jogos de terror com Samantha":
-#             $ points_samantha += 1
-#             samantha "Sim! Muitos jogos se inspiram nesse estilo cinematográfico. Podemos jogar algo parecido depois."
-
-#         "Perguntar a Katia sobre diretores independentes":
-#             $ points_katia += 1
-#             katia "Há muitos talentos emergentes que merecem reconhecimento. Posso te indicar alguns."
-
-#         "Sugerir uma maratona de filmes com ambas":
-#             $ points_katia += 1
-#             $ points_samantha += 1
-#             katia "Uma ótima ideia. Podemos selecionar uma temática específica."
-#             samantha "Estou dentro! Vai ser divertido."
-
-#     hide katia
-#     hide samantha
-#     narrator "A sessão terminou com discussões animadas sobre cinema e cultura pop. Uma noite memorável para todos."
-#     jump capitulo2
-
-# # --- Evento Larissa e Huey ---
-# label evento_larissa:
-#     $ points_larissa += 1
-#     scene bg quadra with dissolve
-#     show larissa happy at left
-#     show huey neutral at right
-
-#     narrator "Larissa me convidou para uma partida de vôlei na quadra da universidade. Huey apareceu para assistir e torcer."
-
-#     larissa "Vamos aquecer antes do jogo. Preparado para suar a camisa?"
-
-#     huey "A energia aqui é contagiante. Esportes realmente elevam o espírito."
-
-#     menu:
-#         "Treinar saques com Larissa":
-#             $ points_larissa += 1
-#             larissa "Ótimo saque! Com prática, você vai dominar essa técnica."
-
-#         "Conversar com Huey sobre esportes e bem-estar":
-#             $ points_huey += 1
-#             huey "Atividades físicas equilibram corpo e mente. É essencial para a saúde."
-
-#         "Propor um jogo amistoso com todos":
-#             $ points_larissa += 1
-#             $ points_huey += 1
-#             larissa "Adoro a ideia! Vamos formar times mistos."
-#             huey "Será divertido e revigorante."
-
-#         "Perguntar a Larissa sobre sua rotina de treinos":
-#             $ points_larissa += 1
-#             larissa "Treino diariamente, focando em resistência e agilidade. Posso te passar algumas dicas."
-
-#         "Discutir com Huey sobre a importância da respiração durante exercícios":
-#             $ points_huey += 1
-#             huey "A respiração correta melhora o desempenho e previne lesões. É fundamental."
-
-#     hide larissa
-#     hide huey
-#     narrator "Após o jogo, nos sentamos para recuperar o fôlego e conversar. Uma tarde energizante e cheia de aprendizado."
-#     jump capitulo2
-
-# # --- Evento Huey e Katia ---
-# label evento_huey:
-#     $ points_huey += 1
-#     scene bg galeria with dissolve
-#     show huey neutral at left
-#     show katia neutral at right
-
-#     narrator "Huey me convidou para visitar uma galeria de arte contemporânea. Katia também apareceu, interessada nas exposições."
-
-#     huey "As obras aqui são provocativas, desafiando nossas percepções."
-
-#     katia "Algumas peças realmente mexem com a mente. Arte que instiga é sempre bem-vinda."
-
-#     menu:
-#         "Discutir interpretações das obras com Huey":
-#             $ points_huey += 1
-#             huey "Cada pessoa vê algo diferente. Essa é a beleza da arte abstrata."
-
-#         "Conversar com Katia sobre técnicas artísticas":
-#             $ points_katia += 1
-#             katia "A mistura de mídias aqui é fascinante. Inspira novas ideias para meus projetos."
-
-#         "Propor uma obra conjunta entre você, Huey e Katia":
-#             $ points_huey += 1
-#             $ points_katia += 1
-#             huey "Uma colaboração? Isso seria incrível."
-#             katia "Estou curiosa para ver no que isso daria."
-
-#         "Pedir recomendações de artistas para estudar":
-#             $ points_huey += 1
-#             huey "Te passo uma lista depois. Tem alguns que mudaram minha visão de arte."
-
-#         "Falar com Katia sobre o uso de horror e surrealismo nas obras":
-#             $ points_katia += 1
-#             katia "A tensão e o desconforto são ferramentas poderosas na narrativa visual."
-
-#     hide huey
-#     hide katia
-#     narrator "A visita terminou com boas ideias e novos olhares. A arte cumpriu seu papel: provocar, inspirar e unir."
-
-#     jump capitulo2
