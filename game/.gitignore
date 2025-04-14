@@ -1,3 +1,4 @@
+
 # Ignora qualquer pasta chamada 'cache' em qualquer nível
 **/cache/
 cache/
@@ -8,16 +9,6 @@ saves/
 
 # Ignora todos os arquivos que terminam com .rpyc em qualquer pasta
 *.rpyc
-**/*.rpyc
+*/.rpyc
 
 **/log.txt
-
-*.txt
-
-*.rpyb
-
-*.save
-
-*.json
-
-*.rpymc

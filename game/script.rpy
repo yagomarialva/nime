@@ -1,4 +1,4 @@
-﻿# script.rpy
+# script.rpy
 
 # Cenários
 image bg room = "images/cenarios/room.jpg"
