@@ -1607,3 +1607,20 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+screen affinity_points():
+    frame:
+        background "#00000080"  # Fundo preto com transparência
+        padding (10, 10)  # ✅ CERTO
+        xalign 0.01  # Alinhado à esquerda
+        yalign 0.01  # Alinhado ao topo
+
+        vbox:
+            spacing 4
+            text "Afinidade:" color "#FFDAB9" size 20
+            text "Samantha: [points_samantha]" color "#FFC0CB" size 16
+            text "Katia: [points_katia]" color "#FFB6C1" size 16
+            text "Nicole: [points_nicole]" color "#FF69B4" size 16
+            text "Larissa: [points_larissa]" color "#FF8C69" size 16
+            text "Huey: [points_huey]" color "#FFA07A" size 16
+            text "Camille: [points_camille]" color "#FF4500" size 16
