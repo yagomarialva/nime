@@ -138,45 +138,45 @@ label evento_nicole:
     jump capitulo2
 
 # --- Evento Larissa e Huey ---
-label evento_larissa:
-    $ points_larissa += 1
-    scene bg quadra with dissolve
-    show larissa happy at left
-    show huey neutral at right
+# label evento_larissa:
+#     $ points_larissa += 1
+#     scene bg quadra with dissolve
+#     show larissa happy at left
+#     show huey neutral at right
 
-    narrator "Larissa me convidou para uma partida de vôlei na quadra da universidade. Huey apareceu para assistir e torcer."
+#     narrator "Larissa me convidou para uma partida de vôlei na quadra da universidade. Huey apareceu para assistir e torcer."
 
-    larissa "Vamos aquecer antes do jogo. Preparado para suar a camisa?"
+#     larissa "Vamos aquecer antes do jogo. Preparado para suar a camisa?"
 
-    huey "A energia aqui é contagiante. Esportes realmente elevam o espírito."
+#     huey "A energia aqui é contagiante. Esportes realmente elevam o espírito."
 
-    menu:
-        "Treinar saques com Larissa":
-            $ points_larissa += 1
-            larissa "Ótimo saque! Com prática, você vai dominar essa técnica."
+#     menu:
+#         "Treinar saques com Larissa":
+#             $ points_larissa += 1
+#             larissa "Ótimo saque! Com prática, você vai dominar essa técnica."
 
-        "Conversar com Huey sobre esportes e bem-estar":
-            $ points_huey += 1
-            huey "Atividades físicas equilibram corpo e mente. É essencial para a saúde."
+#         "Conversar com Huey sobre esportes e bem-estar":
+#             $ points_huey += 1
+#             huey "Atividades físicas equilibram corpo e mente. É essencial para a saúde."
 
-        "Propor um jogo amistoso com todos":
-            $ points_larissa += 1
-            $ points_huey += 1
-            larissa "Adoro a ideia! Vamos formar times mistos."
-            huey "Será divertido e revigorante."
+#         "Propor um jogo amistoso com todos":
+#             $ points_larissa += 1
+#             $ points_huey += 1
+#             larissa "Adoro a ideia! Vamos formar times mistos."
+#             huey "Será divertido e revigorante."
 
-        "Perguntar a Larissa sobre sua rotina de treinos":
-            $ points_larissa += 1
-            larissa "Treino diariamente, focando em resistência e agilidade. Posso te passar algumas dicas."
+#         "Perguntar a Larissa sobre sua rotina de treinos":
+#             $ points_larissa += 1
+#             larissa "Treino diariamente, focando em resistência e agilidade. Posso te passar algumas dicas."
 
-        "Discutir com Huey sobre a importância da respiração durante exercícios":
-            $ points_huey += 1
-            huey "A respiração correta melhora o desempenho e previne lesões. É fundamental."
+#         "Discutir com Huey sobre a importância da respiração durante exercícios":
+#             $ points_huey += 1
+#             huey "A respiração correta melhora o desempenho e previne lesões. É fundamental."
 
-    hide larissa
-    hide huey
-    narrator "Após o jogo, nos sentamos para recuperar o fôlego e conversar. Uma tarde energizante e cheia de aprendizado."
-    jump capitulo2
+#     hide larissa
+#     hide huey
+#     narrator "Após o jogo, nos sentamos para recuperar o fôlego e conversar. Uma tarde energizante e cheia de aprendizado."
+#     jump capitulo2
 
 # --- Evento Huey e Katia ---
 label evento_huey:

@@ -19,7 +19,7 @@ define narrator = Character(None)  # Narrador sem nome
 define nicole = Character("Nicole", color="#FF69B4")  # Cor opcional para o nome
 define katia = Character("Katia", color="#8A2BE2")
 define larissa = Character("Larissa", color="#FFD700")
-define Huey = Character("Aline (Huey)", color="#00CED1")
+define huey = Character("Aline (Huey)", color="#00CED1")
 define samantha = Character("Samantha", color="#FF4500")
 define camille = Character("Camille", color="#32CD32")
 
@@ -29,7 +29,7 @@ image samantha happy = "images/characters/samantha/samantha 382x395.png"
 image nicole neutral = "images/characters/nicole/Nicole_neutra.png"
 image katia neutral = "images/characters/katia/katia_neutral.png"
 image larissa happy = "images/characters/larissa/Larissa_feliz.png"
-image huey neutral = "images/characters/huey/Huey_neutra.png"
+image huey neutral = "images/characters/hu_wei/huwei_volei.png"
 image camille neutral = "images/characters/camille/Camille_neutra.png"
 
 # Pontos de afinidade
