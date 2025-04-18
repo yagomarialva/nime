@@ -10,6 +10,7 @@ image bg cinema_cafe = "images/cenarios/scene/cinema_lobby.png"
 image bg cinema_cafeteria = "images/cenarios/Cafeteria.png"
 image bg cinema_lobby_empty = "images/cenarios/cinema_lobby.png"
 image bg cinema_arcade = "images/cenarios/Arcade.jpg"
+image bg quadra_volei = "images/cenarios/QUADRA.png"
 # Adicione outros cenários conforme necessário
 # image bg park = "images/cenarios/park.jpg"
 
@@ -18,7 +19,7 @@ define narrator = Character(None)  # Narrador sem nome
 define nicole = Character("Nicole", color="#FF69B4")  # Cor opcional para o nome
 define katia = Character("Katia", color="#8A2BE2")
 define larissa = Character("Larissa", color="#FFD700")
-define huey = Character("Aline (Huey)", color="#00CED1")
+define Huey = Character("Aline (Huey)", color="#00CED1")
 define samantha = Character("Samantha", color="#FF4500")
 define camille = Character("Camille", color="#32CD32")
 
