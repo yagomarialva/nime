@@ -1,8 +1,16 @@
-# script.rpy
+﻿# script.rpy
 
 # Cenários
 image bg room = "images/cenarios/room.jpg"
 image bg city = "images/cenarios/city.png"
+image bg cinema = "images/cenarios/cinema.png"
+image bg cinema_katia_samantha = "images/cenarios/scene/cinema_katia_samantha.png"
+image bg cinema_exhibition = "images/cenarios/scene/amostra_filmes_katia_samantha.png"
+image bg cinema_cafe = "images/cenarios/scene/cinema_lobby.png"
+image bg cinema_cafeteria = "images/cenarios/Cafeteria.png"
+image bg cinema_lobby_empty = "images/cenarios/cinema_lobby.png"
+image bg cinema_arcade = "images/cenarios/Arcade.jpg"
+image bg quadra_volei = "images/cenarios/QUADRA.png"
 # Adicione outros cenários conforme necessário
 # image bg park = "images/cenarios/park.jpg"
 
@@ -17,11 +25,11 @@ define camille = Character("Camille", color="#32CD32")
 
 
 # Personagens
-image samantha happy = "images/characters/samantha/Samantha_falando_olho_aberto.png"
+image samantha happy = "images/characters/samantha/samantha 382x395.png"
 image nicole neutral = "images/characters/nicole/Nicole_neutra.png"
-image katia neutral = "images/characters/katia/Katia_neutra.png"
+image katia neutral = "images/characters/katia/katia_neutral.png"
 image larissa happy = "images/characters/larissa/Larissa_feliz.png"
-image huey neutral = "images/characters/huey/Huey_neutra.png"
+image huey neutral = "images/characters/hu_wei/huwei_volei.png"
 image camille neutral = "images/characters/camille/Camille_neutra.png"
 
 # Pontos de afinidade
