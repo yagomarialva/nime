@@ -1,4 +1,4 @@
-label evento_samantha_lab:
+label evento_samantha_larissa_lab:
     scene bg lab with dissolve
     show samantha neutral at left
     show larissa happy at right

@@ -26,9 +26,11 @@ define camille = Character("Camille", color="#32CD32")
 
 # Personagens
 image samantha happy = "images/characters/samantha/samantha 382x395.png"
+image samantha neutral = "images/characters/samantha/samantha 382x395.png"
 image nicole neutral = "images/characters/nicole/Nicole_neutra.png"
 image katia neutral = "images/characters/katia/katia_neutral.png"
 image larissa happy = "images/characters/larissa/Larissa_feliz.png"
+image larissa voley = "images/characters/larissa/Larissa_volei.png"
 image huey neutral = "images/characters/hu_wei/huwei_volei.png"
 image camille neutral = "images/characters/camille/Camille_neutra.png"
 
