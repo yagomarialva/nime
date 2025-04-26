@@ -115,4 +115,4 @@ label evento_katia_nicole_cultura:
     hide katia
     hide nicole
     narrator "O passeio cultural foi uma experiência enriquecedora, fortalecendo os laços entre nós e expandindo nossas perspectivas sobre arte e cultura."
-    return
+    jump terceiro_dia_escolha

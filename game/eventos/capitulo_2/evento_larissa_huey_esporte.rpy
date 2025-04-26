@@ -94,4 +94,4 @@ label evento_larissa_huey_esporte:
     hide larissa
     hide huey
     narrator "A atividade esportiva foi um sucesso, fortalecendo os laços entre nós e criando memórias divertidas. Mal posso esperar para a próxima aventura com Larissa e Huey."
-    return
+    jump terceiro_dia_escolha
