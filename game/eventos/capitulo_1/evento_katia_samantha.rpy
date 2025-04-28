@@ -21,7 +21,7 @@ label evento_katia_samantha:
     menu:
         "Discutir simbolismos do filme com Katia":
             $ points_katia += 3
-            katia blush "Você percebeu a metáfora sobre a perda da identidade? Pff... não achei que você fosse notar algo assim."
+            katia "Você percebeu a metáfora sobre a perda da identidade? Pff... não achei que você fosse notar algo assim."
             katia "Quer dizer, não que eu esteja impressionada nem nada! Hmpf."
 
         "Conversar com Samantha sobre trilhas sonoras de filmes":
