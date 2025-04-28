@@ -8,9 +8,10 @@ label capitulo1:
     narrator "Um homem de meia-idade, de postura serena e olhar atento, subiu ao palco improvisado. Seu nome era Professor Wendell Garcez, coordenador do curso de Arte e Comunicação."
 
     # Professor Wendell
-    "Professor Wendell" "Sejam bem-vindos à faculdade Solária. Hoje começa uma jornada de criatividade, expressão pessoal e a beleza de contar histórias com emoção."
-    "Professor Wendell" "Explorem diferentes linguagens artísticas, expressem-se com autenticidade e nunca subestimem o poder de uma boa narrativa."
-
+    show professor_wendell neutral at center
+    professor_wendell "Sejam bem-vindos à faculdade Solária. Hoje começa uma jornada de criatividade, expressão pessoal e a beleza de contar histórias com emoção."
+    professor_wendell "Explorem diferentes linguagens artísticas, expressem-se com autenticidade e nunca subestimem o poder de uma boa narrativa."
+    hide professor_wendell
     narrator "Após o término da apresentação, os alunos começaram a se dispersar. Eu ainda absorvia as palavras do professor quando uma voz próxima se fez ouvir."
 
     # Nicole
@@ -27,7 +28,7 @@ label capitulo1:
     hide katia
 
     # Larissa
-    show larissa happy at left
+    show larissa neutral at left
     larissa "Cara! A quadra de vôlei aqui é ENORME. Já quero marcar um amistoso com a turma!"
     larissa "Oi, sou Larissa, mas pode chamar de Lari."
     hide larissa
@@ -61,7 +62,7 @@ label capitulo1:
     katia "Eu estava pensando em assistir a um filme cult no cinema da cidade. Nada muito popular, mas algo que faz você pensar. Se alguém quiser ir, tanto faz."
     hide katia
 
-    show larissa happy at left
+    show larissa neutral at left
     larissa "Eu vou treinar na quadra de vôlei mais tarde. Quem quiser se mexer um pouco e se divertir, pode aparecer por lá!"
     hide larissa
 

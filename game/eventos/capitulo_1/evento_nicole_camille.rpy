@@ -1,7 +1,7 @@
 label evento_nicole_camille:
 
     $ points_nicole += 1
-    scene bg cafe with dissolve
+    scene bg cafeteria with dissolve
     show nicole neutral at left
     show camille neutral at right
 
