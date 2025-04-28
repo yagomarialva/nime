@@ -41,7 +41,7 @@ label evento_larissa_huey:
 
     # Transição para o jardim
     scene bg jardim_universidade with dissolve
-    show larissa casual at left
+    show larissa neutral at left
     show huey neutral at right
 
     narrator "Depois do jogo, Larissa sugeriu que fôssemos ao jardim da universidade para relaxar e conversar."
