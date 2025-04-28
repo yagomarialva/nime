@@ -90,8 +90,8 @@ label evento_nicole_camille:
     
     # Transição para o espaço criativo
     scene bg art_room with dissolve
-    show nicole smile at left
-    show camille gentle at right
+    show nicole neutral at left
+    show camille neutral at right
 
     narrator "A sala estava aconchegante, com luzes suaves e uma atmosfera que convidava à introspecção criativa."
 

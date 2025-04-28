@@ -10,5 +10,6 @@ image bg cinema_lobby_empty = "images/cenarios/cinema_lobby.png"
 image bg cinema_arcade = "images/cenarios/Arcade.jpg"
 image bg quadra_volei = "images/cenarios/QUADRA.png"
 image bg cafeteria = "images/cenarios/Cafeteria.png"
+image bg art_room = "images/cenarios/art_room.png"
 # Adicione outros cenários conforme necessário
 # image bg park = "images/cenarios/park.jpg"
