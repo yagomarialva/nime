@@ -12,5 +12,6 @@ image bg quadra_volei = "images/cenarios/QUADRA.png"
 image bg cafeteria = "images/cenarios/Cafeteria.png"
 image bg art_room = "images/cenarios/art_room.png"
 image bg auditorium = "images/cenarios/auditorium.png"
+image bg campus_day = "images/cenarios/parque.png"
 # Adicione outros cenários conforme necessário
 # image bg park = "images/cenarios/park.jpg"
