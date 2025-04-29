@@ -1,4 +1,6 @@
 label capitulo2:
+    if "capitulo2" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo2")
     scene bg campus_day with fade
     narrator "O segundo capítulo do semestre começou com uma energia renovada no campus. O grupo de amigos começava a se conhecer melhor, e novas possibilidades surgiam a cada dia."
 
