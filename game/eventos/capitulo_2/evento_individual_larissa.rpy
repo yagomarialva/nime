@@ -111,4 +111,4 @@ label evento_individual_larissa:
 
     hide larissa
     narrator "Passei uma tarde cheia de energia e diversão com Larissa, aprendendo mais sobre sua paixão por esportes e sua visão positiva da vida. Foi uma experiência que certamente ficará na memória."
-    return
+    jump capitulo2_conclusao

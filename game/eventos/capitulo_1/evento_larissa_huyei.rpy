@@ -80,7 +80,7 @@ label evento_larissa_huey:
 
     # Transição para a cafeteria
     scene bg cafe_universidade with dissolve
-    show larissa casual at left
+    show larissa neutral at left
     show huey neutral at right
 
     narrator "Para encerrar o dia, decidimos ir até a cafeteria da universidade para tomar algo e continuar a conversa."

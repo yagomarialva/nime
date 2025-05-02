@@ -41,4 +41,4 @@ label capitulo2_conclusao:
 
     narrator "Enquanto o sol desaparecia no horizonte, senti uma mistura de gratidão e expectativa pelo que estava por vir. O semestre ainda tinha muito a oferecer, e eu estava pronto para enfrentar o que viesse."
 
-    return
+    jump capitulo3

@@ -89,4 +89,4 @@ label evento_individual_huey:
 
     hide huey
     narrator "Passei uma tarde tranquila e inspiradora com Huey, aprendendo mais sobre sua visão única do mundo. Foi um momento que certamente ficará na memória."
-    return
+    jump capitulo2_conclusao

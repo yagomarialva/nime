@@ -109,4 +109,4 @@ label evento_individual_camille:
 
     hide camille
     narrator "Passei uma tarde tranquila e introspectiva com Camille, aprendendo mais sobre sua visão de mundo e sua prática de meditação. Foi uma experiência que certamente ficará na memória."
-    return
+    jump capitulo2_conclusao

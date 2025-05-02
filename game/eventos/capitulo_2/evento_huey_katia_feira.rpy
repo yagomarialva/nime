@@ -115,4 +115,5 @@ label evento_huey_katia_feira:
     hide huey
     hide katia
     narrator "A feira de arte foi uma experiência enriquecedora, fortalecendo os laços entre nós e expandindo nossas perspectivas sobre arte e cultura."
-    return
+    
+    jump capitulo2_conclusao
