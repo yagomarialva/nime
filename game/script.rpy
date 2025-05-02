@@ -1,5 +1,5 @@
 ﻿# script.rpy
-
+default persistent.unlocked_chapters = []  # Lista de capítulos desbloqueados
 # Pontos de afinidade
 default points_samantha = 0
 default points_katia = 0

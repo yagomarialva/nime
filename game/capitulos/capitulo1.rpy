@@ -1,5 +1,6 @@
 label capitulo1:
-    
+    if "capitulo1" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo1")
     scene bg auditorium with fade
 
     # Narrador
