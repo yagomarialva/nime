@@ -11,25 +11,27 @@ label capitulo3:
 
     scene bg rua_aurora with dissolve
     narrator "Ao chegar em casa, ele encontra todas as garotas do grupo na frente do portão, cada uma com sua mala."
-
     show samantha happy at left
     samantha "O quê?! Você também vai morar aqui?!"
+    hide samantha happy
 
     show katia neutral at center
     katia "Isso só pode ser pegadinha."
-
+    hide katia neutral
     show camille gentle at right
     camille "Talvez o universo esteja nos unindo por alguma razão… cósmica?"
-
+    hide camille gentle
     show nicole neutral at left
     nicole "Isso é uma falha logística gritante. Inaceitável. Mas… irreversível."
-
+    hide nicole neutral
     show larissa neutral at center
     larissa "Pelo menos tem quintal. Dá pra correr de manhã."
-
+    hide larissa neutral
     show huey happy at right
     huey "AAAAAA EU SEMPRE QUIS MORAR EM UMA SÉRIE DE TV!"
-
+    hide huey happy
+    narrator "Todos olham para [nome], esperando uma reação. O clima é de expectativa e nervosismo."ß
+    
     "[nome]" "Isso vai dar muito certo. Ou muito errado."
 
     # Cena 2 – Organização dos Quartos
@@ -138,22 +140,22 @@ label luz_volta:
 
     show samantha happy at left
     samantha "Finalmente! Achei que ia precisar usar meus óculos de visão noturna... se eu tivesse um, claro."
-
+    hide samantha happy
     show nicole neutral at center
     nicole "Pelo menos agora posso voltar ao trabalho. Isso foi uma perda de tempo."
-
+    hide nicole neutral
     show katia neutral at right
     katia "Hmpf. Eu sabia que não tinha nada de assombrado. Só um apagão comum."
-
+    hide katia neutral
     show huey happy at left
     huey "Ahhh, mas foi divertido! Parecia um episódio de mistério!"
-
+    hide huey happy
     show larissa neutral at center
     larissa "Agora sim! Vou preparar algo para comer. Ficar no escuro me deu fome."
-
+    hide larissa neutral
     show camille gentle at right
     camille "A luz voltou, mas a energia que compartilhamos no escuro foi especial. Obrigada por isso."
-
+    hide camille gentle
     # Interação personalizada com base na escolha
     if _return == "noite_samantha":
         jump luz_samantha
