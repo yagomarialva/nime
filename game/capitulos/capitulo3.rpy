@@ -30,7 +30,6 @@ label capitulo3:
     show huey happy at right
     huey "AAAAAA EU SEMPRE QUIS MORAR EM UMA SÉRIE DE TV!"
     hide huey happy
-    narrator "Todos olham para [nome], esperando uma reação. O clima é de expectativa e nervosismo."ß
     
     "[nome]" "Isso vai dar muito certo. Ou muito errado."
 
@@ -89,12 +88,12 @@ label convivencia:
             $ points_katia += 1
             jump convivencia_rigida
         "Sugerir uma convivência flexível e amigável":
-            $ points_camille += 1
-            $ points_huey += 1
+            $ points_camille += 3
+            $ points_huey += 3
             jump convivencia_flexivel
         "Apoiar a ideia de lavar só o que usou":
-            $ points_samantha += 1
-            $ points_larissa += 1
+            $ points_samantha += 3
+            $ points_larissa += 3
             jump convivencia_lavar
 
     # Cena 4 – Noite de Tempestade
@@ -278,19 +277,19 @@ label fim_de_semana:
 
     menu:
         "Sentar-se ao lado de Samantha":
-            $ points_samantha += 1
+            $ points_samantha += 3
             jump filme_samantha
         "Sentar-se ao lado de Katia":
-            $ points_katia += 1
+            $ points_katia += 3
             jump filme_katia
         "Sentar-se ao lado de Nicole":
-            $ points_nicole += 1
+            $ points_nicole += 3
             jump filme_nicole
         "Sentar-se ao lado de Camille":
-            $ points_camille += 1
+            $ points_camille += 3
             jump filme_camille
         "Sentar-se ao lado de Larissa":
-            $ points_larissa += 1
+            $ points_larissa += 3
             jump filme_larissa
 
     return
