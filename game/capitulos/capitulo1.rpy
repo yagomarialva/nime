@@ -36,7 +36,7 @@ label capitulo1:
 
     # Aline (Huey)
     show huey neutral at left
-    huey "Vocês... também sentiram que essa cidade tem uma energia especial?"
+    huey "Vocês... também sentiram que essa cidade parece um qaudro de arte especial?"
     huey "Sou Aline. Mas muita gente me chama de Huey."
     hide huey
 

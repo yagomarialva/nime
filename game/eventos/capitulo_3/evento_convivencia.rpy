@@ -21,7 +21,7 @@ label convivencia_rigida:
     samantha "Regras são boas, mas espero que não compliquem demais."
 
     narrator "Apesar de algumas reclamações, o grupo aceitou as regras rígidas. Nicole parecia especialmente satisfeita."
-    jump convivencia
+    jump noite_tempestade
 
 label convivencia_flexivel:
     scene bg sala_casa with dissolve

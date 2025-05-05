@@ -1,4 +1,5 @@
 label noite_samantha:
+    $ points_samantha += 3
     scene bg sala_escura with dissolve
     show samantha neutral at center
     narrator "Você decide se sentar ao lado de Samantha, que está segurando uma lanterna e olhando ao redor com curiosidade."
@@ -17,6 +18,7 @@ label noite_samantha:
     jump luz_volta
 
 label noite_katia:
+    $ points_katia += 3
     scene bg cozinha_escura with dissolve
     show katia neutral at center
     narrator "Você decide ajudar Katia na cozinha, que está segurando uma frigideira com uma expressão séria."
@@ -37,6 +39,7 @@ label noite_katia:
     jump luz_volta
 
 label noite_nicole:
+    $ points_nicole += 3
     scene bg sala_escura with dissolve
     show nicole neutral at center
     narrator "Você decide se sentar ao lado de Nicole, que está segurando seu notebook com preocupação."
@@ -52,6 +55,7 @@ label noite_nicole:
     jump luz_volta
 
 label noite_huey:
+    $ points_huey += 3
     scene bg sala_escura with dissolve
     show huey happy at center
     narrator "Você decide se sentar ao lado de Huey, que está segurando uma lanterna e rindo."
@@ -67,6 +71,7 @@ label noite_huey:
     jump luz_volta
 
 label noite_larissa:
+    $ points_larissa += 3
     scene bg sala_escura with dissolve
     show larissa neutral at center
     narrator "Você decide ajudar Larissa a se alongar, já que ela parecia inquieta."
@@ -82,6 +87,7 @@ label noite_larissa:
     jump luz_volta
 
 label noite_camille:
+    $ points_camille += 3
     scene bg sala_escura with dissolve
     show camille gentle at center
     narrator "Você decide participar da 'dança ritual' de Camille, que parecia animada com a ideia."
