@@ -1,5 +1,5 @@
 label evento_huey_katia_feira:
-    scene bg art_fair with fade
+    scene bg museum_hall with fade
     show huey neutral at left
     show katia neutral at right
 
@@ -92,7 +92,7 @@ label evento_huey_katia_feira:
             katia "Hmph, eu acho que posso ajudar... mas só porque eu quero, não porque você pediu!"
 
     # Cena 4: Café da feira
-    scene bg art_fair_cafe with dissolve
+    scene bg cafeteria with dissolve
     narrator "Terminamos a visita no café da feira, onde discutimos nossas impressões sobre o evento."
 
     menu:

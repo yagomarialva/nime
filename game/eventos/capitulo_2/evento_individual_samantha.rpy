@@ -1,5 +1,5 @@
 label evento_individual_samantha:
-    scene bg tech_lab with fade
+    scene bg lab with fade
     show samantha happy at center
 
     narrator "Samantha me convidou para passar um tempo no laboratório de tecnologia. Ela parecia animada, como sempre, com várias ideias fervilhando em sua mente."
@@ -25,7 +25,7 @@ label evento_individual_samantha:
             narrator "Samantha anotou minhas sugestões, claramente animada com as possibilidades."
 
     # Cena 1: Testando o sistema
-    scene bg tech_lab with dissolve
+    scene bg lab with dissolve
     narrator "Depois de ajustar algumas coisas, Samantha decidiu testar o sistema comigo."
 
     samantha "Ok, você será o jogador de teste. Vamos ver como isso funciona na prática!"
@@ -47,7 +47,7 @@ label evento_individual_samantha:
             narrator "Samantha parecia impressionada com minhas sugestões e começou a fazer ajustes imediatamente."
 
     # Cena 2: Conversa sobre RPGs
-    scene bg tech_lab with dissolve
+    scene bg lab with dissolve
     narrator "Depois de testar o sistema, começamos a conversar sobre RPGs em geral."
 
     samantha "Eu adoro como RPGs permitem que você crie histórias únicas. É como ser o autor e o protagonista ao mesmo tempo."
@@ -69,7 +69,7 @@ label evento_individual_samantha:
             narrator "Samantha parecia impressionada com minha visão sobre RPGs."
 
     # Cena 3: Finalizando o dia
-    scene bg tech_lab with dissolve
+    scene bg lab with dissolve
     narrator "Depois de algumas horas, Samantha parecia satisfeita com o progresso que fizemos."
 
     samantha "Hoje foi incrível! Obrigada por me ajudar. Acho que o sistema está muito melhor agora."

@@ -1,6 +1,6 @@
 label evento_individual_huey:
     scene bg park with fade
-    show huey neutral at center
+    show huey neutral at right
 
     narrator "Huey me convidou para passar uma tarde no parque. Ele parecia tranquilo, como sempre, com um sorriso sereno no rosto."
 
@@ -25,7 +25,8 @@ label evento_individual_huey:
             narrator "Huey parecia animado com a ideia de explorar o parque."
 
     # Cena 1: Caminhando pelo parque
-    scene bg park_path with dissolve
+    scene bg park with dissolve
+    show huey neutral at right
     narrator "Começamos a caminhar pelo parque, conversando sobre arte, vida e tudo mais."
 
     huey "A arte e a natureza têm muito em comum. Ambas nos conectam a algo maior do que nós mesmos."
@@ -48,6 +49,7 @@ label evento_individual_huey:
 
     # Cena 2: Descanso à sombra de uma árvore
     scene bg park_tree with dissolve
+    show huey neutral at right
     narrator "Depois de caminhar por um tempo, encontramos uma árvore grande e decidimos descansar à sua sombra."
 
     huey "Às vezes, tudo o que precisamos é de um momento de silêncio para reorganizar nossos pensamentos."
@@ -70,6 +72,7 @@ label evento_individual_huey:
 
     # Cena 3: Finalizando o encontro
     scene bg park_exit with dissolve
+    show huey neutral at right
     narrator "Depois de algum tempo, Huey olhou para o céu e sorriu."
 
     huey "Obrigado por passar esse tempo comigo. Foi bom desacelerar e apenas... estar presente."

@@ -1,5 +1,5 @@
 label evento_individual_camille:
-    scene bg garden_university with fade
+    scene bg jardim_universidade with fade
     show camille neutral at center
 
     narrator "Camille me convidou para uma sessão de meditação no jardim da universidade. O lugar era tranquilo, com o som suave do vento e o canto dos pássaros ao fundo."
@@ -31,7 +31,7 @@ label evento_individual_camille:
             camille "Fico feliz em ajudar. Às vezes, tudo o que precisamos é de um empurrãozinho para começar."
 
     # Cena 1: Meditação guiada
-    scene bg garden_university with dissolve
+    scene bg jardim_universidade with dissolve
     narrator "Camille começou a guiar a meditação, pedindo para que eu me concentrasse na minha respiração e deixasse os pensamentos fluírem."
 
     camille "Inspire profundamente... e expire lentamente. Sinta o ar entrando e saindo, conectando você ao momento presente."
@@ -58,7 +58,7 @@ label evento_individual_camille:
             camille "Isso é ótimo. Lembre-se de que cada tentativa é um progresso."
 
     # Cena 2: Reflexão após a meditação
-    scene bg garden_university with dissolve
+    scene bg jardim_universidade with dissolve
     narrator "Depois de algum tempo, Camille abriu os olhos e sorriu levemente, parecendo completamente em paz."
 
     camille "Como você se sente? Espero que tenha conseguido encontrar um pouco de tranquilidade."
@@ -86,7 +86,7 @@ label evento_individual_camille:
             camille "Obrigada. É bom saber que posso ajudar."
 
     # Cena 3: Finalizando o encontro
-    scene bg garden_university with dissolve
+    scene bg jardim_universidade with dissolve
     narrator "Depois de algum tempo, Camille se levantou e olhou para o céu, respirando profundamente."
 
     camille "Obrigada por passar esse tempo comigo. Espero que você leve um pouco dessa calma com você."

@@ -1,8 +1,7 @@
 label evento_samantha_larissa_lab:
     scene bg lab with dissolve
-    show samantha neutral at left
-    show larissa happy at right
-
+    show larissa neutral at right
+    show samantha happy at left
     narrator "No laboratório de tecnologia, encontrei Samantha ajustando um protótipo de jogo... e Larissa testando os controles com concentração intensa."
 
     larissa "Ei! Esse jogo tá viciante. Mas essa parte de mira aqui tá bugada!"

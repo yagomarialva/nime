@@ -1,6 +1,6 @@
 label caminhada_camille:
     $ points_camille += 5
-    scene bg floresta with dissolve
+    scene bg park_exit with dissolve
     show camille gentle at center
     narrator "Você escolheu participar da caminhada mística com Camille. Ela lidera o grupo por uma trilha tranquila, acendendo incensos e falando sobre energias."
     camille "Sinta o vento, [nome]. Ele carrega as respostas que você procura."

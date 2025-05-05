@@ -1,5 +1,5 @@
 label evento_individual_nicole:
-    scene bg cafe_universidade with fade
+    scene bg cafeteria with fade
     show nicole neutral at center
 
     narrator "Nicole me convidou para tomar um café e conversar sobre ideias e projetos. Ela parecia tranquila, mas seu olhar focado mostrava que já estava pensando em algo."
@@ -25,7 +25,8 @@ label evento_individual_nicole:
             narrator "Nicole parecia reflexiva, mostrando um lado mais vulnerável."
 
     # Cena 1: Discussão sobre ideias
-    scene bg cafe_universidade with dissolve
+    scene bg cafeteria with dissolve
+    show nicole neutral at center
     narrator "Enquanto tomávamos café, a conversa se aprofundou. Nicole parecia interessada em ouvir minha opinião sobre alguns tópicos."
 
     menu:
@@ -45,7 +46,8 @@ label evento_individual_nicole:
             narrator "Nicole compartilhou algumas de suas fontes de inspiração, mostrando sua abordagem prática."
 
     # Cena 2: Reflexão pessoal
-    scene bg cafe_universidade with dissolve
+    scene bg cafeteria with dissolve
+    show nicole neutral at center
     narrator "Depois de discutir ideias, a conversa tomou um tom mais pessoal. Nicole parecia disposta a compartilhar mais sobre si mesma."
 
     nicole "Sabe, às vezes me pergunto se estou no caminho certo. Ser tão focada em resultados pode me fazer parecer fria."
@@ -67,7 +69,8 @@ label evento_individual_nicole:
             narrator "Nicole parecia considerar seriamente a sugestão, algo que parecia raro para ela."
 
     # Cena 3: Finalizando o encontro
-    scene bg cafe_universidade with dissolve
+    scene bg cafeteria with dissolve
+    show nicole neutral at center
     narrator "Depois de algum tempo, Nicole olhou para o relógio e sorriu levemente."
 
     nicole "Foi bom conversar com você. Acho que precisava disso mais do que imaginava."

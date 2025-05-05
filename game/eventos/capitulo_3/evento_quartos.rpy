@@ -1,5 +1,5 @@
 label quarto_samantha:
-    scene bg quarto_samantha with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Samantha. Assim que começa a organizar suas coisas, ela aparece na porta com um sorriso animado."
     
     show samantha happy at center
@@ -13,7 +13,7 @@ label quarto_samantha:
     jump convivencia
 
 label quarto_nicole:
-    scene bg quarto_nicole with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Nicole. Enquanto organiza suas coisas, ela aparece na porta com um tablet na mão."
     
     show nicole neutral at center
@@ -28,7 +28,7 @@ label quarto_nicole:
     jump convivencia
 
 label quarto_camille:
-    scene bg quarto_camille with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Camille. Enquanto organiza suas coisas, ela aparece na porta com um incenso aceso."
     
     show camille gentle at center
@@ -43,7 +43,7 @@ label quarto_camille:
     jump convivencia
 
 label quarto_huey:
-    scene bg quarto_huey with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Huey. Enquanto organiza suas coisas, ela aparece na porta com um bloco de notas."
     
     show huey happy at center
@@ -58,7 +58,7 @@ label quarto_huey:
     jump convivencia
 
 label quarto_larissa:
-    scene bg quarto_larissa with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Larissa. Enquanto organiza suas coisas, ela aparece na porta com um par de tênis de corrida."
     
     show larissa happy at center
@@ -73,7 +73,7 @@ label quarto_larissa:
     jump convivencia
 
 label quarto_katia:
-    scene bg quarto_katia with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto ao lado de Katia. Enquanto organiza suas coisas, ela aparece na porta com os braços cruzados."
     
     show katia neutral at center
@@ -88,7 +88,7 @@ label quarto_katia:
     jump convivencia
 
 label quarto_fundo:
-    scene bg quarto_fundo with dissolve
+    scene bg room with dissolve
     narrator "Você escolheu o quarto do fundo, longe de todos. Enquanto organiza suas coisas, você ouve as vozes dos outros no corredor."
     
     "[nome]" "Talvez seja melhor assim. Um pouco de paz e silêncio nunca faz mal."

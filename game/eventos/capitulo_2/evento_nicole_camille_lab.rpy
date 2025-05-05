@@ -1,5 +1,5 @@
 label evento_nicole_camille_lab:
-    scene bg lab with dissolve
+    scene bg botanic_lab with dissolve
     show nicole neutral at left
     show camille happy at right
 

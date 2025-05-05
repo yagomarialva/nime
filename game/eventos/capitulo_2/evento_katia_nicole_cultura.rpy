@@ -29,7 +29,10 @@ label evento_katia_nicole_cultura:
             nicole "E é por isso que ela é tão importante em campanhas de engajamento social."
 
     # Cena 1: Sala de esculturas
-    scene bg museum_sculpture with dissolve
+    scene bg sculpture_exhibit with dissolve
+    show katia neutral at left
+    show nicole neutral at right
+
     narrator "Seguimos para a sala de esculturas, onde peças tridimensionais contavam histórias profundas."
 
     menu:
@@ -50,7 +53,9 @@ label evento_katia_nicole_cultura:
             nicole "Isso é interessante. Mostra como a arte pode ser subjetiva e universal ao mesmo tempo."
 
     # Cena 2: Sala de pinturas
-    scene bg museum_paintings with dissolve
+    scene bg photo_exhibit with dissolve
+    show katia neutral at left
+    show nicole neutral at right
     narrator "Na sala de pinturas, obras vibrantes e cheias de emoção decoravam as paredes."
 
     menu:
@@ -71,7 +76,9 @@ label evento_katia_nicole_cultura:
             nicole "Eu gosto dessa. Ela transmite uma mensagem clara e poderosa."
 
     # Cena 3: Sala interativa
-    scene bg museum_interactive with dissolve
+    scene bg interactive_art with dissolve
+    show katia neutral at left
+    show nicole neutral at right
     narrator "Chegamos a uma sala interativa, onde os visitantes podiam criar suas próprias obras digitais."
 
     menu:
@@ -92,7 +99,9 @@ label evento_katia_nicole_cultura:
             nicole "Isso será interessante. Vamos ver o que conseguimos fazer juntos."
 
     # Cena 4: Café do museu
-    scene bg museum_cafe with dissolve
+    scene bg cafeteria with dissolve
+    show katia neutral at left
+    show nicole neutral at right
     narrator "Terminamos a visita no café do museu, onde discutimos nossas impressões sobre a exposição."
 
     menu:

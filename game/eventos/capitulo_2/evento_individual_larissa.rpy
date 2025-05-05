@@ -25,7 +25,7 @@ label evento_individual_larissa:
             narrator "Larissa parecia animada com a ideia de explorar o parque."
 
     # Cena 1: Caminhando pelo parque
-    scene bg park_path with dissolve
+    scene bg campus_day with dissolve
     narrator "Começamos a caminhar pelo parque, conversando sobre esportes, vida e tudo mais."
 
     larissa "Esportes são mais do que apenas competição para mim. Eles são uma forma de me conectar com as pessoas e comigo mesma."
@@ -69,7 +69,7 @@ label evento_individual_larissa:
             narrator "Larissa parecia animada com a ideia de criar algo novo juntos."
 
     # Cena 3: Descanso no parque
-    scene bg park_bench with dissolve
+    scene bg park with dissolve
     narrator "Depois de nos movimentarmos bastante, decidimos descansar em um banco à sombra de uma árvore."
 
     larissa "Sabe, momentos como este me lembram por que eu amo tanto estar ativa. É uma sensação de liberdade."
