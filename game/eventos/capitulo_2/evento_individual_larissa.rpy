@@ -26,6 +26,7 @@ label evento_individual_larissa:
 
     # Cena 1: Caminhando pelo parque
     scene bg campus_day with dissolve
+    show larissa happy at center
     narrator "Começamos a caminhar pelo parque, conversando sobre esportes, vida e tudo mais."
 
     larissa "Esportes são mais do que apenas competição para mim. Eles são uma forma de me conectar com as pessoas e comigo mesma."
@@ -48,6 +49,7 @@ label evento_individual_larissa:
 
     # Cena 2: Jogando no parque
     scene bg park_field with dissolve
+    show larissa happy at center
     narrator "Encontramos um campo aberto no parque, e Larissa sugeriu que jogássemos algo para nos divertir."
 
     larissa "Vamos jogar algo simples, só para nos mexermos um pouco. Que tal?"
@@ -70,6 +72,7 @@ label evento_individual_larissa:
 
     # Cena 3: Descanso no parque
     scene bg park with dissolve
+    show larissa happy at center
     narrator "Depois de nos movimentarmos bastante, decidimos descansar em um banco à sombra de uma árvore."
 
     larissa "Sabe, momentos como este me lembram por que eu amo tanto estar ativa. É uma sensação de liberdade."
@@ -92,6 +95,7 @@ label evento_individual_larissa:
 
     # Cena 4: Finalizando o encontro
     scene bg park_exit with dissolve
+    show larissa happy at center
     narrator "Depois de algum tempo, Larissa olhou para o céu e respirou fundo, parecendo completamente em paz."
 
     larissa "Obrigada por passar esse tempo comigo. Foi ótimo ter alguém para compartilhar isso."

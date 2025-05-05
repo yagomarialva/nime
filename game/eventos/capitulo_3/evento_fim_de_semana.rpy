@@ -60,7 +60,7 @@ label filme_camille:
     
     narrator "Durante o filme, Camille parecia mais interessada em observar você do que a tela. No final, ela fez um comentário inesperado."
     
-    show camille happy at center
+    show camille blush at center
     camille "Sua energia estava linda hoje. Obrigada por compartilhar esse momento comigo."
     
     narrator "Foi um momento único e especial, que deixou você pensando sobre o que ela quis dizer."
@@ -77,7 +77,7 @@ label filme_larissa:
     
     narrator "Durante o filme, Larissa começou a narrar as cenas como se estivesse assistindo a uma final de campeonato. Foi impossível não rir."
     
-    show larissa neutral at center
+    show larissa blush at center
     larissa "Quer metade da minha pizza? Essa aqui tem mais queijo."
     
     narrator "Foi um momento descontraído e divertido, que mostrou o lado generoso e animado de Larissa."

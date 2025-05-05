@@ -1,6 +1,6 @@
 label noite_samantha:
     scene bg sala_escura with dissolve
-    show samantha happy at center
+    show samantha neutral at center
     narrator "Você decide se sentar ao lado de Samantha, que está segurando uma lanterna e olhando ao redor com curiosidade."
     
     samantha "Isso parece o início de uma campanha de RPG de terror. Estamos presos em uma casa escura, e algo pode aparecer a qualquer momento!"
@@ -10,7 +10,7 @@ label noite_samantha:
     show samantha neutral at center
     samantha "Hmmm... agora que você mencionou, seria uma boa ideia! Eu trouxe meus dados comigo."
     
-    show samantha happy at center
+    show samantha blush at center
     samantha "Se quiser, podemos criar personagens agora mesmo. Vai ser divertido!"
     
     narrator "Samantha parecia animada com a ideia, e você acabou se envolvendo em uma conversa sobre jogos e histórias. Foi uma forma leve e divertida de passar o tempo."
@@ -30,7 +30,7 @@ label noite_katia:
     
     narrator "Enquanto vocês organizavam as coisas na cozinha, Katia começou a relaxar. Apesar de suas palavras duras, ela parecia gostar da sua companhia."
     
-    show katia neutral at center
+    show katia blush at center
     katia "Não é como se eu precisasse de você aqui, mas... até que você não é tão inútil."
     
     narrator "Você riu da tentativa de Katia de esconder seu desconforto. No final, ela até sorriu de canto, satisfeita com a ajuda."

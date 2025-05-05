@@ -1,7 +1,7 @@
 label evento_larissa_huey_esporte:
     scene bg quadra_volei with fade
     show larissa voley at left
-    show huey neutral at right
+    show huey voley at right
 
     narrator "Larissa me convidou para participar de uma atividade esportiva criativa na quadra de vôlei. Huey também apareceu, curioso para ver como seria."
 
@@ -30,6 +30,8 @@ label evento_larissa_huey_esporte:
 
     # Cena 1: Início do jogo
     scene bg quadra_volei with dissolve
+    show larissa voley at left
+    show huey voley at right
     narrator "Começamos o jogo com as regras criativas de Larissa. Era uma mistura de vôlei tradicional com desafios inesperados, como acertar alvos no chão ou passar a bola de formas inusitadas."
 
     menu:
@@ -51,6 +53,8 @@ label evento_larissa_huey_esporte:
 
     # Cena 2: Intervalo
     scene bg quadra_volei with dissolve
+    show larissa voley at left
+    show huey voley at right
     narrator "Fizemos uma pausa para descansar e conversar sobre a atividade."
 
     menu:
@@ -72,6 +76,8 @@ label evento_larissa_huey_esporte:
 
     # Cena 3: Final do jogo
     scene bg quadra_volei with dissolve
+    show larissa voley at left
+    show huey voley at right
     narrator "Terminamos o jogo com risadas e um sentimento de realização. Larissa parecia satisfeita com a atividade, e Huey estava mais relaxado e envolvido."
 
     menu:

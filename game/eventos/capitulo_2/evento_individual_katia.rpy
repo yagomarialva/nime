@@ -26,6 +26,7 @@ label evento_individual_katia:
 
     # Cena 1: Conversa sobre arte
     scene bg cafe_artistic with dissolve
+    show katia neutral at center
     narrator "Enquanto tomávamos café, começamos a conversar sobre arte e cultura. Katia parecia mais relaxada, embora ainda mantivesse sua atitude reservada."
 
     katia "A arte é uma forma de expressão que vai além das palavras. É por isso que eu gosto dela... Não que eu precise explicar isso para você."
@@ -48,6 +49,7 @@ label evento_individual_katia:
 
     # Cena 2: Reflexão pessoal
     scene bg cafe_artistic with dissolve
+    show katia neutral at center
     narrator "Depois de algum tempo, a conversa tomou um tom mais pessoal. Katia parecia disposta a compartilhar um pouco mais sobre si mesma."
 
     katia "Às vezes, eu me pergunto se as pessoas realmente entendem o que eu quero dizer. É por isso que eu prefiro deixar a arte falar por mim."
@@ -70,6 +72,7 @@ label evento_individual_katia:
 
     # Cena 3: Finalizando o encontro
     scene bg cafe_artistic with dissolve
+    show katia neutral at center
     narrator "Depois de algum tempo, Katia olhou para o relógio e suspirou levemente."
 
     katia "Acho que já está na hora de ir. Não foi tão ruim passar esse tempo com você... Não que eu esteja dizendo que gostei ou algo assim."

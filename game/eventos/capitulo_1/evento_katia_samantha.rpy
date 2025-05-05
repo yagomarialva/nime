@@ -2,8 +2,8 @@
 label evento_katia_samantha:
     $ points_katia += 1
     scene bg cinema with dissolve
-    show katia neutral at left
-    show samantha happy at right
+    show katia angry at left
+    show samantha neutral at right
 
     narrator "Katia me convidou para assistir a um filme cult no cinema da cidade. Samantha apareceu de surpresa, curiosa sobre o evento."
 
@@ -50,7 +50,7 @@ label evento_katia_samantha:
     narrator "Após o filme, fomos para o lobby do cinema, onde começamos a discutir nossas impressões."
     scene bg cinema_lobby_empty with dissolve
     show katia neutral at left
-    show samantha happy at right
+    show samantha neutral at right
 
     menu:
         "Perguntar a Katia sobre a direção do filme":
@@ -74,7 +74,7 @@ label evento_katia_samantha:
     narrator "Decidimos tomar um café no cinema enquanto continuávamos a conversa."
     scene bg cinema_cafeteria with dissolve
     show katia neutral at left
-    show samantha happy at right
+    show samantha neutral at right
 
     menu:
         "Perguntar a Katia sobre seus filmes favoritos":
@@ -100,7 +100,7 @@ label evento_katia_samantha:
     narrator "Exploramos uma pequena exposição de pôsteres de filmes clássicos no cinema."
     scene bg cinema_lobby_empty with dissolve
     show katia neutral at left
-    show samantha happy at right
+    show samantha neutral at right
 
     menu:
         "Perguntar a Katia sobre o design dos pôsteres":
@@ -123,7 +123,7 @@ label evento_katia_samantha:
     scene bg cinema_arcade with dissolve
     narrator "Passamos por uma área de fliperamas no cinema, e Samantha ficou animada."
     show katia neutral at left
-    show samantha happy at right
+    show samantha neutral at right
 
     menu:
         "Desafiar Samantha para um jogo de terror no fliperama":
@@ -146,7 +146,7 @@ label evento_katia_samantha:
     scene bg cinema with dissolve
     narrator "Ao final da noite, saímos do cinema e nos despedimos."
     show katia neutral at left
-    show samantha happy at right
+    show samantha neutral at right
 
     menu:
         "Agradecer a Katia pelo convite":

@@ -30,6 +30,8 @@ label evento_huey_katia_feira:
 
     # Cena 1: Exposição de esculturas
     scene bg sculpture_exhibit with dissolve
+    show huey neutral at left
+    show katia neutral at right
     narrator "Seguimos para uma área dedicada a esculturas, onde formas abstratas e materiais inusitados chamavam a atenção."
 
     menu:
@@ -51,6 +53,8 @@ label evento_huey_katia_feira:
 
     # Cena 2: Exposição de fotografias
     scene bg photo_exhibit with dissolve
+    show huey neutral at left
+    show katia neutral at right
     narrator "Na área de fotografias, imagens em preto e branco capturavam momentos únicos e emocionantes."
 
     menu:
@@ -72,6 +76,8 @@ label evento_huey_katia_feira:
 
     # Cena 3: Área interativa
     scene bg interactive_art with dissolve
+    show huey neutral at left
+    show katia neutral at right
     narrator "Chegamos a uma área interativa, onde os visitantes podiam criar suas próprias obras digitais."
 
     menu:
@@ -93,6 +99,8 @@ label evento_huey_katia_feira:
 
     # Cena 4: Café da feira
     scene bg cafeteria with dissolve
+    show huey neutral at left
+    show katia neutral at right
     narrator "Terminamos a visita no café da feira, onde discutimos nossas impressões sobre o evento."
 
     menu:

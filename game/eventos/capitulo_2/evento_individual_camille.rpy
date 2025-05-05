@@ -32,6 +32,7 @@ label evento_individual_camille:
 
     # Cena 1: Meditação guiada
     scene bg jardim_universidade with dissolve
+    show camille neutral at center
     narrator "Camille começou a guiar a meditação, pedindo para que eu me concentrasse na minha respiração e deixasse os pensamentos fluírem."
 
     camille "Inspire profundamente... e expire lentamente. Sinta o ar entrando e saindo, conectando você ao momento presente."
@@ -59,6 +60,7 @@ label evento_individual_camille:
 
     # Cena 2: Reflexão após a meditação
     scene bg jardim_universidade with dissolve
+    show camille neutral at center
     narrator "Depois de algum tempo, Camille abriu os olhos e sorriu levemente, parecendo completamente em paz."
 
     camille "Como você se sente? Espero que tenha conseguido encontrar um pouco de tranquilidade."
@@ -87,6 +89,7 @@ label evento_individual_camille:
 
     # Cena 3: Finalizando o encontro
     scene bg jardim_universidade with dissolve
+    show camille neutral at center
     narrator "Depois de algum tempo, Camille se levantou e olhou para o céu, respirando profundamente."
 
     camille "Obrigada por passar esse tempo comigo. Espero que você leve um pouco dessa calma com você."

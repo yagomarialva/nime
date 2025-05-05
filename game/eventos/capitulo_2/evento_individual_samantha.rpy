@@ -26,6 +26,7 @@ label evento_individual_samantha:
 
     # Cena 1: Testando o sistema
     scene bg lab with dissolve
+    show samantha happy at center
     narrator "Depois de ajustar algumas coisas, Samantha decidiu testar o sistema comigo."
 
     samantha "Ok, você será o jogador de teste. Vamos ver como isso funciona na prática!"
@@ -48,6 +49,7 @@ label evento_individual_samantha:
 
     # Cena 2: Conversa sobre RPGs
     scene bg lab with dissolve
+    show samantha happy at center
     narrator "Depois de testar o sistema, começamos a conversar sobre RPGs em geral."
 
     samantha "Eu adoro como RPGs permitem que você crie histórias únicas. É como ser o autor e o protagonista ao mesmo tempo."
@@ -70,6 +72,7 @@ label evento_individual_samantha:
 
     # Cena 3: Finalizando o dia
     scene bg lab with dissolve
+    show samantha happy at center
     narrator "Depois de algumas horas, Samantha parecia satisfeita com o progresso que fizemos."
 
     samantha "Hoje foi incrível! Obrigada por me ajudar. Acho que o sistema está muito melhor agora."
