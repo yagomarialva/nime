@@ -88,12 +88,12 @@ label convivencia:
             $ points_katia += 1
             jump convivencia_rigida
         "Sugerir uma convivência flexível e amigável":
-            $ points_camille += 3
-            $ points_huey += 3
+            $ points_camille += 1
+            $ points_huey += 1
             jump convivencia_flexivel
         "Apoiar a ideia de lavar só o que usou":
-            $ points_samantha += 3
-            $ points_larissa += 3
+            $ points_samantha += 1
+            $ points_larissa += 1
             jump convivencia_lavar
 
     # Cena 4 – Noite de Tempestade
@@ -121,16 +121,22 @@ label noite_tempestade:
 
     menu:
         "Ficar ao lado de Samantha":
+            $ points_samantha += 1
             jump noite_samantha
         "Ficar ao lado de Nicole":
+            $ points_nicole += 1
             jump noite_nicole
         "Ficar ao lado de Huey":
+            $ points_huey += 1
             jump noite_huey
         "Ajudar Katia na cozinha":
+            $ points_katia += 1
             jump noite_katia
         "Ajudar Larissa a se alongar":
+            $ points_larissa += 1
             jump noite_larissa
         "Participar da 'dança' com Camille":
+            $ points_camille += 1
             jump noite_camille
 
 label luz_volta:
@@ -157,16 +163,22 @@ label luz_volta:
     hide camille gentle
     # Interação personalizada com base na escolha
     if _return == "noite_samantha":
+        $ points_samantha += 1    
         jump luz_samantha
     elif _return == "noite_nicole":
+        $ points_nicole += 1
         jump luz_nicole
     elif _return == "noite_huey":
+        $ points_huey += 1
         jump luz_huey
     elif _return == "noite_katia":
+        $ points_katia += 1
         jump luz_katia
     elif _return == "noite_larissa":
+        $ points_larissa += 1
         jump luz_larissa
     elif _return == "noite_camille":
+        $ points_camille += 1
         jump luz_camille
 
 label luz_samantha:
@@ -277,19 +289,19 @@ label fim_de_semana:
 
     menu:
         "Sentar-se ao lado de Samantha":
-            $ points_samantha += 3
+            $ points_samantha += 1
             jump filme_samantha
         "Sentar-se ao lado de Katia":
-            $ points_katia += 3
+            $ points_katia += 1
             jump filme_katia
         "Sentar-se ao lado de Nicole":
-            $ points_nicole += 3
+            $ points_nicole += 1
             jump filme_nicole
         "Sentar-se ao lado de Camille":
-            $ points_camille += 3
+            $ points_camille += 1
             jump filme_camille
         "Sentar-se ao lado de Larissa":
-            $ points_larissa += 3
+            $ points_larissa += 1
             jump filme_larissa
 
     return

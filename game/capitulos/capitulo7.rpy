@@ -28,33 +28,37 @@ label cena2_desafios_convivencia:
     show camille gentle at right
     camille "Talvez devêssemos nos alinhar energeticamente antes. A repórter vai sentir o clima."
 
-    menu:
-        "Escolher Nicole":
-            $ points_nicole += 1
-            $ points_katia -= 1
-            "[nome]" "Nicole tem razão. Precisamos de alguém articulado."
-            nicole "Obrigada. Vou garantir que nossa imagem seja impecável."
-            jump cena3_duvidas_crescem
-        "Escolher Katia":
-            $ points_katia += 1
-            $ points_nicole -= 1
-            "[nome]" "Katia está certa. Precisamos ser autênticos."
-            katia "Finalmente alguém que entende. Vamos mostrar quem realmente somos."
-            jump cena3_duvidas_crescem
-        "Escolher Samantha":
-            $ points_samantha += 1
-            "[nome]" "Samantha pode representar bem o grupo."
-            samantha "Eu? Tá bom, vou tentar não estragar tudo."
-            jump cena3_duvidas_crescem
-        "Escolher Camille":
-            $ points_camille += 1
-            "[nome]" "Camille pode trazer uma energia única para a entrevista."
-            camille "Vou fazer o meu melhor para representar todos nós."
-            jump cena3_duvidas_crescem
-        "[nome] se oferece":
-            "[nome]" "Eu posso fazer isso. Quero representar todos nós."
-            narrator "O grupo concorda, e você se prepara para a entrevista."
-            jump cena3_duvidas_crescem
+    narrator "Após uma breve discussão, o grupo decide que a pessoa mais adequada para representar a república será escolhida com base em quem tem mais afinidade com o grupo."
+
+    # Verifica quem tem mais afinidade
+    if points_nicole >= max(points_katia, points_samantha, points_camille, points_huey, points_larissa):
+        "[nome]" "Nicole tem razão. Precisamos de alguém articulado."
+        nicole "Obrigada. Vou garantir que nossa imagem seja impecável."
+        jump cena3_duvidas_crescem
+    elif points_katia >= max(points_nicole, points_samantha, points_camille, points_huey, points_larissa):
+        "[nome]" "Katia está certa. Precisamos ser autênticos."
+        katia "Finalmente alguém que entende. Vamos mostrar quem realmente somos."
+        jump cena3_duvidas_crescem
+    elif points_samantha >= max(points_nicole, points_katia, points_camille, points_huey, points_larissa):
+        "[nome]" "Samantha pode representar bem o grupo."
+        samantha "Eu? Tá bom, vou tentar não estragar tudo."
+        jump cena3_duvidas_crescem
+    elif points_camille >= max(points_nicole, points_katia, points_samantha, points_huey, points_larissa):
+        "[nome]" "Camille pode trazer uma energia única para a entrevista."
+        camille "Vou fazer o meu melhor para representar todos nós."
+        jump cena3_duvidas_crescem
+    elif points_huey >= max(points_nicole, points_katia, points_samantha, points_camille, points_larissa):
+        "[nome]" "Huey pode trazer uma perspectiva artística e sensível para a entrevista."
+        huey "Obrigado. Vou tentar capturar a essência do que somos."
+        jump cena3_duvidas_crescem
+    elif points_larissa >= max(points_nicole, points_katia, points_samantha, points_camille, points_huey):
+        "[nome]" "Larissa pode trazer uma energia vibrante e dinâmica para a entrevista."
+        larissa "Sério? Beleza, vou dar o meu melhor!"
+        jump cena3_duvidas_crescem
+    else:
+        "[nome]" "Eu posso fazer isso. Quero representar todos nós."
+        narrator "O grupo concorda, e você se prepara para a entrevista."
+        jump cena3_duvidas_crescem
 
 label cena3_duvidas_crescem:
     narrator "À noite, a personagem com quem você iniciou uma relação amorosa te chama para uma conversa mais séria."
@@ -90,7 +94,7 @@ label cena3_camille:
             camille "Eu entendo. O tempo nos guiará."
             jump cena4_convite_externo
         "Não sei se é o certo agora.":
-            $ points_camille -= 2
+            $ points_camille -= 1
             "[nome]" "Não sei se é o certo agora."
             camille "Entendi. Talvez o universo tenha outros planos."
             jump cena4_convite_externo
@@ -209,7 +213,7 @@ label cena3_larissa:
             jump cena4_convite_externo
 
 label cena4_convite_externo:
-    narrator "Um ex da [personagem_evento] aparece na universidade. Ele(a) está participando de um evento na cidade e convida todos… especialmente ela."
+    narrator "Um ex da [personagem_evento] aparece na universidade. Ele está participando de um evento na cidade e convida todos… especialmente ela."
 
     if personagem_evento == "camille":
         jump convite_camille
@@ -228,137 +232,176 @@ label convite_camille:
     show camille gentle at center
     narrator "Camille parece hesitante ao receber o convite."
     camille "O universo testa a frequência quando ela está mais instável."
+    narrator "Ela decide ir ao evento, onde seu ex está apresentando uma palestra sobre espiritualidade e conexões humanas. Você decide acompanhá-la para apoiá-la."
+
+    scene bg evento_camille with fade
+    narrator "No evento, Camille ouve atentamente enquanto seu ex fala sobre como as energias das pessoas se conectam e se separam ao longo do tempo. Após a palestra, ele se aproxima dela."
+    show ex_camille neutral at center
+    ex_camille "Camille, é bom te ver. Espero que você ainda acredite que nossas almas estavam destinadas a se encontrar."
+    show camille gentle at center
+    camille "Talvez estivessem. Mas algumas conexões são feitas para ensinar, não para durar."
+    narrator "Camille olha para você, seus olhos brilhando com uma nova certeza."
+    camille "[nome], você me mostrou que algumas conexões são mais profundas porque são reais, não porque são idealizadas."
     menu:
-        "Confiar e apoiar":
-            $ points_camille += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            camille "Obrigada. Sua confiança significa muito para mim."
+        "Segurar a mão dela":
+            $ romance_camille = True
+            "[nome]" "E eu quero que a nossa conexão continue crescendo."
+            camille "Obrigada. Você é a energia que eu quero ao meu lado."
+            narrator "Camille sorri suavemente, e o momento entre vocês parece eterno."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            camille "Eu entendo. Vou pensar bem antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_camille -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            camille "Entendi. Obrigada pela sinceridade."
+        "Apenas sorrir":
+            "[nome]" "..."
+            narrator "Camille entende o que você sente, mesmo sem palavras. Ela segura sua mão por um momento antes de voltar ao evento."
             jump cena5_domingo_para_dois
 
 label convite_samantha:
     show samantha nervous at center
     narrator "Samantha parece surpresa ao receber o convite, mas tenta disfarçar."
-    samantha "Ah, claro... ele(a) sempre aparece nos momentos mais aleatórios."
+    samantha "Ah, claro... ele sempre aparece nos momentos mais aleatórios."
+    narrator "No evento, seu ex está organizando um campeonato de videogame. Samantha decide participar, e você a acompanha para torcer por ela."
+
+    scene bg evento_samantha with fade
+    narrator "Samantha joga com intensidade, derrotando vários oponentes até chegar à final. Seu ex, que também está competindo, a enfrenta na última partida."
+    show ex_samantha smug at center
+    ex_samantha "Você sempre foi boa, Sam. Mas será que consegue me vencer agora?"
+    show samantha determined at center
+    samantha "Eu não preciso provar nada para você. Mas vou ganhar, só para deixar claro."
+    narrator "Samantha vence a partida com uma jogada brilhante. Após o jogo, ela se aproxima de você, ainda segurando o controle."
+    samantha "[nome], você é a única pessoa que me faz sentir que sou mais do que uma jogadora. Com você, eu sou eu mesma."
     menu:
-        "Confiar e apoiar":
-            $ points_samantha += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            samantha "Obrigada. Você é incrível, sabia?"
+        "Abraçá-la":
+            $ romance_samantha = True
+            "[nome]" "E você é a pessoa que eu quero ao meu lado, em qualquer jogo."
+            samantha "Sério?! Isso foi tipo... um crítico de afeto. Obrigada por me escolher."
+            narrator "Samantha sorri, e vocês compartilham um momento de pura conexão."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            samantha "Entendi. Vou pensar bem antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_samantha -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            samantha "Ah... tá. Valeu pela sinceridade, eu acho."
+        "Dar um sorriso de apoio":
+            "[nome]" "..."
+            narrator "Samantha entende o que você sente e sorri de volta, mas o momento parece incompleto."
             jump cena5_domingo_para_dois
 
 label convite_nicole:
     show nicole neutral at center
     narrator "Nicole ajusta os óculos ao receber o convite, tentando esconder qualquer reação."
     nicole "Isso é... inesperado. Mas não impossível de gerenciar."
+    narrator "No evento, seu ex está apresentando um projeto de tecnologia inovadora. Nicole decide ir para avaliar o trabalho, e você a acompanha."
+
+    scene bg evento_nicole with fade
+    narrator "Nicole observa atentamente enquanto seu ex apresenta gráficos e estatísticas. Após a apresentação, ele se aproxima dela."
+    show ex_nicole confident at center
+    ex_nicole "Nicole, você sempre foi a mente mais brilhante que conheci. Espero que ainda pense em mim quando vê algo bem organizado."
+    show nicole neutral at center
+    nicole "Eu penso em eficiência, não em nostalgia. E, sinceramente, já encontrei alguém que entende isso melhor do que você."
+    narrator "Nicole olha para você, ajustando os óculos com um leve sorriso."
+    nicole "[nome], você é a única variável que faz minha equação funcionar."
     menu:
-        "Confiar e apoiar":
-            $ points_nicole += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            nicole "Obrigada. Sua confiança é... apreciada."
+        "Segurar sua mão":
+            $ romance_nicole = True
+            "[nome]" "E eu quero continuar sendo parte da sua equação."
+            nicole "Então tá. Vamos documentar isso como um momento único."
+            narrator "Nicole sorri levemente, e o momento parece mais importante do que qualquer cálculo."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            nicole "Entendido. Vou considerar isso antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_nicole -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            nicole "Entendido. Obrigada pela clareza."
+        "Apenas sorrir":
+            "[nome]" "..."
+            narrator "Nicole entende o que você sente, mas volta a focar no evento, como se algo tivesse ficado por dizer."
             jump cena5_domingo_para_dois
 
 label convite_katia:
     show katia neutral at center
     narrator "Katia revira os olhos ao receber o convite, mas há algo em seu tom que sugere hesitação."
-    katia "Claro que ele(a) aparece agora. É tão típico."
+    katia "Claro que ele aparece agora. É tão típico."
+    narrator "No evento, seu ex está exibindo um curta-metragem que dirigiu. Katia decide ir para criticar, e você a acompanha."
+
+    scene bg evento_katia with fade
+    narrator "Katia assiste ao curta com atenção, mas seu olhar crítico é evidente. Após a exibição, seu ex se aproxima dela."
+    show ex_katia smug at center
+    ex_katia "Então, o que achou? Ainda acha que eu não sei contar histórias?"
+    show katia neutral at center
+    katia "Você melhorou. Mas ainda falta algo... talvez autenticidade."
+    narrator "Katia olha para você, seus olhos suavizando por um momento."
+    katia "[nome], você é a única pessoa que me faz acreditar que histórias podem ser reais."
     menu:
-        "Confiar e apoiar":
-            $ points_katia += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            katia "Hmpf. Obrigada, eu acho."
+        "Concordar com ela":
+            $ romance_katia = True
+            "[nome]" "E eu quero continuar escrevendo essa história com você."
+            katia "Hmpf. Não se ache. Mas... obrigada por isso."
+            narrator "Katia desvia o olhar, mas há um leve sorriso em seu rosto."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            katia "Tá, entendi. Vou pensar antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_katia -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            katia "Ah, claro. Valeu pela sinceridade."
+        "Ficar em silêncio":
+            "[nome]" "..."
+            narrator "Katia finge que não se importa, mas o momento parece incompleto."
             jump cena5_domingo_para_dois
 
 label convite_huey:
     show huey gentle at center
     narrator "Huey segura o convite com cuidado, como se fosse algo frágil."
     huey "Eu não esperava isso... mas talvez seja uma oportunidade."
+    narrator "No evento, seu ex está exibindo uma galeria de arte com obras que exploram emoções humanas. Huey decide ir para ver as obras, e você o acompanha."
+
+    scene bg evento_huey with fade
+    narrator "Huey observa as pinturas com atenção, seus olhos capturando cada detalhe. Após um tempo, seu ex se aproxima dele."
+    show ex_huey confident at center
+    ex_huey "Huey, você sempre teve um olhar único. Espero que ainda veja algo especial nas minhas obras."
+    show huey gentle at center
+    huey "Elas são boas. Mas acho que o que vejo agora é diferente... porque encontrei algo mais verdadeiro."
+    narrator "Huey olha para você, seus olhos cheios de emoção."
+    huey "[nome], você é a inspiração que eu nunca soube que precisava."
     menu:
-        "Confiar e apoiar":
-            $ points_huey += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            huey "Obrigada. Isso significa muito para mim."
+        "Segurar sua mão":
+            $ romance_huey = True
+            "[nome]" "E você é a arte mais bonita que eu já vi."
+            huey "Obrigada... isso significa muito para mim."
+            narrator "Huey sorri timidamente, e o momento entre vocês parece cheio de significado."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            huey "Entendi. Vou pensar bem antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_huey -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            huey "Ah... tá. Obrigada pela sinceridade."
+        "Apenas sorrir":
+            "[nome]" "..."
+            narrator "Huey entende o que você sente, mas volta a observar as pinturas, como se algo tivesse ficado por dizer."
             jump cena5_domingo_para_dois
 
 label convite_larissa:
     show larissa happy at center
     narrator "Larissa ri ao receber o convite, mas há algo em seu olhar que sugere incerteza."
-    larissa "Ele(a) sempre aparece nos momentos mais aleatórios. É quase engraçado."
+    larissa "Ele sempre aparece nos momentos mais aleatórios. É quase engraçado."
+    narrator "No evento, seu ex está organizando uma competição de atletismo. Larissa decide participar, e você a acompanha para torcer por ela."
+
+    scene bg evento_larissa with fade
+    narrator "Larissa corre com determinação, superando cada obstáculo com facilidade. Na linha de chegada, seu ex a parabeniza."
+    show ex_larissa smug at center
+    ex_larissa "Você ainda é incrível, Larissa. Mas será que ainda tem espaço para mim na sua vida?"
+    show larissa happy at center
+    larissa "Eu sou incrível porque aprendi a correr para frente, não para trás."
+    narrator "Larissa olha para você, seu sorriso cheio de energia e sinceridade."
+    larissa "[nome], você é a única pessoa que eu quero ao meu lado, em qualquer corrida."
     menu:
-        "Confiar e apoiar":
-            $ points_larissa += 2
-            "[nome]" "Eu confio em você. Vá e aproveite o momento."
-            larissa "Obrigada. Você é incrível, sabia?"
+        "Abraçá-la":
+            $ romance_larissa = True
+            "[nome]" "E eu quero correr ao seu lado, em qualquer ritmo."
+            larissa "Sério?! Uau. Que emoção, hein? Agora só falta você me vencer na corrida."
+            narrator "Larissa ri, mas há algo mais profundo em seu olhar."
             jump cena5_domingo_para_dois
-        "Dizer que se sente desconfortável":
-            "[nome]" "Não sei... isso me deixa desconfortável."
-            larissa "Entendi. Vou pensar bem antes de decidir."
-            jump cena5_domingo_para_dois
-        "Se mostrar indiferente":
-            $ points_larissa -= 2
-            "[nome]" "Faça o que quiser. Não importa para mim."
-            larissa "Ah... tá. Valeu pela sinceridade, eu acho."
+        "Dar um sorriso de apoio":
+            "[nome]" "..."
+            narrator "Larissa entende o que você sente e sorri de volta, mas o momento parece incompleto."
             jump cena5_domingo_para_dois
 
 label cena5_domingo_para_dois:
     narrator "Por acaso ou destino, você e [personagem_evento] acabam ficando sozinhos em casa por um dia. A energia muda."
 
-    if personagem_evento == "camille":
+    if romance_camille:
         jump domingo_camille
-    elif personagem_evento == "samantha":
+    elif romance_samantha:
         jump domingo_samantha
-    elif personagem_evento == "nicole":
+    elif romance_nicole:
         jump domingo_nicole
-    elif personagem_evento == "katia":
+    elif romance_katia:
         jump domingo_katia
-    elif personagem_evento == "huey":
+    elif romance_huey:
         jump domingo_huey
-    elif personagem_evento == "larissa":
+    elif romance_larissa:
         jump domingo_larissa
+    else:
+        narrator "Algo deu errado. Nenhum romance está ativo."
+        return
 
 label domingo_camille:
     show camille gentle at center

@@ -80,16 +80,22 @@ label cena4_tarde_estudo:
 
     menu:
         "Estudar com Samantha":
+            $ points_samantha += 1
             jump estudar_samantha
         "Estudar com Nicole":
+            $ points_nicole += 1
             jump estudar_nicole
         "Estudar com Huey":
+            $ points_huey += 1
             jump estudar_huey
         "Estudar com Camille":
+            $ points_camille += 1
             jump estudar_camille
         "Estudar com Katia":
+            $ points_katia += 1
             jump estudar_katia
         "Estudar com Larissa":
+            $ points_larissa += 1
             jump estudar_larissa
 
 label cena5_confronto_silencioso:

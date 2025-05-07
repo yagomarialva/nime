@@ -7,7 +7,12 @@ define huey = Character("Aline (Huey)", color="#00CED1")
 define samantha = Character("Samantha", color="#FF4500")
 define camille = Character("Camille", color="#32CD32")
 define professor_wendell = Character("Professor Wendell", color="#6202bbff")
-
+define ex_camille = Character("Ex de Camille", color="#6A5ACD")
+define ex_samantha = Character("Ex de Samantha", color="#FFD700")
+define ex_nicole = Character("Ex de Nicole", color="#00CED1")
+define ex_katia = Character("Ex de Katia", color="#FF4500")
+define ex_huey = Character("Ex de Huey", color="#32CD32")
+define ex_larissa = Character("Ex de Larissa", color="#FF5733")
 # Imagem de sombra genérica para emoções ausentes
 image shadow = "images/characters/shadow.png"
 

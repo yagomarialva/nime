@@ -79,7 +79,7 @@ label evento_larissa_huey:
             narrator "Ela falou sobre como usa as derrotas como motivação para melhorar."
 
     # Transição para a cafeteria
-    scene bg cafe_universidade with dissolve
+    scene bg cafeteria with dissolve
     show larissa neutral at left
     show huey neutral at right
 

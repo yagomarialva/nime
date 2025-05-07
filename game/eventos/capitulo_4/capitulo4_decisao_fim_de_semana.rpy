@@ -1,5 +1,4 @@
 label caminhada_camille:
-    $ points_camille += 5
     scene bg park_exit with dissolve
     show camille gentle at center
     narrator "Você escolheu participar da caminhada mística com Camille. Ela lidera o grupo por uma trilha tranquila, acendendo incensos e falando sobre energias."
@@ -10,7 +9,6 @@ label caminhada_camille:
     jump capitulo4_conclusao
 
 label filmes_katia:
-    $ points_katia += 5
     scene bg sala_casa with dissolve
     show katia neutral at center
     narrator "Você escolheu participar da maratona de filmes de terror com Katia. Ela organizou uma lista de clássicos assustadores."
@@ -22,7 +20,6 @@ label filmes_katia:
     jump capitulo4_conclusao
 
 label boardgames_samantha:
-    $ points_samantha += 5
     scene bg sala_casa with dissolve
     show samantha happy at center
     narrator "Você escolheu participar do torneio de boardgames com Samantha. Ela trouxe vários jogos de estratégia e estava animada."
@@ -45,7 +42,6 @@ label arte_huey:
     jump capitulo4_conclusao
 
 label funcional_larissa:
-    $ points_larissa += 5
     scene bg quintal with dissolve
     show larissa happy at center
     narrator "Você escolheu participar do aulão funcional com Larissa. Ela montou um circuito de exercícios no quintal."
@@ -57,7 +53,6 @@ label funcional_larissa:
     jump capitulo4_conclusao
 
 label financas_nicole:
-    $ points_nicole += 5
     scene bg sala_casa with dissolve
     show nicole neutral at center
     narrator "Você escolheu participar do workshop de finanças criativas com Nicole. Ela preparou uma apresentação detalhada."

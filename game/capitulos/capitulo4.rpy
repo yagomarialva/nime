@@ -47,27 +47,27 @@ label capitulo4_interacoes_diarias:
     menu:
         "Ajudar Samantha a configurar um jogo" if "samantha" not in interacoes_realizadas:
             $ interacoes_realizadas.append("samantha")
-            $ points_samantha += 3
+            $ points_samantha += 1
             jump interacao_samantha
         "Acompanhar Nicole em uma ida ao mercado" if "nicole" not in interacoes_realizadas:
             $ interacoes_realizadas.append("nicole")
-            $ points_nicole += 3
+            $ points_nicole += 1
             jump interacao_nicole
         "Assistir Larissa treinar no quintal" if "larissa" not in interacoes_realizadas:
             $ interacoes_realizadas.append("larissa")
-            $ points_larissa += 3
+            $ points_larissa += 1
             jump interacao_larissa
         "Conversar com Huey sobre arte" if "huey" not in interacoes_realizadas:
             $ interacoes_realizadas.append("huey")
-            $ points_huey += 3
+            $ points_huey += 1
             jump interacao_huey
         "Ajudar Katia a organizar sua coleção de filmes" if "katia" not in interacoes_realizadas:
             $ interacoes_realizadas.append("katia")
-            $ points_katia += 3
+            $ points_katia += 1
             jump interacao_katia
         "Meditar com Camille no jardim" if "camille" not in interacoes_realizadas:
             $ interacoes_realizadas.append("camille")
-            $ points_camille += 3
+            $ points_camille += 1
             jump interacao_camille
 
 
@@ -77,22 +77,22 @@ label capitulo4_decisao_fim_de_semana:
 
     menu:
         "Caminhada mística com Camille":
-            $ points_camille += 3
+            $ points_camille += 2
             jump caminhada_camille
         "Maratona de filmes de terror com Katia":
-            $ points_katia += 3
+            $ points_katia += 2
             jump filmes_katia
         "Torneio de boardgames com Samantha":
-            $ points_samantha += 3
+            $ points_samantha += 2
             jump boardgames_samantha
         "Oficina de arte livre com Huey":
-            $ points_huey += 3
+            $ points_huey += 2
             jump arte_huey
         "Aulão funcional com Larissa":
-            $ points_larissa += 3
+            $ points_larissa += 2
             jump funcional_larissa
         "Workshop de finanças criativas com Nicole":
-            $ points_nicole += 3
+            $ points_nicole += 2
             jump financas_nicole
 
 
