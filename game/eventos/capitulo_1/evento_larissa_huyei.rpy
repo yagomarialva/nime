@@ -3,7 +3,7 @@ label evento_larissa_huey:
     $ points_larissa += 1
     scene bg quadra_volei with dissolve
     show larissa_volei at left
-    show huey neutral at right
+    show huey voley at right
 
     narrator "Larissa me convidou para uma partida de vôlei na quadra da universidade. Huey apareceu para assistir e torcer."
 
@@ -41,7 +41,7 @@ label evento_larissa_huey:
 
     # Transição para o jardim
     scene bg jardim_universidade with dissolve
-    show larissa casual at left
+    show larissa neutral at left
     show huey neutral at right
 
     narrator "Depois do jogo, Larissa sugeriu que fôssemos ao jardim da universidade para relaxar e conversar."
@@ -79,8 +79,8 @@ label evento_larissa_huey:
             narrator "Ela falou sobre como usa as derrotas como motivação para melhorar."
 
     # Transição para a cafeteria
-    scene bg cafe_universidade with dissolve
-    show larissa casual at left
+    scene bg cafeteria with dissolve
+    show larissa neutral at left
     show huey neutral at right
 
     narrator "Para encerrar o dia, decidimos ir até a cafeteria da universidade para tomar algo e continuar a conversa."
@@ -123,4 +123,4 @@ label evento_larissa_huey:
     hide huey
     narrator "Após a conversa, nos despedimos com sorrisos e a promessa de repetir a experiência. Foi um dia energizante e cheio de aprendizado."
 
-    jump capitulo2
+    jump capitulo1_final

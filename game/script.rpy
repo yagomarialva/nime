@@ -1,44 +1,45 @@
-﻿# script.rpy
+﻿# script.rpy - MELHORADO baseado em sucessos do gênero
+default persistent.unlocked_chapters = []  # Lista de capítulos desbloqueados
 
-# Cenários
-image bg room = "images/cenarios/room.jpg"
-image bg city = "images/cenarios/city.png"
-image bg cinema = "images/cenarios/cinema.png"
-image bg cinema_katia_samantha = "images/cenarios/scene/cinema_katia_samantha.png"
-image bg cinema_exhibition = "images/cenarios/scene/amostra_filmes_katia_samantha.png"
-image bg cinema_cafe = "images/cenarios/scene/cinema_lobby.png"
-image bg cinema_cafeteria = "images/cenarios/Cafeteria.png"
-image bg cinema_lobby_empty = "images/cenarios/cinema_lobby.png"
-image bg cinema_arcade = "images/cenarios/Arcade.jpg"
-image bg quadra_volei = "images/cenarios/QUADRA.png"
-# Adicione outros cenários conforme necessário
-# image bg park = "images/cenarios/park.jpg"
-
-# Definição dos personagens
-define narrator = Character(None)  # Narrador sem nome
-define nicole = Character("Nicole", color="#FF69B4")  # Cor opcional para o nome
-define katia = Character("Katia", color="#8A2BE2")
-define larissa = Character("Larissa", color="#FFD700")
-define huey = Character("Aline (Huey)", color="#00CED1")
-define samantha = Character("Samantha", color="#FF4500")
-define camille = Character("Camille", color="#32CD32")
-
-
-# Personagens
-image samantha happy = "images/characters/samantha/samantha 382x395.png"
-image nicole neutral = "images/characters/nicole/Nicole_neutra.png"
-image katia neutral = "images/characters/katia/katia_neutral.png"
-image larissa happy = "images/characters/larissa/Larissa_feliz.png"
-image huey neutral = "images/characters/hu_wei/huwei_volei.png"
-image camille neutral = "images/characters/camille/Camille_neutra.png"
-
-# Pontos de afinidade
+# === SISTEMA DE AFINIDADE APRIMORADO ===
+# Pontos de afinidade (0-100 para maior precisão)
 default points_samantha = 0
 default points_katia = 0
 default points_nicole = 0
 default points_larissa = 0
 default points_huey = 0
 default points_camille = 0
+
+# Sistema de níveis de relacionamento
+default relationship_samantha = "stranger"  # stranger -> acquaintance -> friend -> close_friend -> romantic
+default relationship_katia = "stranger"
+default relationship_nicole = "stranger"  
+default relationship_larissa = "stranger"
+default relationship_huey = "stranger"
+default relationship_camille = "stranger"
+
+# Flags de romance (agora com desenvolvimento orgânico)
+default romance_samantha = False
+default romance_nicole = False
+default romance_huey = False
+default romance_camille = False
+default romance_larissa = False
+default romance_katia = False
+
+# === SISTEMA NAKIGE (MOMENTOS EMOCIONAIS) ===
+default emotional_moments_unlocked = []  # Lista de momentos emocionais desbloqueados
+default player_empathy_level = 0  # Nível de empatia do jogador (afeta diálogos)
+
+# === SISTEMA DE CRESCIMENTO MÚTUO ===
+default character_growth_samantha = 0  # Crescimento pessoal de cada personagem
+default character_growth_katia = 0
+default character_growth_nicole = 0
+default character_growth_larissa = 0
+default character_growth_huey = 0
+default character_growth_camille = 0
+
+# === SISTEMA DE MEMÓRIAS COMPARTILHADAS ===
+default shared_memories = []  # Lista de memórias especiais criadas com personagens
 
 label start:
     show screen affinity_points
