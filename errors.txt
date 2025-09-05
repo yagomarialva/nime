@@ -1,8 +1,0 @@
-﻿I'm sorry, but errors were detected in your script. Please correct the
-errors listed below, and try again.
-
-
-File "game/capitulos/capitulo1.rpy", line 25: Indentation mismatch.
-
-Ren'Py Version: Ren'Py 8.3.7.25031702
-Sat Apr 12 03:21:01 2025
