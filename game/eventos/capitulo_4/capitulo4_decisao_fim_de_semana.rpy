@@ -6,7 +6,7 @@ label caminhada_camille:
     "[nome]" "Eu só espero que o vento não traga mosquitos."
     camille "Hahaha, você é engraçado. Mas sério, tente se conectar com a natureza."
     narrator "Apesar de suas dúvidas, você percebeu que a caminhada foi relaxante e trouxe uma sensação de paz."
-    jump capitulo4_conclusao
+    jump capitulo4_final
 
 label filmes_katia:
     scene bg sala_casa with dissolve
@@ -17,7 +17,7 @@ label filmes_katia:
     show katia blush at center
     katia "Hmpf. Como se eu fosse gritar. Só assista o filme."
     narrator "Apesar de sua atitude tsundere, Katia parecia se divertir com sua companhia."
-    jump capitulo4_conclusao
+    jump capitulo4_final
 
 label boardgames_samantha:
     scene bg sala_casa with dissolve
@@ -28,7 +28,7 @@ label boardgames_samantha:
     show samantha laugh at center
     samantha "Hahaha! Adoro um bom desafio. Vamos começar!"
     narrator "A competição foi acirrada, mas o mais importante foi a diversão que vocês compartilharam."
-    jump capitulo4_conclusao
+    jump capitulo4_final
 
 label arte_huey:
     $ points_huey += 5
@@ -39,7 +39,7 @@ label arte_huey:
     "[nome]" "Eu sinto que minha pintura vai ser um desastre."
     huey "Hahaha, não se preocupe. Até desastres têm sua beleza."
     narrator "Huey ajudou você a soltar sua criatividade, e no final, você até se surpreendeu com o resultado."
-    jump capitulo4_conclusao
+    jump capitulo4_final
 
 label funcional_larissa:
     scene bg quintal with dissolve
@@ -50,7 +50,7 @@ label funcional_larissa:
     show larissa laugh at center
     larissa "Hahaha! Não tem desculpa. Vamos começar!"
     narrator "Apesar do esforço, você se sentiu revigorado depois do treino. Larissa sabia como motivar as pessoas."
-    jump capitulo4_conclusao
+    jump capitulo4_final
 
 label financas_nicole:
     scene bg sala_casa with dissolve
@@ -61,4 +61,4 @@ label financas_nicole:
     show nicole happy at center
     nicole "É um bom começo. Posso te ajudar a criar um plano, se quiser."
     narrator "Nicole parecia no seu elemento, e você aprendeu muito com ela."
-    jump capitulo4_conclusao
+    jump capitulo4_final

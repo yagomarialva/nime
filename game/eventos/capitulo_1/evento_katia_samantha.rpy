@@ -7,8 +7,9 @@ label evento_katia_samantha:
 
     narrator "Katia me convidou para assistir a um filme cult no cinema da cidade. Samantha apareceu de surpresa, curiosa sobre o evento."
 
-    katia "Ei! Eu te convidei... não esperava que virasse um encontro em grupo." 
+    katia "E-ei! Eu te convidei... não esperava que virasse um encontro em grupo." 
     katia "Hmpf. Mas tanto faz. Só não atrapalha."
+    katia "N-não é como se eu estivesse esperando um encontro a dois ou qualquer coisa assim!"
 
     samantha "Relaxa, Katia. Eu só fiquei curiosa! Esse filme tem um enredo tão interessante... cheio de camadas filosóficas!"
 
@@ -21,8 +22,10 @@ label evento_katia_samantha:
     menu:
         "Discutir simbolismos do filme com Katia":
             $ points_katia += 3
+            show katia blush at left
             katia "Você percebeu a metáfora sobre a perda da identidade? Pff... não achei que você fosse notar algo assim."
             katia "Quer dizer, não que eu esteja impressionada nem nada! Hmpf."
+            katia "É só que... é raro encontrar alguém que realmente entende de cinema. N-não que eu me importe com sua opinião!"
 
         "Conversar com Samantha sobre trilhas sonoras de filmes":
             $ points_samantha += 3
@@ -36,13 +39,17 @@ label evento_katia_samantha:
 
         "Perguntar a Katia sobre diretores independentes":
             $ points_katia += 3
+            show katia neutral at left
             katia "Há muitos talentos emergentes que merecem reconhecimento. Não que você conheça, mas posso te indicar alguns... se quiser."
             katia "Mas só porque eu odeio quando bons diretores passam despercebidos! Não é por sua causa ou algo assim."
+            katia "É só que... você parece ter um gosto decente. N-não que eu me importe com sua opinião ou qualquer coisa!"
 
         "Sugerir uma maratona de filmes com ambas":
             $ points_katia += 1
             $ points_samantha += 1
+            show katia blush at left
             katia "Uma maratona, hein? Só se for com filmes decentes."
+            katia "N-não é como se eu estivesse animada ou qualquer coisa assim! É só que... seria interessante."
             samantha "Estou dentro! Podemos até fazer um cronograma por décadas!"
 
     # Cena adicional 1 – Debate no lobby
@@ -151,7 +158,10 @@ label evento_katia_samantha:
     menu:
         "Agradecer a Katia pelo convite":
             $ points_katia += 3
+            show katia blush at left
             katia  "Tsc... eu que agradeço por ter vindo. Mas não se acostuma, tá?"
+            katia "N-não é como se eu tivesse gostado da sua companhia ou qualquer coisa assim!"
+            katia "É só que... foi menos chato do que eu esperava. Nada mais que isso!"
 
         "Agradecer a Samantha por se juntar a vocês":
             $ points_samantha += 3
@@ -160,10 +170,13 @@ label evento_katia_samantha:
         "Sugerir um próximo encontro para assistir outro filme":
             $ points_katia += 1
             $ points_samantha += 1
+            show katia blush at left
             katia "Se for um filme decente... talvez eu aceite."
+            katia "N-não é como se eu estivesse ansiosa para sair com você novamente ou qualquer coisa assim!"
+            katia "É só que... você tem um gosto razoável. Nada mais que isso!"
             samantha "Vamos sim! Já quero montar um cronograma de filmes cult."
 
     hide katia
     hide samantha
     narrator "A noite foi cheia de conversas, provocações e risadas. O tipo de encontro que deixa saudade — e vontade de repetir."
-    jump capitulo2
+    jump capitulo1_final

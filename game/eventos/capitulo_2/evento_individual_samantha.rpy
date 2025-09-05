@@ -92,4 +92,4 @@ label evento_individual_samantha:
 
     hide samantha
     narrator "Passei uma tarde incrível com Samantha, aprendendo mais sobre sua paixão por RPGs e tecnologia. Mal posso esperar para ver o que ela criará no futuro."
-    jump capitulo2_conclusao
+    jump capitulo2_final

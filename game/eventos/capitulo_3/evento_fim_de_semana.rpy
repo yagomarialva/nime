@@ -13,7 +13,7 @@ label filme_samantha:
     samantha "Eu adoraria dublar personagens de anime um dia. Acho que seria incrível dar vida a histórias assim."
     
     narrator "Você percebeu o brilho nos olhos dela enquanto falava. Foi um momento sincero e inspirador."
-    jump capitulo3_conclusao
+    jump capitulo3_final
 
 label filme_katia:
     scene bg sala_casa with dissolve
@@ -30,7 +30,7 @@ label filme_katia:
     katia "Até que você tem bom gosto... às vezes. Não se ache por isso."
     
     narrator "Apesar de suas palavras, Katia parecia satisfeita com a escolha. Foi um momento divertido e descontraído."
-    jump capitulo3_conclusao
+    jump capitulo3_final
 
 label filme_nicole:
     scene bg sala_casa with dissolve
@@ -47,7 +47,7 @@ label filme_nicole:
     nicole "Ah, desculpe... Eu só estava descansando os olhos. Não conte isso pra ninguém, ok?"
     
     narrator "Foi um momento inesperado, mas você percebeu que Nicole confiava em você o suficiente para relaxar."
-    jump capitulo3_conclusao
+    jump capitulo3_final
 
 label filme_camille:
     scene bg sala_casa with dissolve
@@ -64,7 +64,7 @@ label filme_camille:
     camille "Sua energia estava linda hoje. Obrigada por compartilhar esse momento comigo."
     
     narrator "Foi um momento único e especial, que deixou você pensando sobre o que ela quis dizer."
-    jump capitulo3_conclusao
+    jump capitulo3_final
 
 label filme_larissa:
     scene bg sala_casa with dissolve
@@ -81,4 +81,4 @@ label filme_larissa:
     larissa "Quer metade da minha pizza? Essa aqui tem mais queijo."
     
     narrator "Foi um momento descontraído e divertido, que mostrou o lado generoso e animado de Larissa."
-    jump capitulo3_conclusao
+    jump capitulo3_final

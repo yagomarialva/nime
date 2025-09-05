@@ -221,6 +221,7 @@ style choice_vbox:
     xalign 0.5
     ypos 405
     yanchor 0.5
+    xsize 1200
 
     spacing gui.choice_spacing
 
@@ -318,6 +319,9 @@ screen navigation():
             textbutton _("Main Menu") action MainMenu()
 
         textbutton _("About") action ShowMenu("about")
+        
+        # Botão de idiomas
+        textbutton _("Language") action ShowMenu("language_selection")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -1610,17 +1614,99 @@ style slider_slider:
 
 screen affinity_points():
     frame:
-        background "#00000080"  # Fundo preto com transparência
-        padding (10, 10)  # ✅ CERTO
-        xalign 0.01  # Alinhado à esquerda
-        yalign 0.01  # Alinhado ao topo
+        background "#00000090"  # Fundo mais elegante
+        padding (15, 12)
+        xalign 0.01
+        yalign 0.01
 
         vbox:
-            spacing 4
-            text "Afinidade:" color "#FFDAB9" size 20
-            text "Samantha: [points_samantha]" color "#FFC0CB" size 16
-            text "Katia: [points_katia]" color "#FFB6C1" size 16
-            text "Nicole: [points_nicole]" color "#FF69B4" size 16
-            text "Larissa: [points_larissa]" color "#FF8C69" size 16
-            text "Huey: [points_huey]" color "#FFA07A" size 16
-            text "Camille: [points_camille]" color "#FF4500" size 16
+            spacing 6
+            text "💕 Relacionamentos" color "#FFDAB9" size 22 bold True
+            
+            # Sistema melhorado com ícones de relacionamento
+            hbox:
+                spacing 10
+                vbox:
+                    spacing 3
+                    if relationship_samantha == "romantic":
+                        text "💖 Samantha: [points_samantha]" color "#FF4500" size 16 bold True
+                    elif relationship_samantha == "close_friend":
+                        text "😊 Samantha: [points_samantha]" color "#FF6347" size 16
+                    elif relationship_samantha == "friend":
+                        text "🙂 Samantha: [points_samantha]" color "#FFA07A" size 16
+                    else:
+                        text "🤝 Samantha: [points_samantha]" color "#FFC0CB" size 16
+                    
+                    if relationship_katia == "romantic":
+                        text "💖 Katia: [points_katia]" color "#8A2BE2" size 16 bold True
+                    elif relationship_katia == "close_friend":
+                        text "😊 Katia: [points_katia]" color "#9370DB" size 16
+                    elif relationship_katia == "friend":
+                        text "🙂 Katia: [points_katia]" color "#BA55D3" size 16
+                    else:
+                        text "🤝 Katia: [points_katia]" color "#DDA0DD" size 16
+                    
+                    if relationship_nicole == "romantic":
+                        text "💖 Nicole: [points_nicole]" color "#FF69B4" size 16 bold True
+                    elif relationship_nicole == "close_friend":
+                        text "😊 Nicole: [points_nicole]" color "#FF1493" size 16
+                    elif relationship_nicole == "friend":
+                        text "🙂 Nicole: [points_nicole]" color "#FF69B4" size 16
+                    else:
+                        text "🤝 Nicole: [points_nicole]" color "#FFB6C1" size 16
+                
+                vbox:
+                    spacing 3
+                    if relationship_larissa == "romantic":
+                        text "💖 Larissa: [points_larissa]" color "#FFD700" size 16 bold True
+                    elif relationship_larissa == "close_friend":
+                        text "😊 Larissa: [points_larissa]" color "#FFA500" size 16
+                    elif relationship_larissa == "friend":
+                        text "🙂 Larissa: [points_larissa]" color "#FFFF00" size 16
+                    else:
+                        text "🤝 Larissa: [points_larissa]" color "#FFFFE0" size 16
+                    
+                    if relationship_huey == "romantic":
+                        text "💖 Huey: [points_huey]" color "#00CED1" size 16 bold True
+                    elif relationship_huey == "close_friend":
+                        text "😊 Huey: [points_huey]" color "#20B2AA" size 16
+                    elif relationship_huey == "friend":
+                        text "🙂 Huey: [points_huey]" color "#48D1CC" size 16
+                    else:
+                        text "🤝 Huey: [points_huey]" color "#AFEEEE" size 16
+                    
+                    if relationship_camille == "romantic":
+                        text "💖 Camille: [points_camille]" color "#32CD32" size 16 bold True
+                    elif relationship_camille == "close_friend":
+                        text "😊 Camille: [points_camille]" color "#228B22" size 16
+                    elif relationship_camille == "friend":
+                        text "🙂 Camille: [points_camille]" color "#90EE90" size 16
+                    else:
+                        text "🤝 Camille: [points_camille]" color "#98FB98" size 16
+            
+            null height 8
+            text "🌱 Empatia: [player_empathy_level]" color "#E6E6FA" size 14
+            text "📚 Memórias: [len(shared_memories)]" color "#E6E6FA" size 14
+
+# Nova tela para momentos especiais
+screen emotional_moment_notification(message):
+    modal True
+    frame:
+        background "#FF69B490"
+        padding (30, 20)
+        xalign 0.5
+        yalign 0.5
+        xsize 800
+        
+        vbox:
+            spacing 15
+            text "✨ Momento Especial ✨" color "#FFFFFF" size 24 bold True xalign 0.5
+            text "[message]" color "#FFFFFF" size 18 xalign 0.5 text_align 0.5
+            
+            textbutton "Continuar" action Hide("emotional_moment_notification"):
+                text_color "#FFFFFF"
+                text_hover_color "#FFD700"
+                background "#FF1493"
+                hover_background "#FF69B4"
+                padding (20, 10)
+                xalign 0.5

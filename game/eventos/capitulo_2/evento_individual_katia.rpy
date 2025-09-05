@@ -92,4 +92,4 @@ label evento_individual_katia:
 
     hide katia
     narrator "Passei uma tarde reflexiva e interessante com Katia, aprendendo mais sobre sua visão de mundo e sua paixão por arte. Foi uma experiência que certamente ficará na memória."
-    jump capitulo2_conclusao
+    jump capitulo2_final

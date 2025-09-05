@@ -90,4 +90,4 @@ label evento_individual_nicole:
 
     hide nicole
     narrator "Passei uma tarde inspiradora com Nicole, aprendendo mais sobre sua visão estratégica e seu lado mais humano. Foi uma experiência que certamente ficará na memória."
-    jump capitulo2_conclusao
+    jump capitulo2_final

@@ -1,16 +1,34 @@
 label evento_nicole_camille:
-
-    $ points_nicole += 1
+    
+    # === EVENTO MELHORADO COM DESENVOLVIMENTO ORGÂNICO ===
+    $ feedback_nicole = add_affinity_points("nicole", 5, "Primeira conversa profunda")
+    $ feedback_camille = add_affinity_points("camille", 5, "Primeira conexão espiritual")
+    
     scene bg cafeteria with dissolve
     show nicole neutral at left
     show camille neutral at right
 
     narrator "Nicole me convidou para continuar a conversa no café da universidade. Camille também se juntou, atraída pelo tema de sustentabilidade."
+    
+    # Diálogos contextuais baseados no relacionamento
+    $ nicole_dialogue = get_contextual_dialogue("nicole", "casual")
+    $ camille_dialogue = get_contextual_dialogue("camille", "casual")
 
-    nicole "Estou organizando um projeto para ajudar artistas a entender melhor como monetizar sua arte sem perder a essência."
-    camille "A conexão entre arte e energia é mais profunda do que parece. Sustentabilidade também é espiritualidade."
+    nicole "[nicole_dialogue] Estou organizando um projeto para ajudar artistas a entender melhor como monetizar sua arte sem perder a essência."
+    
+    # Momento de vulnerabilidade inicial de Camille
+    camille "Sabe... [camille_dialogue] A conexão entre arte e energia é mais profunda do que parece. Às vezes sinto que as pessoas não levam isso a sério..."
+    
+    # Primeira escolha significativa que afeta o desenvolvimento
+    call meaningful_choice(
+        "Como responder à vulnerabilidade de Camille?",
+        "Mostrar interesse genuíno e perguntar mais sobre suas experiências",
+        "Conectar com a visão prática de Nicole sobre monetização",
+        "camille", "nicole", 8, 3
+    ) from _call_meaningful_choice_1
 
-    narrator "Enquanto tomávamos café, a conversa fluía naturalmente, abordando temas que iam desde criatividade até planejamento estratégico."
+    narrator "Enquanto tomávamos café, senti que esta conversa estava se tornando algo especial..."
+    narrator "Não era apenas sobre projetos - era sobre pessoas reais compartilhando seus sonhos mais profundos."
 
     # Primeira rodada de escolhas
     menu:
@@ -146,10 +164,46 @@ label evento_nicole_camille:
             $ points_camille += 1
             narrator "Ouvi as reflexões de ambas com atenção. A gratidão pairava no ar."
 
-    narrator "A noite terminou com abraços e sorrisos. Nicole mencionou uma nova ideia para um projeto. Camille parecia ter recarregado suas energias."
+    # === MOMENTO NAKIGE - CONEXÃO EMOCIONAL PROFUNDA ===
+    scene bg art_room with fade
+    show nicole happy at left
+    show camille gentle at right
+    
+    # Camille revela algo pessoal (desenvolvimento de personagem)
+    camille "Vocês sabem... eu nunca tinha conseguido explicar essas sensações para alguém antes."
+    camille "Desde pequena, sinto as energias ao meu redor, mas sempre achei que era 'estranha' demais..."
+    
+    # Nicole mostra crescimento emocional
+    nicole "Camille... eu sempre fui tão focada em números e resultados que esqueci da magia por trás da arte."
+    nicole "Hoje você me lembrou de algo que eu tinha perdido."
+    
+    # Momento de conexão mútua
+    call emotional_moment("vulnerability", "camille", "Camille se abre sobre suas inseguranças espirituais") from _call_emotional_moment_evento_nc_2
+    
+    narrator "O silêncio que se seguiu não era vazio - era repleto de compreensão mútua."
+    narrator "Senti que algo fundamental havia mudado entre nós três naquele momento."
+    
+    # Crescimento mútuo dos personagens
+    $ growth_camille = trigger_character_growth("camille", "confidence")
+    $ growth_nicole = trigger_character_growth("nicole", "empathy")
+    
+    narrator "[growth_camille]"
+    narrator "[growth_nicole]"
+    
+    # Promessa de continuidade (foreshadowing)
+    camille "Obrigada por... por me ouvirem de verdade."
+    nicole "Acho que este é só o começo de algo muito especial."
+    
+    show screen emotional_moment_notification("💫 Uma amizade verdadeira começou a florescer...")
+    pause 3.0
+    hide screen emotional_moment_notification
+    
+    # Memória compartilhada especial
+    $ add_shared_memory("artistic_awakening", ["nicole", "camille"], "O momento em que descobrimos a magia da criatividade compartilhada")
 
     hide nicole
     hide camille
-    narrator "Saí da sala com a sensação de ter tocado algo profundo. A arte, ali, era mais do que expressão — era conexão."
+    narrator "Saí da sala com o coração aquecido e a mente cheia de possibilidades."
+    narrator "Esta não foi apenas uma tarde de atividades - foi o nascimento de algo que mudaria todos nós."
 
-    jump capitulo2
+    jump capitulo1_final
