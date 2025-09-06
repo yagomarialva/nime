@@ -11,6 +11,10 @@ label convivencia_rigida:
     show huey sad at right
     huey "Regras rígidas? Isso parece tão... sufocante."
 
+    hide nicole
+    hide katia
+    hide huey
+    
     show camille sad at left
     camille "Eu acho que a convivência deveria ser mais fluida, mas... se todos concordarem..."
 
@@ -36,6 +40,10 @@ label convivencia_flexivel:
     show nicole neutral at right
     nicole "Flexível demais pode gerar problemas, mas... vamos tentar."
 
+    hide camille
+    hide huey
+    hide nicole
+    
     show katia neutral at left
     katia "Hmpf. Isso só vai dar errado, mas não vou me opor."
 
@@ -61,6 +69,10 @@ label convivencia_lavar:
     show nicole sad at right
     nicole "Isso pode gerar problemas. E se alguém esquecer de lavar? O caos vai se instalar."
 
+    hide samantha
+    hide larissa
+    hide nicole
+    
     show katia neutral at left
     katia "Hmpf. Desde que eu não precise limpar nada de ninguém, tanto faz."
 

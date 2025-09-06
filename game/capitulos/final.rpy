@@ -341,11 +341,16 @@ label final_romantico:
 label final_familiar:
     scene bg casa_sala with dissolve
     show nicole happy at left
-    show katia happy at left  
-    show samantha happy at center
-    show larissa happy at right
-    show huey happy at right
-    show camille gentle at center
+    show katia happy at center
+    show samantha happy at right
+    
+    hide nicole
+    hide katia
+    hide samantha
+    
+    show larissa happy at left
+    show huey happy at center
+    show camille gentle at right
     
     narrator "Todas voltaram à casa uma última vez antes da demolição."
     narrator "Não para se despedir da casa - mas para celebrar o que ela representava."

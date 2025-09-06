@@ -64,7 +64,7 @@ label capitulo3:
     narrator "Cada uma delas reagiu de forma única à situação, mas todas pareciam... curiosas. Talvez até um pouco animadas, mesmo que algumas tentassem disfarçar."
 
     # Cena 2 – Organização dos Quartos
-    scene bg casa_interior with dissolve
+    scene bg casa_dia with dissolve
     narrator "Todos entram na casa, que tem sete quartos individuais, uma cozinha, sala ampla e dois banheiros."
     
     # Momento emocional de escolha
@@ -109,7 +109,7 @@ label capitulo3:
 
     # Cena 3 – Conflitos na Convivência
 label convivencia:
-    scene bg sala_casa with dissolve
+    scene bg casa_dia with dissolve
     narrator "No dia seguinte, todos se reúnem na sala para definir as regras da casa."
     
     # Momento emocional de estabelecimento de regras
@@ -129,6 +129,10 @@ label convivencia:
     katia "Eu não vou limpar banheiro que outra pessoa sujou."
     katia "N-não é como se eu fosse preguiçosa ou qualquer coisa assim! É só que... cada um tem que fazer sua parte."
 
+    hide samantha
+    hide nicole
+    hide katia
+    
     show huey happy at left
     huey "Eu posso organizar tudo com base nas suas cores favoritas!"
     huey "Vai ficar lindo! Cada cômodo com sua própria paleta de cores!"
@@ -163,7 +167,7 @@ label convivencia:
     # Cena 4 – Noite de Tempestade
 label noite_tempestade:
     scene bg sala_escura with dissolve
-    narrator "Chove forte. A luz acaba. Todos se reúnem na sala escura com lanternas."
+    narrator "Mais tarde, chove forte. A luz acaba. Todos se reúnem na sala escura com lanternas."
     
     # Momento emocional de intimidade na escuridão
     call emotional_moment("intimate_darkness", None, "Momento de intimidade e vulnerabilidade na escuridão") from _call_emotional_moment_cap3_5
@@ -182,6 +186,10 @@ label noite_tempestade:
     samantha "A casa parece assombrada. Não é que eu esteja com medo… mas posso sentar aí?"
     samantha "É estranho como a escuridão pode fazer até uma casa familiar parecer diferente."
 
+    hide camille
+    hide nicole
+    hide samantha
+    
     show katia neutral at left
     katia "Eu vou ficar na cozinha. Se algo aparecer, eu taco uma frigideira."
     katia "N-não é como se eu estivesse com medo ou qualquer coisa assim! É só que... a cozinha é mais segura."
@@ -226,7 +234,7 @@ label noite_tempestade:
             jump noite_camille
 
 label luz_volta:
-    scene bg sala_casa with dissolve
+    scene bg sala_casa_noite with dissolve
     narrator "Depois de algumas horas no escuro, a luz finalmente voltou. Um suspiro coletivo de alívio ecoou pela casa."
     
     # Momento emocional de alívio e conexão

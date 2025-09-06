@@ -77,9 +77,8 @@ label evento_katia_samantha:
             samantha "Amei sua análise! Posso até escrever sobre isso no meu blog!"
 
     # Cena adicional 2 – Café
-    scene bg cinema_cafe with dissolve
-    narrator "Decidimos tomar um café no cinema enquanto continuávamos a conversa."
     scene bg cinema_cafeteria with dissolve
+    narrator "Decidimos tomar um café no cinema enquanto continuávamos a conversa."
     show katia neutral at left
     show samantha neutral at right
 

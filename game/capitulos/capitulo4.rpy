@@ -4,7 +4,7 @@ label capitulo4:
     if "capitulo4" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo4")
     
-    scene bg casa_morning with fade
+    scene bg casa_dia with fade
     narrator "A rotina começa a se instalar na república da Rua Aurora. As manhãs são barulhentas, os banheiros sempre ocupados, e o café nunca é suficiente para todos."
     
     # Momento emocional de rotina estabelecida
@@ -56,7 +56,7 @@ label capitulo4:
     jump capitulo4_interacoes_diarias
 
 label capitulo4_interacoes_diarias:
-    scene bg sala_casa with dissolve
+    scene bg casa_dia with dissolve
     narrator "Durante a semana, você tem a chance de interagir com os colegas em momentos casuais. Cada interação revela algo novo sobre eles."
     
     # Momento emocional de conexões diárias
@@ -107,7 +107,7 @@ label capitulo4_interacoes_diarias:
 
 
 label capitulo4_decisao_fim_de_semana:
-    scene bg sala_casa with dissolve
+    scene bg casa_dia with dissolve
     narrator "Com o fim de semana chegando, a casa decide que cada um deve organizar uma atividade para todo o grupo. O jogador deve escolher qual participar."
     
     # Momento emocional de atividades em grupo

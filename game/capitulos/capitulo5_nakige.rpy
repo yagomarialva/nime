@@ -122,6 +122,11 @@ label momento_final_nakige:
     show nicole neutral at center
     show katia neutral at left
     show samantha happy at right
+    
+    hide nicole
+    hide katia
+    hide samantha
+    
     show larissa neutral at center
     show huey neutral at left
     show camille gentle at right
