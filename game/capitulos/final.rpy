@@ -339,7 +339,7 @@ label final_romantico:
     jump cena_foto_final
 
 label final_familiar:
-    scene bg casa_sala with dissolve
+    scene bg sala_casa with dissolve
     show nicole happy at left
     show katia happy at center
     show samantha happy at right

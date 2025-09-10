@@ -77,7 +77,6 @@ label filme_larissa:
     
     narrator "Durante o filme, Larissa começou a narrar as cenas como se estivesse assistindo a uma final de campeonato. Foi impossível não rir."
     
-    show larissa blush at center
     larissa "Quer metade da minha pizza? Essa aqui tem mais queijo."
     
     narrator "Foi um momento descontraído e divertido, que mostrou o lado generoso e animado de Larissa."

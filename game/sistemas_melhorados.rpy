@@ -135,7 +135,7 @@ label emotional_moment(moment_type, character=None, description=""):
         narrator "A atmosfera fica mais íntima, e você sente que algo importante está prestes a ser compartilhado..."
         
     elif moment_type == "farewell":
-        scene bg sunset with dissolve  
+        # scene bg sunset with dissolve  
         $ unlock_emotional_moment("farewell", description)
         narrator "O por do sol pinta o céu de dourado, e você sente o peso da despedida se aproximando..."
         

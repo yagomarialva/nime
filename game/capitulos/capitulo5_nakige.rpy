@@ -116,7 +116,7 @@ label momento_samantha_vulnerabilidade:
 
 # === MOMENTO FINAL NAKIGE - CLÍMAX EMOCIONAL ===
 label momento_final_nakige:
-    scene bg casa_sala_noite with fade
+    scene bg casa_noite with fade
     
     # Todas as garotas se reúnem espontaneamente
     show nicole neutral at center
@@ -182,7 +182,7 @@ label momento_final_nakige:
 # === MOMENTO COLETIVO PARA BAIXA AFINIDADE ===
 label momento_coletivo_vulnerabilidade:
     narrator "Ouvi vozes baixas vindo da sala."
-    scene bg casa_sala_noite with dissolve
+    scene bg casa_noite with dissolve
     
     narrator "Todas as garotas estavam reunidas, conversando em tons sussurrados."
     narrator "Ao me ver, elas sorriram e me convidaram para sentar com elas."
