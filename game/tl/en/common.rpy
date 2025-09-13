@@ -5,6 +5,10 @@
 translate english game_title:
     "NIME"
 
+# Full Game Title
+translate english full_game_title:
+    "NIME: Crossed Hearts"
+
 # Game Version
 translate english game_version:
     "1.0.0"

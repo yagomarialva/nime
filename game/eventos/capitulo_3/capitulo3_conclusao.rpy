@@ -1,5 +1,5 @@
 label capitulo3_final:
-    scene bg casa_noite with fade
+    scene bg sala_casa_noite with fade
 
     narrator "A noite caiu sobre a Rua Aurora, e a casa estava finalmente em silêncio. Depois de dias intensos de convivência, parecia que todos estavam começando a se adaptar à nova rotina."
 

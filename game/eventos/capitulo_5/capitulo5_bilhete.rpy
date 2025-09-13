@@ -80,6 +80,11 @@ label confrontar_sala_comum:
     show samantha happy at left
     show nicole neutral at center
     show larissa happy at right
+    
+    hide samantha
+    hide nicole
+    hide larissa
+    
     show katia neutral at left
     show huey neutral at center
     show camille gentle at right
