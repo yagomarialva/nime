@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM NICOLE ===
 # Momento especial de conexão individual
 
-label caminhada_nicole:
+label capitulo1_caminhada_nicole:
     scene bg campus_night with fade
     show nicole neutral at center
     

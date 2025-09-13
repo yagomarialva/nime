@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM LARISSA ===
 # Momento especial de conexão individual
 
-label caminhada_larissa:
+label capitulo1_caminhada_larissa:
     scene bg campus_night with fade
     show larissa happy at center
     

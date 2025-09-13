@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM CAMILLE ===
 # Momento especial de conexão individual
 
-label caminhada_camille:
+label capitulo1_caminhada_camille:
     scene bg campus_night with fade
     show camille gentle at center
     

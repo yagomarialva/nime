@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM KATIA ===
 # Momento especial de conexão individual
 
-label caminhada_katia:
+label capitulo1_caminhada_katia:
     scene bg campus_night with fade
     show katia neutral at center
     

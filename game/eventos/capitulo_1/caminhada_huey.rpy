@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM HUEY ===
 # Momento especial de conexão individual
 
-label caminhada_huey:
+label capitulo1_caminhada_huey:
     scene bg campus_night with fade
     show huey gentle at center
     

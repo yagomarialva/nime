@@ -427,32 +427,32 @@ label capitulo1_terceira_escolha:
         "Acompanhar Nicole até sua república":
             $ add_shared_memory("evening_walk_nicole", ["nicole"], "Caminhada noturna especial com Nicole até sua república")
             $ add_affinity_points("nicole", 15, "Momento íntimo especial")
-            jump caminhada_nicole
+            jump capitulo1_caminhada_nicole
             
         "Acompanhar Katia até sua república":
             $ add_shared_memory("evening_walk_katia", ["katia"], "Caminhada noturna especial com Katia até sua república")
             $ add_affinity_points("katia", 15, "Momento íntimo especial")
-            jump caminhada_katia
+            jump capitulo1_caminhada_katia
             
         "Acompanhar Larissa até sua república":
             $ add_shared_memory("evening_walk_larissa", ["larissa"], "Caminhada noturna especial com Larissa até sua república")
             $ add_affinity_points("larissa", 15, "Momento íntimo especial")
-            jump caminhada_larissa
+            jump capitulo1_caminhada_larissa
             
         "Acompanhar Huey até sua república":
             $ add_shared_memory("evening_walk_huey", ["huey"], "Caminhada noturna especial com Huey até sua república")
             $ add_affinity_points("huey", 15, "Momento íntimo especial")
-            jump caminhada_huey
+            jump capitulo1_caminhada_huey
             
         "Acompanhar Samantha até sua república":
             $ add_shared_memory("evening_walk_samantha", ["samantha"], "Caminhada noturna especial com Samantha até sua república")
             $ add_affinity_points("samantha", 15, "Momento íntimo especial")
-            jump caminhada_samantha
+            jump capitulo1_caminhada_samantha
             
         "Acompanhar Camille até sua república":
             $ add_shared_memory("evening_walk_camille", ["camille"], "Caminhada noturna especial com Camille até sua república")
             $ add_affinity_points("camille", 15, "Momento íntimo especial")
-            jump caminhada_camille
+            jump capitulo1_caminhada_camille
 
 
 # === FINAL DO CAPÍTULO 1 - RETROSPECTIVA E PROGRESSÃO ===

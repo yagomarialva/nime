@@ -1,7 +1,7 @@
 # === CAMINHADA NOTURNA COM SAMANTHA ===
 # Momento especial de conexão individual
 
-label caminhada_samantha:
+label capitulo1_caminhada_samantha:
     scene bg campus_night with fade
     show samantha happy at center
     
