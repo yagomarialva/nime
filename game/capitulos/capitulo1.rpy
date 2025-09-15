@@ -36,10 +36,10 @@ label capitulo1:
             $ events_completed.append("library")
             jump capitulo1_continue_exploration
             
-        "Explorar a galeria de arte e espaços criativos":
-            $ add_shared_memory("arts_exploration", [], "Primeira exploração dos espaços artísticos")
-            call evento_huey_camille
-            $ events_completed.append("arts")
+        "Ir para o cinema da universidade":
+            $ add_shared_memory("cinema_exploration", [], "Primeira exploração do cinema da universidade")
+            call evento_katia_samantha
+            $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
             
         "Conhecer a quadra esportiva e áreas de lazer":
@@ -59,10 +59,10 @@ label capitulo1_continue_exploration:
             $ events_completed.append("library")
             jump capitulo1_continue_exploration
             
-        "Explorar a galeria de arte e espaços criativos" if "arts" not in events_completed:
-            $ add_shared_memory("arts_exploration", [], "Exploração dos espaços artísticos")
-            call evento_huey_camille
-            $ events_completed.append("arts")
+        "Ir para o cinema da universidade" if "cinema" not in events_completed:
+            $ add_shared_memory("cinema_exploration", [], "Exploração do cinema da universidade")
+            call evento_katia_samantha
+            $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
             
         "Conhecer a quadra esportiva e áreas de lazer" if "sports" not in events_completed:

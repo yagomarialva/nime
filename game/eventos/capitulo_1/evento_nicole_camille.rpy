@@ -355,4 +355,4 @@ label evento_nicole_camille:
     narrator "Esta não foi apenas uma tarde de conversas - foi o nascimento de algo que mudaria todos nós."
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde lógica e intuição dançavam juntas em perfeita harmonia."
 
-    jump capitulo1_segunda_escolha
+    return
