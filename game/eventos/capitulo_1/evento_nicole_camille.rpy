@@ -1,24 +1,41 @@
 label evento_nicole_camille:
     
-    # === EVENTO MELHORADO COM CONFLITO ORGÂNICO ===
+    # === PRIMEIRO ENCONTRO - CONHECENDO NICOLE E CAMILLE ===
     $ feedback_nicole = add_affinity_points("nicole", 5, "Primeira conversa profunda")
     $ feedback_camille = add_affinity_points("camille", 5, "Primeira conexão espiritual")
     
-    scene bg cafeteria with dissolve
-    show nicole neutral at left
-    show camille neutral at right
+    scene bg library with dissolve
+    narrator "Entrei na biblioteca da universidade, procurando um lugar silencioso para estudar. O ambiente estava calmo, com poucos estudantes e uma atmosfera que convidava à concentração."
+    narrator "Encontrei uma mesa vazia próxima a uma estante de livros sobre comunicação e psicologia. Foi então que percebi que não estava sozinho..."
 
-    narrator "Nicole me convidou para continuar a conversa no café da universidade. O ambiente estava movimentado, com estudantes conversando e o aroma de café fresco no ar."
+    # Apresentação natural da Nicole
+    show nicole neutral at left
+    nicole "Desculpe, posso me sentar aqui? Esta mesa tem uma boa iluminação para leitura."
+    nicole "Sou Nicole, estudo comunicação estratégica e análise de dados comportamentais."
+    nicole "Estou trabalhando em um projeto sobre metodologias de autoconhecimento profissional... é fascinante como podemos quantificar o crescimento pessoal."
     
-    nicole "Obrigada por vir! Estava pensando muito sobre nossa conversa anterior..."
-    narrator "Nicole organizou seus materiais na mesa com precisão metódica, enquanto Camille chegava com passos suaves."
+    narrator "Nicole organizou seus materiais com precisão metódica - cadernos, canetas coloridas, até um laptop com gráficos complexos na tela."
+    narrator "Sua abordagem era sistemática, mas havia algo genuíno em sua paixão pelos dados e pela estrutura."
+
+    # Apresentação natural da Camille
+    show camille gentle at right
+    camille "Nossa, que energia interessante vocês têm aqui... posso me juntar a vocês?"
+    camille "Sou Camille, estudo conexões energéticas e práticas de mindfulness."
+    camille "Senti uma vibração muito boa vindo desta mesa... como se vocês estivessem falando sobre algo importante."
     
-    camille "Oi, pessoal! Senti uma energia muito boa vindo daqui... vocês estavam falando sobre algo importante?"
+    narrator "Camille chegou com passos suaves, carregando um caderno de anotações e alguns cristais pequenos."
+    narrator "Havia algo sereno em sua presença, como se ela trouxesse calma para o ambiente."
     
+    # Apresentação do jogador
+    narrator "Me apresentei brevemente, explicando que era novo na universidade e estava explorando diferentes áreas de estudo."
+    narrator "Ambas pareceram interessadas em conhecer minha perspectiva sobre os temas que estavam discutindo."
+    
+    nicole "Que interessante! E qual sua abordagem para autoconhecimento? Você prefere métodos estruturados ou mais intuitivos?"
     nicole "Estou organizando um projeto para ajudar pessoas a encontrarem seu propósito profissional de forma mais consciente."
     nicole "A ideia é criar uma metodologia que combine análise de mercado com autoconhecimento profundo."
     
-    camille "Que interessante... o propósito tem uma energia própria, sabem? Quando alguém encontra sua verdadeira vocação, isso ressoa de uma forma que números não conseguem capturar."
+    camille "Que energia interessante você tem... posso sentir que você está em um momento de descoberta."
+    camille "O propósito tem uma energia própria, sabem? Quando alguém encontra sua verdadeira vocação, isso ressoa de uma forma que números não conseguem capturar."
     
     nicole "Camille, entendo seu ponto, mas precisamos de dados concretos, métricas, resultados mensuráveis. Como vamos medir o sucesso se não tivermos indicadores claros?"
     
@@ -30,8 +47,9 @@ label evento_nicole_camille:
     
     narrator "O silêncio se estendeu por alguns segundos enquanto ambas processavam os argumentos uma da outra."
     narrator "Senti que esta conversa estava se tornando algo especial... não era apenas sobre projetos - era sobre duas visões de mundo muito diferentes tentando se entender."
+    narrator "E eu estava no meio, observando como duas abordagens aparentemente opostas podiam coexistir."
 
-    # Primeira rodada de escolhas
+    # Primeira rodada de escolhas - Primeiro encontro
     menu:
         "Perguntar a Nicole sobre como medir o impacto emocional":
             $ points_nicole += 1
@@ -53,12 +71,12 @@ label evento_nicole_camille:
             nicole "Isso... isso poderia funcionar. Dados para validar, intuição para guiar."
             camille "Sim! Como se os números confirmassem o que já sentimos que é verdade."
 
-        "Contar uma experiência onde a intuição te guiou":
+        "Compartilhar sua própria perspectiva sobre autoconhecimento":
+            $ points_nicole += 1
             $ points_camille += 1
-            narrator "Compartilhei uma experiência pessoal onde segui minha intuição."
-            camille "Exato! Às vezes você sabe que algo vai dar certo antes mesmo de ter os dados..."
-            camille "É como se o universo já estivesse te mostrando o caminho."
-            nicole "Hmm... isso me faz pensar. Talvez eu tenha perdido algumas oportunidades por ser muito analítica."
+            narrator "Compartilhei minha própria visão sobre autoconhecimento, tentando encontrar um meio termo."
+            nicole "Interessante perspectiva... você parece equilibrar bem os dois lados."
+            camille "Sinto que você tem uma energia muito equilibrada... como se conseguisse ver o valor em ambas as abordagens."
 
         "Perguntar como Nicole lida com situações onde os dados não explicam tudo":
             $ points_nicole += 1
@@ -75,13 +93,15 @@ label evento_nicole_camille:
             narrator "Ambas compartilharam suas estratégias para lidar com o desconhecido, cada uma com sua abordagem única."
 
     narrator "Com cada troca de ideia, sentíamos que havia algo especial naquela conversa."
-    narrator "O café esfriou um pouco, mas ninguém parecia se importar com isso."
+    narrator "O ambiente da biblioteca parecia ter se transformado em um espaço de descoberta mútua."
     
+    nicole "É fascinante como conseguimos conversar sobre temas tão complexos logo no primeiro encontro..."
     nicole "Sabia que muitas pessoas desistem de seguir seus sonhos por falta de apoio emocional e financeiro?"
     nicole "É frustrante ver potencial sendo desperdiçado por falta de estrutura."
     
     camille "A estrutura importa, mas não pode sufocar a essência. Quando corpo e mente estão alinhados, o propósito floresce naturalmente."
     camille "Talvez o problema seja que estamos tentando encaixar a vocação em moldes que não foram feitos para ela."
+    camille "E é incrível como você consegue ver o valor em ambas as perspectivas... isso é raro."
 
     # Segunda rodada de escolhas
     menu:
@@ -276,7 +296,7 @@ label evento_nicole_camille:
             nicole "Obrigada por me ensinar que não preciso escolher entre ser prática e ser sensível."
             camille "E obrigada por me mostrar que dados podem ser uma ferramenta de validação, não de limitação."
 
-    # === MOMENTO NAKIGE - CONEXÃO EMOCIONAL PROFUNDA ===
+    # === MOMENTO DE CONEXÃO PROFUNDA - PRIMEIRO ENCONTRO ===
     scene bg library with fade
     show nicole happy at left
     show camille gentle at right
@@ -285,7 +305,7 @@ label evento_nicole_camille:
     narrator "Senti que algo fundamental havia mudado entre nós três naquele momento."
     
     # Camille revela algo pessoal (desenvolvimento de personagem)
-    camille "Vocês sabem... eu nunca tinha conseguido explicar essas sensações para alguém antes."
+    camille "Vocês sabem... é estranho, mas sinto que posso confiar em vocês."
     camille "Desde pequena, sinto as energias ao meu redor, mas sempre achei que era 'estranha' demais..."
     camille "As pessoas me olhavam como se eu estivesse inventando coisas, então aprendi a guardar isso para mim."
     
@@ -335,4 +355,4 @@ label evento_nicole_camille:
     narrator "Esta não foi apenas uma tarde de conversas - foi o nascimento de algo que mudaria todos nós."
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde lógica e intuição dançavam juntas em perfeita harmonia."
 
-    jump capitulo1_final
+    jump capitulo1_segunda_escolha

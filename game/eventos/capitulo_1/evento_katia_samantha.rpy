@@ -325,4 +325,4 @@ label evento_katia_samantha:
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o entretenimento - não como opostos, mas como complementos."
     narrator "Katia aprendendo a valorizar o entusiasmo genuíno, Samantha aprendendo a valorizar a análise crítica."
 
-    jump capitulo1_final
+    jump capitulo1_segunda_escolha

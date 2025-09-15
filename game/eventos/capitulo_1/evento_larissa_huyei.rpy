@@ -197,4 +197,4 @@ label evento_larissa_huey:
     narrator "Foi um dia que mudou a forma como vemos o esporte e a arte - não como opostos, mas como complementos."
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde determinação e beleza dançavam juntas em perfeita harmonia."
 
-    jump capitulo1_final
+    jump capitulo1_segunda_escolha

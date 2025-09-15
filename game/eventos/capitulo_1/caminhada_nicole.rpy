@@ -48,4 +48,4 @@ label capitulo1_caminhada_nicole:
     scene bg campus_night with fade
     narrator "Caminhei de volta para casa, pensando em tudo que havia acontecido. A noite havia sido especial, e senti que algo importante havia começado..."
     
-    jump capitulo1_final
+    jump capitulo1_quarta_escolha

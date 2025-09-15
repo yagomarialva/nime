@@ -178,4 +178,4 @@ label evento_katia_nicole:
 
     narrator "Katia e Nicole haviam encontrado um terreno comum, e eu mal podia esperar para ver o que essa colaboração poderia gerar..."
 
-    return
+    jump capitulo1_terceira_escolha

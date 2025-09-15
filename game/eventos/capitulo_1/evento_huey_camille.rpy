@@ -181,4 +181,4 @@ label evento_huey_camille:
 
     narrator "Huey e Camille haviam encontrado um terreno comum, e eu mal podia esperar para ver o que essa colaboração poderia gerar..."
 
-    return
+    jump capitulo1_terceira_escolha

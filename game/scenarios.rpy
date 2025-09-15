@@ -43,6 +43,9 @@ image bg quarto_samantha = "images/cenarios/quarto_samantha.png"
 image bg quarto_katia = "images/cenarios/quarto_katia.png"
 image bg sala_comum = "images/cenarios/casa_dia.png"
 image bg sala_jantar = "images/cenarios/sala_jantar.png"
+image bg campus_night = "images/cenarios/campus_night.png"
+image bg campus_evening = "images/cenarios/campus_sunset.png"
+image bg festa_boas_vindas = "images/cenarios/festa_boas_vindas.png"
 # Adicione outros cenários conforme necessário
 # image bg park = "images/cenarios/park.jpg"
 

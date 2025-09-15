@@ -2,148 +2,76 @@ label capitulo1:
     if "capitulo1" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo1")
     
-    # === INTRODUÇÃO MELHORADA ===
+    # === INTRODUÇÃO COM MONÓLOGO DO PROFESSOR WENDELL ===
     scene bg auditorium with fade
 
     narrator "O auditório da Faculdade Solária estava repleto de expectativa. Dezenas de jovens, cada um carregando sonhos únicos, aguardavam o início de uma jornada que mudaria suas vidas para sempre."
 
     narrator "Entre eles, eu me sentava nas fileiras do meio, tentando absorver cada detalhe deste momento histórico. O ar estava carregado de possibilidades infinitas."
 
-    # Professor Wendell - Diálogo mais impactante
+    # Professor Wendell - Monólogo sobre a faculdade e fase da vida
     show professor_wendell neutral at center
-    professor_wendell "Bem-vindos à Faculdade Solária, onde a arte encontra a alma humana."
-    professor_wendell "Hoje, vocês não apenas iniciam um curso - vocês embarcam em uma jornada de autodescoberta através da criatividade."
-    professor_wendell "Lembrem-se: as melhores histórias não são apenas contadas, são vividas. E vocês, queridos alunos, são os protagonistas de suas próprias narrativas."
+    professor_wendell "Bem-vindos à Faculdade Solária, jovens mentes brilhantes. Vocês estão prestes a embarcar em uma das jornadas mais transformadoras de suas vidas."
+    professor_wendell "A universidade não é apenas um lugar de aprendizado acadêmico, mas um laboratório de descobertas pessoais, conexões humanas e crescimento interior."
+    professor_wendell "Cada um de vocês traz consigo sonhos únicos, perspectivas distintas e potencial ilimitado. Aqui, vocês não apenas estudarão, mas descobrirão quem realmente são."
+    professor_wendell "As amizades que vocês formarão aqui, os desafios que enfrentarão, as paixões que descobrirão... tudo isso moldará não apenas seus futuros profissionais, mas suas almas."
+    professor_wendell "Não tenham medo de explorar, de questionar, de se conectar com pessoas diferentes de vocês. É na diversidade que encontramos nossa verdadeira força."
+    professor_wendell "Agora, saiam e explorem este campus. Deixem que a vida os surpreenda com as pessoas incríveis que vocês estão prestes a conhecer."
     hide professor_wendell
     
-    narrator "Suas palavras ecoaram em meu coração como uma profecia. Algo dentro de mim sabia que este dia seria especial."
+    narrator "As palavras do Professor Wendell ecoaram em minha mente enquanto caminhava pelo campus. Sentia que algo especial estava prestes a acontecer."
+    narrator "Cada corredor, cada jardim, cada prédio parecia pulsar com possibilidades infinitas. Era como se o próprio campus estivesse esperando para me revelar seus segredos."
 
-    # === APRESENTAÇÕES MELHORADAS COM MECÂNICAS ===
-    narrator "Após a apresentação, os alunos começaram a se dispersar. Foi então que percebi um grupo se formando naturalmente ao meu redor..."
-
-    # Nicole - Apresentação mais profunda
-    show nicole neutral at left
-    nicole "Desculpem a interrupção, mas... vocês também sentiram que há algo diferente no ar hoje?"
-    nicole "Sou Nicole. Especializo-me em comunicação estratégica, mas minha verdadeira paixão é entender como as pessoas se conectam através de suas histórias."
-    nicole "Acredito que cada pessoa tem uma narrativa única esperando para ser descoberta."
-    $ add_affinity_points("nicole", 5, "Primeira impressão positiva")
-    hide nicole
-
-    # Katia - Personalidade tsundere
-    show katia neutral at left
-    katia "Hmm... interessante perspectiva, Nicole. Mas vocês sabem o que realmente me intriga?"
-    katia "Como as pessoas reagem quando suas expectativas são subvertidas. Sou Katia, cineasta em formação."
-    katia "Especializo-me em filmes que fazem você questionar a realidade. A vida real, afinal, é o maior thriller de todos."
-    katia "N-não que eu me importe com o que vocês pensam ou qualquer coisa assim..."
-    $ add_affinity_points("katia", 5, "Primeira impressão positiva")
-    hide katia
-
-    # Larissa - Energia mais contagiante
-    show larissa happy at left
-    larissa "Nossa, que energia incrível vocês têm! Sou Larissa, mas podem me chamar de Lari."
-    larissa "Sou apaixonada por esportes, especialmente vôlei. Acredito que o movimento do corpo liberta a mente, sabem?"
-    larissa "E olha só essa quadra aqui! É como se estivesse chamando a gente para criar memórias incríveis juntos!"
-    $ add_affinity_points("larissa", 5, "Primeira impressão positiva")
-    hide larissa
-
-    # Huey - Sensibilidade artística
-    show huey gentle at left
-    huey "Vocês... também sentiram que esta cidade respira arte? Cada esquina parece uma tela em branco esperando por uma pincelada de vida."
-    huey "Sou Aline, mas muitos me chamam de Hu Wei. Sou artista visual, e acredito que a beleza está nos detalhes que a maioria das pessoas ignora."
-    huey "Talvez... talvez tenhamos nos encontrado hoje por uma razão maior que o acaso."
-    $ add_affinity_points("huey", 5, "Primeira impressão positiva")
-    hide huey
-
-    # Samantha - Entusiasmo genuíno
-    show samantha happy at left
-    samantha "GENTE! Vocês são demais! Sou Samantha, streamer de jogos e mestra de RPG!"
-    samantha "Sabem o que é incrível? Cada um de vocês já parece ter uma personalidade única, como personagens de uma história épica!"
-    samantha "Imaginem só... se fôssemos um grupo de aventureiros em uma jornada real! Seria a campanha mais incrível de todas!"
-    $ add_affinity_points("samantha", 5, "Primeira impressão positiva")
-    hide samantha
-
-    # Camille - Espiritualidade sutil
-    show camille gentle at left
-    camille "Samantha... você disse exatamente o que eu estava sentindo. Sou Camille, e estudo as conexões energéticas entre as pessoas."
-    camille "Hoje, quando entrei neste auditório, senti algo especial. Como se o universo tivesse alinhado as estrelas para nos reunir."
-    camille "Cada um de vocês carrega uma energia única, mas juntos... juntos podemos criar algo verdadeiramente mágico."
-    $ add_affinity_points("camille", 5, "Primeira impressão positiva")
-    hide camille
-
-    # === MOMENTO DE CONEXÃO PROFUNDA ===
-    narrator "Por um instante, o tempo pareceu parar. Olhei ao redor e vi seis pessoas extraordinárias, cada uma com sua própria luz, mas todas conectadas por algo invisível e poderoso."
-
-    # Momento emocional - estabelece o tom do jogo
-    call emotional_moment("connection", None, "Reconhecimento de uma conexão especial entre o grupo") from _call_emotional_moment_1
+    # === EXPLORAÇÃO DO CAMPUS ===
+    narrator "Conforme explorava o campus, percebi que havia várias áreas interessantes para conhecer. Onde deveria começar minha jornada de descobertas?"
     
-    narrator "Meu coração se encheu de uma emoção indescritível. Esta não seria apenas mais uma faculdade - seria o início de uma família escolhida."
-
-    # === PLANOS PARA A TARDE - MAIS ORGÂNICOS ===
-    narrator "Conforme conversávamos, cada uma começou a compartilhar seus planos para a tarde..."
-
-    show nicole happy at left
-    nicole "Estava pensando em ir ao café da universidade para trabalhar em um projeto sobre storytelling em marketing."
-    nicole "Se alguém quiser trocar ideias sobre como contar histórias que realmente tocam as pessoas... seria uma conversa fascinante."
-    hide nicole
-
-    show katia neutral at left
-    katia "Eu tenho um filme independente em mente no cinema da cidade. Algo que desafia as convenções narrativas."
-    katia "Se alguém quiser uma experiência cinematográfica que vai fazer vocês questionarem tudo... estou indo sozinha mesmo."
-    katia "N-não é como se eu estivesse convidando ninguém ou algo assim! É só... se vocês quiserem, tanto faz."
-    hide katia
-
-    show larissa happy at left
-    larissa "Eu vou treinar na quadra! Quem quiser se mexer e liberar endorfina, é só aparecer!"
-    larissa "E depois podemos tomar um suco natural e conversar sobre como o movimento liberta a criatividade!"
-    hide larissa
-
-    show huey gentle at left
-    huey "Ouvi falar de uma nova exposição de arte contemporânea na galeria do centro."
-    huey "Se alguém quiser ver o mundo através de uma perspectiva diferente... seria uma experiência enriquecedora."
-    hide huey
-
-    show samantha happy at left
-    samantha "Eu vou montar uma campanha de RPG épica! Quem quiser criar um personagem e embarcar numa aventura, é só falar!"
-    samantha "E depois podemos assistir a um filme juntos para nos inspirar para as próximas sessões!"
-    hide samantha
-
-    show camille gentle at left
-    camille "Vou meditar no jardim da universidade. É um lugar perfeito para conectar-se com a natureza e recarregar as energias."
-    camille "Se alguém quiser aprender técnicas de mindfulness... seria um momento de paz compartilhado."
-    hide camille
-
-    # === ESCOLHA COM MAIS PESO EMOCIONAL ===
-    narrator "Cada proposta parecia mais tentadora que a anterior. Como escolher entre tantas possibilidades incríveis?"
-
-    narrator "Mas algo dentro de mim sabia que esta escolha seria importante. Não apenas para hoje, mas para toda a jornada que estava por vir."
-
+    # Inicializar variáveis de controle
+    $ events_completed = []
+    
+    # === PRIMEIRA ESCOLHA - EXPLORAÇÃO DO CAMPUS ===
     menu:
-        "Ir ao café com Nicole e Camille (Explorar storytelling e espiritualidade)":
-            $ add_shared_memory("cafe_first_meeting", ["nicole", "camille"], "Primeira conversa profunda sobre narrativas e conexões energéticas")
-            $ add_affinity_points("nicole", 10, "Interesse em seus projetos")
-            $ add_affinity_points("camille", 10, "Interesse em suas práticas")
+        "Ir para a biblioteca e centro de estudos":
+            $ add_shared_memory("library_exploration", [], "Primeira exploração da biblioteca do campus")
             call evento_nicole_camille
-            jump capitulo1_segunda_escolha
+            $ events_completed.append("library")
+            jump capitulo1_continue_exploration
             
-        "Assistir a um filme com Katia e Samantha (Mergulhar na arte e criatividade)":
-            $ add_shared_memory("cinema_first_meeting", ["katia", "samantha"], "Primeira experiência cinematográfica compartilhada")
-            $ add_affinity_points("katia", 10, "Interesse em cinema independente")
-            $ add_affinity_points("samantha", 10, "Interesse em suas atividades")
+        "Explorar a galeria de arte e espaços criativos":
+            $ add_shared_memory("arts_exploration", [], "Primeira exploração dos espaços artísticos")
+            call evento_huey_camille
+            $ events_completed.append("arts")
+            jump capitulo1_continue_exploration
             
-            # Reação tsundere da Katia
-            show katia blush at left
-            katia "E-eh?! Você quer vir comigo? N-não é como se eu estivesse esperando ou qualquer coisa assim..."
-            katia "Mas... se você realmente quer, eu... eu não me importo. Só não venha reclamar se o filme for muito profundo para você!"
-            hide katia
-            
-            call evento_katia_samantha
-            jump capitulo1_segunda_escolha
-            
-        "Treinar na quadra com Larissa e Huey (Conectar corpo, mente e arte)":
-            $ add_shared_memory("sports_first_meeting", ["larissa", "huey"], "Primeira atividade física e artística em grupo")
-            $ add_affinity_points("larissa", 10, "Interesse em esportes")
-            $ add_affinity_points("huey", 10, "Interesse em arte")
+        "Conhecer a quadra esportiva e áreas de lazer":
+            $ add_shared_memory("sports_exploration", [], "Primeira exploração das áreas esportivas")
             call evento_larissa_huey
+            $ events_completed.append("sports")
+            jump capitulo1_continue_exploration
+
+# === CONTINUAÇÃO DA EXPLORAÇÃO ===
+label capitulo1_continue_exploration:
+    narrator "Após essa primeira experiência, senti que havia muito mais para descobrir no campus. Onde deveria explorar a seguir?"
+    
+    menu:
+        "Ir para a biblioteca e centro de estudos" if "library" not in events_completed:
+            $ add_shared_memory("library_exploration", [], "Exploração da biblioteca do campus")
+            call evento_nicole_camille
+            $ events_completed.append("library")
+            jump capitulo1_continue_exploration
+            
+        "Explorar a galeria de arte e espaços criativos" if "arts" not in events_completed:
+            $ add_shared_memory("arts_exploration", [], "Exploração dos espaços artísticos")
+            call evento_huey_camille
+            $ events_completed.append("arts")
+            jump capitulo1_continue_exploration
+            
+        "Conhecer a quadra esportiva e áreas de lazer" if "sports" not in events_completed:
+            $ add_shared_memory("sports_exploration", [], "Exploração das áreas esportivas")
+            call evento_larissa_huey
+            $ events_completed.append("sports")
+            jump capitulo1_continue_exploration
+            
+        "Continuar para o próximo dia" if len(events_completed) >= 3:
             jump capitulo1_segunda_escolha
 
 # === SEGUNDA ESCOLHA - NOVO DIA ===
@@ -227,21 +155,31 @@ label capitulo1_terceira_escolha:
     narrator "O ambiente estava animado, com música, luzes coloridas e estudantes conversando em grupos. O ar estava carregado de energia e possibilidades."
     
     # Apresentação do grupo reunido
-    show nicole happy at left
-    show katia neutral at center_left
-    show larissa happy at center_right
-    show huey gentle at right
-    show samantha happy at far_left
-    show camille gentle at far_right
-    
     narrator "E foi então que as vi... todas as seis pessoas incríveis que havia conhecido, reunidas em um só lugar."
     
+    show nicole happy at center
     nicole "Nossa, que coincidência! Todas estamos aqui!"
+    hide nicole with dissolve
+    
+    show katia neutral at center
     katia "Hmm... tanto faz."
+    hide katia with dissolve
+    
+    show larissa happy at center
     larissa "GENTE! Que energia incrível! Vamos aproveitar essa festa!"
+    hide larissa with dissolve
+    
+    show huey gentle at center
     huey "É lindo ver todas vocês juntas... como uma obra de arte viva."
+    hide huey with dissolve
+    
+    show samantha happy at center
     samantha "Nossa, que legal! É tipo uma party épica com todas as personagens principais!"
+    hide samantha with dissolve
+    
+    show camille gentle at center
     camille "Senti uma energia muito especial vindo daqui... como se o universo tivesse nos reunido."
+    hide camille with dissolve
     
     narrator "Por um momento, todas ficaram em silêncio, observando uma à outra. Era como se houvesse uma conexão invisível entre todas elas."
     
@@ -453,6 +391,247 @@ label capitulo1_terceira_escolha:
             $ add_shared_memory("evening_walk_camille", ["camille"], "Caminhada noturna especial com Camille até sua república")
             $ add_affinity_points("camille", 15, "Momento íntimo especial")
             jump capitulo1_caminhada_camille
+
+# === QUARTA ESCOLHA - ENTREVISTA DE TRABALHO ===
+label capitulo1_quarta_escolha:
+    scene bg campus_morning with fade
+    
+    # Inicializar variáveis do sistema de trabalho
+    $ work_interests = {"analytical": False, "creative": False, "social": False}
+    $ work_style = {"independent": False, "collaborative": False, "leadership": False}
+    $ work_environment = {"quiet": False, "dynamic": False, "creative": False}
+    $ work_approach = {"analytical": False, "intuitive": False, "adaptive": False}
+    $ work_impact = {"efficiency": False, "community": False, "innovation": False}
+    $ chosen_work = ""
+    $ work_team = []
+    $ work_description = ""
+    $ work_benefits = ""
+    
+    narrator "O quarto dia na Faculdade Solária havia começado. Após as experiências incríveis dos dias anteriores, senti que era hora de pensar no futuro prático."
+    narrator "Precisava de um trabalho de meio período para me sustentar durante os estudos, e ouvi que o Professor Wendell poderia ter algumas orientações valiosas."
+    
+    scene bg professor_office with fade
+    show professor_wendell neutral at center
+    
+    narrator "Encontrei o Professor Wendell em seu escritório, organizando alguns documentos. Ele parecia estar esperando por alguém."
+    
+    professor_wendell "Ah, você! Estava esperando sua visita. Ouvi que você está procurando oportunidades de trabalho no campus."
+    professor_wendell "Tenho algumas posições interessantes disponíveis, mas antes preciso entender melhor seu perfil e interesses."
+    professor_wendell "Vamos fazer uma pequena entrevista para encontrar a posição ideal para você."
+    
+    narrator "O Professor Wendell se acomodou em sua cadeira e pegou um formulário. Sua expressão era séria, mas acolhedora."
+    
+    professor_wendell "Primeiro, me conte sobre seus interesses acadêmicos. O que mais te motiva nos estudos?"
+    
+    menu:
+        "Análise de dados e metodologia":
+            $ work_interests["analytical"] = True
+            $ work_interests["creative"] = False
+            $ work_interests["social"] = False
+            narrator "Mencionei minha paixão por análise de dados, metodologia e estruturas organizacionais."
+            professor_wendell "Interessante... uma mente analítica. Isso pode ser muito útil em várias áreas do campus."
+            
+        "Arte e expressão criativa":
+            $ work_interests["analytical"] = False
+            $ work_interests["creative"] = True
+            $ work_interests["social"] = False
+            narrator "Falei sobre meu interesse em arte, criatividade e expressão visual."
+            professor_wendell "Fascinante... a criatividade é essencial para o crescimento da universidade."
+            
+        "Interação social e comunicação":
+            $ work_interests["analytical"] = False
+            $ work_interests["creative"] = False
+            $ work_interests["social"] = True
+            narrator "Comentei sobre minha paixão por interação social, comunicação e trabalho em equipe."
+            professor_wendell "Excelente... as conexões humanas são o coração de qualquer instituição."
+    
+    professor_wendell "Agora, me conte sobre seu estilo de trabalho preferido. Como você gosta de trabalhar?"
+    
+    menu:
+        "Trabalho independente e focado":
+            $ work_style["independent"] = True
+            $ work_style["collaborative"] = False
+            $ work_style["leadership"] = False
+            narrator "Mencionei que prefiro trabalhar de forma independente, com foco e concentração."
+            professor_wendell "Entendo... autonomia e responsabilidade individual. Muito valioso."
+            
+        "Trabalho em equipe e colaborativo":
+            $ work_style["independent"] = False
+            $ work_style["collaborative"] = True
+            $ work_style["leadership"] = False
+            narrator "Falei sobre minha preferência por trabalho em equipe e colaboração."
+            professor_wendell "Perfeito... o trabalho em equipe é fundamental para o sucesso."
+            
+        "Liderança e coordenação de projetos":
+            $ work_style["independent"] = False
+            $ work_style["collaborative"] = False
+            $ work_style["leadership"] = True
+            narrator "Comentei sobre minha paixão por liderança e coordenação de projetos."
+            professor_wendell "Impressionante... líderes natos são raros e valiosos."
+    
+    professor_wendell "Qual ambiente de trabalho você considera mais produtivo para você?"
+    
+    menu:
+        "Ambiente silencioso e organizado":
+            $ work_environment["quiet"] = True
+            $ work_environment["dynamic"] = False
+            $ work_environment["creative"] = False
+            narrator "Mencionei que prefiro ambientes silenciosos e bem organizados."
+            professor_wendell "Compreensível... a concentração é essencial para certas tarefas."
+            
+        "Ambiente dinâmico e movimentado":
+            $ work_environment["quiet"] = False
+            $ work_environment["dynamic"] = True
+            $ work_environment["creative"] = False
+            narrator "Falei sobre minha preferência por ambientes dinâmicos e movimentados."
+            professor_wendell "Excelente... a energia é contagiante e produtiva."
+            
+        "Ambiente criativo e inspirador":
+            $ work_environment["quiet"] = False
+            $ work_environment["dynamic"] = False
+            $ work_environment["creative"] = True
+            narrator "Comentei sobre minha paixão por ambientes criativos e inspiradores."
+            professor_wendell "Maravilhoso... a inspiração é o motor da inovação."
+    
+    professor_wendell "Como você lida com desafios e pressão no trabalho?"
+    
+    menu:
+        "Análise sistemática e planejamento":
+            $ work_approach["analytical"] = True
+            $ work_approach["intuitive"] = False
+            $ work_approach["adaptive"] = False
+            narrator "Mencionei que prefiro analisar sistematicamente e planejar antes de agir."
+            professor_wendell "Muito bom... a abordagem metódica evita muitos problemas."
+            
+        "Intuição e criatividade":
+            $ work_approach["analytical"] = False
+            $ work_approach["intuitive"] = True
+            $ work_approach["adaptive"] = False
+            narrator "Falei sobre minha confiança na intuição e criatividade para resolver problemas."
+            professor_wendell "Interessante... a intuição pode ser uma ferramenta poderosa."
+            
+        "Adaptação rápida e flexibilidade":
+            $ work_approach["analytical"] = False
+            $ work_approach["intuitive"] = False
+            $ work_approach["adaptive"] = True
+            narrator "Comentei sobre minha capacidade de adaptação rápida e flexibilidade."
+            professor_wendell "Excelente... a adaptabilidade é crucial no mundo atual."
+    
+    professor_wendell "Por fim, qual tipo de impacto você gostaria de ter na universidade?"
+    
+    menu:
+        "Melhorar processos e eficiência":
+            $ work_impact["efficiency"] = True
+            $ work_impact["community"] = False
+            $ work_impact["innovation"] = False
+            narrator "Mencionei meu interesse em melhorar processos e eficiência da universidade."
+            professor_wendell "Muito nobre... a eficiência beneficia todos."
+            
+        "Fortalecer a comunidade estudantil":
+            $ work_impact["efficiency"] = False
+            $ work_impact["community"] = True
+            $ work_impact["innovation"] = False
+            narrator "Falei sobre meu desejo de fortalecer a comunidade estudantil."
+            professor_wendell "Admirável... a comunidade é o coração da universidade."
+            
+        "Promover inovação e criatividade":
+            $ work_impact["efficiency"] = False
+            $ work_impact["community"] = False
+            $ work_impact["innovation"] = True
+            narrator "Comentei sobre minha paixão por promover inovação e criatividade."
+            professor_wendell "Inspirador... a inovação é o futuro da educação."
+    
+    # === ANÁLISE DAS RESPOSTAS E DETERMINAÇÃO DO TRABALHO ===
+    narrator "O Professor Wendell analisou minhas respostas cuidadosamente, fazendo algumas anotações em seu formulário."
+    
+    professor_wendell "Baseado em suas respostas, identifiquei a posição ideal para você. Vou apresentar três opções que se alinham com seu perfil."
+    
+    # Calcular pontuações para determinar o trabalho
+    $ analytical_score = 0
+    $ creative_score = 0
+    $ social_score = 0
+    
+    if work_interests["analytical"]:
+        $ analytical_score += 2
+    if work_interests["creative"]:
+        $ creative_score += 2
+    if work_interests["social"]:
+        $ social_score += 2
+    
+    if work_style["independent"]:
+        $ analytical_score += 1
+    if work_style["collaborative"]:
+        $ social_score += 1
+    if work_style["leadership"]:
+        $ social_score += 1
+    
+    if work_environment["quiet"]:
+        $ analytical_score += 1
+    if work_environment["dynamic"]:
+        $ social_score += 1
+    if work_environment["creative"]:
+        $ creative_score += 1
+    
+    if work_approach["analytical"]:
+        $ analytical_score += 1
+    if work_approach["intuitive"]:
+        $ creative_score += 1
+    if work_approach["adaptive"]:
+        $ social_score += 1
+    
+    if work_impact["efficiency"]:
+        $ analytical_score += 1
+    if work_impact["community"]:
+        $ social_score += 1
+    if work_impact["innovation"]:
+        $ creative_score += 1
+    
+    # Determinar o trabalho baseado nas pontuações
+    if analytical_score >= creative_score and analytical_score >= social_score:
+        $ chosen_work = "library"
+        $ work_team = ["nicole", "katia", "huey"]
+        $ work_description = "Biblioteca e Centro de Pesquisa"
+        $ work_benefits = "Trabalhar com Nicole na organização de dados, Katia na análise de narrativas e Huey na curadoria artística"
+    elif creative_score >= social_score:
+        $ chosen_work = "arts_center"
+        $ work_team = ["huey", "camille", "samantha"]
+        $ work_description = "Centro de Artes e Criatividade"
+        $ work_benefits = "Colaborar com Huey em projetos artísticos, Camille em eventos espirituais e Samantha em atividades criativas"
+    else:
+        $ chosen_work = "student_center"
+        $ work_team = ["larissa", "samantha", "camille"]
+        $ work_description = "Centro Estudantil e Atividades"
+        $ work_benefits = "Trabalhar com Larissa em eventos esportivos, Samantha em atividades de entretenimento e Camille em eventos comunitários"
+    
+    professor_wendell "Perfeito! Baseado em seu perfil, recomendo que você trabalhe no [work_description]."
+    professor_wendell "[work_benefits]."
+    professor_wendell "Esta posição permitirá que você desenvolva suas habilidades enquanto contribui significativamente para a universidade."
+    
+    narrator "O Professor Wendell me entregou um documento com os detalhes da posição e os contatos das pessoas com quem trabalharia."
+    
+    # Adicionar memória compartilhada sobre o trabalho
+    $ add_shared_memory("work_assignment", work_team, f"Atribuição de trabalho no {work_description} com foco em {work_benefits}")
+    
+    # Adicionar pontos de afinidade com a equipe de trabalho
+    python:
+        for character in work_team:
+            add_affinity_points(character, 10, "Colega de trabalho")
+    
+    professor_wendell "Agora, você gostaria de conhecer melhor sua equipe de trabalho? Posso apresentá-lo às pessoas com quem você colaborará."
+    
+    menu:
+        "Sim, gostaria de conhecer a equipe":
+            $ add_affinity_points(work_team[0], 5, "Interesse em colaboração")
+            $ add_affinity_points(work_team[1], 5, "Interesse em colaboração")
+            $ add_affinity_points(work_team[2], 5, "Interesse em colaboração")
+            narrator "Concordei em conhecer a equipe de trabalho."
+            professor_wendell "Excelente! Vou organizar um encontro para vocês se conhecerem melhor."
+            jump capitulo1_final
+            
+        "Prefiro começar o trabalho diretamente":
+            narrator "Agradeci a oferta, mas preferi começar o trabalho diretamente."
+            professor_wendell "Entendo perfeitamente. Boa sorte em sua nova posição!"
+            jump capitulo1_final
 
 
 # === FINAL DO CAPÍTULO 1 - RETROSPECTIVA E PROGRESSÃO ===
