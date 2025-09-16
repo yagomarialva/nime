@@ -1,25 +1,42 @@
-# --- Evento Larissa e Huey ---
+# --- Evento Larissa e Huey - PRIMEIRO ENCONTRO ---
 label evento_larissa_huey:
     $ points_larissa += 1
     scene bg quadra_volei with dissolve
+    narrator "Entrei na quadra de vôlei da universidade, procurando um lugar para praticar esportes. O ambiente estava movimentado, com outros estudantes treinando e o som das bolas ecoando."
+    narrator "Escolhi uma quadra vazia para fazer alguns exercícios. Foi então que percebi que não estava sozinho..."
+
+    # Apresentação natural da Larissa
     show larissa_volei at left
-    show huey voley at right
-
-    narrator "Larissa me convidou para uma partida de vôlei na quadra da universidade. O ambiente estava movimentado, com outros estudantes treinando e o som das bolas ecoando."
-    narrator "Huey apareceu com seu caderno de desenhos, mas parecia um pouco perdida no ambiente esportivo."
-
+    larissa "Oi! Você também veio treinar? Que legal!"
+    larissa "Sou Larissa, estudo educação física e adoro esportes! Especialmente vôlei!"
     larissa "Vamos aquecer antes do jogo. Preparado para suar a camisa? Hoje vamos treinar duro!"
-    huey "O movimento dos corpos em ação... é como uma dança. Cada gesto conta uma história."
-    
+
+    narrator "Larissa chegou com energia contagiante, carregando uma bola de vôlei e com um sorriso radiante. Havia algo motivador em sua presença."
+
+    # Apresentação natural da Huey
+    show huey neutral at right
+    huey "Nossa, que energia incrível vocês têm aqui... posso me juntar a vocês?"
+    huey "Sou Huey, estudo artes visuais. O movimento dos corpos em ação... é como uma dança. Cada gesto conta uma história."
+    huey "Estava desenhando alguns esboços quando vi vocês treinando... é fascinante como o esporte pode ser tão artístico."
+
+    narrator "Huey chegou com passos suaves, carregando um caderno de desenhos e alguns materiais de arte. Havia algo contemplativo em sua presença."
+
+    # Apresentação do jogador
+    narrator "Me apresentei brevemente, explicando que era novo na universidade e estava explorando diferentes atividades físicas e artísticas."
+    narrator "Ambas pareceram interessadas em conhecer minha perspectiva sobre esporte e arte."
+
+    larissa "Que legal! E qual sua abordagem para esportes? Você prefere competição ou mais recreativo?"
     larissa "Dança? Huey, isso é esporte! Precisamos de foco, técnica e determinação para vencer."
+    
     huey "Mas a beleza está no processo, não apenas no resultado final. Cada movimento tem sua própria poesia."
     
     larissa "Beleza? Huey, no vôlei o que importa é ganhar! Pontos, sets, vitórias. É isso que conta."
     huey "E se eu te disser que a verdadeira vitória está em encontrar significado em cada momento?"
     
     narrator "Senti que havia uma tensão sutil entre as duas perspectivas. Larissa focada na competição, Huey na essência artística."
+    narrator "E eu estava no meio, observando como duas abordagens aparentemente opostas podiam coexistir."
 
-    # Primeira interação: Quadra de vôlei
+    # Primeira interação: Quadra de vôlei - Primeiro encontro
     menu:
         "Apoiar a abordagem competitiva de Larissa":
             $ points_larissa += 1
@@ -35,12 +52,12 @@ label evento_larissa_huey:
             larissa "Mas Huey, sem competição, como vamos medir nosso progresso? Como saber se estamos melhorando?"
             huey "Talvez o progresso não seja só sobre números, mas sobre como nos sentimos ao jogar."
 
-        "Tentar mediar as duas perspectivas":
+        "Compartilhar sua própria perspectiva sobre esporte e arte":
             $ points_larissa += 1
             $ points_huey += 1
-            narrator "Sugeri que talvez ambas as abordagens tivessem seu valor."
-            larissa "Hmm... talvez você tenha razão. Mas ainda acho que precisamos de objetivos claros."
-            huey "E eu acho que podemos encontrar beleza mesmo na competição mais acirrada."
+            narrator "Compartilhei minha própria visão sobre esporte e arte, tentando encontrar um meio termo."
+            larissa "Interessante perspectiva... você parece equilibrar bem os dois lados."
+            huey "Sinto que você tem uma energia muito equilibrada... como se conseguisse ver o valor em ambas as abordagens."
 
         "Perguntar a Larissa sobre o que a motiva no esporte":
             $ points_larissa += 1
@@ -53,6 +70,13 @@ label evento_larissa_huey:
             huey "A concentração nos olhos, a sincronia entre os jogadores, a emoção pura... é arte em movimento."
             larissa "Arte? Huey, isso é estratégia, técnica, força física! Não tem nada de artístico."
             huey "Mas Larissa, você não sente que há algo mágico quando tudo se alinha perfeitamente?"
+
+        "Tentar mediar as duas perspectivas":
+            $ points_larissa += 1
+            $ points_huey += 1
+            narrator "Sugeri que talvez ambas as abordagens tivessem seu valor."
+            larissa "Hmm... talvez você tenha razão. Mas ainda acho que precisamos de objetivos claros."
+            huey "E eu acho que podemos encontrar beleza mesmo na competição mais acirrada."
 
     # Transição para o jardim
     scene bg jardim_universidade with dissolve
@@ -160,17 +184,19 @@ label evento_larissa_huey:
             huey "Larissa, talvez a 'vida real' seja exatamente isso: entender quem somos e o que nos move."
             larissa "Huey, você precisa de objetivos concretos, metas mensuráveis, resultados tangíveis."
 
-    # === MOMENTO DE REFLEXÃO E CRESCIMENTO MÚTUO ===
+    # === MOMENTO DE REFLEXÃO E CRESCIMENTO MÚTUO - PRIMEIRO ENCONTRO ===
     narrator "Por um momento, todas ficaram em silêncio, processando as diferentes perspectivas que haviam sido compartilhadas."
     narrator "O ambiente da cafeteria parecia ter se transformado em um espaço de reflexão profunda."
     
     # Larissa mostra crescimento
     larissa "Huey... eu nunca tinha pensado no esporte dessa forma. Sempre foquei apenas em vencer, em ser melhor."
     larissa "Mas talvez você tenha razão. Talvez haja algo mais profundo que eu estava perdendo."
+    larissa "É raro encontrar alguém que veja o esporte de uma forma tão... poética."
     
     # Huey mostra crescimento
     huey "E eu nunca tinha considerado que a competição pudesse ser uma forma de arte também."
     huey "A paixão que você tem, a determinação... isso também é belo, também tem significado."
+    huey "E você... você parece ter uma perspectiva interessante sobre equilibrar competição e arte."
     
     # Momento de conexão
     narrator "As duas se olharam com uma nova compreensão, como se tivessem descoberto algo importante sobre si mesmas."
@@ -197,4 +223,4 @@ label evento_larissa_huey:
     narrator "Foi um dia que mudou a forma como vemos o esporte e a arte - não como opostos, mas como complementos."
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde determinação e beleza dançavam juntas em perfeita harmonia."
 
-    jump capitulo1_final
+    return

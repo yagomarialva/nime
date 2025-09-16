@@ -1,19 +1,35 @@
-# --- Evento Katia e Samantha ---
+# --- Evento Katia e Samantha - PRIMEIRO ENCONTRO ---
 label evento_katia_samantha:
     $ points_katia += 1
     scene bg cinema with dissolve
-    show katia angry at left
-    show samantha neutral at right
+    narrator "Entrei no cinema da universidade, procurando uma sessão interessante para assistir. O ambiente estava silencioso, com poucas pessoas na sessão da tarde."
+    narrator "Escolhi um filme cult que estava sendo exibido - algo sobre identidade e realidade. Foi então que percebi que não estava sozinho..."
 
-    narrator "Katia me convidou para assistir a um filme cult no cinema da cidade. O ambiente estava silencioso, com poucas pessoas na sessão da tarde."
-    narrator "Samantha apareceu de surpresa, carregando uma mochila cheia de livros e um caderno de anotações."
+    # Apresentação natural da Katia
+    show katia neutral at left
+    katia "Hmm... você também veio assistir este filme? Interessante."
+    katia "Sou Katia, estudo cinema e análise de narrativas. Este diretor tem uma abordagem única sobre subjetividade."
+    katia "N-não é como se eu estivesse procurando companhia ou qualquer coisa assim... mas é raro encontrar alguém que aprecie cinema de verdade."
 
-    katia "E-ei! Eu te convidei... não esperava que virasse um encontro em grupo." 
-    katia "Hmpf. Mas tanto faz. Só não atrapalha."
-    katia "N-não é como se eu estivesse esperando um encontro a dois ou qualquer coisa assim!"
+    narrator "Katia se acomodou na poltrona ao lado, carregando um caderno de anotações e uma caneta. Havia algo intenso em sua presença, como se ela estivesse sempre analisando tudo ao redor."
 
-    samantha "Oi! Desculpa aparecer assim do nada, mas quando vi que vocês estavam vindo para o cinema, não consegui resistir!"
-    samantha "Esse filme tem um enredo tão interessante... cheio de camadas filosóficas! É tipo um RPG com múltiplas escolhas!"
+    # Apresentação natural da Samantha
+    show samantha happy at right
+    samantha "Nossa, que legal! Vocês também vieram assistir este filme?"
+    samantha "Sou Samantha, estudo jogos e narrativas interativas! Este filme tem um enredo tão interessante... cheio de camadas filosóficas!"
+    samantha "É tipo um RPG com múltiplas escolhas! Imaginem só... uma aventura onde vocês são aventureiros em uma realidade alternativa!"
+
+    narrator "Samantha chegou com passos animados, carregando uma mochila cheia de livros e um caderno de anotações. Havia algo contagiante em seu entusiasmo."
+
+    # Apresentação do jogador
+    narrator "Me apresentei brevemente, explicando que era novo na universidade e estava explorando diferentes formas de arte e entretenimento."
+    narrator "Ambas pareceram interessadas em conhecer minha perspectiva sobre o filme que estávamos prestes a assistir."
+
+    katia "Hmm... interessante. E qual sua abordagem para análise cinematográfica? Você prefere análise técnica ou mais emocional?"
+    katia "Este diretor tem uma abordagem única sobre subjetividade... não é para qualquer um."
+
+    samantha "Nossa, que legal! Eu adoro quando as pessoas se interessam por narrativas complexas!"
+    samantha "Este filme tem um enredo tão interessante... cheio de camadas filosóficas! É tipo um RPG com múltiplas escolhas!"
 
     katia "Tsc... é só um filme, não precisa fazer uma tese. E para de falar tão alto, estamos num cinema!"
 
@@ -31,6 +47,7 @@ label evento_katia_samantha:
     katia "Mas... se você quiser, posso te explicar algumas coisas que talvez você não tenha entendido."
 
     narrator "O clima entre elas era... tenso, mas havia algo de genuíno na interação. Katia tentando manter sua fachada tsundere, Samantha sendo sua versão nerd desajeitada."
+    narrator "E eu estava no meio, observando como duas abordagens aparentemente opostas podiam coexistir."
     scene bg cinema_katia_samantha with dissolve
     menu:
         "Discutir simbolismos do filme com Katia":
@@ -51,13 +68,13 @@ label evento_katia_samantha:
             katia "Hmpf... como se eu não conhecesse trilhas sonoras. Eu tenho a coleção completa do Ennio Morricone."
             samantha "Nossa, sério? Ele é um dos meus compositores favoritos! E você já ouviu as trilhas do Nobuo Uematsu? São épicas!"
 
-        "Comparar o filme com jogos de terror com Samantha":
-            $ points_samantha += 3
-            narrator "Concordei com a conexão que Samantha fez entre cinema e jogos."
-            samantha "Sim! Muitos jogos se inspiram nesse estilo cinematográfico. Podemos jogar algo parecido depois, tipo Silent Hill 2!"
-            samantha "Aliás, você sabia que esse diretor foi consultor num game japonês obscuro? É tipo um easter egg!"
-            katia "Tsc... jogos? Sério que você está comparando cinema de arte com videogames?"
-            samantha "Ah, mas Katia, os jogos podem ser arte também! Eles têm narrativa, direção, trilha sonora... é tipo cinema interativo!"
+        "Compartilhar sua própria perspectiva sobre cinema e jogos":
+            $ points_katia += 1
+            $ points_samantha += 1
+            narrator "Compartilhei minha própria visão sobre cinema e jogos, tentando encontrar um meio termo."
+            katia "Interessante perspectiva... você parece equilibrar bem os dois lados."
+            samantha "Nossa, que legal! Eu adoro quando as pessoas conseguem ver o valor em ambas as formas de arte!"
+            katia "Hmpf... talvez você tenha razão. Mas ainda acho que cinema é superior a jogos."
 
         "Perguntar a Katia sobre diretores independentes":
             $ points_katia += 3
@@ -67,6 +84,14 @@ label evento_katia_samantha:
             katia "Mas só porque eu odeio quando bons diretores passam despercebidos! Não é por sua causa ou algo assim."
             katia "É só que... você parece ter um gosto decente. N-não que eu me importe com sua opinião ou qualquer coisa!"
             samantha "Nossa, que legal! Eu adoraria conhecer mais diretores independentes. Você pode me indicar alguns?"
+
+        "Perguntar a Samantha sobre jogos com narrativas cinematográficas":
+            $ points_samantha += 3
+            narrator "Perguntei sobre jogos que têm narrativas complexas como filmes."
+            samantha "Nossa, que pergunta incrível! Tem vários jogos que são verdadeiras obras de arte!"
+            samantha "Tipo Persona 5, que tem uma história incrível, ou até jogos indie como Celeste que falam sobre saúde mental!"
+            katia "Tsc... jogos? Sério que você está comparando cinema de arte com videogames?"
+            samantha "Ah, mas Katia, os jogos podem ser arte também! Eles têm narrativa, direção, trilha sonora... é tipo cinema interativo!"
 
         "Tentar mediar a discussão entre as duas":
             $ points_katia += 1
@@ -254,10 +279,11 @@ label evento_katia_samantha:
     show katia neutral at left
     show samantha neutral at right
 
-    # Momento de reflexão e crescimento
+    # Momento de reflexão e crescimento - Primeiro encontro
     narrator "Por um momento, todas ficaram em silêncio, processando a noite que haviam compartilhado."
     
     katia "Bem... foi... menos chato do que eu esperava. Você não é tão irritante quanto parecia."
+    katia "É raro encontrar alguém que realmente entenda de cinema... e você parece ter um gosto decente."
     samantha "Nossa, obrigada! Eu também gostei muito de conversar com você!"
     samantha "Você é realmente muito inteligente, Katia. Aprendi muito sobre cinema hoje!"
     samantha "É tipo quando você joga um RPG e encontra um NPC que te ensina coisas incríveis!"
@@ -325,4 +351,4 @@ label evento_katia_samantha:
     narrator "Era como se tivéssemos descoberto uma nova forma de ver o entretenimento - não como opostos, mas como complementos."
     narrator "Katia aprendendo a valorizar o entusiasmo genuíno, Samantha aprendendo a valorizar a análise crítica."
 
-    jump capitulo1_final
+    return

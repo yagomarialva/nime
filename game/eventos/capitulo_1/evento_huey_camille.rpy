@@ -1,63 +1,111 @@
-# === EVENTO HUEY E CAMILLE ===
+# === EVENTO HUEY E CAMILLE - PRIMEIRO ENCONTRO ===
 # Artista vs. Espiritual
 
 label evento_huey_camille:
     $ points_huey += 1
-    scene bg galeria_arte with dissolve
+    scene bg art_room with dissolve
+    narrator "Entrei na galeria de arte e espaços criativos da universidade, procurando um lugar para me inspirar. O ambiente estava silencioso e contemplativo, com obras de arte espalhadas pelas paredes."
+    narrator "Foi então que percebi que não estava sozinho..."
+
+    # Apresentação natural da Huey
     show huey gentle at left
+    huey "Ah, oi, [nome]! Que coincidência te encontrar aqui."
+    huey "Estava procurando um lugar para me inspirar para um projeto sobre conexões humanas."
+    huey "É bom te ver aqui... sempre valorizo sua perspectiva sobre arte."
+
+    narrator "Huey se acomodou em um canto da galeria, carregando um caderno de esboços e alguns materiais de arte. Havia algo contemplativo em sua presença, como se ela estivesse sempre absorvendo a beleza ao redor."
+
+    # Apresentação natural da Camille
     show camille gentle at right
+    camille "Olaá, [nome]! Muito bom te ver aqui."
+    camille "Estou trabalhando em um projeto sobre conexões energéticas... é fascinante como podemos sentir a energia que permeia tudo."
 
-    narrator "Huey me convidou para visitar uma exposição de arte contemporânea na galeria do centro. O ambiente estava silencioso e contemplativo."
-    narrator "Camille apareceu de surpresa, carregando um caderno de anotações e com um ar sereno."
+    narrator "Camille organizou seus materiais com cuidado, carregando um caderno de anotações e alguns cristais pequenos."
+    narrator "Havia algo sereno em sua presença, como se ela trouxesse calma para o ambiente, mas também notei um olhar curioso em direção a Huey."
 
-    huey "Obrigada por vir! Esta exposição é realmente especial... cada obra conta uma história única."
-    huey "Preciso de sua opinião sobre algo importante. Estou trabalhando em uma série sobre conexões humanas."
+    # Apresentação entre elas
+    narrator "Ambas pareceram interessadas em conhecer a perspectiva uma da outra sobre os temas que estavam trabalhando."
 
-    camille "Nossa, que sincronia! Eu também estava pensando sobre conexões... mas de uma perspectiva mais energética."
-    camille "Senti uma energia muito forte vindo daqui... como se as obras estivessem vibrando com algo especial."
+    # Primeiro momento de tensão sutil - elas se conhecem através do jogador
+    huey "Hmm... interessante. E qual sua abordagem para conexões? Você prefere arte ou mais espiritual?"
+    huey "Este projeto que estou fazendo... é sobre como capturar emoções através da arte."
 
-    huey "Energia? Camille, você também sente isso? É como se cada obra tivesse sua própria aura, sua própria emoção..."
-    huey "Quando estou aqui, sinto que posso capturar não apenas o visual, mas também a essência que cada peça emana."
+    camille "Que coincidência! Eu também estou trabalhando com conexões, mas focando em energia e espiritualidade."
+    camille "Estou organizando um projeto sobre como sentir a energia que permeia tudo... é fascinante como podemos nos conectar com o universo."
 
-    camille "Huey, você entende exatamente o que eu sinto! A arte é sobre essa conexão profunda, sobre sentir além do que vemos."
-    camille "Cada obra carrega a energia de quem a criou... e quando você se conecta com ela, consegue sentir essa essência."
+    # Primeiro momento de tensão sutil - elas se conhecem
+    huey "Conexões energéticas? Você também sente isso? É como se cada obra tivesse sua própria aura, sua própria emoção..."
+    huey "É raro encontrar alguém que realmente entenda de sensibilidade."
 
-    huey "Exato! É como se cada pincelada, cada cor, cada textura... tudo fosse uma forma de canalizar emoções e energias."
-    huey "Quando pinto, sinto que estou traduzindo algo que existe além do mundo físico."
+    camille "Sim, adoro sentir como as energias fluem através de tudo. Cada elemento tem seu propósito, cada vibração contribui para o todo."
+    camille "É fascinante como podemos nos conectar com algo maior que nós mesmos."
 
-    camille "Huey, você descreveu perfeitamente! É exatamente isso que sinto quando medito ou quando me conecto com a natureza."
-    camille "É sobre sentir a energia que permeia tudo... e a arte é uma forma linda de expressar essa conexão."
+    # Apresentação entre elas
+    huey "Interessante. Sou Huey, estudo artes visuais e expressão criativa."
+    huey "É bom conhecer alguém que entende de sensibilidade."
 
-    narrator "Senti que havia uma conexão genuína entre elas. Ambas compartilhavam a mesma sensibilidade para perceber e expressar as energias sutis do mundo, apenas com linguagens diferentes."
+    camille "Prazer, Camille. Estudo conexões energéticas e práticas de mindfulness."
+    camille "É reconfortante encontrar alguém que valoriza a sensibilidade tanto quanto eu..."
 
-    scene bg galeria_arte with dissolve
+    huey "Conexões energéticas? Interessante."
+    huey "Sua abordagem parece... espiritual."
+
+    camille "E sua paixão pela arte é... inspiradora."
+    camille "É fascinante como conseguimos ver a mesma coisa de perspectivas diferentes."
+
+    # Tensão sutil entre elas
+    narrator "Senti que havia uma tensão sutil no ar. Ambas pareciam interessadas em se conhecer, mas também havia algo de... competitividade?"
+    narrator "E eu estava no meio, observando como duas abordagens aparentemente complementares podiam criar uma dinâmica interessante."
+
+    scene bg art_room with dissolve
     menu:
         "Discutir como a arte captura emoções":
             $ points_huey += 3
             narrator "Concordei com a perspectiva de Huey sobre arte e emoção."
             huey "Exato! A arte é sobre traduzir o que sentimos em algo tangível!"
             huey "Cada cor, cada pincelada... tudo é uma forma de expressar emoções que não conseguimos dizer com palavras!"
+            huey "Você parece ter uma perspectiva interessante sobre isso..."
             camille "Huey, você disse exatamente o que eu sinto! É como se a arte fosse uma linguagem universal das emoções!"
+            camille "É reconfortante saber que você valoriza tanto a expressão artística quanto a espiritual..."
 
         "Explorar a energia que permeia a arte":
             $ points_camille += 3
             narrator "Concordei com a perspectiva de Camille sobre energia e arte."
             camille "Exato! Cada obra carrega a energia de quem a criou!"
             camille "Quando você se conecta com uma obra, consegue sentir a essência que o artista colocou nela!"
+            camille "É reconfortante encontrar alguém que valoriza a sensibilidade tanto quanto eu..."
             huey "Nossa, Camille, você descreveu perfeitamente! É exatamente isso que sinto quando olho para uma pintura!"
+            huey "Sua abordagem é... espiritual."
 
-        "Compartilhar experiências de conexão":
+        "Compartilhar sua própria perspectiva sobre arte e espiritualidade":
+            $ points_huey += 1
+            $ points_camille += 1
+            narrator "Compartilhei minha própria visão sobre arte e espiritualidade, tentando encontrar um meio termo."
+            huey "Interessante perspectiva. Você parece equilibrar bem os dois lados."
+            huey "Você tem uma forma única de ver as coisas..."
+            camille "Sinto que você tem uma energia muito equilibrada... como se conseguisse ver o valor em ambas as abordagens."
+            camille "É reconfortante saber que você valoriza tanto a arte quanto a espiritualidade..."
+
+        "Perguntar a Huey sobre seus projetos artísticos":
             $ points_huey += 2
+            narrator "Perguntei sobre os projetos artísticos de Huey."
+            huey "Bem... sempre me conecto com a energia criativa antes de começar a pintar."
+            huey "É raro encontrar alguém que realmente entenda de sensibilidade..."
+            camille "Fascinante! Eu também sinto energia, mas nunca pensei em expressá-la através da arte como você faz!"
+            camille "É interessante como vocês dois parecem ter gostos similares..."
+
+        "Perguntar a Camille sobre suas práticas espirituais":
             $ points_camille += 2
-            narrator "Sugeri que compartilhassem suas experiências de conexão com a arte."
-            huey "Que ideia linda! É fascinante como cada uma de nós sente e expressa essas conexões!"
-            camille "Sim! E é incrível como chegamos ao mesmo lugar por caminhos diferentes!"
-            huey "É como se fôssemos duas artistas da mesma alma, apenas usando linguagens diferentes!"
+            narrator "Perguntei sobre as práticas espirituais de Camille."
+            camille "Bem... uso meditação e mindfulness para me conectar com a energia universal."
+            camille "É reconfortante encontrar alguém que valoriza a sensibilidade tanto quanto eu..."
+            huey "Interessante. Sua abordagem é... metódica."
+            huey "É raro encontrar alguém que sinta energia de forma tão... espiritual."
 
     # Cena adicional 2 – Workshop prático
     hide huey
     hide camille
-    scene bg galeria_arte with dissolve
+    scene bg art_room with dissolve
     show huey gentle at left
     show camille gentle at right
 
@@ -111,7 +159,7 @@ label evento_huey_camille:
     # Cena adicional 3 – Reflexão
     hide huey
     hide camille
-    scene bg galeria_arte with dissolve
+    scene bg art_room with dissolve
     show huey gentle at left
     show camille gentle at right
 
@@ -167,18 +215,22 @@ label evento_huey_camille:
             narrator "Sugeri que refletissem sobre a conexão especial que haviam descoberto."
             huey "Nunca pensei que encontraria alguém que sentisse a arte da mesma forma que eu..."
             camille "E eu nunca imaginei que encontraria alguém que canalizasse energia através da arte como você!"
-            huey "É como se fôssemos duas almas gêmeas da sensibilidade... N-não é como se eu estivesse sendo sentimental ou qualquer coisa assim!"
+            huey "É como se fôssemos duas almas gêmeas da sensibilidade..."
 
     # Memória compartilhada especial
     $ add_shared_memory("sensitive_souls_connection", ["huey", "camille"], "O momento em que descobrimos nossa conexão especial como almas sensíveis e criativas")
 
     hide huey
     hide camille
-    scene bg galeria_arte with dissolve
+    scene bg art_room with dissolve
 
     narrator "O sol começava a se pôr sobre a galeria, mas a conversa continuava inspiradora."
     narrator "Era como se tivéssemos descoberto algo especial... uma conexão entre duas perspectivas que pareciam opostas, mas que na verdade se complementavam perfeitamente."
 
     narrator "Huey e Camille haviam encontrado um terreno comum, e eu mal podia esperar para ver o que essa colaboração poderia gerar..."
+    narrator "Mas também havia algo de... tensão no ar, como se cada uma quisesse ser a única a compartilhar essa paixão comigo."
+
+    narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde arte e espiritualidade dançavam juntas em perfeita harmonia."
+    narrator "Mas também havia algo de... estranho no ar, como se cada uma quisesse ser a única a me ensinar sobre sensibilidade."
 
     return
