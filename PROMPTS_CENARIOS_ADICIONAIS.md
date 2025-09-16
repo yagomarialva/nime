@@ -372,6 +372,90 @@ blurry, low resolution, night time, office, classroom, hospital, bad lighting, u
 
 ---
 
+## 🏖️ CENÁRIOS DE PRAIA
+
+### 🌞 **PRAIA DIA (praia_dia)**
+**Prompt Positivo:**
+```
+A beautiful sunny beach during daytime, crystal clear blue ocean waves, golden sand stretching far, bright blue sky with white fluffy clouds, beach umbrellas and chairs scattered around, palm trees swaying in gentle breeze, warm sunlight, anime style, tropical paradise atmosphere, detailed beach scenery, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, night time, stormy weather, dark clouds, cold lighting, dirty sand, polluted water, empty beach, winter scene, snow, rain, bad weather, unrealistic proportions, poor composition, oversaturated colors, industrial setting
+```
+
+### 🌅 **PRAIA TARDE (praia_tarde)**
+**Prompt Positivo:**
+```
+A beautiful beach during late afternoon, golden hour lighting, warm orange and pink sky reflecting on ocean, golden sand, beach umbrellas and chairs, palm trees silhouetted against colorful sky, romantic lighting, anime style, peaceful sunset atmosphere, detailed beach scenery, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, night time, morning light, stormy weather, dark clouds, cold lighting, dirty sand, polluted water, empty beach, winter scene, snow, rain, bad weather, unrealistic proportions, poor composition, harsh lighting
+```
+
+### 🌙 **PRAIA NOITE (praia_noite)**
+**Prompt Positivo:**
+```
+A beautiful beach at night, dark blue ocean waves under moonlight, silver sand, beach umbrellas and chairs in shadows, palm trees silhouetted against starry sky, soft moonlight, anime style, romantic night atmosphere, detailed beach scenery, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, bright daylight, morning light, stormy weather, harsh lighting, dirty sand, polluted water, empty beach, winter scene, snow, rain, bad weather, unrealistic proportions, poor composition, oversaturated colors
+```
+
+### 🏖️ **ARENA DA PRAIA (areia_praia)**
+**Prompt Positivo:**
+```
+Close-up view of golden beach sand, fine grains sparkling in sunlight, small seashells scattered around, gentle waves in background, warm natural lighting, anime style, detailed sand texture, peaceful beach atmosphere, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, dirty sand, mud, rocks, gravel, snow, ice, desert sand, construction site, industrial area, bad texture, unrealistic proportions, poor composition, oversaturated colors, artificial lighting
+```
+
+### 🌊 **MAR/OCÉANO (mar)**
+**Prompt Positivo:**
+```
+Beautiful ocean waves, crystal clear blue water, gentle waves rolling onto shore, bright blue sky above, seagulls flying, distant horizon, warm sunlight, anime style, peaceful ocean atmosphere, detailed water and waves, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, stormy sea, rough waves, dark water, polluted water, lake, river, pool, swimming pool, bad weather, unrealistic proportions, poor composition, oversaturated colors, artificial lighting, industrial setting
+```
+
+### ☂️ **GUARDA-SOL PRAIA (guarda_sol_praia)**
+**Prompt Positivo:**
+```
+Colorful beach umbrellas on golden sand, striped patterns in bright colors, beach chairs underneath, ocean waves in background, palm trees swaying, warm sunlight, anime style, tropical beach atmosphere, detailed umbrella and beach setup, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, broken umbrellas, dirty umbrellas, indoor setting, office, classroom, bad weather, storm, unrealistic proportions, poor composition, oversaturated colors, artificial lighting, industrial setting
+```
+
+### 🪑 **CADEIRAS DE PRAIA (cadeiras_praia)**
+**Prompt Positivo:**
+```
+Beach chairs and loungers on golden sand, colorful towels, beach umbrellas providing shade, ocean waves in background, palm trees, warm sunlight, anime style, relaxing beach atmosphere, detailed beach furniture, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, indoor furniture, office chairs, broken chairs, dirty furniture, bad weather, storm, unrealistic proportions, poor composition, oversaturated colors, artificial lighting, industrial setting, empty beach
+```
+
+### 🏝️ **ILHA TROPICAL (ilha_tropical)**
+**Prompt Positivo:**
+```
+Tropical island paradise, pristine white sand beach, crystal clear turquoise water, lush green palm trees, colorful tropical flowers, bright blue sky, warm tropical sunlight, anime style, exotic island atmosphere, detailed tropical scenery, slice of life visual novel background
+```
+**Prompt Negativo:**
+```
+blurry, low resolution, cold climate, snow, ice, desert, mountains, urban setting, industrial area, bad weather, storm, unrealistic proportions, poor composition, oversaturated colors, artificial lighting, polluted environment
+```
+
+---
+
 ## 📝 INSTRUÇÕES DE USO
 
 ### 🎯 **Para DiffusionBee:**
@@ -399,4 +483,4 @@ blurry, low resolution, night time, office, classroom, hospital, bad lighting, u
 
 ---
 
-**Total:** 35 cenários adicionais para backgrounds do jogo NIME
+**Total:** 43 cenários adicionais para backgrounds do jogo NIME (incluindo 8 cenários de praia)
