@@ -14,7 +14,7 @@ label evento_larissa_huey:
     narrator "Larissa chegou com energia contagiante, carregando uma bola de vôlei e com um sorriso radiante. Havia algo motivador em sua presença."
 
     # Apresentação natural da Huey
-    show huey voley at right
+    show huey neutral at right
     huey "Nossa, que energia incrível vocês têm aqui... posso me juntar a vocês?"
     huey "Sou Huey, estudo artes visuais. O movimento dos corpos em ação... é como uma dança. Cada gesto conta uma história."
     huey "Estava desenhando alguns esboços quando vi vocês treinando... é fascinante como o esporte pode ser tão artístico."
