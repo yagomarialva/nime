@@ -1,5 +1,8 @@
 # === TERCEIRA ESCOLHA - FESTA DE BOAS-VINDAS ===
 label capitulo1_terceira_escolha:
+    # Tocar música da festa
+    play music party fadein 2.0
+    
     scene bg campus_evening with fade
     
     narrator "O terceiro dia na Faculdade Solária havia chegado ao fim. O sol se punha sobre o campus, pintando o céu com tons alaranjados e rosa."

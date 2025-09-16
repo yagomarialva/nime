@@ -35,19 +35,19 @@ label capitulo1:
     menu:
         "Ir para a biblioteca e centro de estudos":
             $ add_shared_memory("library_exploration", [], "Primeira exploração da biblioteca do campus")
-            call evento_nicole_camille from _call_evento_nicole_camille
+            call evento_nicole_camille
             $ events_completed.append("library")
             jump capitulo1_continue_exploration
             
         "Ir para o cinema da universidade":
             $ add_shared_memory("cinema_exploration", [], "Primeira exploração do cinema da universidade")
-            call evento_katia_samantha from _call_evento_katia_samantha
+            call evento_katia_samantha
             $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
             
         "Conhecer a quadra esportiva e áreas de lazer":
             $ add_shared_memory("sports_exploration", [], "Primeira exploração das áreas esportivas")
-            call evento_larissa_huey from _call_evento_larissa_huey
+            call evento_larissa_huey
             $ events_completed.append("sports")
             jump capitulo1_continue_exploration
 
@@ -58,19 +58,19 @@ label capitulo1_continue_exploration:
     menu:
         "Ir para a biblioteca e centro de estudos" if "library" not in events_completed:
             $ add_shared_memory("library_exploration", [], "Exploração da biblioteca do campus")
-            call evento_nicole_camille from _call_evento_nicole_camille_1
+            call evento_nicole_camille
             $ events_completed.append("library")
             jump capitulo1_continue_exploration
             
         "Ir para o cinema da universidade" if "cinema" not in events_completed:
             $ add_shared_memory("cinema_exploration", [], "Exploração do cinema da universidade")
-            call evento_katia_samantha from _call_evento_katia_samantha_1
+            call evento_katia_samantha
             $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
             
         "Conhecer a quadra esportiva e áreas de lazer" if "sports" not in events_completed:
             $ add_shared_memory("sports_exploration", [], "Exploração das áreas esportivas")
-            call evento_larissa_huey from _call_evento_larissa_huey_1
+            call evento_larissa_huey
             $ events_completed.append("sports")
             jump capitulo1_continue_exploration
             
@@ -105,7 +105,7 @@ label capitulo1_continue_second_choice:
             $ add_shared_memory("methodology_debate_meeting", ["katia", "nicole"], "Primeira discussão sobre metodologia e criatividade")
             $ add_affinity_points("katia", 10, "Interesse em análise criativa")
             $ add_affinity_points("nicole", 10, "Interesse em metodologia")
-            call evento_katia_nicole from _call_evento_katia_nicole
+            call evento_katia_nicole
             $ second_choice_events.append("lab")
             jump capitulo1_continue_second_choice
             
@@ -113,7 +113,7 @@ label capitulo1_continue_second_choice:
             $ add_shared_memory("art_spirituality_meeting", ["huey", "camille"], "Primeira exploração da conexão entre arte e espiritualidade")
             $ add_affinity_points("huey", 10, "Interesse em técnica artística")
             $ add_affinity_points("camille", 10, "Interesse em energia criativa")
-            call evento_huey_camille from _call_evento_huey_camille
+            call evento_huey_camille
             $ second_choice_events.append("gallery")
             jump capitulo1_continue_second_choice
             
@@ -121,18 +121,18 @@ label capitulo1_continue_second_choice:
             $ add_shared_memory("gaming_sports_meeting", ["samantha", "larissa"], "Primeira atividade combinando jogos e esportes")
             $ add_affinity_points("samantha", 10, "Interesse em RPG e criatividade")
             $ add_affinity_points("larissa", 10, "Interesse em competição e superação")
-            call evento_samantha_larissa from _call_evento_samantha_larissa
+            call evento_samantha_larissa
             $ second_choice_events.append("games")
             jump capitulo1_continue_second_choice
             
         "Continuar para a aula com o Professor Wendell" if len(second_choice_events) >= 3:
-            call capitulo1_aula_professor_wendell from _call_capitulo1_aula_professor_wendell
+            call capitulo1_aula_professor_wendell
 
     # Após a aula, continuar para a festa
-    call capitulo1_terceira_escolha from _call_capitulo1_terceira_escolha
+    call capitulo1_terceira_escolha
 
     # Chamar o questionário de conexões futuras
-    call capitulo1_quarta_escolha from _call_capitulo1_quarta_escolha
+    call capitulo1_quarta_escolha
 
 
 # === FINAL DO CAPÍTULO 1 - RETROSPECTIVA E PROGRESSÃO ===
