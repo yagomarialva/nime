@@ -35,6 +35,29 @@ define gui.language_portuguese = "🇧🇷 Português"
 define gui.language_english = "🇺🇸 English"
 define gui.language_close = "Close"
 
+# Language Menu Strings
+translate english strings:
+    old "Selecionar Idioma / Select Language"
+    new "Select Language"
+    
+    old "Fechar / Close"
+    new "Close"
+    
+    old "💕 Relationships"
+    new "💕 Relationships"
+    
+    old "Empathy"
+    new "Empathy"
+    
+    old "Memories"
+    new "Memories"
+    
+    old "✨ Special Moment ✨"
+    new "✨ Special Moment ✨"
+    
+    old "Continue"
+    new "Continue"
+
 # Character Names
 define gui.camille_name = "Camille"
 define gui.larissa_name = "Larissa"

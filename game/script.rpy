@@ -42,6 +42,18 @@ default character_growth_camille = 0
 default shared_memories = []  # Lista de memórias especiais criadas com personagens
 
 label start:
+    # Inicializar o idioma salvo
+    python:
+        if hasattr(persistent, 'language') and persistent.language:
+            lang = persistent.language
+            if lang == "pt":
+                renpy.change_language("portuguese")
+            else:
+                renpy.change_language("english")
+        else:
+            persistent.language = "en"
+            renpy.change_language("english")
+    
     show screen affinity_points
     # Sua história começa aqui
     jump prologo  # ou o label inicial da sua VN

@@ -25,6 +25,12 @@ define gui.show_name = True
 
 define config.version = "1.0"
 
+## Language Configuration ####################################################
+##
+## The default language of the game. This should be set to the language code
+## of the base game content.
+
+define config.language = "english"
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.

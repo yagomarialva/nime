@@ -1,29 +1,29 @@
-define sombra = Character("Narrador", color="#A9A9A9")  # Personagem misterioso e sombreado
+define sombra = Character("Narrator", color="#A9A9A9")  # Mysterious and shadowed character
 
 label prologo:
 
-    scene bg city with fade  # Substitua por sua imagem real
+    scene bg city with fade  # Replace with your real image
 
-    sombra "Este jogo é recomendado para maiores de 18 anos."
-    sombra "Você confirma que tem 18 anos ou mais?"
+    sombra "This game is recommended for ages 18 and up."
+    sombra "Do you confirm that you are 18 years old or older?"
 
     menu:
-        "Sim, tenho 18 anos ou mais.":
+        "Yes, I am 18 years old or older.":
             jump nome_jogador
 
-        "Não, sou menor de idade.":
-            sombra "Infelizmente, você não poderá jogar este jogo. Obrigado pela compreensão!"
+        "No, I am underage.":
+            sombra "Unfortunately, you will not be able to play this game. Thank you for your understanding!"
             return
 
 label nome_jogador:
     scene bg city with fade
 
-    $ nome = renpy.input("Digite seu nome:", length=20)
+    $ nome = renpy.input("Enter your name:", length=20)
     $ nome = nome.strip()
     if nome == "":
-        $ nome = "Jogador"
+        $ nome = "Player"
 
-    sombra "Olá, [nome]. Seja bem-vindo(a)!"
+    sombra "Hello, [nome]. Welcome!"
 
     jump aviso_jogo
 
@@ -31,135 +31,97 @@ label aviso_jogo:
     scene bg city with fade
     with dissolve
 
-    sombra "Todos os personagens deste jogo possuem 18 anos ou mais."
-    sombra "Apesar de abordar relacionamentos e temas maduros, este NÃO é um jogo pornográfico."
-    sombra "Nosso foco está na construção de narrativa, romance e escolhas com consequências."
-    sombra "Esperamos que aproveite sua jornada com responsabilidade e respeito."
+    sombra "All characters in this game are 18 years old or older."
+    sombra "Although it addresses mature relationships and themes, this is NOT a pornographic game."
+    sombra "Our focus is on narrative construction, romance, and choices with consequences."
+    sombra "We hope you enjoy your journey with responsibility and respect."
 
     jump tutorial_mecanicas
 
 label tutorial_mecanicas:
     scene bg city with dissolve
     
-    sombra "Antes de começar sua jornada, [nome], deixe-me explicar como este mundo funciona..."
-    sombra "NIME não é apenas uma história - é uma experiência onde suas escolhas moldam relacionamentos reais."
+    sombra "Before you begin your journey, [nome], let me explain how this world works..."
+    sombra "NIME is not just a story - it's an experience where your choices shape real relationships."
     
     menu:
-        "Quero aprender sobre as mecânicas do jogo":
+        "I want to learn about the game mechanics":
             jump explicar_mecanicas
-        "Prefiro descobrir jogando":
-            sombra "Entendo! Às vezes a descoberta é parte da diversão."
-            sombra "Mas lembre-se: no canto superior esquerdo você sempre pode ver como seus relacionamentos estão evoluindo."
+        "I prefer to discover by playing":
+            sombra "I understand! Sometimes discovery is part of the fun."
+            sombra "But remember: in the top left corner you can always see how your relationships are evolving."
             jump iniciar_aventura
 
 label explicar_mecanicas:
     scene bg city with dissolve
     
-    # === EXPLICAÇÃO DO SISTEMA DE RELACIONAMENTOS ===
-    sombra "🏠 Bem-vindo ao sistema de relacionamentos de NIME!"
-    sombra "Você conhecerá 6 personagens únicas, cada uma com sua personalidade, sonhos e vulnerabilidades."
+    # === RELATIONSHIP SYSTEM EXPLANATION ===
+    sombra "🏠 Welcome to NIME's relationship system!"
+    sombra "You will meet 6 unique characters, each with their own personality, dreams, and vulnerabilities."
     
-    sombra "💕 No canto superior esquerdo, você verá os NÍVEIS DE RELACIONAMENTO:"
-    sombra "🤝 Desconhecido → 🙂 Amigo → 😊 Amigo Próximo → 💖 Romântico"
+    sombra "💕 In the top left corner, you'll see RELATIONSHIP LEVELS:"
+    sombra "🤝 Stranger → 🙂 Friend → 😊 Close Friend → 💖 Romantic"
     
-    sombra "Cada interação positiva fortalece seus laços. Cada momento especial cria memórias duradouras."
+    sombra "Each positive interaction strengthens your bonds. Each special moment creates lasting memories."
     
-    # === EXPLICAÇÃO DAS ESCOLHAS ===
-    sombra "🎯 Suas ESCOLHAS têm consequências reais:"
-    sombra "• Algumas aumentam afinidade com personagens específicos"
-    sombra "• Outras afetam múltiplos relacionamentos"
-    sombra "• Momentos especiais desbloqueiam quando você demonstra empatia genuína"
+    # === CHOICE EXPLANATION ===
+    sombra "🎯 Your CHOICES have real consequences:"
+    sombra "• Some increase affinity with specific characters"
+    sombra "• Others affect multiple relationships"
+    sombra "• Special moments unlock when you show genuine empathy"
     
-    sombra "🌱 Seu NÍVEL DE EMPATIA também importa - quanto mais você se importa com os outros, mais oportunidades especiais surgem."
+    sombra "🌱 Your EMPATHY LEVEL also matters - the more you care about others, the more special opportunities arise."
     
-    # === EXPLICAÇÃO DOS MOMENTOS ESPECIAIS ===
-    sombra "✨ MOMENTOS ESPECIAIS acontecem quando conexões verdadeiras se formam:"
-    sombra "• Conversas profundas que revelam vulnerabilidades"
-    sombra "• Experiências compartilhadas que se tornam memórias preciosas"
-    sombra "• Realizações sobre amor, amizade e crescimento pessoal"
+    # === SPECIAL MOMENTS EXPLANATION ===
+    sombra "✨ SPECIAL MOMENTS happen when true connections form:"
+    sombra "• Deep conversations that reveal vulnerabilities"
+    sombra "• Shared experiences that become precious memories"
+    sombra "• Realizations about love, friendship, and personal growth"
     
-    sombra "📚 Suas MEMÓRIAS COMPARTILHADAS ficam registradas - cada uma representa um momento único que você criou."
+    sombra "📚 Your SHARED MEMORIES are recorded - each one represents a unique moment you created."
     
-    # === EXPLICAÇÃO DO CRESCIMENTO ===
-    sombra "🌟 Mas aqui está o mais importante:"
-    sombra "Este não é um jogo sobre 'conquistar' alguém. É sobre crescimento mútuo."
-    sombra "Cada personagem tem sua própria jornada de autodescoberta."
-    sombra "Suas ações não apenas afetam como elas se sentem sobre você - mas como elas crescem como pessoas."
+    # === GROWTH EXPLANATION ===
+    sombra "🌟 But here's the most important thing:"
+    sombra "This is not a game about 'conquering' someone. It's about mutual growth."
+    sombra "Each character has their own journey of self-discovery."
+    sombra "Your actions not only affect how they feel about you - but how they grow as people."
     
-    # === EXPLICAÇÃO DOS FINAIS ===
-    sombra "🎭 Existem múltiplos caminhos para sua história:"
-    sombra "• Um romance profundo e significativo"
-    sombra "• Uma irmandade eterna baseada em amor familiar"
-    sombra "• Ou algo único que surge das escolhas que você fizer"
+    # === ENDINGS EXPLANATION ===
+    sombra "🎭 There are multiple paths for your story:"
+    sombra "• Deep friendships that last a lifetime"
+    sombra "• Romantic relationships based on genuine connection"
+    sombra "• Personal growth that transforms you as a person"
+    sombra "• Memories that will stay with you forever"
     
-    sombra "🏡 Lembre-se: às vezes, a família que escolhemos é mais forte que qualquer romance."
-    
-    # === DICAS PRÁTICAS ===
-    sombra "💡 Algumas dicas para sua jornada:"
-    sombra "• Seja autêntico - as personagens valorizam honestidade"
-    sombra "• Ouça com atenção - pequenos detalhes podem ser importantes"
-    sombra "• Não force relacionamentos - deixe-os fluir naturalmente"
-    sombra "• Cuide de todos - até mesmo quem não é 'sua rota' merece carinho"
-    
-    sombra "🎨 E principalmente: este é um jogo sobre arte, criatividade e conexão humana."
-    sombra "Permita-se ser tocado pelas histórias que você vai viver."
-    
-    menu:
-        "Entendi! Estou pronto para começar":
-            jump iniciar_aventura
-        "Posso ver um exemplo das mecânicas?":
-            jump exemplo_mecanicas
-
-label exemplo_mecanicas:
-    scene bg city with dissolve
-    
-    sombra "Claro! Deixe-me mostrar como funciona na prática."
-    sombra "Imagine que você está conversando com alguém que parece triste..."
-    
-    menu:
-        "Perguntar se está tudo bem e oferecer apoio":
-            $ feedback_exemplo = add_affinity_points("exemplo", 8, "Demonstração de empatia")
-            sombra "✨ Excelente! Essa escolha demonstra empatia genuína."
-            sombra "Você veria: '[feedback_exemplo]'"
-            sombra "E talvez desbloqueasse um momento especial de vulnerabilidade."
-            
-        "Fazer uma piada para alegrar o ambiente":
-            $ feedback_exemplo = add_affinity_points("exemplo", 3, "Tentativa de ajudar")
-            sombra "🙂 Uma escolha carinhosa, mas talvez não o que ela precisava no momento."
-            sombra "Você veria: '[feedback_exemplo]'"
-            sombra "Ainda assim, sua intenção de ajudar seria valorizada."
-    
-    sombra "Viu como suas intenções se traduzem em consequências reais?"
-    sombra "Agora imagine isso acontecendo ao longo de meses de convivência..."
-    sombra "Cada escolha constrói a fundação dos relacionamentos que você terá."
+    sombra "The choice is yours, [nome]. What kind of story will you create?"
     
     jump iniciar_aventura
 
 label iniciar_aventura:
     scene bg city with dissolve
     
-    sombra "🌟 Sua jornada na Faculdade Solária está prestes a começar, [nome]."
-    sombra "Você conhecerá:"
-    sombra "💼 Nicole - A estrategista que sonha em ajudar artistas"
-    sombra "🎬 Katia - A cineasta que vê arte nas sombras"  
-    sombra "🏐 Larissa - A atleta que encontra paz no movimento"
-    sombra "🎨 Huey - A artista que vê magia em tudo"
-    sombra "🎮 Samantha - A gamer que vive em mundos de fantasia"
-    sombra "🧘 Camille - A espiritualista que sente as energias do universo"
+    sombra "🌟 Your journey at Solária College is about to begin, [nome]."
+    sombra "You will meet:"
+    sombra "💼 Nicole - The strategist who dreams of helping artists"
+    sombra "🎬 Katia - The filmmaker who sees art in shadows"  
+    sombra "🏐 Larissa - The athlete who finds peace in movement"
+    sombra "🎨 Huey - The artist who sees magic in everything"
+    sombra "🎮 Samantha - The gamer who lives in fantasy worlds"
+    sombra "🧘 Camille - The spiritualist who feels the energies of the universe"
     
-    sombra "Cada uma tem seus sonhos, medos, e uma história única para contar."
-    sombra "Mas o mais importante: cada uma pode mudar, crescer e florescer..."
-    sombra "...dependendo de como você escolher se conectar com elas."
+    sombra "Each one has their dreams, fears, and a unique story to tell."
+    sombra "But most importantly: each one can change, grow, and flourish..."
+    sombra "...depending on how you choose to connect with them."
     
-    sombra "💫 Que tipo de história vocês criarão juntos?"
-    sombra "Isso, meu caro [nome], depende inteiramente de você."
+    sombra "💫 What kind of story will you create together?"
+    sombra "That, my dear [nome], depends entirely on you."
     
-    sombra "🏠 Bem-vindo à Rua Aurora, 57."
-    sombra "Sua nova casa. Sua nova família. Sua nova vida."
+    sombra "🏠 Welcome to Aurora Street, 57."
+    sombra "Your new home. Your new family. Your new life."
     
-    # Transição épica para o primeiro capítulo
+    # Epic transition to the first chapter
     scene black with fade
-    centered "{color=#FFD700}🌟 Sua jornada de conexões humanas começa agora... 🌟{/color}"
+    centered "{color=#FFD700}🌟 Your journey of human connections begins now... 🌟{/color}"
     pause 2.0
 
     jump capitulo1

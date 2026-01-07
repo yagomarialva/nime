@@ -113,6 +113,29 @@ translate portuguese english:
 translate portuguese close:
     "Fechar"
 
+# Language Menu Strings (português é o padrão, mas mantemos para consistência)
+translate portuguese strings:
+    old "Selecionar Idioma / Select Language"
+    new "Selecionar Idioma"
+    
+    old "Fechar / Close"
+    new "Fechar"
+    
+    old "💕 Relationships"
+    new "💕 Relacionamentos"
+    
+    old "Empathy"
+    new "Empatia"
+    
+    old "Memories"
+    new "Memórias"
+    
+    old "✨ Special Moment ✨"
+    new "✨ Momento Especial ✨"
+    
+    old "Continue"
+    new "Continuar"
+
 # Affinity System
 translate portuguese affinity_points:
     "Pontos de Afinidade"

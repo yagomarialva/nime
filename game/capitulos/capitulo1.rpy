@@ -1,96 +1,143 @@
 label capitulo1:
+    # Desbloqueia o capítulo na galeria (se existir)
     if "capitulo1" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo1")
     
-    # === INTRODUÇÃO COM MONÓLOGO DO PROFESSOR WENDELL ===
-    # Tocar música de fundo do campus
+    # === ABERTURA: O DISCURSO DA COLISÃO ===
     play music campus_ambient fadein 2.0
     
     scene bg auditorium with fade
 
-    narrator "O auditório da Faculdade Solária estava repleto de expectativa. Dezenas de jovens, cada um carregando sonhos únicos, aguardavam o início de uma jornada que mudaria suas vidas para sempre."
+    # Imersão sensorial
+    narrator "O zumbido do ar condicionado lutava contra o murmúrio de trezentos estudantes. O auditório cheirava a polímero novo e ansiedade adolescente."
+    
+    # MC com personalidade (Observador/Cínico)
+    mc "Primeiro dia. Aquele momento em que todo mundo finge que sabe o que está fazendo, mas ninguém realmente sabe."
+    
+    narrator "Ajeitei-me na poltrona do meio. O palco estava iluminado, aguardando a 'autoridade' falar."
 
-    narrator "Entre eles, eu me sentava nas fileiras do meio, tentando absorver cada detalhe deste momento histórico. O ar estava carregado de possibilidades infinitas."
+    # Foreshadowing das Heroínas (Visual apenas, sem interações ainda)
+    narrator "Olhei ao redor. A fauna local era... diversa."
+    
+    # Katia e Samantha (Descrição visual corrigida)
+    narrator "Duas fileiras à frente, uma garota de óculos lia um livro grosso, ignorando o mundo. Ao lado dela, outra garota tentava equilibrar três chaveiros de pelúcia na mochila."
+    
+    # Larissa e Huey
+    narrator "Mais à direita, uma atleta girava uma bola de vôlei nos dedos, impaciente. Perto da janela, alguém desenhava no vidro embaçado com o dedo."
+    
+    mc "É... vai ser um semestre longo."
 
-    # Professor Wendell - Monólogo sobre a faculdade e fase da vida
+    # === O DISCURSO DO PROFESSOR WENDELL ===
     show professor_wendell neutral at center
-    professor_wendell "Bem-vindos à Faculdade Solária, jovens mentes brilhantes. Vocês estão prestes a embarcar em uma das jornadas mais transformadoras de suas vidas."
-    professor_wendell "A universidade não é apenas um lugar de aprendizado acadêmico, mas um laboratório de descobertas pessoais, conexões humanas e crescimento interior."
-    professor_wendell "Cada um de vocês traz consigo sonhos únicos, perspectivas distintas e potencial ilimitado. Aqui, vocês não apenas estudarão, mas descobrirão quem realmente são."
-    professor_wendell "As amizades que vocês formarão aqui, os desafios que enfrentarão, as paixões que descobrirão... tudo isso moldará não apenas seus futuros profissionais, mas suas almas."
-    professor_wendell "Não tenham medo de explorar, de questionar, de se conectar com pessoas diferentes de vocês. É na diversidade que encontramos nossa verdadeira força."
-    professor_wendell "Agora, saiam e explorem este campus. Deixem que a vida os surpreenda com as pessoas incríveis que vocês estão prestes a conhecer."
+    
+    narrator "O microfone chiou. O homem no palco não parecia um reitor tradicional. Ele tinha um sorriso de quem sabia uma piada que ninguém mais ouviu."
+    
+    professor_wendell "Bom dia. Olhem para a pessoa ao seu lado."
+    professor_wendell "Estatisticamente, um de vocês vai mudar o mundo. O outro... vai apenas pagar boletos."
+    
+    narrator "Risos nervosos na plateia."
+    
+    professor_wendell "Brincadeira. Ou não. Solária não é uma fábrica de diplomas. É um coliseu."
+    professor_wendell "Vocês acham que vieram aprender fórmulas? Errado. Vocês vieram aprender a colidir."
+    professor_wendell "Ideias colidem. Egos colidem. Sonhos colidem. E é nessa explosão que a gente descobre se vocês são feitos de vidro... ou de diamante."
+    
+    professor_wendell "O campus é de vocês. O laboratório, a quadra, o cinema. Não me importo com suas notas. Me importo com o que vocês farão quando ninguém estiver olhando."
+    professor_wendell "Dispensados."
+    
     hide professor_wendell
     
-    narrator "As palavras do Professor Wendell ecoaram em minha mente enquanto caminhava pelo campus. Sentia que algo especial estava prestes a acontecer."
-    narrator "Cada corredor, cada jardim, cada prédio parecia pulsar com possibilidades infinitas. Era como se o próprio campus estivesse esperando para me revelar seus segredos."
-
-    # === EXPLORAÇÃO DO CAMPUS ===
-    narrator "Conforme explorava o campus, percebi que havia várias áreas interessantes para conhecer. Onde deveria começar minha jornada de descobertas?"
+    # === A PRIMEIRA ESCOLHA: MOTIVAÇÃO ===
+    narrator "O discurso foi curto, grosso e estranhamente motivador. A multidão começou a se dispersar."
     
-    # Inicializar variáveis de controle
+    mc "Colidir, hein? Ok. Vamos ver onde essas colisões vão acontecer."
+    
+    # Inicializa variáveis de controle
     $ events_completed = []
     
-    # === PRIMEIRA ESCOLHA - EXPLORAÇÃO DO CAMPUS ===
+# ... (Parte do discurso do Professor continua igual até o final) ...
+
+    professor_wendell "O campus é de vocês... Dispensados."
+    
+    hide professor_wendell
+    
+    # === A PRIMEIRA ESCOLHA: INTERESSE GENUÍNO ===
+    narrator "O discurso foi curto e grosso. A multidão começou a se dispersar, um fluxo caótico de estudantes indo para todas as direções."
+    
+    mc "Colidir, hein? O professor tem um jeito dramático de dizer 'façam amigos'."
+    
+    narrator "Olhei para o mapa do campus no meu celular. Eu tinha algumas horas livres antes da próxima aula obrigatória."
+    narrator "Vi aquelas garotas do auditório seguindo caminhos diferentes. A 'leitora' e a 'animada' foram para o norte. A atleta correu para o sul."
+    
+    mc "Bom, não vou ficar aqui parado no auditório vazio. O que eu estou a fim de fazer agora?"
+    
+    # Inicializa variáveis de controle
+    $ events_completed = []
+    
+    # Menu focado no INTERESSE DO MC (Sem stalkear!)
     menu:
-        "Ir para a biblioteca e centro de estudos":
-            $ add_shared_memory("library_exploration", [], "Primeira exploração da biblioteca do campus")
-            call evento_nicole_camille from _call_evento_nicole_camille
-            $ events_completed.append("library")
-            jump capitulo1_continue_exploration
+        "Ir ao Cinema (Preciso relaxar um pouco)":
+            mc "Aquele discurso me deu sono. Um filme parece a melhor forma de começar o semestre sem estresse."
             
-        "Ir para o cinema da universidade":
-            $ add_shared_memory("cinema_exploration", [], "Primeira exploração do cinema da universidade")
+            $ add_shared_memory("cinema_exploration", [], "Decidiu relaxar no cinema")
             call evento_katia_samantha from _call_evento_katia_samantha
             $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
+         
+        "Ir à Quadra de Esportes (Preciso gastar energia)":
+            mc "Ficar sentado me deixou travado. Aquela atleta girando a bola me lembrou que preciso me mexer."
+            mc "Nada como um pouco de endorfina para processar esse discurso filosófico."
             
-        "Conhecer a quadra esportiva e áreas de lazer":
-            $ add_shared_memory("sports_exploration", [], "Primeira exploração das áreas esportivas")
+            $ add_shared_memory("sports_exploration", [], "Decidiu se exercitar na quadra")
             call evento_larissa_huey from _call_evento_larissa_huey
             $ events_completed.append("sports")
             jump capitulo1_continue_exploration
 
-# === CONTINUAÇÃO DA EXPLORAÇÃO ===
+        "Ir à Biblioteca (Preciso de silêncio e foco)":
+            mc "Muita gente, muito barulho, muito discurso motivacional. Minha bateria social já está no fim."
+            mc "Preciso de um lugar quieto para organizar minha grade de horários."
+            
+            $ add_shared_memory("library_exploration", [], "Buscou refúgio na biblioteca")
+            call evento_nicole_camille from _call_evento_nicole_camille
+            $ events_completed.append("library")
+            jump capitulo1_continue_exploration
+# === CONTINUAÇÃO DA EXPLORAÇÃO (LOOP) ===
 label capitulo1_continue_exploration:
-    narrator "Após essa primeira experiência, senti que havia muito mais para descobrir no campus. Onde deveria explorar a seguir?"
+    
+    # Se já fez 3 eventos, avança para o dia seguinte
+    if len(events_completed) >= 3:
+        jump capitulo1_segunda_escolha
+
+    narrator "Ainda havia tempo para explorar mais o campus antes do dia terminar. Para onde eu deveria ir agora?"
     
     menu:
         "Ir para a biblioteca e centro de estudos" if "library" not in events_completed:
-            $ add_shared_memory("library_exploration", [], "Exploração da biblioteca do campus")
+            $ add_shared_memory("library_exploration", [], "Exploração da biblioteca")
             call evento_nicole_camille from _call_evento_nicole_camille_1
             $ events_completed.append("library")
             jump capitulo1_continue_exploration
             
-        "Ir para o cinema da universidade" if "cinema" not in events_completed:
-            $ add_shared_memory("cinema_exploration", [], "Exploração do cinema da universidade")
+        "Ir para o cinema universitário" if "cinema" not in events_completed:
+            $ add_shared_memory("cinema_exploration", [], "Exploração do cinema")
             call evento_katia_samantha from _call_evento_katia_samantha_1
             $ events_completed.append("cinema")
             jump capitulo1_continue_exploration
             
-        "Conhecer a quadra esportiva e áreas de lazer" if "sports" not in events_completed:
-            $ add_shared_memory("sports_exploration", [], "Exploração das áreas esportivas")
+        "Visitar a quadra de esportes" if "sports" not in events_completed:
+            $ add_shared_memory("sports_exploration", [], "Exploração da quadra")
             call evento_larissa_huey from _call_evento_larissa_huey_1
             $ events_completed.append("sports")
             jump capitulo1_continue_exploration
-            
-        "Continuar para o próximo dia" if len(events_completed) >= 3:
-            jump capitulo1_segunda_escolha
 
 # === SEGUNDA ESCOLHA - NOVO DIA ===
 label capitulo1_segunda_escolha:
     scene bg campus_morning with fade
     
-    narrator "O sol da manhã iluminava o campus com uma luz dourada. O segundo dia na Faculdade Solária havia começado."
-    narrator "Após as experiências incríveis do dia anterior, eu mal podia esperar para continuar explorando o campus e conhecendo novas pessoas."
+    narrator "O sol da manhã iluminava o campus com uma luz dourada. O segundo dia na Solária College havia começado."
+    mc "Certo. Sobrevivi ao primeiro dia. Agora é hora de aprofundar."
     
-    narrator "Conforme caminhava pelo campus, percebi que havia muito mais para descobrir. Onde deveria explorar a seguir?"
+    narrator "Lembrei das pessoas incríveis que conheci ontem, mas sabia que havia cantos do campus que eu ainda não tinha visto."
     
-    # Mostrar apenas as personagens que o jogador ainda não conheceu
-    narrator "Lembrei-me das pessoas incríveis que havia conhecido no dia anterior, mas sabia que havia muito mais para descobrir neste campus."
-    narrator "Cada área do campus parecia pulsar com possibilidades de novos encontros e descobertas."
-    
-    # Inicializar lista de eventos da segunda escolha se não existir
+    # Inicializa lista de eventos do segundo dia se não existir
     if "second_choice_events" not in globals():
         $ second_choice_events = []
     
@@ -98,119 +145,105 @@ label capitulo1_segunda_escolha:
 
 # === CONTINUAÇÃO DA SEGUNDA ESCOLHA ===
 label capitulo1_continue_second_choice:
-    narrator "Após essa experiência, senti que havia muito mais para descobrir no campus. Onde deveria explorar a seguir?"
+    
+    # Se já fez eventos suficientes, vai para a aula
+    if len(second_choice_events) >= 3:
+        call capitulo1_aula_professor_wendell from _call_capitulo1_aula_professor_wendell
+        # Depois da aula, continua para a festa
+        call capitulo1_terceira_escolha from _call_capitulo1_terceira_escolha
+        # Questionário de conexões futuras
+        call capitulo1_quarta_escolha from _call_capitulo1_quarta_escolha
+        jump capitulo1_final
+
+    narrator "Para onde devo ir agora?"
     
     menu:
-        "Ir para o laboratório de comunicação e análise de dados" if "lab" not in second_choice_events:
+        "Ir ao laboratório de comunicação e dados" if "lab" not in second_choice_events:
             $ add_shared_memory("methodology_debate_meeting", ["katia", "nicole"], "Primeira discussão sobre metodologia e criatividade")
             $ add_affinity_points("katia", 10, "Interesse em análise criativa")
             $ add_affinity_points("nicole", 10, "Interesse em metodologia")
+            
             call evento_katia_nicole from _call_evento_katia_nicole
             $ second_choice_events.append("lab")
             jump capitulo1_continue_second_choice
             
-        "Explorar a galeria de arte e espaços criativos" if "gallery" not in second_choice_events:
-            $ add_shared_memory("art_spirituality_meeting", ["huey", "camille"], "Primeira exploração da conexão entre arte e espiritualidade")
+        "Explorar a galeria de arte" if "gallery" not in second_choice_events:
+            $ add_shared_memory("art_spirituality_meeting", ["huey", "camille"], "Exploração da conexão entre arte e espiritualidade")
             $ add_affinity_points("huey", 10, "Interesse em técnica artística")
             $ add_affinity_points("camille", 10, "Interesse em energia criativa")
+            
             call evento_huey_camille from _call_evento_huey_camille
             $ second_choice_events.append("gallery")
             jump capitulo1_continue_second_choice
             
-        "Conhecer o centro de jogos e atividades recreativas" if "games" not in second_choice_events:
+        "Visitar o centro de jogos e recreação" if "games" not in second_choice_events:
             $ add_shared_memory("gaming_sports_meeting", ["samantha", "larissa"], "Primeira atividade combinando jogos e esportes")
             $ add_affinity_points("samantha", 10, "Interesse em RPG e criatividade")
             $ add_affinity_points("larissa", 10, "Interesse em competição e superação")
+            
             call evento_samantha_larissa from _call_evento_samantha_larissa
             $ second_choice_events.append("games")
             jump capitulo1_continue_second_choice
-            
-        "Continuar para a aula com o Professor Wendell" if len(second_choice_events) >= 3:
-            call capitulo1_aula_professor_wendell from _call_capitulo1_aula_professor_wendell
 
-    # Após a aula, continuar para a festa
-    call capitulo1_terceira_escolha from _call_capitulo1_terceira_escolha
-
-    # Chamar o questionário de conexões futuras
-    call capitulo1_quarta_escolha from _call_capitulo1_quarta_escolha
-
-
-# === FINAL DO CAPÍTULO 1 - RETROSPECTIVA E PROGRESSÃO ===
+# === FINAL DO CAPÍTULO 1 - RETROSPECTIVA ===
 label capitulo1_final:
     scene bg campus_sunset with fade
     
-    narrator "O sol começava a se pôr sobre o campus, pintando o céu com tons dourados e rosa. Os primeiros dias na Faculdade Solária estavam chegando ao fim."
+    narrator "O sol começava a se pôr sobre o campus, pintando o céu com tons de dourado e rosa. Os primeiros dias na Solária estavam chegando ao fim."
     
-    narrator "Mas antes de voltar para casa, algo dentro de mim pedia uma pausa para refletir sobre tudo que havia acontecido..."
-
-    # === RETROSPECTIVA DOS RELACIONAMENTOS ===
-    narrator "Olhando para trás, percebi como cada encontro havia deixado uma marca única em meu coração."
-
-    # Mostra o resumo dos relacionamentos
+    mc "Parece que foi ontem que cheguei... bom, tecnicamente foi anteontem."
+    narrator "Mas antes de voltar para casa, algo dentro de mim pedia uma pausa para refletir sobre tudo o que aconteceu..."
+    
+    # === RETROSPECTIVA DE RELACIONAMENTOS ===
+    narrator "Olhando para trás, percebi como cada encontro deixou uma marca única."
+    
+    # Mostra resumo (assumindo que esta função existe no seu jogo)
     $ relationship_summary = get_relationship_summary()
     
     narrator "📊 RESUMO DOS RELACIONAMENTOS:"
+    
     python:
         for summary in relationship_summary:
             narrator(summary)
     
-    # Momento emocional de reflexão
-    call emotional_moment("reflection", None, "Reflexão sobre as conexões formadas no primeiro dia") from _call_emotional_moment_cap1_2
+    # Momento emocional
+    call emotional_moment("reflection", None, "Reflexão sobre as conexões formadas") from _call_emotional_moment_cap1_2
     
-    narrator "Cada sorriso, cada conversa, cada momento compartilhado... tudo isso havia criado laços invisíveis mas poderosos entre nós."
+    narrator "Cada sorriso, cada discussão, cada momento compartilhado... tudo isso criou laços invisíveis."
     
-    narrator "Mas uma pergunta ecoava em minha mente: seria suficiente para continuar esta jornada?"
-
-    # === VERIFICAÇÃO DE PROGRESSÃO ===
+    # === CHECAGEM DE PROGRESSÃO ===
     $ can_progress, progress_message = check_chapter_progression_requirement(1)
     
     narrator "[progress_message]"
     
     if can_progress:
-        narrator "Meu coração se encheu de alegria ao perceber que havia criado conexões verdadeiras com todas essas pessoas incríveis."
+        mc "Acho que fiz a escolha certa em vir para cá. Essas pessoas... elas são reais."
         
-        # Momento especial de realização
-        call emotional_moment("achievement", None, "Realização de ter criado conexões suficientes para continuar") from _call_emotional_moment_cap1_3
+        # Conquista
+        call emotional_moment("achievement", None, "Conexões suficientes para continuar") from _call_emotional_moment_cap1_3
         
-        narrator "Esta jornada estava apenas começando, e eu mal podia esperar para ver o que o futuro nos reservava."
+        narrator "Essa jornada estava apenas começando, e eu mal podia esperar para ver o que o futuro nos reservava."
         
-        narrator "Com um sorriso no rosto e esperança no coração, me preparei para o que estava por vir..."
-        
-        # Transição para o próximo capítulo
+        # Transição para próximo capítulo
         scene bg city with fade
         narrator "O Capítulo 1 chegou ao fim, mas nossa história estava apenas começando..."
         
-        # Desbloqueia o próximo capítulo
+        # Desbloqueia próximo
         if "capitulo2" not in persistent.unlocked_chapters:
             $ persistent.unlocked_chapters.append("capitulo2")
         
-        # Por enquanto, direcionar para a última atualização
-        jump ultima_atualizacao
+        # Redireciona para onde o jogo deve seguir (ex: atualização ou menu)
+        return
         
     else:
-        narrator "Uma sensação de inquietação tomou conta de mim. Talvez eu não tivesse me conectado o suficiente com todas as pessoas."
+        mc "Sinto que deixei algo passar... Talvez eu devesse ter me aberto mais."
         
-        narrator "Mas isso não significava que eu deveria desistir. Talvez fosse necessário mais tempo para construir essas conexões..."
-        
-        # Opção de revisitar eventos ou tentar novamente
+        # Opção de tentar novamente
         menu:
-            "Refletir sobre as conexões perdidas":
-                narrator "Talvez eu devesse ter escolhido diferentes caminhos, conhecido outras pessoas..."
-                narrator "Mas cada escolha que fiz me trouxe até aqui, e isso também tinha seu valor."
+            "Refletir sobre conexões perdidas (Reiniciar Capítulo)":
+                mc "Preciso tentar de novo. Fazer diferente."
+                jump capitulo1
                 
-            "Aceitar que algumas conexões levam tempo":
-                narrator "Nem todas as amizades nascem no primeiro dia. Algumas precisam de tempo para florescer."
-                narrator "O importante era que eu havia dado o primeiro passo."
-        
-        # Momento de crescimento pessoal
-        call emotional_moment("growth", None, "Crescimento pessoal através da reflexão") from _call_emotional_moment_cap1_4
-        
-        narrator "Mesmo sem ter atingido o objetivo, este dia havia me ensinado muito sobre mim mesmo e sobre como me conectar com os outros."
-        
-        narrator "Talvez fosse hora de tentar uma abordagem diferente, ou simplesmente dar tempo para que as conexões se desenvolvessem naturalmente..."
-        
-        # Retorna para o menu principal ou oferece opção de rejogar
-        scene bg city with fade
-        narrator "O Capítulo 1 chegou ao fim. Talvez seja hora de refletir sobre suas escolhas e tentar novamente..."
-        
-        return
+            "Aceitar que algumas conexões levam tempo (Retornar ao Menu)":
+                mc "Nem toda amizade nasce no primeiro dia. Vou dar tempo ao tempo."
+                return

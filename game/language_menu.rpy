@@ -24,7 +24,8 @@ screen language_selection():
                 xalign 0.5
                 size 32
                 color "#ffffff"
-                font "gui/fonts/DejaVuSans-Bold.ttf"
+                font gui.interface_text_font
+                bold True
             
             # Espaçador
             null height 20
@@ -40,14 +41,14 @@ screen language_selection():
                     ysize 60
                     background "#4a4a4a"
                     hover_background "#6a6a6a"
-                    action [Function(change_language, "pt"), Return()]
+                    action Function(change_language_and_close, "pt")
                     
                     text "🇧🇷 Português":
                         xalign 0.5
                         yalign 0.5
                         size 24
                         color "#ffffff"
-                        font "gui/fonts/DejaVuSans.ttf"
+                        font gui.interface_text_font
                 
                 # Inglês
                 button:
@@ -55,14 +56,14 @@ screen language_selection():
                     ysize 60
                     background "#4a4a4a"
                     hover_background "#6a6a6a"
-                    action [Function(change_language, "en"), Return()]
+                    action Function(change_language_and_close, "en")
                     
                     text "🇺🇸 English":
                         xalign 0.5
                         yalign 0.5
                         size 24
                         color "#ffffff"
-                        font "gui/fonts/DejaVuSans.ttf"
+                        font gui.interface_text_font
             
             # Espaçador
             null height 30
@@ -74,14 +75,14 @@ screen language_selection():
                 xalign 0.5
                 background "#666666"
                 hover_background "#888888"
-                action Return()
+                action Hide("language_selection")
                 
                 text _("Fechar / Close"):
                     xalign 0.5
                     yalign 0.5
                     size 18
                     color "#ffffff"
-                    font "gui/fonts/DejaVuSans.ttf"
+                    font gui.interface_text_font
 
 # Função para mostrar o menu de idiomas
 label show_language_menu:

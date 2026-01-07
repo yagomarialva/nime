@@ -82,3 +82,6 @@ image ex_larissa neutral = "images/characters/shadow.png"
 # Imagens para personagem "p" usado em cenas
 image p happy = "images/characters/shadow.png"
 image p neutral = "images/characters/shadow.png"
+
+# Adicione esta linha no seu personagens.rpy
+define mc = Character("[nome]", color="#ffffff")

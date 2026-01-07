@@ -355,6 +355,22 @@ style navigation_button_text:
 screen main_menu():
 
     tag menu
+    
+    # Inicializar o idioma quando o menu principal é mostrado
+    python:
+        try:
+            if hasattr(persistent, 'language') and persistent.language:
+                lang = persistent.language
+                if lang == "pt":
+                    renpy.change_language("portuguese")
+                else:
+                    renpy.change_language("english")
+            else:
+                persistent.language = "en"
+                renpy.change_language("english")
+        except:
+            persistent.language = "en"
+            renpy.change_language("english")
 
     # Fundo personalizado
     add "images/menu.png"
@@ -1621,7 +1637,7 @@ screen affinity_points():
 
         vbox:
             spacing 6
-            text "💕 Relacionamentos" color "#FFDAB9" size 22 bold True
+            text _("💕 Relationships") color "#FFDAB9" size 22 bold True
             
             # Sistema melhorado com ícones de relacionamento
             hbox:
@@ -1685,8 +1701,8 @@ screen affinity_points():
                         text "🤝 Camille: [points_camille]" color "#98FB98" size 16
             
             null height 8
-            text "🌱 Empatia: [player_empathy_level]" color "#E6E6FA" size 14
-            text "📚 Memórias: [len(shared_memories)]" color "#E6E6FA" size 14
+            text "🌱 " + _("Empathy") + ": [player_empathy_level]" color "#E6E6FA" size 14
+            text "📚 " + _("Memories") + ": [len(shared_memories)]" color "#E6E6FA" size 14
 
 # Nova tela para momentos especiais
 screen emotional_moment_notification(message):
@@ -1700,10 +1716,10 @@ screen emotional_moment_notification(message):
         
         vbox:
             spacing 15
-            text "✨ Momento Especial ✨" color "#FFFFFF" size 24 bold True xalign 0.5
+            text _("✨ Special Moment ✨") color "#FFFFFF" size 24 bold True xalign 0.5
             text "[message]" color "#FFFFFF" size 18 xalign 0.5 text_align 0.5
             
-            textbutton "Continuar" action Hide("emotional_moment_notification"):
+            textbutton _("Continue") action Hide("emotional_moment_notification"):
                 text_color "#FFFFFF"
                 text_hover_color "#FFD700"
                 background "#FF1493"

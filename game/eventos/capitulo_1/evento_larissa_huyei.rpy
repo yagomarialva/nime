@@ -1,226 +1,127 @@
-# --- Evento Larissa e Huey - PRIMEIRO ENCONTRO ---
+# === EVENTO LARISSA E HUEY - MASTER EDITION ===
+# Tema: A Estética do Esforço (Competição vs Arte)
+
 label evento_larissa_huey:
     $ points_larissa += 1
+    
+    # Cenário definido em scenarios.rpy
     scene bg quadra_volei with dissolve
-    narrator "Entrei na quadra de vôlei da universidade, procurando um lugar para praticar esportes. O ambiente estava movimentado, com outros estudantes treinando e o som das bolas ecoando."
-    narrator "Escolhi uma quadra vazia para fazer alguns exercícios. Foi então que percebi que não estava sozinho..."
 
-    # Apresentação natural da Larissa
-    show larissa_volei at left
-    larissa "Oi! Você também veio treinar? Que legal!"
-    larissa "Sou Larissa, estudo educação física e adoro esportes! Especialmente vôlei!"
-    larissa "Vamos aquecer antes do jogo. Preparado para suar a camisa? Hoje vamos treinar duro!"
+    # AÇÃO IMEDIATA: Som e movimento
+    narrator "O som de uma mão golpeando o couro ecoou pelo ginásio como um tiro seco."
+    narrator "*PÁ!*"
 
-    narrator "Larissa chegou com energia contagiante, carregando uma bola de vôlei e com um sorriso radiante. Havia algo motivador em sua presença."
+    # Usando o sprite correto 'larissa voley' definido em personagens.rpy
+    show larissa voley at left
+    
+    # Larissa em ação (Show, Don't Tell)
+    larissa "49... 50! Mais uma série! O suor é só a fraqueza saindo do corpo!"
+    
+    narrator "A garota na quadra parecia uma máquina. Ela saltava e cortava com uma precisão assustadora, totalmente sozinha."
+    
+    # O MC observa alguém observando
+    narrator "Mas ela não era a única ali. Na arquibancada, escondida atrás de um pilar..."
 
-    # Apresentação natural da Huey
+    # Usando sprite correto 'huey neutral'
     show huey neutral at right
-    huey "Nossa, que energia incrível vocês têm aqui... posso me juntar a vocês?"
-    huey "Sou Huey, estudo artes visuais. O movimento dos corpos em ação... é como uma dança. Cada gesto conta uma história."
-    huey "Estava desenhando alguns esboços quando vi vocês treinando... é fascinante como o esporte pode ser tão artístico."
-
-    narrator "Huey chegou com passos suaves, carregando um caderno de desenhos e alguns materiais de arte. Havia algo contemplativo em sua presença."
-
-    # Apresentação do jogador
-    narrator "Me apresentei brevemente, explicando que era novo na universidade e estava explorando diferentes atividades físicas e artísticas."
-    narrator "Ambas pareceram interessadas em conhecer minha perspectiva sobre esporte e arte."
-
-    larissa "Que legal! E qual sua abordagem para esportes? Você prefere competição ou mais recreativo?"
-    larissa "Dança? Huey, isso é esporte! Precisamos de foco, técnica e determinação para vencer."
     
-    huey "Mas a beleza está no processo, não apenas no resultado final. Cada movimento tem sua própria poesia."
+    # Huey murmurando, focada no desenho
+    huey "A curva do deltoide na extensão máxima... fascinante. A tensão dinâmica é perfeita."
     
-    larissa "Beleza? Huey, no vôlei o que importa é ganhar! Pontos, sets, vitórias. É isso que conta."
-    huey "E se eu te disser que a verdadeira vitória está em encontrar significado em cada momento?"
+    # O MC intervém
+    mc "Ei, você não deveria pedir permissão antes de usar alguém como modelo vivo?"
     
-    narrator "Senti que havia uma tensão sutil entre as duas perspectivas. Larissa focada na competição, Huey na essência artística."
-    narrator "E eu estava no meio, observando como duas abordagens aparentemente opostas podiam coexistir."
-
-    # Primeira interação: Quadra de vôlei - Primeiro encontro
+    # Huey se assusta levemente (usando 'happy' pois não há 'surprised')
+    show huey happy
+    huey "Oh. Olá, [nome]. A permissão alteraria a pose. A autoconsciência mata a autenticidade do movimento."
+    
+    # Larissa percebe os dois e fica irritada ('larissa angry' existe)
+    show larissa angry
+    larissa "EI! VOCÊS DOIS! Estão atrapalhando meu foco! Se não vieram treinar, saiam da quadra!"
+    
+    mc "Calma, Larissa, a gente só estava..."
+    
+    larissa "Calma é para quem perde. Eu tenho um campeonato estadual em três semanas e minha recepção ainda está 0.5 segundos lenta."
+    
+    # Huey muda para tom mais sério/neutro
+    show huey neutral
+    huey "Na verdade... sua recepção está lenta porque você tensiona o ombro esquerdo antes de pular. Quebra a simetria."
+    
+    # O Choque: A artista dá uma dica técnica.
+    # Como não tem 'surprised', usamos 'neutral' para mostrar que ela parou de gritar
+    show larissa neutral
+    
+    larissa "O quê? Quem é você para falar da minha técnica? Alguma treinadora nova?"
+    
+    huey "Sou Huey. Apenas observo as linhas. E sua linha de força está... truncada."
+    huey "Olhe aqui no esboço."
+    
+    # Larissa olha o desenho.
+    narrator "Larissa marchou até a arquibancada, pronta para brigar, mas parou ao ver o caderno de Huey."
+    
+    # Usando 'blush' para mostrar que ela ficou desconcertada/impressionada
+    show larissa blush
+    larissa "Isso... sou eu? Por que estou parecendo uma... estátua grega?"
+    
+    huey "Porque o esforço é belo. Mas veja aqui... o ombro. Está rígido no desenho. O corpo não mente."
+    
+    # === MENU DE ESCOLHA ===
     menu:
-        "Apoiar a abordagem competitiva de Larissa":
-            $ points_larissa += 1
-            narrator "Concordei que o esporte é sobre vitória e superação."
-            larissa "Exato! Sem competição, não há evolução. Precisamos sempre buscar ser melhores."
-            huey "Mas e se a evolução vier de dentro? De entender o que realmente nos move?"
-            larissa "Huey, números não mentem. Vitórias, recordes, títulos... isso é o que importa."
-
-        "Apoiar a perspectiva artística de Huey":
+        "Validar a observação da Huey (Apoiar Arte/Técnica)":
             $ points_huey += 1
-            narrator "Concordei que há beleza e significado no processo esportivo."
-            huey "Obrigada por entender... cada movimento é uma expressão, cada jogo uma história."
-            larissa "Mas Huey, sem competição, como vamos medir nosso progresso? Como saber se estamos melhorando?"
-            huey "Talvez o progresso não seja só sobre números, mas sobre como nos sentimos ao jogar."
+            
+            mc "Ela tem um ponto, Larissa. Às vezes quem está de fora vê vícios de postura que você não percebe."
+            
+            show larissa neutral
+            larissa "Hmpf. Deixe-me ver isso direito..."
+            larissa "Talvez... se eu relaxar o trapézio... Tsc. Não é que faz sentido?"
 
-        "Compartilhar sua própria perspectiva sobre esporte e arte":
+        "Elogiar a força da Larissa (Apoiar Esporte)":
             $ points_larissa += 1
-            $ points_huey += 1
-            narrator "Compartilhei minha própria visão sobre esporte e arte, tentando encontrar um meio termo."
-            larissa "Interessante perspectiva... você parece equilibrar bem os dois lados."
-            huey "Sinto que você tem uma energia muito equilibrada... como se conseguisse ver o valor em ambas as abordagens."
+            
+            mc "Não liga pro desenho. Sua explosão muscular estava incrível, deu pra ouvir o estalo da bola daqui."
+            
+            show larissa happy
+            larissa "Exato! Força bruta e repetição resolvem qualquer problema de postura."
+            
+            show huey sad
+            huey "A força sem forma é apenas violência. Mas... a energia é inegável."
 
-        "Perguntar a Larissa sobre o que a motiva no esporte":
-            $ points_larissa += 1
-            larissa "A adrenalina da competição, a sensação de superar limites, de vencer! É indescritível."
-            huey "Interessante... eu sinto algo parecido quando estou criando. Mas para mim é mais sobre conexão."
-            larissa "Conexão? Huey, no vôlei você precisa estar focado em si mesmo, em sua performance."
-
-        "Perguntar a Huey sobre o que ela vê de belo no esporte":
-            $ points_huey += 1
-            huey "A concentração nos olhos, a sincronia entre os jogadores, a emoção pura... é arte em movimento."
-            larissa "Arte? Huey, isso é estratégia, técnica, força física! Não tem nada de artístico."
-            huey "Mas Larissa, você não sente que há algo mágico quando tudo se alinha perfeitamente?"
-
-        "Tentar mediar as duas perspectivas":
+        "Sugerir uma colaboração (União)":
             $ points_larissa += 1
             $ points_huey += 1
-            narrator "Sugeri que talvez ambas as abordagens tivessem seu valor."
-            larissa "Hmm... talvez você tenha razão. Mas ainda acho que precisamos de objetivos claros."
-            huey "E eu acho que podemos encontrar beleza mesmo na competição mais acirrada."
+            
+            mc "Larissa, use o desenho como replay instantâneo. Huey, continue desenhando para acharmos os erros."
+            
+            show huey happy
+            huey "Seria... um estudo de anatomia em tempo real. Aceito."
+            
+            show larissa happy
+            larissa "Usar arte para ganhar medalha? ...Tsc. Se me ajudar a vencer, eu topo."
 
-    # Transição para o jardim
-    scene bg jardim_universidade with dissolve
-    show larissa neutral at left
-    show huey neutral at right
-
-    narrator "Depois do treino, Larissa sugeriu que fôssemos ao jardim da universidade para relaxar."
-    narrator "O ambiente contrastava com a intensidade da quadra - mais calmo, mais contemplativo."
-
-    larissa "Esse lugar é perfeito para recarregar as energias depois de um treino. Preciso me alongar e hidratar."
-    huey "As cores aqui... são inspiradoras. Cada folha, cada flor tem sua própria personalidade."
+    # === TRANSIÇÃO PARA CAFETERIA ===
+    scene bg cafeteria with fade
     
-    larissa "Personalidade? Huey, são só plantas. O importante é que o ar fresco ajuda na recuperação muscular."
-    huey "Mas Larissa, não sente que há algo especial neste lugar? Como se cada elemento tivesse uma história para contar?"
+    narrator "Trinta minutos de saques, esboços e correções depois..."
     
-    larissa "História? Huey, estou pensando no próximo treino, na próxima competição. Preciso manter o foco."
-    huey "E se eu te disser que parar para observar pode te ajudar a jogar melhor? Às vezes a pausa é parte do processo."
-
-    # Segunda interação: Jardim da universidade
-    menu:
-        "Apoiar a abordagem prática de Larissa":
-            $ points_larissa += 1
-            narrator "Concordei que o foco deve estar nos objetivos esportivos."
-            larissa "Exato! Cada minuto conta. Preciso otimizar meu tempo para maximizar resultados."
-            huey "Mas e se a 'otimização' incluir momentos de contemplação? Às vezes a resposta vem quando paramos de procurar."
-            larissa "Huey, no esporte não há tempo para contemplação. É ação, reação, resultado."
-
-        "Apoiar a perspectiva contemplativa de Huey":
-            $ points_huey += 1
-            narrator "Concordei que há valor em parar e observar."
-            huey "Obrigada... às vezes as melhores ideias vêm quando estamos em paz com o momento."
-            larissa "Mas Huey, como isso vai me ajudar a vencer? Preciso de estratégias, não de poesia."
-            huey "Talvez a poesia seja a estratégia que você está procurando."
-
-        "Tentar encontrar um meio termo":
-            $ points_larissa += 1
-            $ points_huey += 1
-            narrator "Sugeri que talvez ambas as abordagens pudessem se complementar."
-            larissa "Hmm... talvez você tenha razão. Mas ainda acho que precisamos de foco nos objetivos."
-            huey "E eu acho que podemos encontrar clareza mesmo nos momentos mais calmos."
-
-        "Perguntar a Larissa sobre seus objetivos competitivos":
-            $ points_larissa += 1
-            larissa "Quero ser a melhor. Competir em alto nível, quebrar recordes, ganhar títulos."
-            huey "E o que acontece depois que você conquista tudo isso? O que fica?"
-            larissa "Huey, você não entende. A competição nunca acaba. Sempre há um próximo nível para alcançar."
-
-        "Perguntar a Huey sobre o que a inspira na natureza":
-            $ points_huey += 1
-            huey "A imperfeição perfeita de cada folha, a forma como a luz dança entre as árvores... é pura arte."
-            larissa "Arte? Huey, isso não vai me ajudar a melhorar meu saque ou minha defesa."
-            huey "Mas Larissa, você não sente que há uma conexão entre a harmonia da natureza e a fluidez do movimento?"
-
-    # Transição para a cafeteria
-    scene bg cafeteria with dissolve
-    show larissa neutral at left
-    show huey neutral at right
-
-    narrator "Para encerrar o dia, decidimos ir até a cafeteria da universidade para tomar algo e continuar a conversa."
-    narrator "O ambiente estava movimentado, com estudantes conversando e o barulho das máquinas de café."
-
-    larissa "Depois de tanto exercício, um suco gelado cai muito bem! Preciso repor os eletrólitos."
-    huey "E um café para me manter alerta... preciso finalizar alguns esboços que fiz hoje."
+    show larissa happy at left
+    show huey happy at right
     
-    larissa "Ainda está desenhando? Huey, você deveria estar pensando no próximo treino, não em desenhos."
-    huey "Mas Larissa, estes desenhos são importantes para mim. Eles capturam momentos que nunca mais voltarão."
+    larissa "Aquele último saque foi perfeito! Eu senti a fluidez que você falou!"
     
-    larissa "Momentos? Huey, o que importa é o futuro, os próximos jogos, as próximas vitórias!"
-    huey "E se eu te disser que entender o passado pode te ajudar a melhorar no futuro?"
+    huey "E o desenho ficou... dinâmico. Você tem uma energia cinética incrível, Larissa."
+    
+    mc "Viu? Arte e Esporte não são inimigos."
+    
+    show larissa blush
+    larissa "É... acho que você não é só uma garota estranha com um caderno, afinal."
+    
+    huey "E você não é apenas músculos em movimento. Há uma dança na sua determinação."
+    
+    # Fechamento
+    narrator "Larissa virou uma garrafa de água inteira, enquanto Huey sombreava o último desenho. Havia um respeito silencioso nascendo ali."
 
-    # Terceira interação: Cafeteria
-    menu:
-        "Apoiar a visão focada no futuro de Larissa":
-            $ points_larissa += 1
-            narrator "Concordei que o foco deve estar nos objetivos futuros."
-            larissa "Exato! Preciso sempre estar pensando no próximo passo, na próxima melhoria."
-            huey "Mas e se parar para refletir sobre o que já conquistou te der força para continuar?"
-            larissa "Huey, reflexão não ganha jogos. Ação, determinação, foco... isso sim."
-
-        "Apoiar a perspectiva reflexiva de Huey":
-            $ points_huey += 1
-            narrator "Concordei que há valor em refletir sobre o presente e o passado."
-            huey "Obrigada... cada momento tem sua própria beleza e lição."
-            larissa "Mas Huey, como isso vai me ajudar a vencer? Preciso de resultados, não de filosofia."
-            huey "Talvez a filosofia seja o que está faltando para você encontrar uma nova forma de jogar."
-
-        "Tentar unir as duas perspectivas":
-            $ points_larissa += 1
-            $ points_huey += 1
-            narrator "Sugeri que talvez ambas as abordagens pudessem trabalhar juntas."
-            larissa "Hmm... talvez você tenha razão. Mas ainda acho que precisamos de foco nos objetivos."
-            huey "E eu acho que podemos encontrar clareza mesmo nos momentos mais reflexivos."
-
-        "Perguntar a Larissa sobre o que a motiva a continuar competindo":
-            $ points_larissa += 1
-            larissa "A sensação de superar limites, de ser melhor que ontem, de vencer! É viciante."
-            huey "E quando você não vence? O que te mantém motivada?"
-            larissa "Huey, derrota é só combustível para treinar mais duro. Cada perda me torna mais forte."
-            huey "Mas e se houver outras formas de se fortalecer além da competição?"
-
-        "Perguntar a Huey sobre o que ela aprende com seus desenhos":
-            $ points_huey += 1
-            huey "Cada desenho me ensina algo sobre mim mesma, sobre como vejo o mundo."
-            larissa "E como isso vai te ajudar na vida real? Na carreira, nos estudos?"
-            huey "Larissa, talvez a 'vida real' seja exatamente isso: entender quem somos e o que nos move."
-            larissa "Huey, você precisa de objetivos concretos, metas mensuráveis, resultados tangíveis."
-
-    # === MOMENTO DE REFLEXÃO E CRESCIMENTO MÚTUO - PRIMEIRO ENCONTRO ===
-    narrator "Por um momento, todas ficaram em silêncio, processando as diferentes perspectivas que haviam sido compartilhadas."
-    narrator "O ambiente da cafeteria parecia ter se transformado em um espaço de reflexão profunda."
-    
-    # Larissa mostra crescimento
-    larissa "Huey... eu nunca tinha pensado no esporte dessa forma. Sempre foquei apenas em vencer, em ser melhor."
-    larissa "Mas talvez você tenha razão. Talvez haja algo mais profundo que eu estava perdendo."
-    larissa "É raro encontrar alguém que veja o esporte de uma forma tão... poética."
-    
-    # Huey mostra crescimento
-    huey "E eu nunca tinha considerado que a competição pudesse ser uma forma de arte também."
-    huey "A paixão que você tem, a determinação... isso também é belo, também tem significado."
-    huey "E você... você parece ter uma perspectiva interessante sobre equilibrar competição e arte."
-    
-    # Momento de conexão
-    narrator "As duas se olharam com uma nova compreensão, como se tivessem descoberto algo importante sobre si mesmas."
-    
-    larissa "Talvez... talvez possamos aprender uma com a outra. Eu posso te ensinar sobre determinação e foco."
-    huey "E eu posso te mostrar como encontrar beleza e significado em cada momento."
-    
-    # Crescimento mútuo
-    narrator "Era como se cada uma tivesse encontrado uma parte de si mesma que não sabia que estava perdida."
-    narrator "Larissa descobrindo que há poesia na competição, Huey descobrindo que há arte na determinação."
-    
-    # Promessa de continuidade
-    larissa "Que tal treinarmos juntas? Eu te ensino sobre esporte, você me ensina sobre... sobre ver as coisas de forma diferente."
-    huey "Adorei a ideia! E posso desenhar você treinando, capturar a beleza da sua determinação."
-    
-    narrator "Ambas sorriram, e pela primeira vez, pareciam verdadeiramente conectadas."
-    
-    # Memória compartilhada especial
-    $ add_shared_memory("sport_art_connection", ["larissa", "huey"], "O momento em que descobrimos que competição e arte podem coexistir harmoniosamente")
-
-    hide larissa
-    hide huey
-    narrator "Após a conversa, nos despedimos com sorrisos e a promessa de repetir a experiência."
-    narrator "Foi um dia que mudou a forma como vemos o esporte e a arte - não como opostos, mas como complementos."
-    narrator "Era como se tivéssemos descoberto uma nova forma de ver o mundo, onde determinação e beleza dançavam juntas em perfeita harmonia."
+    # Memória compartilhada
+    $ add_shared_memory("sport_art_connection", ["larissa", "huey"], "O dia em que corrigimos um saque de vôlei usando desenho artístico.")
 
     return
