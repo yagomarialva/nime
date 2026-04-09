@@ -146,19 +146,29 @@ label capitulo1_segunda_escolha:
 # === CONTINUAÇÃO DA SEGUNDA ESCOLHA ===
 label capitulo1_continue_second_choice:
     
-    # Se já fez eventos suficientes, vai para a aula
+    # Se já fez eventos suficientes, a rotina segue
     if len(second_choice_events) >= 3:
+        mc "Bom, acho que por hoje chega de exploração. A aula do Professor Wendell vai começar em breve."
+        
         call capitulo1_aula_professor_wendell from _call_capitulo1_aula_professor_wendell
+        
         # Depois da aula, continua para a festa
+        narrator "A aula foi intensa, mas a noite prometia mais."
         call capitulo1_terceira_escolha from _call_capitulo1_terceira_escolha
+        
         # Questionário de conexões futuras
         call capitulo1_quarta_escolha from _call_capitulo1_quarta_escolha
+        
         jump capitulo1_final
 
-    narrator "Para onde devo ir agora?"
+    # Se ainda tem tempo
+    mc "Ainda tenho um tempo livre na grade. O campus é grande e eu não vi tudo."
+    narrator "Olhei para as opções disponíveis no mapa do campus."
     
     menu:
-        "Ir ao laboratório de comunicação e dados" if "lab" not in second_choice_events:
+        "Checar o Laboratório de Dados (Curiosidade Intelectual)" if "lab" not in second_choice_events:
+            mc "Ouvi dizer que o equipamento do laboratório de comunicação é de ponta. Talvez valha a pena ver quem frequenta aquele aquário de vidro."
+            
             $ add_shared_memory("methodology_debate_meeting", ["katia", "nicole"], "Primeira discussão sobre metodologia e criatividade")
             $ add_affinity_points("katia", 10, "Interesse em análise criativa")
             $ add_affinity_points("nicole", 10, "Interesse em metodologia")
@@ -167,7 +177,9 @@ label capitulo1_continue_second_choice:
             $ second_choice_events.append("lab")
             jump capitulo1_continue_second_choice
             
-        "Explorar a galeria de arte" if "gallery" not in second_choice_events:
+        "Passar na Galeria de Arte (Inspiração)" if "gallery" not in second_choice_events:
+            mc "Um pouco de cultura não faz mal a ninguém. Além disso, lugares artísticos costumam atrair as pessoas mais... interessantes."
+            
             $ add_shared_memory("art_spirituality_meeting", ["huey", "camille"], "Exploração da conexão entre arte e espiritualidade")
             $ add_affinity_points("huey", 10, "Interesse em técnica artística")
             $ add_affinity_points("camille", 10, "Interesse em energia criativa")
@@ -176,7 +188,9 @@ label capitulo1_continue_second_choice:
             $ second_choice_events.append("gallery")
             jump capitulo1_continue_second_choice
             
-        "Visitar o centro de jogos e recreação" if "games" not in second_choice_events:
+        "Ver o Centro de Jogos (Diversão)" if "games" not in second_choice_events:
+            mc "Estudar é bom, mas descontrair é essencial. Se tiver alguém jogando alguma coisa por lá, é lá que eu quero estar."
+            
             $ add_shared_memory("gaming_sports_meeting", ["samantha", "larissa"], "Primeira atividade combinando jogos e esportes")
             $ add_affinity_points("samantha", 10, "Interesse em RPG e criatividade")
             $ add_affinity_points("larissa", 10, "Interesse em competição e superação")
@@ -184,7 +198,7 @@ label capitulo1_continue_second_choice:
             call evento_samantha_larissa from _call_evento_samantha_larissa
             $ second_choice_events.append("games")
             jump capitulo1_continue_second_choice
-
+            
 # === FINAL DO CAPÍTULO 1 - RETROSPECTIVA ===
 label capitulo1_final:
     scene bg campus_sunset with fade
