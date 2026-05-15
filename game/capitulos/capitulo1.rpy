@@ -106,9 +106,13 @@ label loop_mapa_cap1:
         jump capitulo1_final
 
     # Chamada da tela do mapa interativo. O jogador escolhe um local.
-    call screen mapa_interativo
+    call screen mapa_modal
     
     $ local_escolhido = _return
+    
+    # Se o jogador fechou o modal sem escolher (botão X), volta ao mapa
+    if local_escolhido is None:
+        jump loop_mapa_cap1
     
     # Pede ao EventManager o evento pendente
     $ evt_label = game_events.get_pending_event(local_escolhido, dia_atual, periodo_atual)
