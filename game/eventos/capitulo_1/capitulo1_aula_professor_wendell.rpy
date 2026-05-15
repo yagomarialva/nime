@@ -1,68 +1,71 @@
-# === AULA COM O PROFESSOR WENDELL - TODOS SE CONHECEM ===
+# === AULA COM O PROFESSOR WENDELL - A SALA DO CAOS ===
 label capitulo1_aula_professor_wendell:
     scene bg auditorium with fade
     
-    narrator "Após todas as explorações do dia, recebi uma mensagem do Professor Wendell convidando para uma aula especial sobre 'Conexões Humanas e Desenvolvimento Pessoal'."
-    narrator "Era uma matéria eletiva que ele ministrava para alunos interessados em crescimento pessoal e relacionamentos."
+    narrator "Cheguei atrasado. O cronograma dizia 'Eletiva: Conexões Humanas', mas o que encontrei ao abrir a porta foi o mais puro caos."
+    narrator "Não havia ninguém sentado. As mesas haviam sido empurradas contra a parede."
     
-    narrator "Quando entrei na sala, fiquei surpreso ao ver que todas as pessoas que havia conhecido nos últimos dias estavam presentes."
-    narrator "Era como se o destino tivesse nos reunido naquele momento especial."
+    show professor_wendell neutral at center
     
-    show professor_wendell at center
-    professor_wendell "Bem-vindos, queridos alunos! Hoje temos uma aula muito especial sobre conexões humanas."
-    professor_wendell "E vejo que temos alguns rostos novos aqui... que maravilhoso!"
+    narrator "O Professor Wendell estava sentado de pernas cruzadas em cima da própria mesa, balanceando um diapasão na mão."
+    narrator "No centro do chão vazio da sala, ele havia desenhado um enorme círculo com giz branco."
+    
+    professor_wendell "O paradoxo do ouriço de Schopenhauer. Alguém me explique como não morrer congelado sem ser devorado por espinhos."
     
     hide professor_wendell
-    narrator "O Professor Wendell começou a apresentar cada pessoa, criando um ambiente acolhedor onde todos puderam se conhecer formalmente."
     
-    # Apresentação das personagens
-    show nicole neutral at left
-    nicole "Olá, sou Nicole. Estudo comunicação estratégica e análise de dados comportamentais."
-    nicole "É um prazer conhecer todos vocês formalmente."
-    hide nicole with dissolve
+    narrator "Ele não estava dando uma aula. Ele estava assistindo a um incêndio forestal."
     
-    show camille gentle at right
-    camille "Oi, sou Camille. Estudo conexões energéticas e práticas de mindfulness."
-    camille "É reconfortante estar em um ambiente onde todos valorizam o crescimento pessoal."
-    hide camille with dissolve
+    show larissa angry at left
+    larissa "Isso não faz o menor sentido! Não tem exercício prático? Não tem objetivo?"
+    larissa "Qual a utilidade funcional de ficar debatendo um bicho imaginário?!"
+    
+    narrator "Larissa andava de um lado pro outro fora do círculo de giz, batendo a ponta do pé com força no chão falso de madeira. Ela precisava de movimento. O impasse a estava enlouquecendo."
+    
+    show nicole sad at right
+    nicole "O problema não é a falta de prática! O problema é que a variável do 'congelamento' não está quantificada! Como vamos ser avaliados por algo sem critério?!"
+    
+    narrator "Nicole analisava a lousa freneticamente. O rosto pálido e a respiração curta denunciavam o pânico. O caos era o seu pior pesadelo."
     
     show katia neutral at left
-    katia "Sou Katia, estudo cinema e análise de narrativas."
-    katia "N-não é como se eu me importasse, mas vocês parecem ter perspectivas... interessantes sobre comunicação."
-    hide katia with dissolve
+    katia "Vocês são tão... previsíveis."
+    katia "Estão discutindo a regra do jogo sem perceber que o tabuleiro já está viciado. Espinhos ou frio, o fim é a dor. Que exercício medíocre."
     
-    show huey gentle at right
-    huey "Oi, sou Huey. Estudo artes visuais e expressão criativa."
-    huey "É inspirador estar rodeada de pessoas tão diferentes e interessantes."
-    hide huey with dissolve
+    narrator "Katia jogava as palavras como quem joga pedras na água, fingindo não se importar com as ondulações. Mas seus braços estavam cruzados com força demais."
     
-    show samantha happy at left
-    samantha "O-oi, sou Samantha... estudo jogos e estratégia criativa."
-    samantha "É bom conhecer todos vocês... sempre valorizo diferentes perspectivas sobre criatividade."
-    hide samantha with dissolve
+    hide larissa
+    hide nicole
+    hide katia
     
-    show larissa happy at right
-    larissa "Eaí, sou Larissa! Estudo educação física e estratégia esportiva."
-    larissa "Que legal conhecer todo mundo! Adoro trabalhar em equipe e superar desafios juntos!"
-    hide larissa with dissolve
+    narrator "Olhei para o fundo da sala. Atrás de uma prateleira de livros derrubada, Camille mantinha os olhos fechados, tentando, em vão, filtrar a energia pesada e descontrolada do ambiente."
+    narrator "No canto oposto, Huey rascunhava algo freneticamente em um bloco, os nós dos dedos brancos. E Samantha..."
+    narrator "Samantha estava sentada no chão, os fones de ouvido maiores que a própria cabeça apertados sobre os ouvidos, lutando contra o pânico social que ameaçava engoli-la."
     
-    show professor_wendell at center
-    professor_wendell "Maravilhoso! Vejo que temos um grupo muito diverso e talentoso aqui."
-    professor_wendell "Hoje vamos falar sobre como as conexões humanas se formam e como podemos aprender uns com os outros."
+    mc "Eles não vão chegar a um acordo. Nunca."
     
-    narrator "A aula foi fascinante. O Professor Wendell falou sobre como pessoas diferentes podem se complementar perfeitamente."
-    narrator "Ele destacou como cada um de nós traz uma perspectiva única que pode enriquecer o grupo todo."
+    show professor_wendell happy at center
+    professor_wendell "Fascinante. Simplesmente fascinante."
     
-    professor_wendell "Lembrem-se, queridos alunos: as melhores conexões acontecem quando abrimos nossos corações para aprender com pessoas diferentes de nós."
-    professor_wendell "Cada um de vocês tem algo especial para oferecer ao mundo e uns aos outros."
+    narrator "Wendell finalmente desceu da mesa e caminhou até o centro do círculo de giz."
+    
+    professor_wendell "A Srta. Larissa atacou o problema. A Srta. Nicole exigiu as regras. A Srta. Katia tentou desconstruir a dor."
+    professor_wendell "E todos vocês... todos vocês continuam isolados em suas próprias trincheiras."
+    
+    narrator "O sorriso dele desapareceu."
+    
+    professor_wendell "Vocês são brilhantes. E são covardes."
+    professor_wendell "Não quero que tentem ler a mente uns dos outros. Quero que se perdoem por ferir e por queimar."
+    
+    professor_wendell "A nossa aula acabou."
     
     hide professor_wendell
-    narrator "Após a aula, todos ficaram conversando, compartilhando suas experiências dos últimos dias."
-    narrator "Era incrível ver como, mesmo tendo personalidades tão diferentes, todos conseguiam se conectar de forma genuína."
     
-    narrator "Foi um momento especial onde finalmente todos se conheceram, criando laços que prometiam durar muito tempo."
+    narrator "Ele pegou seu sobretudo e saiu, deixando vinte alunos sozinhos com ecos e atritos."
+    narrator "O silêncio que se seguiu foi insuportavelmente pesado. Uma estática quebrada."
     
-    # Memória compartilhada especial
-    $ add_shared_memory("first_group_meeting", ["nicole", "camille", "katia", "huey", "samantha", "larissa"], "O primeiro encontro oficial de todo o grupo na aula do Professor Wendell")
+    mc "A conexão aqui não vai ser mágica... vai ser um processo violento."
+    
+    # Memória compartilhada refatorada (sem "amigos felizes")
+    $ add_shared_memory("first_group_meeting", ["nicole", "camille", "katia", "huey", "samantha", "larissa"], "O momento em que percebi o quão isolados todos realmente estavam.")
     
     jump capitulo1_terceira_escolha

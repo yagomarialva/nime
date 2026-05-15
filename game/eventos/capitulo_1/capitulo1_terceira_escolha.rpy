@@ -1,254 +1,183 @@
-# === TERCEIRA ESCOLHA - FESTA DE BOAS-VINDAS ===
+# === TERCEIRA ESCOLHA - A FESTA DA FUMAÇA E DO RUÍDO ===
 label capitulo1_terceira_escolha:
-    # Tocar música da festa
     play music party fadein 2.0
     
     scene bg campus_evening with fade
     
-    narrator "O terceiro dia na Faculdade Solária havia chegado ao fim. O sol se punha sobre o campus, pintando o céu com tons alaranjados e rosa."
-    narrator "Mas a noite ainda estava apenas começando..."
+    narrator "O sol despencou no horizonte sem qualquer aviso decoroso. O céu da Solária sangrava em um tom alaranjado doente."
+    narrator "A noite engoliu o campus com a agressividade habitual das noites universitárias."
     
     scene bg campus_night with fade
-    narrator "Conforme caminhava pelo campus, ouvi música e risadas vindas do centro estudantil. Uma festa de boas-vindas estava acontecendo!"
-    narrator "Era a oportunidade perfeita para conhecer melhor todas as pessoas incríveis que havia encontrado nos últimos dias."
+    narrator "Ouvi o grave pulsante muito antes de ver o pavilhão do centro estudantil. O ar cheirava a cerveja quente, suor de ansiedade e fumaça artificial."
+    narrator "A infame festa de recepção dos calouros. Um rito de passagem onde todos tentam provar que não estão desesperados por aprovação."
     
-    scene bg festa_boas_vindas with fade
-    narrator "O ambiente estava animado, com música, luzes coloridas e estudantes conversando em grupos. O ar estava carregado de energia e possibilidades."
+    scene bg festa_boas_vindas with dissolve
+    narrator "A música estava tão alta que meus pensamentos se transformaram em estática."
     
-    # Apresentação do grupo reunido
-    narrator "E foi então que as vi... todas as seis pessoas incríveis que havia conhecido, reunidas em um só lugar."
+    # As garotas isoladas e desconfortáveis
+    narrator "Abri caminho pela multidão de corpos amontoados. Foi quando percebi: não existia roda. Não existia o grupo perfeito."
+    narrator "Todas aquelas figuras fragmentadas, as garotas que encontrei ao longo da semana, estavam dolorosamente espalhadas pelos cantos da festa, como detritos deixados na areia após a maré recuar."
     
-    show nicole happy at center
-    nicole "Nossa, que coincidência! Todas estamos aqui!"
-    hide nicole with dissolve
+    mc "Miseráveis e teimosas demais para simplesmente irem embora."
     
-    show katia neutral at center
-    katia "Hmm... tanto faz."
-    hide katia with dissolve
+    # === INTERAÇÃO COM NICOLE ===
+    narrator "Encostada na mesa de bebidas, longe das caixas de som, encontrei Nicole. Ela mexia distraidamente em um copo plástico, o nariz sutilmente enrugado."
     
-    show larissa happy at center
-    larissa "GENTE! Que energia incrível! Vamos aproveitar essa festa!"
-    hide larissa with dissolve
-    
-    show huey gentle at center
-    huey "É lindo ver todas vocês juntas... como uma obra de arte viva."
-    hide huey with dissolve
-    
-    show samantha happy at center
-    samantha "Nossa, que legal! É tipo uma party épica com todas as personagens principais!"
-    hide samantha with dissolve
-    
-    show camille gentle at center
-    camille "Senti uma energia muito especial vindo daqui... como se o universo tivesse nos reunido."
-    hide camille with dissolve
-    
-    narrator "Por um momento, todas ficaram em silêncio, observando uma à outra. Era como se houvesse uma conexão invisível entre todas elas."
-    
-    # Momento especial com cada personagem
-    narrator "Conforme a festa continuava, cada uma se dispersou para explorar o ambiente. Foi então que tive a oportunidade de conversar individualmente com cada uma..."
-    
-    # === MOMENTO ESPECIAL COM NICOLE ===
-    scene bg festa_boas_vindas with fade
     show nicole neutral at center
     
-    narrator "Encontrei Nicole em um canto mais silencioso da festa, organizando seus materiais em uma mesa."
-    
-    nicole "Ah, você! Estava esperando uma oportunidade para conversar com você em particular."
-    nicole "Estes últimos dias foram... transformadores. Nunca pensei que encontraria pessoas que entendessem minha paixão por metodologia e análise."
+    nicole "O volume excedeu os limites regulamentares há trinta minutos. As vibrações daquele alto-falante estão provocando uma microfissura no gesso."
     
     menu:
-        "Perguntar sobre seus projetos futuros":
-            $ points_nicole += 3
-            narrator "Perguntei sobre os projetos que Nicole estava desenvolvendo."
-            nicole "Bem... tenho várias ideias em mente. Mas o mais importante é que agora tenho pessoas incríveis para colaborar."
-            nicole "Katia, por exemplo... ela me mostrou que há mais na narrativa do que apenas estrutura. É fascinante como nos complementamos."
-            
-        "Comentar sobre a conexão do grupo":
-            $ points_nicole += 2
-            narrator "Comentei sobre a conexão especial que parecia existir entre todas."
-            nicole "É verdade... há algo especial aqui. Como se cada uma de nós trouxesse uma peça única de um quebra-cabeça maior."
-            nicole "E você... você parece ser a peça que conecta todas as outras."
-            
-        "Refletir sobre os últimos dias":
+        "Tentar ser otimista":
             $ points_nicole += 1
-            narrator "Refletimos juntos sobre tudo que havia acontecido nos últimos dias."
-            nicole "Nunca pensei que a faculdade seria assim... cheia de descobertas e conexões genuínas."
-            nicole "Você fez parte disso. Obrigada por estar aqui."
+            mc "É uma festa de recepção. Acho que o objetivo estrutural é surdez coletiva, não?"
+            nicole "Hum. Racionalização interessante da auto-sabotagem humana."
+            
+        "Concordar silenciosamente":
+            $ points_nicole += 3
+            narrator "Fiquei ao lado dela, encarando a mesma fissura imaginária no gesso. O silêncio compartilhado era muito melhor que gritar frivolidades."
+            nicole "Obrigada por não perguntar se estou me divertindo."
+            
+    hide nicole with dissolve
     
-    # === MOMENTO ESPECIAL COM KATIA ===
-    scene bg festa_boas_vindas with fade
-    show katia neutral at center
+    # === INTERAÇÃO COM KATIA ===
+    narrator "Perto da saída de emergência, longe dos estroboscópios estúpidos, uma figura usava o celular como escudo luminoso."
     
-    narrator "Katia estava em pé perto de uma janela, observando a festa com um ar pensativo."
+    show katia sad at center
     
-    katia "Hmm... você apareceu. Estava pensando em algo importante."
-    katia "Estes últimos dias... foram diferentes do que eu esperava. Encontrei pessoas que realmente entendem de cinema e narrativa."
+    katia "Aquela iluminação estroboscópica na pista de dança é amadora. A taxa de quadros visuais cria uma narrativa visual barata que dá náuseas."
     
     menu:
-        "Perguntar sobre seus filmes favoritos":
-            $ points_katia += 3
-            narrator "Perguntei sobre os filmes que Katia mais gostava."
-            katia "Hmm... tenho vários. Mas o mais especial é quando encontro alguém que realmente entende a profundidade do cinema."
-            katia "Nicole, por exemplo... ela me mostrou que há mais na análise do que apenas intuição. É fascinante como nos complementamos."
-            katia "N-não é como se eu estivesse impressionada ou qualquer coisa assim... mas é raro encontrar alguém assim."
-            
-        "Comentar sobre sua personalidade única":
-            $ points_katia += 2
-            narrator "Comentei sobre a personalidade única de Katia."
-            katia "Hmpf... você realmente me observa, não é? É... reconfortante saber que alguém entende minha forma de ser."
-            katia "Às vezes sinto que sou muito diferente das outras pessoas... mas aqui, com vocês, me sinto... aceita."
-            
-        "Refletir sobre o crescimento do grupo":
+        "Discutir cinema":
             $ points_katia += 1
-            narrator "Refletimos sobre como o grupo havia crescido e se conectado."
-            katia "Nunca pensei que encontraria pessoas que me aceitassem como sou... com todas as minhas peculiaridades."
-            katia "E você... você parece entender cada uma de nós de uma forma única."
+            mc "Se o diretor iluminador é ruim, a gente critica a película?"
+            katia "Sim... Quer dizer, não seja estúpido. Isto nem de longe é uma película."
+            
+        "Reconhecer seu isolamento":
+            $ points_katia += 3
+            mc "Você está praticamente com a mão na maçaneta da saída e não vai embora. Críticos gostam de sofrer pela arte?"
+            katia "Hmpf. Não critique as minhas escolhas masoquistas."
+            narrator "Katia apertou os braços em torno do próprio corpo, mas relaxou levemente os ombros pela primeira vez na noite."
+            
+    hide katia with dissolve
     
-    # === MOMENTO ESPECIAL COM LARISSA ===
-    scene bg festa_boas_vindas with fade
-    show larissa happy at center
+    # === INTERAÇÃO COM LARISSA ===
+    narrator "Encontrei Larissa no corredor lateral. Ela não parava de girar um copo vazio de plástico. Ao invés da explosão da quadra, ela parecia uma fera enjaulada em um zoológico."
     
-    narrator "Larissa estava dançando sozinha em um canto da festa, com um sorriso contagiante no rosto."
+    show larissa sad at center
     
-    larissa "Oi! Que bom te ver! Estava esperando uma oportunidade para conversar com você!"
-    larissa "Nossa, que energia incrível esta festa tem! E olha só, todas as pessoas incríveis que conhecemos estão aqui!"
+    larissa "Sabe o esgotamento aeróbico? Aquele momento que falta oxigênio porque tem gente demais sugando o mesmo ar... É assim que me sinto agora."
     
     menu:
-        "Perguntar sobre seus treinos":
-            $ points_larissa += 3
-            narrator "Perguntei sobre os treinos e atividades esportivas de Larissa."
-            larissa "Nossa, que legal que você perguntou! Tenho treinado muito, e agora tenho pessoas incríveis para treinar junto!"
-            larissa "Samantha, por exemplo... ela me mostrou que há mais no esporte do que apenas competição. É fascinante como nos complementamos!"
-            
-        "Comentar sobre sua energia contagiante":
-            $ points_larissa += 2
-            narrator "Comentei sobre a energia positiva e contagiante de Larissa."
-            larissa "Nossa, obrigada! É que eu realmente amo estar com pessoas e criar memórias incríveis!"
-            larissa "E você... você tem uma energia muito especial. É como se você conseguisse conectar todas as pessoas!"
-            
-        "Refletir sobre as amizades formadas":
+        "Puxá-la para dançar":
             $ points_larissa += 1
-            narrator "Refletimos sobre as amizades que haviam se formado."
-            larissa "Nunca pensei que encontraria pessoas tão incríveis! Cada uma tem algo especial para oferecer!"
-            larissa "E você... você é como a cola que mantém todo mundo junto!"
+            mc "Gastar energia física resolve tudo, não? Vá se mexer."
+            larissa "Eu... eu não sei como me mexer nesse tipo de caos, pra falar a verdade."
+            
+        "Entender a claustrofobia":
+            $ points_larissa += 3
+            mc "Excesso de estímulos, falta de direcionamento. Você costuma correr em pistas desenhadas, não em labirintos de bêbados."
+            larissa "Isso... é exatamente isso."
+            narrator "Larissa apertou o copo plástico até esmagado e, por um instante, seu sorriso hiperativo desapareceu."
+            
+    hide larissa with dissolve
     
-    # === MOMENTO ESPECIAL COM HUEY ===
-    scene bg festa_boas_vindas with fade
-    show huey gentle at center
+    # === INTERAÇÃO COM HUEY ===
+    narrator "Huey estava sentada na escada para o segundo andar. Ela traçava na calça jeans a fumaça projetada pelas luzes, os olhos vazios e distantes."
     
-    narrator "Huey estava sentada em um sofá, observando as pessoas dançarem com um olhar contemplativo."
+    show huey neutral at center
     
-    huey "Ah, você... que sincronia. Estava pensando em algo especial."
-    huey "Esta festa... é como uma obra de arte viva. Cada pessoa, cada movimento, cada emoção... tudo se conecta de forma única."
+    huey "Há muitas cores primárias aqui. E tão sufocante. Cadê os tons pastéis? Cadê a respiração das linhas...?"
     
     menu:
-        "Perguntar sobre sua arte":
-            $ points_huey += 3
-            narrator "Perguntei sobre os projetos artísticos de Huey."
-            huey "Bem... tenho várias ideias em mente. Mas o mais especial é que agora tenho pessoas que realmente entendem a arte."
-            huey "Camille, por exemplo... ela me mostrou que há mais na criação do que apenas técnica. É fascinante como nos complementamos."
-            
-        "Comentar sobre sua sensibilidade artística":
-            $ points_huey += 2
-            narrator "Comentei sobre a sensibilidade artística única de Huey."
-            huey "Você realmente me vê, não é? É... reconfortante saber que alguém entende minha forma de perceber o mundo."
-            huey "Às vezes sinto que vejo as coisas de forma diferente... mas aqui, com vocês, me sinto... compreendida."
-            
-        "Refletir sobre a beleza do momento":
+        "Questionar o olhar dela":
             $ points_huey += 1
-            narrator "Refletimos sobre a beleza do momento presente."
-            huey "Nunca pensei que encontraria pessoas que vissem a beleza nas mesmas coisas que eu..."
-            huey "E você... você parece conseguir ver a beleza em cada uma de nós de uma forma única."
+            mc "Sempre vendo arte, até no barulho?"
+            huey "Dói olhar pra isso tudo. Não é um quadro bem planejado."
+            
+        "Sentar de forma silenciosa e densa":
+            $ points_huey += 3
+            narrator "Sentei no degrau abaixo do dela. O grave da música fez meu peito tremer, mas ficar ali parou uma fração do barulho mental."
+            huey "Obrigada. Às vezes o mundo é muito vívido. Você ajuda a diluir um pouco das tintas."
+            
+    hide huey with dissolve
     
-    # === MOMENTO ESPECIAL COM SAMANTHA ===
-    scene bg festa_boas_vindas with fade
-    show samantha happy at center
+    # === INTERAÇÃO COM SAMANTHA ===
+    narrator "Atrás do totem de som quebrado, no escuro, encontrei a pior das vítimas."
     
-    narrator "Samantha estava em pé perto da mesa de jogos, organizando cartas e dados com entusiasmo."
+    show samantha sad at center
     
-    samantha "GENTE! Que legal te ver! Estava esperando uma oportunidade para conversar com você!"
-    samantha "Nossa, que festa épica! É tipo uma party de RPG com todas as personagens principais reunidas!"
+    samantha "M-minha stamina esgotou. A bateria social zerou no lobby. Eu preciso da tela de save."
     
     menu:
-        "Perguntar sobre suas campanhas de RPG":
-            $ points_samantha += 3
-            narrator "Perguntei sobre as campanhas de RPG que Samantha estava organizando."
-            samantha "Nossa, que legal que você perguntou! Tenho várias ideias épicas, e agora tenho pessoas incríveis para jogar!"
-            samantha "Larissa, por exemplo... ela me mostrou que há mais nos jogos do que apenas fantasia. É fascinante como nos complementamos!"
-            
-        "Comentar sobre seu entusiasmo contagiante":
-            $ points_samantha += 2
-            narrator "Comentei sobre o entusiasmo contagiante de Samantha."
-            samantha "Nossa, obrigada! É que eu realmente amo estar com pessoas e criar aventuras incríveis!"
-            samantha "E você... você tem uma energia muito especial. É como se você conseguisse conectar todas as pessoas!"
-            
-        "Refletir sobre as aventuras compartilhadas":
+        "Tratar como piada de jogador":
             $ points_samantha += 1
-            narrator "Refletimos sobre as aventuras que haviam sido compartilhadas."
-            samantha "Nunca pensei que encontraria pessoas tão incríveis para jogar! Cada uma tem algo especial para oferecer!"
-            samantha "E você... você é como o mestre de RPG que conecta todas as histórias!"
+            mc "Vamos usar um poção de vigor, mestre de RPG?"
+            samantha "Isso quebra minha imersão... não funciona. Socorro..."
+            
+        "Oferecer o cobertor do silêncio":
+            $ points_samantha += 3
+            mc "O volume das notificações foi pro mudo."
+            narrator "Fiquei parado entre a caixa de som e ela, criando uma parede humana improvisada. Samantha bufou exausta, encostando a testa contra os próprios joelhos."
+            samantha "O-obrigada... Apenas fique aqui."
+            
+    hide samantha with dissolve
     
-    # === MOMENTO ESPECIAL COM CAMILLE ===
-    scene bg festa_boas_vindas with fade
-    show camille gentle at center
+    # === INTERAÇÃO COM CAMILLE ===
+    narrator "Camille estava parada na sacada, os olhos perdidos na poluição luminosa da universidade que apagava as estrelas."
     
-    narrator "Camille estava sentada em um canto mais tranquilo, meditando suavemente enquanto observava a festa."
+    show camille sad at center
     
-    camille "Ah, você... que sincronia perfeita. Estava esperando por este momento."
-    camille "Esta festa... sinto uma energia muito especial aqui. Como se todas as pessoas estivessem conectadas por algo maior."
+    camille "Pessoas demais projetando desejos vazios e vazamentos emocionais ao mesmo tempo... A estática é ensurdecedora."
     
     menu:
-        "Perguntar sobre suas práticas espirituais":
-            $ points_camille += 3
-            narrator "Perguntei sobre as práticas espirituais e de meditação de Camille."
-            camille "Bem... tenho várias práticas que me ajudam a me conectar com a energia universal."
-            camille "Huey, por exemplo... ela me mostrou que há mais na arte do que apenas técnica. É fascinante como nos complementamos."
-            
-        "Comentar sobre sua energia serena":
-            $ points_camille += 2
-            narrator "Comentei sobre a energia serena e espiritual de Camille."
-            camille "Você realmente sente a energia, não é? É... reconfortante saber que alguém entende minha conexão com o universo."
-            camille "Às vezes sinto que percebo as coisas de forma diferente... mas aqui, com vocês, me sinto... acolhida."
-            
-        "Refletir sobre a conexão espiritual do grupo":
+        "Zombar levemente com lógica cósmica":
             $ points_camille += 1
-            narrator "Refletimos sobre a conexão espiritual que parecia existir entre todas."
-            camille "Nunca pensei que encontraria pessoas que sentissem a energia da mesma forma que eu..."
-            camille "E você... você parece conseguir sentir a energia única de cada uma de nós."
+            mc "É só música eletrônica barata e hormônios, Camille. Não é uma fusão estelar."
+            camille "O vazio ecoa mais alto que as pulsações cósmicas, às vezes..."
+            
+        "Ancorar a gravidade dela":
+            $ points_camille += 3
+            mc "Não tente abrigar toda essa estática. Feche a porta."
+            camille "Eu ainda não sei como... mas sua gravidade é estranhamente silenciosa no meio disso tudo."
+            narrator "Por um instante infimo, a feição celestial dela caiu, mostrando apenas uma garota sufocada por falsas expectativas."
+            
+    hide camille with dissolve
     
     # === MOMENTO DE DECISÃO ===
     scene bg festa_boas_vindas with fade
     
-    narrator "Conforme a festa chegava ao fim, senti que era hora de escolher alguém para acompanhar até sua república."
-    narrator "Cada uma das pessoas incríveis que havia conhecido parecia ter algo especial para compartilhar..."
+    narrator "O relógio passava absurdamente devagar. Eu não suportava mais o oxigênio reciclável daquela sala."
+    narrator "Olhei em volta. Algumas daquelas pessoas isoladas pareciam a um passo de despencar do precipício invisível que construíram para si mesmas."
+    narrator "Eu não ia salvar ninguém. Mas talvez eu pudesse fabricar um pretexto para que um de nós pudesse fugir sentindo menos culpa."
     
     menu:
-        "Acompanhar Nicole até sua república":
-            $ add_shared_memory("evening_walk_nicole", ["nicole"], "Caminhada noturna especial com Nicole até sua república")
-            $ add_affinity_points("nicole", 15, "Momento íntimo especial")
+        "Nicole estava prestes a queimar uma planilha de desespero. Vou acompanhá-la.":
+            $ add_shared_memory("evening_walk_nicole", ["nicole"], "Ofereceu uma desculpa silenciosa para escapar do caos e preservar a estrutura dela.")
+            $ points_nicole += 5
             jump capitulo1_caminhada_nicole
             
-        "Acompanhar Katia até sua república":
-            $ add_shared_memory("evening_walk_katia", ["katia"], "Caminhada noturna especial com Katia até sua república")
-            $ add_affinity_points("katia", 15, "Momento íntimo especial")
+        "Katia ia arrancar o olho do técnico de luz. É melhor eu tirá-la daqui.":
+            $ add_shared_memory("evening_walk_katia", ["katia"], "Salvação relutante e silenciosa sob as luzes estroboscópicas que a incomodavam.")
+            $ points_katia += 5
             jump capitulo1_caminhada_katia
             
-        "Acompanhar Larissa até sua república":
-            $ add_shared_memory("evening_walk_larissa", ["larissa"], "Caminhada noturna especial com Larissa até sua república")
-            $ add_affinity_points("larissa", 15, "Momento íntimo especial")
+        "Se ficasse mais, Larissa ia bater a cabeça numa parede.":
+            $ add_shared_memory("evening_walk_larissa", ["larissa"], "Guiei a energia exausta dela para longe do labirinto social da festa.")
+            $ points_larissa += 5
             jump capitulo1_caminhada_larissa
             
-        "Acompanhar Huey até sua república":
-            $ add_shared_memory("evening_walk_huey", ["huey"], "Caminhada noturna especial com Huey até sua república")
-            $ add_affinity_points("huey", 15, "Momento íntimo especial")
+        "A fumaça ia esmagar as aquarelas mentais da Huey.":
+            $ add_shared_memory("evening_walk_huey", ["huey"], "Providenciou uma moldura vazia de silêncio para aliviar a exaustão sensorial dela.")
+            $ points_huey += 5
             jump capitulo1_caminhada_huey
             
-        "Acompanhar Samantha até sua república":
-            $ add_shared_memory("evening_walk_samantha", ["samantha"], "Caminhada noturna especial com Samantha até sua república")
-            $ add_affinity_points("samantha", 15, "Momento íntimo especial")
+        "A bateria social de Samantha zerou. Ela precisa extrair.":
+            $ add_shared_memory("evening_walk_samantha", ["samantha"], "Agir como um NPC condutor para salvá-la do esgotamento no mundo real.")
+            $ points_samantha += 5
             jump capitulo1_caminhada_samantha
             
-        "Acompanhar Camille até sua república":
-            $ add_shared_memory("evening_walk_camille", ["camille"], "Caminhada noturna especial com Camille até sua república")
-            $ add_affinity_points("camille", 15, "Momento íntimo especial")
+        "A estática ia desabar o cosmos da Camille.":
+            $ add_shared_memory("evening_walk_camille", ["camille"], "Serviu como âncora gravitacional antes que o excesso de caos emocional a rompesse.")
+            $ points_camille += 5
             jump capitulo1_caminhada_camille

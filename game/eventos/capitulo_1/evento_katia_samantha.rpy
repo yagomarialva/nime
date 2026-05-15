@@ -1,168 +1,58 @@
-# === EVENTO KATIA E SAMANTHA - MASTER EDITION (CORRIGIDO) ===
-# Tema: Alta Cultura vs Cultura Pop
+# === EVENTO CINEMA: KATIA E SAMANTHA ===
+# Tema: O escape da realidade e o choque de mídias
 
 label evento_katia_samantha:
-    # Pequeno ganho de afinidade inicial apenas pelo encontro
-    $ points_katia += 1
+    scene bg cinema with fade
     
-    # Usando o cenário definido em scenarios.rpy 
-    scene bg cinema with dissolve
-    
-    # Atmosfera antes da ação
-    narrator "A sala de cinema estava mergulhada na penumbra. O cheiro de pipoca amanteigada lutava contra o odor de carpete antigo."
-    narrator "Eu procurava meu lugar, mas parecia que alguém já tinha reivindicado o território ao lado."
-
-    # Usando 'katia angry' pois não há 'annoyed' definido 
-    show katia angry at left
-    
-    # Katia resmungando sozinha
-    katia "Tsc. Inacreditável. Trouxeram nachos. Para um filme expressionista de três horas, alguém teve a audácia de trazer nachos."
-    
-    narrator "A garota de óculos ao meu lado anotava furiosamente em um caderno, sem nem levantar os olhos para a tela."
-    
-    # O MC toma a iniciativa
-    mc "Com licença... acho que a poltrona ao lado é minha. Espero que meu silêncio seja aprovado pela crítica."
-    
-    # Mudança para neutro ao reconhecer o jogador 
-    show katia neutral
-    
-    katia "Ah. É você. [nome], certo?"
-    katia "Se veio assistir 'O Silêncio do Vazio', espero que tenha lido a tese do diretor antes. Não é obra para amadores."
-    
-    # Samantha entra (Genki Girl) 
-    show samantha happy at right with moveinright
-    
-    samantha "Licença! Licença! Uau, desculpa o atraso! A fila da pipoca estava uma quest de nível final!"
-    
-    # O conflito imediato
-    show katia angry
-    
-    katia "Shhh! O trailer nem começou e você já está quebrando a imersão diegética."
-    
-    samantha "Oh! Oi, [nome]! E... oi, garota séria! Caramba, esse cinema é retrô mesmo, né? Parece aquela cutscene de abertura de jogo pós-apocalíptico!"
-    
-    katia "Pós-apocalíptico...? Este é o último bastião de projeção em 35mm da cidade. Não compare com joguinhos."
-    
-    samantha "Eh? Mas jogos são arte também! A narrativa ambiental aqui é incrível."
-    
-    narrator "Katia parecia prestes a ter um colapso nervoso. Samantha sorria, alheia ao ódio que emanava da poltrona ao lado."
-    
-    # === MENU DE ESCOLHA 1 ===
-    menu:
-        "Elogiar a estética da película (Apoiar Katia)":
-            $ points_katia += 3
-            
-            mc "Sabe, Katia... tem algo nessa granulação do 35mm. O digital é muito limpo, mas a película tem uma textura orgânica."
-            
-            # Expressão definida em 
-            show katia blush
-            katia "Hmpf..."
-            katia "Pelo menos alguém aqui tem olhos funcionais. A textura é a alma da memória. O digital é apenas... dados frios."
-
-        "Comparar o enredo com jogos complexos (Apoiar Samantha)":
-            $ points_samantha += 3
-            
-            mc "Sinceramente, Samantha, essa vibe me lembra muito 'Bioshock'. Aquele clima que conta a história do lugar sem dizer uma palavra."
-            
-            # Mantendo 'happy' pois não há 'stars_eyes' 
-            show samantha happy
-            samantha "SIM! Exatamente! É a 'narrativa emergente'! Sabia que você ia entender a referência!"
-            
-            # Usando 'angry' para desgosto/disgust 
-            show katia angry
-            katia "Você acabou de comparar arquitetura clássica com... um jogo de tiro?"
-
-        "Pedir foco no filme (Neutro)":
-            $ points_katia += 1
-            $ points_samantha += 1
-            
-            mc "Ei, as luzes estão apagando. Vamos deixar a obra falar por si mesma agora, ok?"
-            
-            show katia neutral
-            katia "Finalmente. Respeito ao ritual."
-            show samantha neutral
-            samantha "Ops! *Zip*. Modo furtivo ativado."
-
-    # === TRANSIÇÃO DE TEMPO ===
-    # Usando cenário definido em scenarios.rpy 
-    scene bg cinema_lobby with fade
-    
-    narrator "Duas horas de silêncios longos e metáforas visuais depois..."
+    narrator "O cinema universitário cheirava a assentos mofados e pipoca requentada. Na fileira do fundão, Katia estava sentada rígida, iluminada levemente pela luz do projetor não focado."
+    narrator "Duas fileiras abaixo no corredor lateral, iluminada apenas pelo forte brilho fosforescente de um console portátil, estava Samantha."
     
     show katia neutral at left
-    # Usando neutral para 'thinking' 
     show samantha neutral at right
     
-    samantha "..."
-    katia "..."
+    katia "O brilho emitido por aquela placa de processamento portátil está quebrando a estética umbrosa do ambiente."
+    samantha "S-sério? Porque o filme nem começou e meus saves offline só precisam de um recuo na gama... Espera."
     
-    samantha "Então... o protagonista estava morto o tempo todo ou foi um glitch na simulação?"
+    narrator "Samantha escorregou o dedão e o console emitiu um alto som de morte 8-bits."
+    samantha "Ai, meu Deus."
     
-    katia "Não é um 'glitch'. É uma alegoria existencialista sobre a incapacidade de comunicação."
+    katia "Uma tragédia interativa e pixelada. Era previsível se você tentou desviar olhando pro teto focado lá no fundo. A falta de atenção é fatal."
+    katia "E eu digo o mesmo para você, que acabou de entrar."
     
-    samantha "Hmmm. Profundo. Tipo quando seu save corrompe e você perde 50 horas de progresso. Aquele vazio no peito... é existencialismo puro."
+    narrator "Katia virou as pupilas duras e afiadas na minha direção, sem virar o pescoço."
     
-    # Momento de virada
-    show katia neutral
+    mc "Achei que o espaço estivesse reservado apenas para rituais de silêncio e games portáteis."
+    samantha "E-ei... não quebra a party. Eu já baixei o brilho e morri."
     
-    narrator "Katia parou de limpar seus óculos por um segundo."
+    narrator "Sentei distante de ambas, deixando o eco vazio do teatro pesar. Katia mantinha os braços fortemente cruzados. Samantha escondia o rosto sob o visor transparente de seu fone de ouvido."
+    narrator "Nenhuma delas queria estar aqui especificamente com outra pessoa. Elas só não queriam estar em nenhum outro lugar."
     
-    katia "Essa... foi uma analogia vulgar. Mas... não totalmente imprecisa."
-    katia "A sensação de perda irreversível de dados... Suponho que seja uma forma moderna de luto."
+    katia "Eles acham que escapismo exige telas ou drogas."
+    katia "Eles não têm a capacidade de absorver luto sem piscar, como as películas da Nouvelle Vague."
     
-    show samantha happy
-    samantha "Viu?! A gente sente a mesma coisa! Só usamos controles diferentes!"
+    samantha "Bom... a lore complexa pode substituir luto. Eu acho. Tem dor numa queda de framerate quando seu save corrompe na última hora."
+    samantha "S-só quem perde setenta horas de imersão sabe."
     
-    # === MENU DE ESCOLHA 2 ===
     menu:
-        "Argumentar sobre a agência do jogador (Apoiar Jogos)":
-            $ points_samantha += 2
-            
-            mc "Acho que a Samantha tem um ponto. No jogo, você sente culpa porque *você* tomou a decisão."
-            
-            samantha "Isso! A culpa é sua, a vitória é sua. A imersão é total!"
-            
-            katia "Interessante... A responsabilidade do espectador tornada ativa. Hmmm."
-
-        "Defender a visão do Diretor (Apoiar Cinema)":
+        "Questionar o vazio":
             $ points_katia += 2
+            mc "A questão é: o que vocês tanto tentam fugir ficando sozinhas no escuro?"
+            katia "Do óbvio. Das perguntas idiotas como as suas."
             
-            mc "Mas Katia está certa sobre a visão única. A arte não é uma democracia."
-            
-            katia "Exato. Você não 'escolhe' o final de uma sinfonia."
-            
-            samantha "Mas e os mods? A comunidade criando junto... isso não é bonito também?"
-
-        "Propor o Desafio da Mídia Cruzada (União)":
-            $ points_katia += 2
+        "Fingir imersão":
             $ points_samantha += 2
+            narrator "Fiquei quieto, ouvindo os cliques plásticos que Samantha fazia no controle, como para preencher um silêncio hostil."
+            samantha "Você... entende que eu morri, né? A tela de You Died dói."
+            katia "Tsk. Dramaticidade de polígonos."
             
-            mc "Ok, tive uma ideia. Katia joga um jogo narrativo, Samantha assiste um clássico cult. E a gente debate."
-            
-            show samantha happy
-            samantha "Aceito! Vou trazer meu console portátil!"
-            
-            show katia blush
-            katia "Eu não possuo... consoles. Mas... se for para fins de análise comparativa..."
-            katia "Talvez eu tolere a experiência."
-
-    # === FECHAMENTO DO EVENTO ===
+    narrator "Elas não eram compatíveis em nada além de uma desesperada aversão ao contato físico real do mundo lá de fora."
     
-    narrator "Saímos do cinema sob a luz dos postes de rua."
+    mc "Pelo menos no cinema e no jogo a história vai ter um final, mesmo se vocês morrerem antes."
     
-    show katia angry
-    katia "Não pense que isso muda minha opinião. Cinema ainda é superior."
-    show katia neutral
-    katia "Mas... suas observações não foram completamente descartáveis hoje."
+    narrator "Katia mordeu a parte de trás do lábio inferior por uma leve fração de segundo."
+    katia "Se não tiver roteiro ruim, sim. Eu exijo roteiro sem ganchos abertos e falsas esperanças."
     
-    show samantha happy
-    samantha "Yay! Na próxima, vou te mostrar trilhas sonoras de RPG!"
+    samantha "Vou tentar dar respawn aqui na próxima rodada..."
+    narrator "Elas voltaram à sua bolha intransponível. A conexão aqui parecia impossível, isolada por camadas espessas de medo e celulóide."
     
-    katia "Não force a amizade."
-    
-    mc "Acho que isso é um começo."
-    
-    # Memória compartilhada
-    $ add_shared_memory("clash_of_arts", ["katia", "samantha"], "Debate sobre existencialismo e saves corrompidos.")
-
     return

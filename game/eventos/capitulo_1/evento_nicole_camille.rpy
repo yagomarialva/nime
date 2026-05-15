@@ -1,6 +1,5 @@
-# === EVENTO NICOLE E CAMILLE - MASTER EDITION ===
-# Tema: Caos Controlado vs Fluxo Natural
-# Dinâmica: A garota da planilha vs A garota dos cristais
+# === EVENTO BIBLIOTECA: NICOLE E CAMILLE ===
+# Tema: O medo do imprevisível (Planilhas vs. Cristais)
 
 label evento_nicole_camille:
     # Pequeno ganho de afinidade inicial
@@ -9,108 +8,61 @@ label evento_nicole_camille:
     
     scene bg library with dissolve
     
-    # Atmosfera
-    narrator "A biblioteca deveria ser um templo de silêncio. Mas hoje, havia uma guerra fria acontecendo na mesa do canto."
+    narrator "O ar na biblioteca estava denso de mofo de papel envelhecido e poeira suspensa na luz pálida da tarde. Estática de sussurros compunha o ambiente falso de silêncio."
 
-    # Nicole já está lá, estressada. (Show, Don't Tell)
     show nicole angry at left
     
-    # Som de clique de caneta frenético (se tiver sfx)
-    narrator "*Click. Click. Click. Click.*"
+    narrator "Na mesa de mogno do fundo, uma sinfonia ansiosa. Nicole batia a tampa da caneta esferográfica sobre uma folha lotada de vetores tridimensionais complexos."
     
-    nicole "Isso não faz sentido estatístico. O desvio padrão está... Argh! Quem desenhou esse gráfico? Uma criança?"
+    nicole "A probabilidade do erro estrutural aumenta a cada nova variante humana introduzida. Nada obedece à equação. Tudo quebra."
     
-    narrator "A garota cercada de planilhas parecia prestes a morder o monitor do laptop. A aura dela era puro cortisol."
+    show camille neutral at right
     
-    # O MC se aproxima
-    mc "Com licença... essa mesa é compartilhada?"
+    narrator "A cadeira metálica arrastou bruscamente quando Camille forçou passagem pelo corredor de mesas, carregando incensos apagados em uma das mãos."
+    narrator "Ela sentou sem cumprimentar, os olhos opacos voltados para as folhas agitadas de Nicole."
     
-    # Ela nem olha
-    nicole "Desde que você não respire muito alto e não balance a mesa. Estou calculando a variância de... Esquece. Senta aí."
+    camille "Variantes humanas quebram equações porque se recusam a fluir na malha cósmica. Sua tensão magnética está encurvando o papel, sabia?"
     
-    # Camille entra. Não se apresenta, ela apenas AGE.
-    show camille gentle at right with moveinright
+    narrator "Nicole parou a caneta suspensa no ar. Seu rosto contraiu como quem provou vinagre."
     
-    narrator "De repente, o cheiro de livros velhos foi substituído por... lavanda?"
+    nicole "Tensão magnética não deforma papel em níveis atômicos, a menos que eu fosse um gerador de nêutrons. Você e suas desculpas pseudocientíficas para não resolver problemas empíricos é que me dão náusea."
     
-    camille "Oh... a energia aqui está muito densa. Muito... quadrada."
+    camille "Seus problemas 'empíricos' são caixinhas desesperadas. Você tenta quantificar a dor de existir como se ela fosse previsível, só porque você tem muito medo."
     
-    # Camille coloca um cristal em cima dos papéis da Nicole
-    narrator "A recém-chegada tirou uma pedra roxa da bolsa e a colocou delicadamente sobre a planilha impressa da Nicole."
+    narrator "Camille pegou e soltou bruscamente um pedaço de quartzo lapidado pesado em cima da planilha de cálculos principal."
     
-    # O conflito explode
-    show nicole angry
-    nicole "Ei! O que você pensa que está fazendo?"
+    nicole "Tira a pedra polida da mesa. Você está distorcendo meu campo de visão empírico e contaminando o material de trabalho."
     
-    camille "Ametista. Transmuta energia negativa. Você está com uma nuvem cinza sobre a cabeça, querida. Bloqueia o fluxo criativo."
+    camille "Tentei ancorar a poeira psíquica. Mas a estática da sua ansiedade é uma barreira de vidro blindado."
     
-    nicole "Isso não é uma nuvem cinza, é um gráfico de dispersão! E você está colocando uma pedra suja em cima de dados confidenciais!"
+    mc "Acho que as duas tentam aterrissar o colapso nervoso de si mesmas com métodos que não funcionaram."
     
-    camille "Nada é sujo se vem da terra. E seus dados... eles parecem tristes."
+    narrator "As pálpebras de Camille cederam e piscaram por choque. O maxilar de Nicole trancou ao ouvir minha voz vazia na discussão ininterrupta das duas."
+    narrator "Eram duas frentes lutando em vão contra o medo crônico do imponderável: Controle matemático versus Aceitação cósmica abstrata. Ambas falhas."
     
-    nicole "Dados não têm sentimentos! Dados têm precisão! Tira isso daí antes que eu chame a bibliotecária!"
-    
-    # MC precisa intervir
-    narrator "Eu estava preso entre a Fúria da Lógica e a Calma do Caos."
-    
-    # === MENU DE ESCOLHA ===
     menu:
-        "Defender a organização da Nicole (Apoiar Lógica)":
+        "Proteger as raízes lógicas (Nicole)":
             $ points_nicole += 2
+            mc "Pelo menos a fobia da Nicole gera um dado que podemos ler. Cristal no topo de papel só pesa as folhas."
+            nicole "Obrigada. Funcionalidade supera fuga espiritual."
+            camille "Meros dados estéreis são túmulos pra sua mente, Nicole. Mas divirtam-se medindo cadáveres lógicos."
             
-            mc "Olha, ela está certa. Biblioteca é lugar de estudo, e você está invadindo o espaço pessoal dela com... pedras."
-            
-            show nicole neutral
-            nicole "Obrigada. Alguém com bom senso. O espaço pessoal é uma variável constante que deve ser respeitada."
-            
-            show camille sad
-            camille "Oh... desculpe. Eu só queria ajudar. A tensão dela está vibrando tão alto que dá pra ouvir."
-
-        "Defender a intenção da Camille (Apoiar Intuição)":
+        "Ancorar no escudo espiritual (Camille)":
             $ points_camille += 2
+            mc "As respostas lógicas parecem estar destruindo a estrutura mental dela mais rápido que uma distração com quartzo."
+            camille "A matemática sempre encontra o teto limitante."
+            nicole "Isso é só ignorância defensiva para quem nunca soube lidar com equações frias da vida."
             
-            mc "Calma, Nicole. Ela só estava tentando ajudar. Você realmente parece que vai explodir a qualquer momento."
-            
-            show camille happy
-            camille "Viu? Ele sente também. A empatia é uma forma de inteligência."
-            
-            show nicole angry
-            nicole "Eu não vou 'explodir'. Estou apenas otimizando meu tempo. E 'boas intenções' não corrigem erros de amostragem."
-
-        "Sugerir que a pedra serve de peso de papel (Neutro)":
+        "Apatia para ambas as fugas":
             $ points_nicole += 1
             $ points_camille += 1
-            
-            mc "Ei, que tal um meio termo? A pedra segura os papéis para não voarem com o ar condicionado. Função e... energia?"
-            
-            show nicole thinking
-            nicole "Hmmm. O sistema de ventilação aqui é instável... Suponho que um peso de papel geológico tenha utilidade prática."
-            
-            show camille happy
-            camille "E enquanto segura o papel, purifica a intenção. Perfeito."
-
-    # === TRANSIÇÃO ===
-    narrator "Nicole suspirou, ajeitando os óculos. Ela não jogou a pedra fora, mas a empurrou para o canto da mesa, milimetricamente alinhada."
+            mc "A estática daqui só prova que nenhuma das duas obteve sucesso em acalmar a si mesmas. Parem de ditar regras e só se acostumem com a bagunça."
+            narrator "O silêncio doeu. A pedra de quartzo ficou repousando em cima do gráfico enquanto ambas desistiram de tentar provar o contrário da afirmação violenta de desistência."
     
-    nicole "Sou Nicole, a propósito. Análise de Dados. E se você for colocar mais pedras, me avise para eu recalcular o espaço disponível na mesa."
+    narrator "Camille se reacomodou, olhando pela janela para a fachada envernizada. Nicole agarrou outra folha inteiramente limpa e forçou outro número que não faria diferença no universo."
+    narrator "Permanceram perto, apenas como satélites desorientados sem rota, exilando a dor em seus próprios métodos quebrados."
     
-    show camille gentle
-    camille "Camille. Conexões Energéticas. E não se preocupe, a ametista já está trabalhando. Seus ombros já desceram dois centímetros."
-    
-    show nicole blush
-    nicole "Isso é... postura. Apenas corrigi minha postura ergonômica. Não tem nada a ver com sua pedra mágica."
-    
-    mc "Acho que vou ficar por aqui. Parece que o estudo vai ser interessante."
-    
-    # === FECHAMENTO (Sem melodrama) ===
-    
-    narrator "Não houve abraços nem choros. Apenas o som de teclas sendo batidas com um pouco menos de força, e o cheiro suave de lavanda se misturando ao pó."
-    
-    nicole "Você... não é totalmente inútil, Camille. O peso da pedra realmente impede as folhas de virarem."
-    
-    camille "E você tem uma mente brilhante, Nicole. Só precisa deixar a luz entrar nela às vezes."
-    
-    # Memória compartilhada realista
-    $ add_shared_memory("science_vs_magic", ["nicole", "camille"], "O dia em que usamos um cristal místico como peso de papel.")
+    # Memória compartilhada renomeada
+    $ add_shared_memory("science_vs_magic", ["nicole", "camille"], "O momento onde o desespero por controle empírico esbarrou na ilusão do conforto místico.")
 
     return

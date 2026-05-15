@@ -1,51 +1,42 @@
-# === CAMINHADA NOTURNA COM SAMANTHA ===
-# Momento especial de conexão individual
-
+# === ESCAPE PARA O MUNDO REAL COM SAMANTHA ===
 label capitulo1_caminhada_samantha:
     scene bg campus_night with fade
-    show samantha happy at center
+    show samantha sad at center
     
-    narrator "Samantha e eu saímos da festa juntos, caminhando pelas ruas iluminadas do campus."
+    narrator "Samantha praticamente correu pelos primeiros cem metros até sumirmos do perímetro da festa. Seu peito subia e descia bruscamente."
     
-    samantha "Nossa, obrigada por me acompanhar! É bom ter alguém para conversar depois de uma festa assim!"
-    samantha "Estes últimos dias foram... épicos! Nunca pensei que encontraria pessoas tão incríveis!"
+    samantha "M-meu Deus. Como as pessoas suportam essa densidade de NPCs com áudio bugado?"
     
-    narrator "Caminhamos em silêncio por alguns momentos, apreciando a tranquilidade da noite."
+    narrator "Ela estava brincando em linguagem gamer, mas seus ombros caídos denunciavam uma exaustão física real. A barra social dela havia negativado."
     
-    samantha "Você sabe... às vezes sinto que sou muito nerd, muito entusiasmada. Mas você me mostrou que isso pode ser uma força."
-    samantha "E hoje, vendo todas aquelas pessoas incríveis... sinto que finalmente encontrei pessoas que me aceitam como sou!"
+    mc "Não acho que eles escurecem os olhos sob as luzes da estroboscópica como nós fazemos."
+    
+    samantha "E-eles gostam. De verdade. Parecem se recarregar disso."
+    
+    narrator "Eu caminhei sempre a um braço e meio de distância. Não queria forçar contato visual ou proximidade, sabendo que ela só precisava do escuro."
     
     menu:
-        "Concordar com a força do entusiasmo de Samantha":
+        "Silêncio absoluto":
             $ points_samantha += 3
-            narrator "Concordei que o entusiasmo contagiante de Samantha era uma grande força."
-            samantha "Nossa, obrigada! É reconfortante saber que alguém valoriza minha forma de ser!"
-            samantha "Você me faz sentir... compreendida. É raro encontrar alguém assim!"
+            narrator "Fiz do trajeto um grande campo silencioso. Nem uma palavra trocada. Apenas fomos e pronto."
+            samantha "Você... é um bom suporte. Calibração perfeita."
             
-        "Comentar sobre sua paixão pelos jogos":
+        "Falar sobre baterias":
             $ points_samantha += 2
-            narrator "Comentei sobre a paixão única de Samantha pelos jogos e RPG."
-            samantha "Você realmente me entende, não é? Às vezes sinto que sou muito diferente das outras pessoas..."
-            samantha "Mas com você... me sinto aceita como sou!"
+            mc "Você não precisava ter ido à quest principal se estava sem stamina nos níveis anteriores."
+            samantha " FOMO, sabe? O terrível medo de perder a lore."
             
-        "Refletir sobre a conexão especial":
+        "Afirmar que a tirei de lá":
             $ points_samantha += 1
-            narrator "Refletimos sobre a conexão especial que parecia existir entre nós."
-            samantha "Há algo especial em você... algo que me faz sentir segura para ser eu mesma!"
-            samantha "Obrigada por estar aqui... por me entender!"
+            mc "Bom, agora o cenário engavetou a festa. Pode suspirar."
+            samantha "S-suspirei mentalmente."
+            
+    scene bg house_exterior_night with fade
+    narrator "Quando ela avistou os números fluorescentes do interfone de seu bloco universitário, sua respiração finalmente se normalizou."
     
-    narrator "Chegamos à república de Samantha. A casa estava iluminada, com outras estudantes conversando na varanda."
+    samantha "Eu estava sendo devorada lá dentro... e seria estúpido ir embora sozinha esbarrando em bêbados nos corredores."
+    narrator "Ela segurou o colar em seu pescoço."
+    samantha "Obrigada pelo ponto de salvamento. Prometo não abusar dos buffs com tanta frequência."
     
-    samantha "Bem... aqui estamos. Obrigada por me acompanhar... foi um momento especial!"
-    samantha "Espero que possamos ter mais momentos assim... conversas profundas, conexões genuínas!"
-    
-    narrator "Samantha me olhou nos olhos por um momento, e senti algo especial passando entre nós."
-    
-    samantha "Até amanhã... e obrigada por ser quem você é!"
-    
-    narrator "Ela entrou na casa, mas antes de fechar a porta, olhou para trás com um sorriso radiante."
-    
-    scene bg campus_night with fade
-    narrator "Caminhei de volta para casa, pensando em tudo que havia acontecido. A noite havia sido especial, e senti que algo importante havia começado..."
-    
+    narrator "Samantha correu para dentro num tropeço nervoso. Fiquei ali ouvindo a porta fechar em um clique seco, como um aviso de tela apagada."
     jump capitulo1_quarta_escolha

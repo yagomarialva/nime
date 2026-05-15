@@ -1,51 +1,42 @@
-# === CAMINHADA NOTURNA COM CAMILLE ===
-# Momento especial de conexão individual
-
+# === O REFÚGIO DA ESTÁTICA COM CAMILLE ===
 label capitulo1_caminhada_camille:
     scene bg campus_night with fade
-    show camille gentle at center
+    show camille sad at center
     
-    narrator "Camille e eu saímos da festa juntos, caminhando pelas ruas iluminadas do campus."
+    narrator "A transição do calor esmagador da festa para a umidade congelante da rua foi como um choque elétrico. Camille abraçou os próprios ombros com força."
     
-    camille "Obrigada por me acompanhar... é bom ter alguém para conversar depois de uma festa assim."
-    camille "Estes últimos dias foram... transformadores. Nunca pensei que encontraria pessoas que realmente entendessem de espiritualidade."
+    camille "Pensei que perderia completamente o sinal."
+    narrator "A voz dela, antes etérea e imponente, não passava de um sussurro rouco e cansado."
     
-    narrator "Caminhamos em silêncio por alguns momentos, apreciando a tranquilidade da noite."
+    mc "O sinal não sumiu. Só tinha muito ruído rasgando por cima."
     
-    camille "Você sabe... às vezes sinto que sou muito espiritual, muito conectada com energias. Mas você me mostrou que isso pode ser uma força."
-    camille "E hoje, vendo todas aquelas pessoas incríveis... sinto que finalmente encontrei pessoas que me compreendem."
+    narrator "Caminhamos sobre a linha do meio-fio molhado. Sem contato. Apenas duas órbitas tristes rodando a mesma placa de rua no escuro."
+    
+    camille "Eles bebem para adormecer as incertezas, gritam para abafar a voz de dentro... tudo isso reverbera no espaço como uma unha num quadro negro cósmico."
     
     menu:
-        "Concordar com a força da espiritualidade de Camille":
+        "Tirar o peso dela":
             $ points_camille += 3
-            narrator "Concordei que a espiritualidade de Camille era uma grande força."
-            camille "Obrigada... é reconfortante saber que alguém valoriza minha conexão com o universo."
-            camille "Você me faz sentir... compreendida. É raro encontrar alguém assim."
+            mc "O peso não é seu, Camille. Pare de absorver os estilhaços de gente que não se importa."
+            camille "..."
+            narrator "Ela fechou os olhos fortemente, ofegando. Pela primeira vez percebeu que precisava blindar a si mesma antes do resto."
             
-        "Comentar sobre sua energia serena":
-            $ points_camille += 2
-            narrator "Comentei sobre a energia serena e espiritual de Camille."
-            camille "Você realmente sente a energia, não é? Às vezes sinto que percebo as coisas de forma diferente..."
-            camille "Mas com você... me sinto aceita como sou."
-            
-        "Refletir sobre a conexão especial":
+        "Mero observador prático":
             $ points_camille += 1
-            narrator "Refletimos sobre a conexão especial que parecia existir entre nós."
-            camille "Há algo especial em você... algo que me faz sentir segura para ser eu mesma."
-            camille "Obrigada por estar aqui... por me entender."
+            mc "Eles só querem festejar porque as aulas estão prestes a massacrar eles em alguns meses."
+            camille "Talvez sua lógica terrena faça a gravidade funcionar."
+            
+        "Ficar sem falar nada":
+            $ points_camille += 2
+            narrator "Engoli a teoria do porquê o ser humano é tão destrutivo quando socializa. O silêncio me pareceu um filtro melhor para nós dois."
+            camille "O vazio que você projeta ao seu redor... é libertador."
+            
+    scene bg house_exterior_night with fade
+    narrator "Paramos a cinco degraus da entrada de seu alojamento estufado de samambaias e bicicletas antigas."
     
-    narrator "Chegamos à república de Camille. A casa estava iluminada, com outras estudantes conversando na varanda."
+    camille "Sua presença estancou o delírio elétrico que eu estava sentindo na mente."
+    narrator "Por um instante, o aspecto de 'sábia milenar' desabou completamente, revelando uma garota amedrontada pelo mundo social bruto da faculdade."
+    camille "Obrigada por notar que eu ia colapsar e criar uma desculpa fácil num mundo de mentiras fáceis."
     
-    camille "Bem... aqui estamos. Obrigada por me acompanhar... foi um momento especial."
-    camille "Espero que possamos ter mais momentos assim... conversas profundas, conexões genuínas."
-    
-    narrator "Camille me olhou nos olhos por um momento, e senti algo especial passando entre nós."
-    
-    camille "Até amanhã... e obrigada por ser quem você é."
-    
-    narrator "Ela entrou na casa, mas antes de fechar a porta, olhou para trás com um sorriso sereno."
-    
-    scene bg campus_night with fade
-    narrator "Caminhei de volta para casa, pensando em tudo que havia acontecido. A noite havia sido especial, e senti que algo importante havia começado..."
-    
+    narrator "A porta bateu lentamente sobre a tranca. O silêncio retornou espesso, pesando ainda mais sabendo das rachaduras nas fundações mentais dela."
     jump capitulo1_quarta_escolha

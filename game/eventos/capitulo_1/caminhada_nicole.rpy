@@ -1,51 +1,40 @@
-# === CAMINHADA NOTURNA COM NICOLE ===
-# Momento especial de conexão individual
-
+# === ESCAPE SILENCIOSO COM NICOLE ===
 label capitulo1_caminhada_nicole:
     scene bg campus_night with fade
-    show nicole neutral at center
+    show nicole sad at center
     
-    narrator "Nicole e eu saímos da festa juntos, caminhando pelas ruas iluminadas do campus."
+    narrator "Assim que a porta do pavilhão se fechou atrás de nós, vi os ombros tensionados de Nicole caírem, como se a gravidade do mundo a puxasse para baixo."
     
-    nicole "Obrigada por me acompanhar... é bom ter alguém para conversar depois de uma festa assim."
-    nicole "Estes últimos dias foram... especiais. Nunca pensei que encontraria pessoas que realmente me entendessem."
+    nicole "Oitenta e cinco decibéis. Aquele é o limite saudável antes do dano coclear permanente."
+    nicole "Estávamos pelo menos nos cento e dez."
     
-    narrator "Caminhamos em silêncio por alguns momentos, apreciando a tranquilidade da noite."
+    narrator "Caminhamos sobre a grama orvalhada do campus. Não era um flerte noturno; era uma evacuação tática de emergência."
     
-    nicole "Você sabe... às vezes sinto que sou muito metódica, muito analítica. Mas você me mostrou que isso pode ser uma força."
-    nicole "E hoje, vendo todas aquelas pessoas incríveis... sinto que finalmente encontrei meu lugar."
+    nicole "Eu planejei toda a minha semana com precisão metodológica."
+    nicole "Mas... nada avisou na grade que as pessoas universitárias seriam tão esmagadoramente improdutivas."
     
     menu:
-        "Concordar com a força da metodologia de Nicole":
+        "O caos é incontrolável":
             $ points_nicole += 3
-            narrator "Concordei que a metodologia de Nicole era uma grande força."
-            nicole "Obrigada... é reconfortante saber que alguém valoriza minha forma de pensar."
-            nicole "Você me faz sentir... compreendida. É raro encontrar alguém assim."
+            mc "O Professor Wendell meio que avisou. Estamos aqui para colidir. Não para sermos eficientes."
+            nicole "Colisões quebram estruturas. Eu não gosto de coisas quebradas."
             
-        "Comentar sobre sua personalidade única":
+        "Apoiar o esgotamento dela":
             $ points_nicole += 2
-            narrator "Comentei sobre a personalidade única e especial de Nicole."
-            nicole "Você realmente me vê, não é? Às vezes sinto que sou muito diferente das outras pessoas..."
-            nicole "Mas com você... me sinto aceita como sou."
+            mc "Não dava para aguentar. Você parecia prestes a explodir e eu ofereci um caminho de fuga."
+            nicole "Obrigada pela sua intervenção empírica. Foi pragmático de sua parte."
             
-        "Refletir sobre a conexão especial":
+        "Lembrar do próprio desconforto":
             $ points_nicole += 1
-            narrator "Refletimos sobre a conexão especial que parecia existir entre nós."
-            nicole "Há algo especial em você... algo que me faz sentir segura para ser eu mesma."
-            nicole "Obrigada por estar aqui... por me entender."
+            mc "Eu estava tendo um colapso induzido pelo barulho também."
+            nicole "Então foi uma aliança de auto-preservação puramente simbiótica. Entendido."
+            
+    scene bg house_exterior_night with fade
+    narrator "Paramos a quinze metros do portão da república dela."
     
-    narrator "Chegamos à república de Nicole. A casa estava iluminada, com outras estudantes conversando na varanda."
+    nicole "Meu perímetro seguro começa daqui."
+    narrator "Ela checou freneticamente o celular, ativando seus alarmes para o dia seguinte, refazendo seus laços com a ordem."
+    nicole "Sua presença não quebrou meu fluxo de pensamentos. Diria até que... organizou um pouco a estática da noite."
     
-    nicole "Bem... aqui estamos. Obrigada por me acompanhar... foi um momento especial."
-    nicole "Espero que possamos ter mais momentos assim... conversas profundas, conexões genuínas."
-    
-    narrator "Nicole me olhou nos olhos por um momento, e senti algo especial passando entre nós."
-    
-    nicole "Até amanhã... e obrigada por ser quem você é."
-    
-    narrator "Ela entrou na casa, mas antes de fechar a porta, olhou para trás com um sorriso tímido."
-    
-    scene bg campus_night with fade
-    narrator "Caminhei de volta para casa, pensando em tudo que havia acontecido. A noite havia sido especial, e senti que algo importante havia começado..."
-    
+    narrator "Sem esperar resposta, ela cruzou o portão. Deixando uma aura fria, calculada e insanamente fragil."
     jump capitulo1_quarta_escolha
