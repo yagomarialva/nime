@@ -83,4 +83,4 @@ label capitulo3_mural:
     if "capitulo4" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo4")
         
-    return
+    jump capitulo4
