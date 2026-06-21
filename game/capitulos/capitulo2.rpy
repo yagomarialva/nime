@@ -1,110 +1,129 @@
 label capitulo2:
     if "capitulo2" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo2")
+        
+    scene bg sala_jantar with fade
     
-    scene bg campus_day with fade
-    narrator "O segundo capítulo do semestre começou com uma energia renovada no campus. O grupo de amigos começava a se conhecer melhor, e novas possibilidades surgiam a cada dia."
+    narrator "Acendi a luz do celular, apontando para o canto escuro."
+    narrator "A garota cobriu o rosto com os braços, os cabelos longos e pretos caindo como uma cortina sobre os joelhos."
+    narrator "Ao lado dela, no chão, óculos de grau caídos perto de uma mochila de rodinhas abarrotada."
     
-    # Momento emocional de conexão mais profunda
-    call emotional_moment("deepening_bonds", None, "Os laços começam a se aprofundar no segundo capítulo") from _call_emotional_moment_cap2_1
+    mc "Calma, calma... Ninguém te achou. Você está na Rua Aurora, 57. É a casa do edital."
     
-    narrator "Após as primeiras interações do Capítulo 1, senti que algo havia mudado. As conversas não eram mais apenas sobre apresentações - havia uma curiosidade genuína sobre quem cada um realmente era."
+    narrator "Ela espionou por entre os braços. Os olhos arregalados, a respiração curta."
     
-    # Apresentação melhorada do contexto
-    show samantha happy at left
-    samantha "Olha só, parece que estamos todos mais à vontade agora, né?"
-    samantha "É incrível como algumas conversas podem mudar completamente a dinâmica de um grupo."
-    hide samantha
+    show samantha sad at center
     
-    show nicole neutral at right
-    nicole "Concordo. Há uma diferença entre conhecer alguém superficialmente e realmente... conectá-los."
-    nicole "Estou curiosa para ver como essas conexões vão evoluir."
+    samantha "M-meu stealth falhou... A porta de trás estava destrancada, eu só queria entrar sem ativar nenhum evento de diálogo..."
+    
+    mc "Você é a terceira vaga remanescente? E tentou se mudar de madrugada como uma assaltante?"
+    
+    samantha "Nível baixo... minha defesa social é terrível. Eu tentei pegar um copo d'água, mas meu controle motor travou."
+    
+    menu:
+        "Isso é ridículo. Vai dormir.":
+            $ points_samantha -= 5
+            mc "Olha, não tem monstros aqui. Pega seus óculos e vai dormir."
+            narrator "Ela rapidamente recolheu os óculos, murmurando um pedido de desculpas robótico, e subiu as escadas correndo."
+            hide samantha
+            
+        "Ajudá-la a recolher os cacos (Gastar 10 Energia)":
+            if store.player_stats["energy"] >= 10:
+                $ update_player_stat("energy", -10)
+                $ points_samantha += 10
+                mc "Cuidado com a mão."
+                narrator "Abaixei-me e recolhi os óculos dela do chão antes que ela mesma se cortasse tentando pegá-los no escuro."
+                narrator "Eu os entreguei. Ela os colocou tremendo."
+                samantha "O-obrigada... Pelo suporte de cura..."
+                mc "Bem-vinda à casa. Eu limpo o vidro. Vá dormir."
+                narrator "Ela correu para o andar de cima como se a vida dependesse disso."
+                hide samantha
+            else:
+                mc "Eu queria te ajudar, mas nem eu tô conseguindo ficar acordado."
+                narrator "Ela apenas assentiu freneticamente, pegou os óculos e sumiu na escuridão do corredor."
+                hide samantha
+    
+    # === A MANHÃ SEGUINTE ===
+    scene bg quarto_protagonista with fade
+    
+    narrator "O resto da madrugada foi silencioso. Até que..."
+    
+    play sound "blender_noise.ogg"
+    
+    narrator "BZZZZZZZZZZZZT!"
+    
+    mc "Puta merda, estamos sendo atacados por abelhas gigantes?!"
+    
+    scene bg sala_jantar with dissolve
+    
+    narrator "Desci correndo as escadas. Eram seis da manhã."
+    
+    show nicole angry at right
+    nicole "Desligue isso imediatamente! A cláusula 4.2 do meu regulamento proíbe ruídos industriais antes das oito!"
+    
+    show katia angry at left
+    katia "Se isso for um ataque terrorista, eu quero morrer dormindo! Cale a boca!"
+    
     hide nicole
-
-    # Primeiro dia de interações
-    narrator "O primeiro dia ofereceu oportunidades para explorar diferentes aspectos da vida universitária. Cada escolha prometia descobertas únicas."
+    hide katia
     
-    menu:
-        "Passar um tempo com Samantha no laboratório de tecnologia (Explorar inovação e criatividade)":
-            $ add_shared_memory("lab_technology_exploration", ["samantha", "larissa"], "Primeira exploração tecnológica em grupo")
-            $ add_affinity_points("samantha", 8, "Interesse em tecnologia")
-            $ add_affinity_points("larissa", 8, "Interesse em inovação")
-            jump evento_samantha_larissa_lab
-
-        "Ajudar Nicole e Camille com ideias para o projeto de sustentabilidade (Conectar estratégia e consciência)":
-            $ add_shared_memory("sustainability_project", ["nicole", "camille"], "Primeiro projeto colaborativo de sustentabilidade")
-            $ add_affinity_points("nicole", 8, "Interesse em projetos estratégicos")
-            $ add_affinity_points("camille", 8, "Interesse em sustentabilidade")
-            jump evento_nicole_camille_lab
-
-        "Acompanhar Huey e Katia numa feira de arte independente (Mergulhar na expressão artística)":
-            $ add_shared_memory("art_fair_exploration", ["huey", "katia"], "Primeira exploração de arte independente")
-            $ add_affinity_points("huey", 8, "Interesse em arte")
-            $ add_affinity_points("katia", 8, "Interesse em arte independente")
-            jump evento_huey_katia_feira
-
-    # Segundo dia de interações
-    label segundo_dia_interacoes:
-    scene bg campus_day with fade
-    narrator "No dia seguinte, novas oportunidades surgiram para explorar ideias e laços com mais colegas."
+    show larissa happy at center
     
-    # Momento de reflexão sobre as conexões
-    call emotional_moment("growing_connections", None, "As conexões começam a se fortalecer") from _call_emotional_moment_cap2_2
+    narrator "Uma garota loira incrivelmente atlética sorria enquanto segurava a tampa do liquidificador que parecia ter três hélices de trator."
     
-    narrator "Cada interação do dia anterior havia plantado sementes de curiosidade. Agora, era hora de vê-las florescer em novas formas de conexão."
-
-    menu:
-        "Participar de uma atividade esportiva criativa com Larissa e Huey (Unir movimento e expressão artística)":
-            $ add_shared_memory("creative_sports_activity", ["larissa", "huey"], "Primeira atividade que combina esporte e arte")
-            $ add_affinity_points("larissa", 8, "Interesse em atividades criativas")
-            $ add_affinity_points("huey", 8, "Interesse em expressão corporal")
-            jump evento_larissa_huey_esporte
-
-        "Ir a um passeio cultural com Katia e Nicole (Explorar arte e estratégia)":
-            $ add_shared_memory("cultural_exploration", ["katia", "nicole"], "Primeira exploração cultural em grupo")
-            $ add_affinity_points("katia", 8, "Interesse em cultura")
-            $ add_affinity_points("nicole", 8, "Interesse em análise cultural")
-            jump evento_katia_nicole_cultura
-
-    # Terceiro dia: evento individual
-    label terceiro_dia_escolha:
-    scene bg campus_day with fade
-    narrator "No terceiro dia, uma escolha mais íntima surgiu: um tempo a sós com alguém para se conectar em outro nível."
+    larissa "Bom diiiia! Eu sou a Larissa, vaga número quatro! Alguém quer um shake de hipertrofia com beterraba? Eu já corri o campus inteiro e o sol nem nasceu direito!"
     
-    # Momento emocional de intimidade
-    call emotional_moment("intimate_connection", None, "Momento de conexão mais íntima e pessoal") from _call_emotional_moment_cap2_3
+    narrator "Nicole massageava as têmporas. Katia parecia prestes a cometer um crime violento."
     
-    narrator "Após dois dias de interações em grupo, senti que era hora de aprofundar uma conexão específica. Cada pessoa oferecia algo único, e eu queria descobrir mais sobre quem realmente eram."
+    mc "E de três pulamos para cinco."
+    
+    larissa "Relaxem! Vamos ser uma equipe! Eu dou conta de motivar todos vocês, só preciso do meu shake primeiro!"
+    
+    hide larissa
+    
+    # === LOOP DO MAPA CAP 2 ===
+    narrator "Foi uma manhã torturante. A dinâmica da casa tinha virado do avesso com a energia infinita de Larissa e a fobia da Samantha."
+    
+    $ dia_atual = 2
+    $ periodo_atual = 1
+    
+    $ game_events.events = {}
+    
+    # Dia 1 (Cap 2)
+    $ game_events.add_event("quadra", "evento_larissa_pista", 1, [1, 2, 3])
+    $ game_events.add_event("sala", "evento_samantha_isolada", 1, [1, 2, 3])
 
-    menu:
-        "Passar um tempo sozinho com Samantha (Explorar criatividade e tecnologia)":
-            $ add_shared_memory("intimate_tech_exploration", ["samantha"], "Primeiro momento íntimo explorando tecnologia")
-            $ add_affinity_points("samantha", 12, "Conexão íntima e pessoal")
-            jump evento_individual_samantha
+    # Dia 2 (Cap 2)
+    # Por enquanto, eventos temporários (você pode criar outros eventos depois)
+    $ game_events.add_event("biblioteca", "evento_nicole_bolsa", 2, [1, 2, 3])
+    $ game_events.add_event("cinema", "evento_katia_filme", 2, [1, 2, 3])
 
-        "Ter uma conversa profunda com Nicole (Estratégia e crescimento pessoal)":
-            $ add_shared_memory("deep_strategic_conversation", ["nicole"], "Primeira conversa profunda sobre estratégia e vida")
-            $ add_affinity_points("nicole", 12, "Conexão íntima e pessoal")
-            jump evento_individual_nicole
+label loop_mapa_cap2:
+    if dia_atual >= 3:
+        mc "Foi um final de semana cheio. É melhor eu voltar pra casa pra tentar ter um minuto de paz."
+        jump capitulo2_crise_conta
 
-        "Passar uma tarde relaxante com Huey (Arte e natureza)":
-            $ add_shared_memory("peaceful_artistic_moment", ["huey"], "Primeiro momento de paz e arte compartilhado")
-            $ add_affinity_points("huey", 12, "Conexão íntima e pessoal")
-            jump evento_individual_huey
-
-        "Explorar o parque com Larissa (Energia e movimento)":
-            $ add_shared_memory("energetic_park_exploration", ["larissa"], "Primeira exploração energética do parque")
-            $ add_affinity_points("larissa", 12, "Conexão íntima e pessoal")
-            jump evento_individual_larissa
-
-        "Tomar um café reflexivo com Katia (Arte e cinema)":
-            $ add_shared_memory("reflective_cinema_conversation", ["katia"], "Primeira conversa reflexiva sobre cinema e arte")
-            $ add_affinity_points("katia", 12, "Conexão íntima e pessoal")
-            jump evento_individual_katia
-
-        "Participar de uma meditação com Camille (Paz e espiritualidade)":
-            $ add_shared_memory("spiritual_meditation_moment", ["camille"], "Primeiro momento espiritual compartilhado")
-            $ add_affinity_points("camille", 12, "Conexão íntima e pessoal")
-            jump evento_individual_camille
-
-    jump capitulo2_final
+    call screen mapa_modal
+    
+    $ local_escolhido = _return
+    
+    if local_escolhido is None:
+        jump loop_mapa_cap2
+    
+    $ evt_label = game_events.get_pending_event(local_escolhido, dia_atual, periodo_atual)
+    
+    if evt_label:
+        if evt_label == "evento_samantha_isolada":
+            $ add_shared_memory("samantha_room", ["samantha"], "Um momento de paz atrás de portas fechadas com a Samantha.")
+        elif evt_label == "evento_larissa_pista":
+            $ add_shared_memory("larissa_track", ["larissa"], "Vi Larissa ir além dos próprios limites físicos.")
+            
+        call expression evt_label
+        
+        $ game_events.mark_completed(evt_label)
+        call avancar_tempo(15)
+    else:
+        call local_sem_evento(local_escolhido)
+        call avancar_tempo(15)
+        
+    jump loop_mapa_cap2

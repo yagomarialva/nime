@@ -1,4 +1,4 @@
-﻿# script.rpy - MELHORADO baseado em sucessos do gênero
+# script.rpy - MELHORADO baseado em sucessos do gênero
 default persistent.unlocked_chapters = []  # Lista de capítulos desbloqueados
 
 # === SISTEMA DE AFINIDADE APRIMORADO ===
@@ -54,7 +54,6 @@ label start:
             persistent.language = "en"
             renpy.change_language("english")
     
-    show screen affinity_points
     # Sua história começa aqui
     jump prologo  # ou o label inicial da sua VN
 

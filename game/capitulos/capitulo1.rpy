@@ -1,218 +1,144 @@
 label capitulo1:
-    # Desbloqueia o capítulo na galeria (se existir)
+    # Desbloqueia o capítulo na galeria
     if "capitulo1" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo1")
     
-    # === ABERTURA: A PRIMAVERA DAS ILUSÕES ===
+    # === ABERTURA: A CASA DA RUA AURORA ===
     play music campus_ambient fadein 2.0
     
     scene bg auditorium with fade
 
-    narrator "O zumbido do ar condicionado era constante, quase como o som de uma respiração metálica tentando manter vivos trezentos estranhos."
-    narrator "Poeira dançava no feixe denso de luz que cortava a sala. Tudo parecia suspenso. Efêmero. O cheiro de cadernos novos, o perfume barato, o nervosismo silencioso."
+    narrator "O zumbido do ar condicionado era constante, quase como o som de uma respiração metálica tentando manter vivas as poucas pessoas na sala."
+    narrator "Éramos apenas três. Três estranhos convocados para a última reunião do 'Edital de Moradia Cultural'."
     
-    mc "Primavera... a estação em que somos obrigados a fingir que nossos recomeços significam algo."
+    mc "Primavera... a estação em que o desespero financeiro nos faz assinar contratos que nem lemos direito."
     
-    narrator "Apoiei o rosto na mão, deixando meu olhar vagar pelas ilhas de isolamento ao meu redor."
-    narrator "Não éramos uma turma. Éramos estilhaços esperando por uma desculpa para quebrar."
+    narrator "Apoiei o rosto na mão. A bolsa do Edital era a minha única chance de me manter na Faculdade Solária sem precisar de três empregos."
     
-    # Foreshadowing com subtexto e atmosfera
-    narrator "Duas fileiras à frente, uma garota de óculos lia um livro com uma postura tão rígida que parecia usar as páginas como um escudo contra o mundo."
-    narrator "Ao lado dela, quase invisível, alguém murmurava debaixo de fones de ouvido gigantes, a luz de uma tela refletindo em seus olhos cansados."
-    narrator "Perto da janela, o tamborilar frenético de tênis esportivos batendo no linóleo. Pura ansiedade disfarçada de energia."
+    # Apresentando apenas Nicole e Katia
+    narrator "Duas fileiras à frente, uma garota loira lia o edital impresso com uma postura tão rígida que parecia usar os papéis como um escudo contra o mundo. O nome dela era Nicole."
+    narrator "Longe dela, na última fileira, uma garota de cabelos escuros rabiscava algo furiosamente em um caderno. Ela mastigava chiclete ruidosamente, ignorando a tensão no ar. Essa era a Katia."
     
-    mc "Todos nós tão desesperados para sermos vistos... e tão apavorados de que alguém realmente olhe."
+    mc "Três pessoas lutando por um teto grátis..."
 
     # === O DISCURSO DO PROFESSOR WENDELL ===
     show professor_wendell neutral at center
     
-    narrator "O homem que subiu ao palco não possuía a aura de um educador. Ele caminhava com o equilíbrio de quem pendia sobre a beirada de um precipício."
-    narrator "O microfone chiou em uma microfonia aguda. Ele sorriu, como se o som o agradasse."
+    narrator "O Professor Wendell Garcez subiu ao palco. Ele caminhava com o equilíbrio de quem conhecia todos os segredos do campus."
     
-    professor_wendell "Os humanos são criaturas patéticas, não acham?"
+    professor_wendell "Bem-vindos. Vocês são os três primeiros selecionados do Edital da Rua Aurora, 57."
     
-    narrator "O silêncio no auditório foi instantâneo. Gélido."
+    narrator "A garota loira, Nicole, levantou a mão quase imediatamente."
     
-    professor_wendell "Nós passamos a vida inteira tateando no escuro, construindo muros de sarcasmo, de arrogância, de notas altas... tudo para evitar o atrito."
-    professor_wendell "Vocês acham que a Faculdade Solária vai ensinar a vocês como serem bem-sucedidos? Tolice."
+    nicole "Com licença, Professor. O edital mencionava seis vagas. Onde estão os outros?"
     
-    narrator "Ele deu um passo à frente, quase caindo do palco. Os olhos dele eram selvagens."
+    professor_wendell "Uma excelente observação, Nicole. Os outros três desistiram quando leram as letras miúdas. As vagas remanescentes serão preenchidas nas próximas semanas."
     
-    professor_wendell "Eu quero que vocês colidam. Quero que vocês quebrem as fachadas uns dos outros. Suas carreiras não importam se, no fim do dia, vocês ainda forem covardes emocionais."
-    professor_wendell "Rejeitem o silêncio. Entrem em combustão. Mas acima de tudo..."
-    professor_wendell "Parem de fingir que não precisam uns dos outros. Estão dispensados."
+    narrator "Katia estourou uma bola de chiclete. O som ecoou pelo auditório vazio."
     
-    hide professor_wendell
+    katia "Letras miúdas? Você quer dizer a parte em que a casa tá caindo aos pedaços e nós somos a mão de obra escrava pra restaurar?"
     
-    # === A PRIMEIRA ESCOLHA: MOTIVAÇÃO ===
-    narrator "O discurso foi curto, grosso e estranhamente motivador. A multidão começou a se dispersar."
+    professor_wendell "Eu prefiro o termo 'Projeto de Restauração Colaborativa', Katia."
     
-    mc "Colidir, hein? Ok. Vamos ver onde essas colisões vão acontecer."
+    narrator "Ele deu um passo à frente. Os olhos dele eram afiados."
     
-    # Inicializa variáveis de controle
-    $ events_completed = []
-    
-# ... (Parte do discurso do Professor continua igual até o final) ...
-
-    professor_wendell "O campus é de vocês... Dispensados."
+    professor_wendell "A casa é antiga. O teto vaza. A pintura está descascando. Vocês têm moradia gratuita, mas precisam consertá-la e manter uma média acadêmica excelente. Falhem em qualquer um dos dois, e o edital é cancelado para todos."
+    professor_wendell "Vocês precisam uns dos outros. Estão dispensados. As chaves estão na portaria."
     
     hide professor_wendell
     
     # === PREPARAÇÃO DO MAPA E EVENTOS ===
-    narrator "O discurso foi curto e grosso. A multidão começou a se dispersar, um fluxo caótico de estudantes indo para todas as direções."
+    narrator "O discurso foi curto e ameaçador. A sobrevivência na Solária dependia da nossa capacidade de não nos matarmos."
     
-    mc "Colidir, hein? O professor tem um jeito dramático de dizer 'façam amigos'."
+    mc "Bom, acho que é hora de explorar um pouco antes de ir para o desastre em que me meti."
     
-    narrator "Olhei para o mapa do campus no meu celular. Eu tinha algumas horas livres antes da próxima aula."
-    
-    # Resetando/Iniciando tempo e tracker
+    # Inicializando stats
     $ dia_atual = 1
     $ periodo_atual = 1
     
     # Registrando eventos do Capítulo 1 no EventManager
-    # Evitamos duplicidade se o script rodar de novo
     $ game_events.events = {}
     
-    # Dia 1
-    $ game_events.add_event("cinema", "evento_katia_samantha", 1, [1, 2, 3])
-    $ game_events.add_event("quadra", "evento_larissa_huey", 1, [1, 2, 3])
-    $ game_events.add_event("biblioteca", "evento_nicole_camille", 1, [1, 2, 3])
+    $ game_events.add_event("biblioteca", "evento_nicole_limpeza", 1, [1, 2, 3])
+    $ game_events.add_event("cinema", "evento_katia_caixas", 1, [1, 2, 3])
 
-    # Dia 2
-    $ game_events.add_event("laboratorio", "evento_katia_nicole", 2, [1, 2, 3])
-    $ game_events.add_event("galeria", "evento_huey_camille", 2, [1, 2, 3])
-    $ game_events.add_event("jogos", "evento_samantha_larissa", 2, [1, 2, 3])
+    # Dia 2 
+    $ game_events.add_event("laboratorio", "evento_nicole_bolsa", 2, [1, 2, 3])
+    $ game_events.add_event("cinema", "evento_katia_filme", 2, [1, 2, 3])
 
 # === LOOP PRINCIPAL DO MAPA ===
 label loop_mapa_cap1:
-    # Transição visual caso o dia tenha virado (exemplo básico)
-    if dia_atual == 2 and periodo_atual == 1 and game_events.completed_events:
-        scene bg campus_morning with dissolve
-        narrator "O sol da manhã iluminava o campus. O segundo dia na Solária College havia começado."
-        
-    # Condição de avanço da narrativa
     if dia_atual >= 3:
-        mc "Acho que por enquanto chega de exploração livre. A aula do Professor Wendell vai começar em breve."
+        mc "O tempo livre acabou. Preciso voltar para a casa da Rua Aurora para o nosso primeiro jantar juntos."
         
-        call capitulo1_aula_professor_wendell from _call_capitulo1_aula_wendell_map
-        
-        # Depois da aula, continua para a festa
-        narrator "A aula foi intensa, mas a noite prometia mais."
         call capitulo1_terceira_escolha from _call_capitulo1_terceira_map
-        
-        # Questionário de conexões futuras
-        call capitulo1_quarta_escolha from _call_capitulo1_quarta_map
-        
         jump capitulo1_final
 
-    # Chamada da tela do mapa interativo. O jogador escolhe um local.
     call screen mapa_modal
     
     $ local_escolhido = _return
     
-    # Se o jogador fechou o modal sem escolher (botão X), volta ao mapa
     if local_escolhido is None:
         jump loop_mapa_cap1
     
-    # Pede ao EventManager o evento pendente
     $ evt_label = game_events.get_pending_event(local_escolhido, dia_atual, periodo_atual)
     
     if evt_label:
-        # Prepara a memória / status se necessário
-        if evt_label == "evento_katia_samantha":
-            $ add_shared_memory("cinema_exploration", [], "Decidiu relaxar no cinema")
-        elif evt_label == "evento_larissa_huey":
-            $ add_shared_memory("sports_exploration", [], "Decidiu se exercitar na quadra")
-        elif evt_label == "evento_nicole_camille":
-            $ add_shared_memory("library_exploration", [], "Buscou refúgio na biblioteca")
-        elif evt_label == "evento_katia_nicole":
-            $ add_shared_memory("methodology_debate_meeting", ["katia", "nicole"], "Primeira discussão sobre metodologia e criatividade")
-            $ add_affinity_points("katia", 10, "Interesse em análise criativa")
-            $ add_affinity_points("nicole", 10, "Interesse em metodologia")
-        elif evt_label == "evento_huey_camille":
-            $ add_shared_memory("art_spirituality_meeting", ["huey", "camille"], "Exploração da conexão entre arte e espiritualidade")
-            $ add_affinity_points("huey", 10, "Interesse em técnica artística")
-            $ add_affinity_points("camille", 10, "Interesse em energia criativa")
-        elif evt_label == "evento_samantha_larissa":
-            $ add_shared_memory("gaming_sports_meeting", ["samantha", "larissa"], "Primeira atividade combinando jogos e esportes")
-            $ add_affinity_points("samantha", 10, "Interesse em RPG e criatividade")
-            $ add_affinity_points("larissa", 10, "Interesse em competição e superação")
+        if evt_label == "evento_nicole_limpeza":
+            $ add_shared_memory("nicole_library", ["nicole"], "Nicole pesquisando furiosamente sobre restauração")
+        elif evt_label == "evento_katia_caixas":
+            $ add_shared_memory("katia_cinema", ["katia"], "Katia fugindo das caixas no escuro do cinema")
             
-        # Executa o evento dinamicamente
         call expression evt_label
         
-        # Finaliza e marca evento
         $ game_events.mark_completed(evt_label)
-        call avancar_tempo
+        call avancar_tempo(10)
         
     else:
-        # Não há evento.
         call local_sem_evento(local_escolhido)
+        call avancar_tempo(10)
         
     jump loop_mapa_cap1
             
-# === FINAL DO CAPÍTULO 1 - RETROSPECTIVA ===
+# === FINAL DO CAPÍTULO 1 - CLIFFHANGER ===
 label capitulo1_final:
-    scene bg campus_sunset with fade
+    scene bg quarto_protagonista_noite with fade
     
-    narrator "O sol começava a se pôr sobre o campus, pintando o céu com tons de dourado e rosa. Os primeiros dias na Solária estavam chegando ao fim."
+    narrator "A primeira semana na Rua Aurora foi exaustiva. Me joguei na cama, sentindo cada músculo do corpo reclamar."
     
-    mc "Parece que foi ontem que cheguei... bom, tecnicamente foi anteontem."
-    narrator "Mas antes de voltar para casa, algo dentro de mim pedia uma pausa para refletir sobre tudo o que aconteceu..."
+    mc "Sobrevivemos... Pelo menos por agora."
     
-    # === RETROSPECTIVA DE RELACIONAMENTOS ===
-    narrator "Olhando para trás, percebi como cada encontro deixou uma marca única."
+    narrator "Fechei os olhos, deixando o cansaço me levar."
+    narrator "..."
+    narrator "..."
     
-    # Mostra resumo (assumindo que esta função existe no seu jogo)
-    $ relationship_summary = get_relationship_summary()
+    # Tentativa de tocar um som se existir. Evitamos crash usando condicional ou omitindo o arquivo físico e deixando só a narração
+    # play sound "glass_shatter.ogg"
+    narrator "CRASH!"
     
-    narrator "📊 RESUMO DOS RELACIONAMENTOS:"
+    narrator "O barulho foi agudo e violento. Vidro quebrando no andar de baixo. Seguido por um silêncio mortal."
     
-    python:
-        for summary in relationship_summary:
-            narrator(summary)
+    mc "Que merda foi essa?"
     
-    # Momento emocional
-    call emotional_moment("reflection", None, "Reflexão sobre as conexões formadas") from _call_emotional_moment_cap1_2
+    narrator "Desci as escadas correndo, tateando no escuro da velha casa."
     
-    narrator "Cada sorriso, cada discussão, cada momento compartilhado... tudo isso criou laços invisíveis."
+    scene bg sala_jantar with dissolve
     
-    # === CHECAGEM DE PROGRESSÃO ===
-    $ can_progress, progress_message = check_chapter_progression_requirement(1)
+    narrator "A luz pálida da rua iluminava a cozinha através da janela. Havia cacos de um prato espalhados pelo chão."
+    narrator "E no canto, encolhida nas sombras, estava a garota que eu achava ser a mais forte e sarcástica de nós."
+    narrator "Ela estava chorando silenciosamente, abraçada aos próprios joelhos, sussurrando para o vazio."
     
-    narrator "[progress_message]"
+    "???" "Eles me acharam... Eu não posso... Eles me acharam..."
     
-    if can_progress:
-        mc "Acho que fiz a escolha certa em vir para cá. Essas pessoas... elas são reais."
-        
-        # Conquista
-        call emotional_moment("achievement", None, "Conexões suficientes para continuar") from _call_emotional_moment_cap1_3
-        
-        narrator "Essa jornada estava apenas começando, e eu mal podia esperar para ver o que o futuro nos reservava."
-        
-        # Transição para tela de fim de demo
-        scene black with fade
-        narrator "O Capítulo 1 chegou ao fim. Mas essas peças mal ajustadas ainda têm muitas colisões pela frente..."
-        
-        narrator "Muito obrigado por jogar a introdução de {i}NIME: Crossed Hearts - Master Edition{/i}."
-        narrator "Os próximos capítulos, explorando cada fundo do poço e faísca de conexão dessas personagens, serão lançados em breve em novas atualizações."
-        narrator "Até a próxima estação."
-        
-        # Desbloqueia próximo
-        if "capitulo2" not in persistent.unlocked_chapters:
-            $ persistent.unlocked_chapters.append("capitulo2")
-        
-        return
-        
-    else:
-        mc "Sinto que deixei algo passar... Talvez eu devesse ter me aberto mais."
-        
-        # Opção de tentar novamente
-        menu:
-            "Refletir sobre conexões perdidas (Reiniciar Capítulo)":
-                mc "Preciso tentar de novo. Fazer diferente."
-                jump capitulo1
-                
-            "Aceitar que algumas conexões levam tempo (Retornar ao Menu)":
-                mc "Nem toda amizade nasce no primeiro dia. Vou dar tempo ao tempo."
-                return
+    mc "Ei... o que..."
+    
+    narrator "Ela levantou o rosto. O olhar dela cruzou com o meu. Puro terror."
+    
+    scene black with fade
+    
+    narrator "O Capítulo 1 chegou ao fim."
+    
+    if "capitulo2" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo2")
+    
+    jump capitulo2

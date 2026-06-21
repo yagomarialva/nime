@@ -15,7 +15,7 @@ init python:
             "id": "biblioteca",
             "nome": "Biblioteca",
             "descricao": "Um refúgio de conhecimento e silêncio",
-            "imagem": "images/cenarios/Biblioteca.png",
+            "imagem": "images/cenarios/biblioteca.png",
         },
         {
             "id": "quadra",
@@ -157,7 +157,13 @@ screen mapa_modal():
                     padding (10, 10, 10, 14)
                     background Solid("#0f3460")
                     hover_background Solid("#1a4a7a")
-                    action Return(local["id"])
+                    # Ação: Se tiver energia >= 10, deduz energia (ou não, quem gerencia pode ser o script de destino)
+                    # Mas vamos checar pra não deixar viajar com pouca energia.
+                    action If(
+                        store.player_stats["energy"] >= 10,
+                        true=Return(local["id"]),
+                        false=Notify(_("Você está cansado demais. Energia insuficiente! (-10 necessários)"))
+                    )
 
                     vbox:
                         spacing 8
@@ -227,3 +233,8 @@ screen mapa_modal():
                     spacing 6
                     text "🗺️" size 14 yalign 0.5
                     text _("Clique para visitar") size 13 color "#8899aa" yalign 0.5
+                    
+                hbox:
+                    spacing 6
+                    text "⚡" size 14 yalign 0.5 color "#ffcc00"
+                    text _("Custo de viagem: 10 Energia") size 13 color "#8899aa" yalign 0.5

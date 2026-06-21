@@ -51,8 +51,8 @@ image larissa bikini = "images/characters/larissa/larissa_bikini.png" if renpy.e
 
 image huey neutral = "images/characters/hu_wei/hu_wei_neutral.png" if renpy.exists("images/characters/hu_wei/hu_wei_neutral.png") else "images/characters/shadow.png"
 image huey happy = "images/characters/hu_wei/hu_wei_happy.png" if renpy.exists("images/characters/hu_wei/hu_wei_happy.png") else "images/characters/shadow.png"
-image huey angry = "images/characters/hu_wei/hu_wei_angry.png" if renpy.exists("images/characters/hu_wei/hu_wei_angry.png") else "images/characters/shadow.png"
-image huey sad = "images/characters/hu_wei/hu_wei_sad.png" if renpy.exists("images/characters/hu_wei/hu_wei_sad.png") else "images/characters/shadow.png"
+image huey angry = "images/characters/hu_wei/hu_wei_neutral.png" if renpy.exists("images/characters/hu_wei/hu_wei_neutral.png") else "images/characters/shadow.png"
+image huey sad = "images/characters/hu_wei/hu_wei_blush.png" if renpy.exists("images/characters/hu_wei/hu_wei_blush.png") else "images/characters/shadow.png"
 image huey voley = "images/characters/hu_wei/hu_wei_volei.png" if renpy.exists("images/characters/hu_wei/hu_wei_volei.png") else "images/characters/shadow.png"
 image huey blush = "images/characters/hu_wei/hu_wei_blush.png" if renpy.exists("images/characters/hu_wei/hu_wei_blush.png") else "images/characters/shadow.png"
 image huey gentle = "images/characters/hu_wei/hu_wei_neutral.png" if renpy.exists("images/characters/hu_wei/hu_wei_neutral.png") else "images/characters/shadow.png"

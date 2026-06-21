@@ -1,151 +1,80 @@
-# Inicializa a variável global para rastrear interações realizadas
-default interacoes_realizadas = []
 label capitulo4:
     if "capitulo4" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo4")
+        
+    scene bg quarto_protagonista with fade
     
-    scene bg casa_dia with fade
-    narrator "A rotina começa a se instalar na república da Rua Aurora. As manhãs são barulhentas, os banheiros sempre ocupados, e o café nunca é suficiente para todos."
+    narrator "Oito da manhã. Silêncio."
     
-    # Momento emocional de rotina estabelecida
-    call emotional_moment("routine_established", None, "A rotina da convivência se estabelece e os laços se aprofundam") from _call_emotional_moment_cap4_1
+    narrator "Desde que Larissa se mudou para cá, as manhãs da Rua Aurora eram marcadas pelo som de passos pesados de corrida e do liquidificador industrial dela às 6h."
+    narrator "Mas hoje, o silêncio era tão espesso que quase sufocava."
     
-    narrator "Mas havia algo especial nesse caos matinal. Era o som de uma família se formando, de pessoas que estavam aprendendo a viver juntas."
-
-    show nicole neutral at left
-    nicole "Quem usou meu adoçante orgânico sem avisar?!"
-    nicole "Bem... pelo menos alguém está se alimentando de forma saudável."
-    $ add_affinity_points("nicole", 2, "Aceitação da convivência")
-    hide nicole
-
-    show samantha neutral at center
-    samantha "Sei lá, parecia uma poção de mana."
-    samantha "Mas é legal ter gente que entende minhas referências de jogos!"
-    $ add_affinity_points("samantha", 2, "Conexão através de referências")
-    hide samantha
-
-    show larissa happy at right
-    larissa "Gente, hoje é dia de agachamento coletivo, hein!"
-    larissa "Quem quiser se juntar, é só aparecer! Vai ser divertido!"
-    $ add_affinity_points("larissa", 2, "Energia contagiante")
-    hide larissa
-
+    scene bg sala_jantar with dissolve
+    
+    narrator "Desci para a cozinha. A atmosfera estava fúnebre."
+    
+    show nicole neutral at right
     show katia neutral at left
-    katia "Se me chamar pra isso de novo, vou tacar meu DVD do Exorcista na sua cara."
-    katia "N-não é como se eu não gostasse de vocês ou qualquer coisa assim! É só que... prefiro filmes."
-    $ add_affinity_points("katia", 2, "Reação tsundere à convivência")
+    
+    narrator "Nicole olhava para uma xícara de café intocada. Katia estava encostada na parede, estourando uma bola de chiclete sem nenhum entusiasmo."
+    
+    mc "Ninguém foi ver como ela está?"
+    
+    nicole "Ela trancou a porta. O médico ligou ontem à noite... eu ouvi parte da conversa. Rompimento total do ligamento cruzado."
+    
+    katia "Fim da linha para a Usain Bolt loira. Sem ligamento, sem corrida. Sem corrida, sem bolsa de estudos atlética."
+    
+    nicole "A Katia pode ser insensível, mas está certa. A identidade inteira da Larissa girava em torno do esporte. Como ela vai justificar a permanência dela na universidade agora?"
+    
+    mc "A gente não tá num quartel general. Ela acabou de perder o sonho dela. A gente devia apoiar."
+    
+    katia "E dizer o quê? 'Sinto muito que você vai mancar pelo resto da vida'? Sinceramente, a pior coisa que você pode fazer por alguém no buraco é sentir pena."
+    
+    narrator "Katia desencostou da parede, jogando o chiclete no lixo."
+    
+    katia "Se quiser ir lá bancar o herói, a porta dela é a segunda à esquerda."
+    
+    hide nicole
     hide katia
-
-    show huey happy at center
-    huey "Posso pintar esse momento? É caos puro."
-    huey "Mas é um caos lindo! Cada pessoa aqui é uma obra de arte!"
-    $ add_affinity_points("huey", 2, "Apreciação artística da convivência")
-    hide huey
-
-    show camille gentle at right
-    camille "A energia dessa casa precisa de alinhamento… e talvez de chá de lavanda."
-    camille "Mas há algo especial aqui. Uma energia de família que está se formando."
-    $ add_affinity_points("camille", 2, "Conexão espiritual com a casa")
-    hide camille
-
-    narrator "Apesar do caos, você começa a perceber que a convivência está criando laços inesperados entre todos. Pequenos momentos de interação tornam os dias mais interessantes."
-
-    # Inicializa a lista de interações realizadas
-    $ interacoes_realizadas = []
-
-    jump capitulo4_interacoes_diarias
-
-label capitulo4_interacoes_diarias:
-    scene bg casa_dia with dissolve
-    narrator "Durante a semana, você tem a chance de interagir com os colegas em momentos casuais. Cada interação revela algo novo sobre eles."
     
-    # Momento emocional de conexões diárias
-    call emotional_moment("daily_connections", None, "Conexões diárias que fortalecem os laços") from _call_emotional_moment_cap4_2
+    # === LOOP DO MAPA CAP 4 ===
+    narrator "O clima da casa despencou. O peso da depressão da Larissa era sentido por todas nós. Eu tinha que dar um jeito nisso."
     
-    narrator "Cada dia trazia novas oportunidades de conhecer melhor essas pessoas incríveis que haviam se tornado parte da minha vida."
-
-    # Verifica se todas as interações foram realizadas
-    if len(interacoes_realizadas) == 6:
-        jump capitulo4_decisao_fim_de_semana
-
-    menu:
-        "Ajudar Samantha a configurar um jogo (Explorar tecnologia e criatividade)" if "samantha" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("samantha")
-            $ add_shared_memory("daily_gaming_setup", ["samantha"], "Configuração de jogo em um momento casual")
-            $ add_affinity_points("samantha", 6, "Ajuda com tecnologia")
-            jump interacao_samantha
-            
-        "Acompanhar Nicole em uma ida ao mercado (Organização e estratégia)" if "nicole" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("nicole")
-            $ add_shared_memory("daily_market_trip", ["nicole"], "Ida ao mercado em companhia")
-            $ add_affinity_points("nicole", 6, "Companhia no mercado")
-            jump interacao_nicole
-            
-        "Assistir Larissa treinar no quintal (Energia e movimento)" if "larissa" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("larissa")
-            $ add_shared_memory("daily_training_support", ["larissa"], "Apoio durante o treino")
-            $ add_affinity_points("larissa", 6, "Apoio no treino")
-            jump interacao_larissa
-            
-        "Conversar com Huey sobre arte (Criatividade e expressão)" if "huey" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("huey")
-            $ add_shared_memory("daily_art_conversation", ["huey"], "Conversa sobre arte em momento casual")
-            $ add_affinity_points("huey", 6, "Conversa sobre arte")
-            jump interacao_huey
-            
-        "Ajudar Katia a organizar sua coleção de filmes (Arte e organização)" if "katia" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("katia")
-            $ add_shared_memory("daily_movie_organization", ["katia"], "Organização da coleção de filmes")
-            $ add_affinity_points("katia", 6, "Ajuda com organização")
-            jump interacao_katia
-            
-        "Meditar com Camille no jardim (Paz e espiritualidade)" if "camille" not in interacoes_realizadas:
-            $ interacoes_realizadas.append("camille")
-            $ add_shared_memory("daily_meditation", ["camille"], "Meditação compartilhada no jardim")
-            $ add_affinity_points("camille", 6, "Meditação compartilhada")
-            jump interacao_camille
-
-
-label capitulo4_decisao_fim_de_semana:
-    scene bg casa_dia with dissolve
-    narrator "Com o fim de semana chegando, a casa decide que cada um deve organizar uma atividade para todo o grupo. O jogador deve escolher qual participar."
+    $ dia_atual = 4
+    $ periodo_atual = 1
     
-    # Momento emocional de atividades em grupo
-    call emotional_moment("group_activities", None, "Atividades em grupo que fortalecem os laços familiares") from _call_emotional_moment_cap4_3
+    $ game_events.events = {}
     
-    narrator "Cada pessoa havia preparado algo especial para compartilhar com todos. Era uma oportunidade única de ver como cada uma expressava sua paixão e personalidade."
+    # Dia 1 (Cap 4)
+    $ game_events.add_event("quarto_larissa", "evento_larissa_depressao", 4, [1, 2, 3])
+    $ game_events.add_event("sala_jantar", "evento_nicole_sobrecarga", 4, [1, 2, 3])
 
-    menu:
-        "Caminhada mística com Camille (Espiritualidade e conexão com a natureza)":
-            $ add_shared_memory("weekend_mystical_walk", ["camille"], "Caminhada mística de fim de semana")
-            $ add_affinity_points("camille", 8, "Atividade espiritual em grupo")
-            jump caminhada_camille
-            
-        "Maratona de filmes de terror com Katia (Arte e entretenimento)":
-            $ add_shared_memory("weekend_horror_marathon", ["katia"], "Maratona de filmes de terror")
-            $ add_affinity_points("katia", 8, "Atividade cinematográfica em grupo")
-            jump filmes_katia
-            
-        "Torneio de boardgames com Samantha (Competição e diversão)":
-            $ add_shared_memory("weekend_boardgame_tournament", ["samantha"], "Torneio de boardgames")
-            $ add_affinity_points("samantha", 8, "Atividade competitiva em grupo")
-            jump boardgames_samantha
-            
-        "Oficina de arte livre com Huey (Criatividade e expressão)":
-            $ add_shared_memory("weekend_art_workshop", ["huey"], "Oficina de arte livre")
-            $ add_affinity_points("huey", 8, "Atividade artística em grupo")
-            jump arte_huey
-            
-        "Aulão funcional com Larissa (Energia e movimento)":
-            $ add_shared_memory("weekend_functional_training", ["larissa"], "Aulão funcional")
-            $ add_affinity_points("larissa", 8, "Atividade física em grupo")
-            jump funcional_larissa
-            
-        "Workshop de finanças criativas com Nicole (Estratégia e planejamento)":
-            $ add_shared_memory("weekend_finance_workshop", ["nicole"], "Workshop de finanças criativas")
-            $ add_affinity_points("nicole", 8, "Atividade estratégica em grupo")
-            jump financas_nicole
+label loop_mapa_cap4:
+    if dia_atual >= 5:
+        mc "A depressão dela está corroendo a casa inteira. Eu não aguento mais ver ela assim. É hoje."
+        jump capitulo4_quadra
 
-    jump capitulo4_final
-
-
+    call screen mapa_modal
+    
+    $ local_escolhido = _return
+    
+    if local_escolhido is None:
+        jump loop_mapa_cap4
+    
+    $ evt_label = game_events.get_pending_event(local_escolhido, dia_atual, periodo_atual)
+    
+    if evt_label:
+        if evt_label == "evento_larissa_depressao":
+            $ add_shared_memory("larissa_quarto", ["larissa"], "Vi Larissa vulnerável e sem seu escudo de energia pela primeira vez.")
+        elif evt_label == "evento_nicole_sobrecarga":
+            $ add_shared_memory("nicole_colapso", ["nicole"], "Ajudei Nicole a não enlouquecer com o acúmulo de tarefas domésticas.")
+            
+        call expression evt_label
+        
+        $ game_events.mark_completed(evt_label)
+        call avancar_tempo(15)
+    else:
+        call local_sem_evento(local_escolhido)
+        call avancar_tempo(15)
+        
+    jump loop_mapa_cap4
