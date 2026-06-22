@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -258,7 +258,18 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Celular") action Show("celular_ui")
+            textbutton _("Status") action ToggleScreen("player_hud")
+            textbutton _("Hacker") action Function(hacker_mode) text_color "#00ff00" text_hover_color "#ffffff"
 
+init python:
+    def hacker_mode():
+        store.player_stats["energy"] = 100
+        store.player_stats["intellect"] = 100
+        store.player_stats["charisma"] = 100
+        store.player_stats["fitness"] = 100
+        store.player_stats["creativity"] = 100
+        renpy.notify("Modo Hacker Ativado! Todos os atributos no máximo.")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.

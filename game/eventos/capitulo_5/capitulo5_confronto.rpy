@@ -1,0 +1,97 @@
+label capitulo5_confronto:
+    play music campus_ambient fadein 2.0
+    scene bg sala_jantar with fade
+    
+    narrator "A campainha soou exatamente às cinco da tarde."
+    
+    narrator "Nicole estava pálida, mas estava de pé no centro da sala. Ao lado dela, Katia cruzou os braços. Larissa estava escorada na parede. Camille segurava uma xícara de chá como se fosse uma arma."
+    
+    scene bg casa_interior with dissolve
+    
+    narrator "Eu abri a porta."
+    
+    show nicole neutral at left
+    
+    narrator "A mãe da Nicole estava na varanda, segurando uma pasta de couro."
+    
+    "Mãe da Nicole" "Vejo que as malas não estão na porta. Muito bem. Os papéis do cancelamento..."
+    
+    mc "Os papéis não valem o couro da pasta."
+    
+    narrator "Eu dei um passo à frente, bloqueando a visão dela para a Nicole."
+    
+    "Mãe da Nicole" "Com licença?"
+    
+    if store.player_stats["intelligence"] >= 10:
+        mc "De acordo com o Artigo 14 do edital de subsistência estudantil, a renda familiar não é computada caso o aluno comprove emancipação material."
+        narrator "Eu entreguei um protocolo carimbado na mão dela."
+        mc "Nicole esteve no cartório e no banco hoje cedo. Ela abdicou de todas as contas vinculadas, seguros e fundos no nome da senhora. Ela tem renda de zero reais. Ela é a definição legal de aluna vulnerável."
+        
+        narrator "A mãe de Nicole apertou a pasta. Os nós dos dedos ficaram brancos."
+        
+        "Mãe da Nicole" "Isso é um truque ridículo. Eu vou ligar para o reitor..."
+        
+        show katia angry at right
+        katia "E dizer o quê? Que você tentou subornar alunos do edital cortando a grana da própria filha pra forçar uma quebra de contrato?"
+        
+        show larissa happy at right
+        larissa "Isso daria um escândalo no jornal do campus, não acha?"
+        
+        narrator "As seis garotas estavam ombro a ombro na sala. Pela primeira vez, a casa inteira era uma parede sólida de defesa."
+        
+        "Mãe da Nicole" "Você está destruindo o seu futuro, Nicole."
+        
+        nicole "Não. Eu estou construindo um."
+        
+        narrator "Nicole engoliu o medo. A voz não tremeu."
+        
+        nicole "A porta da rua é a serventia da casa, mãe. Por favor, vá embora."
+        
+        narrator "A mãe sustentou o olhar por um segundo infinito, girou nos calcanhares e foi em direção ao carro. Nós vencemos."
+    else:
+        # Rota de falha (não pesquisou o suficiente)
+        mc "A gente não vai deixar ela sair."
+        "Mãe da Nicole" "Vocês são patéticos. Nicole, venha. Ou eu entro com a petição amanhã."
+        nicole "Eu... eu tenho que ir. Desculpa, gente."
+        narrator "Sem a brecha legal, Nicole não tinha escudo. Ela desabou. As garotas tentaram argumentar, mas era tarde."
+        narrator "GAME OVER. BAD ENDING: A Queda de Nicole."
+        return
+
+    scene bg sala_jantar with dissolve
+    
+    narrator "A porta se fechou. O silêncio reinou por dois segundos antes de Larissa gritar de alegria."
+    
+    show nicole sad at center
+    
+    narrator "Mas Nicole simplesmente cobriu o rosto com as mãos e desabou num choro longo e ruidoso."
+    
+    mc "Acabou. Ela não pode mais tocar em você."
+    
+    nicole "Obrigada... Vocês salvaram a minha vida. Vocês... são a minha família de verdade."
+    
+    narrator "Katia abraçou Nicole. Um abraço desajeitado, mas que provava que as duas haviam enterrado o machado de guerra."
+    
+    narrator "Tudo parecia perfeito. A harmonia que nós passamos cinco capítulos construindo finalmente estava sólida."
+    
+    play sound "spark.ogg"
+    
+    narrator "E então, um estouro surdo veio do teto."
+    
+    mc "O que foi isso?"
+    
+    narrator "A luz da sala piscou e morreu. O cheiro de borracha queimada que veio das escadas foi imediato e forte."
+    
+    camille "A energia... tem algo literalmente queimando lá em cima."
+    
+    scene black with fade
+    
+    narrator "Uma nuvem de fumaça preta começou a descer pelos degraus do segundo andar. A fiação de cinquenta anos da casa não aguentou."
+    
+    narrator "Fogo."
+    
+    narrator "O Capítulo 5 chegou ao fim."
+    
+    if "capitulo6" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo6")
+        
+    jump capitulo6

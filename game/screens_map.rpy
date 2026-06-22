@@ -16,36 +16,98 @@ init python:
             "nome": "Biblioteca",
             "descricao": "Um refúgio de conhecimento e silêncio",
             "imagem": "images/cenarios/biblioteca.png",
+            "categoria": "campus"
         },
         {
             "id": "quadra",
             "nome": "Quadra de Esportes",
             "descricao": "Onde a energia e a competição se encontram",
             "imagem": "images/cenarios/QUADRA.png",
+            "categoria": "campus"
         },
         {
             "id": "cinema",
             "nome": "Cinema Universitário",
             "descricao": "Filmes, debates e encontros inesperados",
             "imagem": "images/cenarios/cinema.png",
+            "categoria": "campus"
         },
         {
             "id": "galeria",
             "nome": "Galeria de Arte",
             "descricao": "Expressão artística e sensibilidade",
             "imagem": "images/cenarios/sala_arte.png",
+            "categoria": "campus"
         },
         {
             "id": "laboratorio",
             "nome": "Laboratório de Dados",
             "descricao": "Tecnologia, código e descobertas",
             "imagem": "images/cenarios/lab.png",
+            "categoria": "campus"
         },
         {
             "id": "jogos",
             "nome": "Centro de Jogos",
             "descricao": "Diversão, estratégia e camaradagem",
             "imagem": "images/cenarios/Arcade.jpg",
+            "categoria": "campus"
+        },
+        {
+            "id": "quarto",
+            "nome": "Seu Quarto",
+            "descricao": "Descanso e uso do PC",
+            "imagem": "images/cenarios/casa_interior.png",
+            "categoria": "casa"
+        },
+        {
+            "id": "sala_jantar",
+            "nome": "Sala de Jantar",
+            "descricao": "Área de convívio",
+            "imagem": "images/cenarios/sala_jantar.png",
+            "categoria": "casa"
+        },
+        {
+            "id": "cozinha_escura",
+            "nome": "Cozinha",
+            "descricao": "Refeições e conversas na madrugada",
+            "imagem": "images/cenarios/cozinha_escura.png",
+            "categoria": "casa"
+        },
+        {
+            "id": "quintal",
+            "nome": "Quintal",
+            "descricao": "Ar livre e reformas necessárias",
+            "imagem": "images/cenarios/quintal.png",
+            "categoria": "casa"
+        },
+        {
+            "id": "praia_cabana",
+            "nome": "Cabana",
+            "descricao": "Nossa morada improvisada",
+            "imagem": "images/cenarios/cabana.png",
+            "categoria": "praia"
+        },
+        {
+            "id": "praia_areia",
+            "nome": "Faixa de Areia",
+            "descricao": "Bronzeado e castelos de areia",
+            "imagem": "images/cenarios/praia.png",
+            "categoria": "praia"
+        },
+        {
+            "id": "praia_mar",
+            "nome": "Mar",
+            "descricao": "Ondas e água salgada",
+            "imagem": "images/cenarios/mar.png",
+            "categoria": "praia"
+        },
+        {
+            "id": "praia_quiosque",
+            "nome": "Quiosque",
+            "descricao": "Calçadão, água de coco e turistas",
+            "imagem": "images/cenarios/quiosque.png",
+            "categoria": "praia"
         },
     ]
 
@@ -67,6 +129,9 @@ init python:
 screen mapa_modal():
     modal True
     zorder 200
+    
+    # Define a aba inicial baseado no dia atual para conveniência
+    default tab_atual = "praia" if (store.dia_atual >= 7 and store.dia_atual <= 9) else "campus"
 
     # --- Fundo escurecido semi-transparente ---
     add Solid("#000000cc")
@@ -113,6 +178,47 @@ screen mapa_modal():
                         color "#66c1e0"
                         italic True
 
+            # Botões de Abas (Campus / Casa / Praia)
+            hbox:
+                xalign 0.6
+                yalign 0.5
+                spacing 20
+                
+                # Se estamos na praia (capitulo 7), bloqueia campus e casa
+                if store.dia_atual < 7 or store.dia_atual >= 10:
+                    textbutton "Campus":
+                        action SetScreenVariable("tab_atual", "campus")
+                        text_size 24
+                        text_color ("#ffffff" if tab_atual == "campus" else "#8899aa")
+                        text_bold True
+                        text_hover_color "#ffcc00"
+                        
+                    textbutton "Casa":
+                        action SetScreenVariable("tab_atual", "casa")
+                        text_size 24
+                        text_color ("#ffffff" if tab_atual == "casa" else "#8899aa")
+                        text_bold True
+                        text_hover_color "#ffcc00"
+                else:
+                    textbutton "Campus (Bloqueado)":
+                        action Notify(_("Estamos a 4 horas de viagem do campus. Impossível ir agora."))
+                        text_size 24
+                        text_color "#555555"
+                        text_bold True
+                        
+                    textbutton "Casa (Bloqueado)":
+                        action Notify(_("A casa está em quarentena pela prefeitura. Não podemos voltar."))
+                        text_size 24
+                        text_color "#555555"
+                        text_bold True
+
+                    textbutton "Praia":
+                        action SetScreenVariable("tab_atual", "praia")
+                        text_size 24
+                        text_color ("#ffffff" if tab_atual == "praia" else "#8899aa")
+                        text_bold True
+                        text_hover_color "#ffcc00"
+
             # Botão fechar (X) no canto superior direito
             textbutton "✕":
                 xalign 1.0
@@ -150,63 +256,63 @@ screen mapa_modal():
             side_xalign 0.5
 
             for local in mapa_locais:
-
-                # --- Card de cada local ---
-                button:
-                    xsize 340
-                    padding (10, 10, 10, 14)
-                    background Solid("#0f3460")
-                    hover_background Solid("#1a4a7a")
-                    # Ação: Se tiver energia >= 10, deduz energia (ou não, quem gerencia pode ser o script de destino)
-                    # Mas vamos checar pra não deixar viajar com pouca energia.
-                    action If(
-                        store.player_stats["energy"] >= 10,
-                        true=Return(local["id"]),
-                        false=Notify(_("Você está cansado demais. Energia insuficiente! (-10 necessários)"))
-                    )
-
-                    vbox:
-                        spacing 8
-                        xalign 0.5
-
-                        # Container da thumbnail com borda condicional
-                        frame:
+                if local["categoria"] == tab_atual:
+                    # --- Card de cada local ---
+                    button:
+                        xsize 340
+                        padding (10, 10, 10, 14)
+                        background Solid("#0f3460")
+                        hover_background Solid("#1a4a7a")
+                        # Ação: Se tiver energia >= 10, deduz energia (ou não, quem gerencia pode ser o script de destino)
+                        # Mas vamos checar pra não deixar viajar com pouca energia.
+                        action If(
+                            store.player_stats["energy"] >= 10,
+                            true=Return(local["id"]),
+                            false=Notify(_("Você está cansado demais. Energia insuficiente! (-10 necessários)"))
+                        )
+    
+                        vbox:
+                            spacing 8
                             xalign 0.5
-                            padding (3, 3, 3, 3)
-                            if local_tem_evento(local["id"]):
-                                background Solid("#0099cc55")
-                            else:
-                                background Solid("#ffffff11")
-
-                            # Thumbnail do background redimensionado (320x180)
-                            add Transform(local["imagem"], size=(320, 180)):
+    
+                            # Container da thumbnail com borda condicional
+                            frame:
                                 xalign 0.5
-
-                        # Nome do local + indicador de evento
-                        hbox:
-                            xalign 0.5
-                            spacing 6
-
-                            text _(local["nome"]):
-                                size 18
-                                color "#ffffff"
-                                bold True
+                                padding (3, 3, 3, 3)
+                                if local_tem_evento(local["id"]):
+                                    background Solid("#0099cc55")
+                                else:
+                                    background Solid("#ffffff11")
+    
+                                # Thumbnail do background redimensionado (320x180)
+                                add Transform(local["imagem"], size=(320, 180)):
+                                    xalign 0.5
+    
+                            # Nome do local + indicador de evento
+                            hbox:
+                                xalign 0.5
+                                spacing 6
+    
+                                text _(local["nome"]):
+                                    size 18
+                                    color "#ffffff"
+                                    bold True
+                                    xalign 0.5
+                                    text_align 0.5
+    
+                                if local_tem_evento(local["id"]):
+                                    text "❗":
+                                        size 18
+                                        yalign 0.5
+                                        color "#FF4500"
+    
+                            # Descrição do local
+                            text _(local["descricao"]):
+                                size 13
+                                color "#8899aa"
                                 xalign 0.5
                                 text_align 0.5
-
-                            if local_tem_evento(local["id"]):
-                                text "❗":
-                                    size 18
-                                    yalign 0.5
-                                    color "#FF4500"
-
-                        # Descrição do local
-                        text _(local["descricao"]):
-                            size 13
-                            color "#8899aa"
-                            xalign 0.5
-                            text_align 0.5
-                            italic True
+                                italic True
 
         # ============================
         # FOOTER COM LEGENDA (posição absoluta no fundo)

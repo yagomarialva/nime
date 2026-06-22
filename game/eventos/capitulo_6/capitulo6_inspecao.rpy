@@ -1,0 +1,81 @@
+label capitulo6_inspecao:
+    play music campus_ambient fadein 2.0
+    scene bg sala_jantar with fade
+    
+    narrator "A hora do julgamento."
+    
+    narrator "O professor Wendell e o engenheiro da prefeitura universitária estavam parados no meio da nossa sala."
+    
+    narrator "O engenheiro olhou para as vigas amarradas com nós de marinheiro e fitas reforçadas no teto."
+    
+    "Engenheiro" "Isso é altamente irregular. Eu nunca vi esse tipo de escoramento sem perfuração primária."
+    
+    show nicole neutral at right
+    
+    nicole "É temporário. Nós temos um fundo de caixa próprio e vamos pagar pelo reboco na próxima semana, desde que o edital seja mantido."
+    
+    "Professor Wendell" "Nicole, eu sinto muito, mas não posso deixar que vocês durmam em uma zona de risco."
+    
+    mc "Professor, não há risco. Nós calculamos a distribuição de peso."
+    
+    narrator "Eu dei um passo à frente."
+    
+    if store.player_stats["charisma"] >= 20:
+        mc "Além do mais, a casa inteira trabalhou nisso. A senhorita Larissa desenhou a sustentação, a Huey calculou a geometria. Se o senhor interditar a casa, não estará apenas parando um edital, estará esmagando o maior exemplo de colaboração acadêmica multidisciplinar que este campus já viu."
+        
+        narrator "Eu apontei para a parede, onde a fuligem havia parado exatamente na beirada do mural abstrato que pintamos."
+        
+        mc "Isso não é mais uma casa de bolsistas. É um patrimônio de resistência e arte. O reitor não adoraria ver uma matéria sobre alunos que reconstruíram o próprio teto na crise em vez de uma matéria sobre abandono estudantil?"
+        
+        narrator "O professor Wendell parou. O engenheiro coçou o queixo."
+        
+        "Professor Wendell" "Você tem uma lábia afiada, meu jovem. O engenheiro assina uma permanência provisória por trinta dias. Se o reboco não estiver pronto até lá, eu mesmo tranco a porta."
+        
+        narrator "As seis soltaram o ar que estavam prendendo ao mesmo tempo."
+        
+        mc "Nós não vamos decepcioná-lo, professor."
+        
+        "Engenheiro" "Certo. Mas as paredes absorveram muita fuligem tóxica. Uma equipe de limpeza virá fazer a fumigação e descontaminação química. Vocês precisam evacuar a casa por três dias. A partir de amanhã cedo."
+        
+        nicole "Três dias na rua... E nós não temos dinheiro pra hotel."
+        
+        larissa "A gente não tem dinheiro. Mas a minha tia-avó tem uma casa caindo aos pedaços na Praia de Maresias que ela não usa há anos. Eu tô com as chaves."
+        
+        mc "Praia? A gente acabou de quase morrer queimado e você quer ir pra praia?"
+        
+        camille "A água salgada limpa a fumaça da alma. Eu voto a favor."
+    else:
+        # Rota de falha sem carisma
+        mc "Vocês têm que dar uma chance pra gente!"
+        "Professor Wendell" "Gritos não sustentam tetos. Sinto muito. A segurança vem primeiro."
+        "Engenheiro" "A casa está oficialmente interditada."
+        narrator "Nossos ombros despencaram. Sem lábia ou charme para vender a ideia do projeto, fomos vistos apenas como adolescentes teimosos e perigosos."
+        narrator "Fomos expulsos no dia seguinte. O grupo se dissolveu."
+        narrator "GAME OVER. BAD ENDING: Cinzas."
+        return
+
+    scene bg casa_noite with dissolve
+    
+    narrator "Nós comemoramos comendo pizza gelada no chão da sala, dividindo cobertores. A casa estava um caos imundo, mas nunca estivemos tão felizes."
+    
+    narrator "Na manhã seguinte, decidi começar a tirar os escombros da escada do segundo andar para liberar a passagem."
+    
+    scene bg casa_interior with dissolve
+    
+    narrator "Enquanto puxava uma tábua torrada do chão do corredor superior, o piso rangeu."
+    narrator "A madeira cedeu, revelando um fundo oco entre as vigas mestras."
+    
+    mc "Tem algo escondido aqui embaixo..."
+    
+    narrator "Eu alcancei a caixa de metal. Estava empoeirada, velha, mas intacta do fogo. Na tampa, havia um símbolo entalhado, parecido com as ervas que a Camille usava."
+    
+    narrator "Quando abri o trinco enferrujado, o que eu vi lá dentro mudou tudo o que sabíamos sobre a Casa da Rua Aurora, 57."
+    
+    scene black with fade
+    
+    narrator "O Capítulo 6 chegou ao fim. As malas para a praia nos aguardam."
+    
+    if "capitulo7" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo7")
+        
+    jump capitulo7

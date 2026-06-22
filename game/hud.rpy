@@ -52,6 +52,33 @@ screen player_hud():
                     text "🧠" size 16 yalign 0.5 color "#ff66cc"
                     text str(store.player_stats["intelligence"]) size 16 color "#ffffff" bold True yalign 0.5
 
+            # Físico
+            vbox:
+                spacing 2
+                text _("Físico") size 12 color "#aaaaaa"
+                hbox:
+                    spacing 5
+                    text "💪" size 16 yalign 0.5 color "#ff9933"
+                    text str(store.player_stats["fitness"]) size 16 color "#ffffff" bold True yalign 0.5
+
+            # Carisma
+            vbox:
+                spacing 2
+                text _("Carisma") size 12 color "#aaaaaa"
+                hbox:
+                    spacing 5
+                    text "🗣️" size 16 yalign 0.5 color "#33ccff"
+                    text str(store.player_stats["charisma"]) size 16 color "#ffffff" bold True yalign 0.5
+
+            # Criatividade
+            vbox:
+                spacing 2
+                text _("Criatividade") size 12 color "#aaaaaa"
+                hbox:
+                    spacing 5
+                    text "🎨" size 16 yalign 0.5 color "#cc33ff"
+                    text str(store.player_stats["creativity"]) size 16 color "#ffffff" bold True yalign 0.5
+
             # Separador
             add Solid("#aaaaaa") xsize 1 ysize 30 yalign 0.5
 
@@ -60,20 +87,12 @@ screen player_hud():
                 spacing 10
                 
                 # Inventário
-                imagebutton:
-                    auto "gui/button/inventory_%s.png"
-                    action Show("inventory_ui")
-                    yalign 0.5
                 textbutton "🎒":
                     text_size 24
                     action Show("inventory_ui")
                     yalign 0.5
                     
                 # Celular
-                imagebutton:
-                    auto "gui/button/phone_%s.png"
-                    action Show("celular_ui")
-                    yalign 0.5
                 textbutton "📱":
                     text_size 24
                     action Show("celular_ui")

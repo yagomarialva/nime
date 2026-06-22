@@ -1,0 +1,64 @@
+label capitulo7_luau:
+    play music campus_ambient fadein 2.0
+    scene bg praia_areia with fade
+    
+    narrator "O sol finalmente mergulhou no oceano. A brisa salgada da noite tomou conta."
+    
+    narrator "Larissa, com sua teimosia lendária, acendeu uma pequena fogueira na areia bem em frente à cabana. Todas nós nos juntamos em volta, assando marshmallows baratos."
+    
+    show nicole bikini at right
+    
+    nicole "A fumaça dessa fogueira me dá gatilhos. Mas... confesso que é a primeira noite que eu consigo deitar sem pensar em boletos ou na minha mãe."
+    
+    show samantha bikini at left
+    
+    samantha "A praia à noite tem um ping menor. As pessoas somem. Fica aceitável."
+    
+    show katia bikini at center
+    
+    katia "Se a Larissa não queimar meu marshmallow de novo, eu concordo que foi uma boa fuga."
+    
+    narrator "Larissa riu e o grupo mergulhou em conversas paralelas."
+    
+    narrator "Eu aproveitei que a atenção delas estava longe de mim e puxei a mochila."
+    
+    mc "A caixa misteriosa."
+    
+    narrator "No desespero da fuga do incêndio na manhã seguinte, eu tinha enfiado o pequeno cofre que achei nas cinzas da casa dentro da minha bolsa."
+    
+    narrator "Aproveitando a luz alaranjada da fogueira, comecei a fuçar no trinco de latão queimado. O calor do incêndio havia amolecido o metal."
+    
+    narrator "Dei uma forçada final com o cabo de uma colher."
+    
+    play sound "spark.ogg"
+    
+    narrator "O cadeado cedeu e a tampa abriu com um estalo seco."
+    
+    mc "Vamos ver o que a Rua Aurora, 57 esconde..."
+    
+    narrator "Não tinha ouro ou dinheiro. Havia apenas fotos antigas em preto e branco, um colar de contas desgastado (semelhante ao estilo da Camille), e um caderno de couro grosso."
+    
+    narrator "Abri o caderno. A caligrafia era rebuscada. E a data da primeira página era clara:"
+    
+    mc "'Diário de Fundação do Teto Cheio de Amor - Março de 1970.'"
+    
+    narrator "O diário do dono original da casa. O criador do edital que nos juntou."
+    
+    narrator "Comecei a ler a primeira página. Meu sangue gelou."
+    
+    mc "'Hoje selecionei as seis novas vítimas. As paredes desta casa têm fome. E a única forma de aplacar essa energia é através da discórdia delas. Se elas sobreviverem ao primeiro ano sem que o fogo consuma a estrutura... eu estarei livre do pacto.'"
+    
+    narrator "Fechei o livro com força. Vítimas? Fogo? Pacto?"
+    
+    narrator "A casa da Rua Aurora não era um projeto de caridade estudantil."
+    
+    narrator "Nós éramos parte de um experimento sinistro que durava cinquenta anos."
+    
+    scene black with fade
+    
+    narrator "O Capítulo 7 chegou ao fim."
+    
+    if "capitulo8" not in persistent.unlocked_chapters:
+        $ persistent.unlocked_chapters.append("capitulo8")
+        
+    jump capitulo8

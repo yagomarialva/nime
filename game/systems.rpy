@@ -6,6 +6,8 @@ default periodo_atual = 1  # 1 = Manhã, 2 = Tarde, 3 = Noite
 default player_stats = {
     "fitness": 0,
     "intelligence": 0,
+    "charisma": 0,
+    "creativity": 0,
     "energy": 100,
     "money": 0
 }
@@ -13,6 +15,8 @@ default player_stats = {
 define STAT_CAPS = {
     "fitness": 100,
     "intelligence": 100,
+    "charisma": 100,
+    "creativity": 100,
     "energy": 100,
     "money": 999999
 }
@@ -37,6 +41,8 @@ init python:
             store.player_stats = {
                 "fitness": 0,
                 "intelligence": 0,
+                "charisma": 0,
+                "creativity": 0,
                 "energy": 100,
                 "money": 0
             }
@@ -47,13 +53,15 @@ init python:
             store.player_stats = {
                 "fitness": 0,
                 "intelligence": 0,
+                "charisma": 0,
+                "creativity": 0,
                 "energy": 100,
                 "money": 0
             }
             return
         
         # Adiciona chaves faltando
-        defaults = {"fitness": 0, "intelligence": 0, "energy": 100, "money": 0}
+        defaults = {"fitness": 0, "intelligence": 0, "charisma": 0, "creativity": 0, "energy": 100, "money": 0}
         for key, default_value in defaults.items():
             if key not in store.player_stats:
                 store.player_stats[key] = default_value
@@ -61,6 +69,8 @@ init python:
         # Aplica limites para prevenir valores inválidos (bugs de saves velhos)
         store.player_stats["fitness"] = max(0, min(store.player_stats["fitness"], STAT_CAPS["fitness"]))
         store.player_stats["intelligence"] = max(0, min(store.player_stats["intelligence"], STAT_CAPS["intelligence"]))
+        store.player_stats["charisma"] = max(0, min(store.player_stats["charisma"], STAT_CAPS["charisma"]))
+        store.player_stats["creativity"] = max(0, min(store.player_stats["creativity"], STAT_CAPS["creativity"]))
         store.player_stats["energy"] = max(0, min(store.player_stats["energy"], STAT_CAPS["energy"]))
         store.player_stats["money"] = max(0, min(store.player_stats["money"], STAT_CAPS["money"]))
 

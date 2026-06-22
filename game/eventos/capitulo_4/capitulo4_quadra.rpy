@@ -18,7 +18,9 @@ label capitulo4_quadra:
     
     narrator "Ela rosnou, mas a minha expressão não abria margem pra negociação. Ela se ajeitou na cadeira com dificuldade."
     
-    scene bg quadra with dissolve
+    scene bg quadra_volei with dissolve
+    
+    show larissa voley at center
     
     narrator "Empurrei a cadeira até a quadra do campus. O cheiro de borracha e suor pairava no ar."
     
@@ -40,14 +42,20 @@ label capitulo4_quadra:
     
     larissa "Abaixa esses ombros! Você tá correndo igual um ganso!"
     
-    # === AQUI CHAMA O MINIGAME DA QUADRA SE EXISTIR ===
-    # call minigame_quadra
+    call screen minigame_corrida(35, 10.0)
+    $ result = _return
     
+    if result:
+        narrator "Eu consegui manter o ritmo frenético, focado no objetivo, quase voando pela pista."
+        larissa "Isso! Mantém o ritmo! Não para!"
+    else:
+        narrator "Meus pulmões queimavam. Eu tropecei nos próprios pés de tão cansado."
+        larissa "Levanta! Quem mandou você parar?! Mais uma volta!"
     narrator "Foram trinta minutos de tortura. Larissa gritava instruções do lado de fora. A tristeza dela tinha dado lugar ao instinto competitivo."
     
     mc "Arf... arf... tô morto..."
     
-    show larissa happy at center
+    show larissa voley at center
     
     narrator "Eu me joguei no chão, arfando. Quando olhei pra cima, Larissa estava sorrindo. Um sorriso verdadeiro, ainda que contido."
     
@@ -90,4 +98,4 @@ label capitulo4_quadra:
     if "capitulo5" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo5")
         
-    return
+    jump capitulo5
