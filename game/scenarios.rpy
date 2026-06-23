@@ -108,3 +108,13 @@ image bg sala_casa_noite = "images/cenarios/sala_casa_noite.png"
 image bg sunset = "images/cenarios/sunset.png"
 image bg biblioteca = "images/cenarios/biblioteca.png"
 image bg casa_interior = "images/cenarios/casa_interior.png"
+
+# CENÁRIOS DO CAPÍTULO 9 (FESTIVAL)
+image bg campus_principal = "images/cenarios/campus_festival.png"
+image bg campus_noite = "images/cenarios/campus_night.png"
+image bg ceu_estrelado = "images/cenarios/campus_night.png"
+image bg jardim_campus = "images/cenarios/jardim_universidade.png"
+image bg corredor_salas = "images/cenarios/classroom.png"
+image bg predio_adm = "images/cenarios/auditorium.png"
+image bg ginasio = "images/cenarios/QUADRA.png"
+image bg estacionamento = "images/cenarios/campus_sunset.png"

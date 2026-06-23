@@ -11,7 +11,7 @@ label quarto_protagonista:
             mc "Vou descansar um pouco."
             # Avançar tempo e restaurar energia
             $ periodo_atual = 3 # Força a ser noite para dormir virar o dia
-            call avancar_tempo(0) from _call_avancar_tempo_15
+            call avancar_tempo(0)
             jump quarto_protagonista
             
         "Usar Computador":

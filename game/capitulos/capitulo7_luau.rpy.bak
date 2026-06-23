@@ -61,4 +61,4 @@ label capitulo7_luau:
     if "capitulo8" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo8")
         
-    call end_of_chapter_validation("capitulo8") from _call_end_of_chapter_validation_3
+    call end_of_chapter_validation("capitulo8")

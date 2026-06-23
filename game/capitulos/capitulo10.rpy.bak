@@ -393,7 +393,7 @@ label capitulo10_final:
         
         narrator "Era verdade. A república havia sido mais que um lugar para morar - havia sido um portal de transformação que nos uniu de formas que nunca imaginamos."
         
-        call end_of_chapter_validation("epilogo") from _call_end_of_chapter_validation_1
+        call end_of_chapter_validation("epilogo")
     else:
         # Momento emocional de crescimento
         call emotional_moment("final_growth_opportunity", None, "Oportunidade de crescimento através da reflexão final") from _call_emotional_moment_cap10_11
@@ -424,4 +424,4 @@ label capitulo10_final:
                 return
                 
             "Tentar o Capítulo 10 novamente":
-                call end_of_chapter_validation("capitulo10") from _call_end_of_chapter_validation_2
+                call end_of_chapter_validation("capitulo10")

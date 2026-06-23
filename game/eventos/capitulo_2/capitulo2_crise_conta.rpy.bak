@@ -80,4 +80,4 @@ label capitulo2_crise_conta:
     if "capitulo3" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo3")
         
-    call end_of_chapter_validation("capitulo3") from _call_end_of_chapter_validation_7
+    call end_of_chapter_validation("capitulo3")

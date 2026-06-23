@@ -260,16 +260,27 @@ screen quick_menu():
             textbutton _("Prefs") action ShowMenu('preferences')
             textbutton _("Celular") action Show("celular_ui")
             textbutton _("Status") action ToggleScreen("player_hud")
+            textbutton _("Flowchart") action ShowMenu("chapter_select") text_color "#ffaa00" text_hover_color "#ffffff"
             textbutton _("Hacker") action Function(hacker_mode) text_color "#00ff00" text_hover_color "#ffffff"
 
 init python:
     def hacker_mode():
         store.player_stats["energy"] = 100
-        store.player_stats["intellect"] = 100
+        store.player_stats["intelligence"] = 100
         store.player_stats["charisma"] = 100
         store.player_stats["fitness"] = 100
         store.player_stats["creativity"] = 100
-        renpy.notify("Modo Hacker Ativado! Todos os atributos no máximo.")
+        store.player_stats["money"] = 9999
+        
+        # Max out affinity
+        store.points_samantha = 100
+        store.points_nicole = 100
+        store.points_camille = 100
+        store.points_katia = 100
+        store.points_larissa = 100
+        store.points_huey = 100
+        
+        renpy.notify("Modo Hacker: Atributos, Dinheiro e Afinidades no MÁXIMO!")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.

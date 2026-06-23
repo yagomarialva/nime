@@ -70,12 +70,12 @@ label loop_mapa_cap7:
         elif evt_label == "evento_cap7_katia":
             $ add_shared_memory("katia_praia", ["katia"], "Prometi uma nova fechadura blindada para a durona da Katia.")
             
-        call expression evt_label from _call_expression_6
+        call expression evt_label
         
         $ game_events.mark_completed(evt_label)
-        call avancar_tempo(15) from _call_avancar_tempo_12
+        call avancar_tempo(15)
     else:
         mc "Estou apenas curtindo a brisa do mar."
-        call avancar_tempo(15) from _call_avancar_tempo_13
+        call avancar_tempo(15)
         
     jump loop_mapa_cap7

@@ -89,14 +89,14 @@ label loop_mapa_cap1:
         elif evt_label == "evento_katia_caixas":
             $ add_shared_memory("katia_cinema", ["katia"], "Katia fugindo das caixas no escuro do cinema")
             
-        call expression evt_label
+        call expression evt_label from _call_expression
         
         $ game_events.mark_completed(evt_label)
-        call avancar_tempo(10)
+        call avancar_tempo(10) from _call_avancar_tempo
         
     else:
-        call local_sem_evento(local_escolhido)
-        call avancar_tempo(10)
+        call local_sem_evento(local_escolhido) from _call_local_sem_evento
+        call avancar_tempo(10) from _call_avancar_tempo_1
         
     jump loop_mapa_cap1
             
@@ -138,7 +138,4 @@ label capitulo1_final:
     
     narrator "O Capítulo 1 chegou ao fim."
     
-    if "capitulo2" not in persistent.unlocked_chapters:
-        $ persistent.unlocked_chapters.append("capitulo2")
-    
-    jump capitulo2
+    call end_of_chapter_validation("capitulo2") from _call_end_of_chapter_validation

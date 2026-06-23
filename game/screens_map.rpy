@@ -47,10 +47,45 @@ init python:
             "categoria": "campus"
         },
         {
+            "id": "ginasio",
+            "nome": "Ginásio do Festival",
+            "descricao": "Tendas de jogos e eventos físicos",
+            "imagem": "images/cenarios/QUADRA.png",
+            "categoria": "campus"
+        },
+        {
+            "id": "jardim_campus",
+            "nome": "Jardins do Campus",
+            "descricao": "Tendas místicas e contato com a natureza",
+            "imagem": "images/cenarios/jardim_universidade.png",
+            "categoria": "campus"
+        },
+        {
+            "id": "estacionamento",
+            "nome": "Estacionamento (Palco)",
+            "descricao": "Palco de desfiles e eventos abertos",
+            "imagem": "images/cenarios/campus_sunset.png",
+            "categoria": "campus"
+        },
+        {
+            "id": "corredor_salas",
+            "nome": "Corredor das Salas",
+            "descricao": "Exposições acadêmicas e de arte",
+            "imagem": "images/cenarios/classroom.png",
+            "categoria": "campus"
+        },
+        {
             "id": "jogos",
             "nome": "Centro de Jogos",
             "descricao": "Diversão, estratégia e camaradagem",
             "imagem": "images/cenarios/Arcade.jpg",
+            "categoria": "campus"
+        },
+        {
+            "id": "predio_adm",
+            "nome": "Prédio da Administração",
+            "descricao": "Burocracia, editais e professores",
+            "imagem": "images/cenarios/auditorium.png",
             "categoria": "campus"
         },
         {
@@ -85,28 +120,28 @@ init python:
             "id": "praia_cabana",
             "nome": "Cabana",
             "descricao": "Nossa morada improvisada",
-            "imagem": "images/cenarios/cabana.png",
+            "imagem": "images/cenarios/fogueira_noite.png",
             "categoria": "praia"
         },
         {
             "id": "praia_areia",
             "nome": "Faixa de Areia",
             "descricao": "Bronzeado e castelos de areia",
-            "imagem": "images/cenarios/praia.png",
+            "imagem": "images/cenarios/Praia.png",
             "categoria": "praia"
         },
         {
             "id": "praia_mar",
             "nome": "Mar",
             "descricao": "Ondas e água salgada",
-            "imagem": "images/cenarios/mar.png",
+            "imagem": "images/cenarios/praia_amanhecer.png",
             "categoria": "praia"
         },
         {
             "id": "praia_quiosque",
             "nome": "Quiosque",
             "descricao": "Calçadão, água de coco e turistas",
-            "imagem": "images/cenarios/quiosque.png",
+            "imagem": "images/cenarios/praia_chegada.png",
             "categoria": "praia"
         },
     ]

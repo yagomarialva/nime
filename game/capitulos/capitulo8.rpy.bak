@@ -64,6 +64,7 @@ label capitulo8:
     # Eventos de comédia/slice of life do Capítulo 8
     $ game_events.add_event("biblioteca", "evento_cap8_biblioteca", 11, [1, 2, 3])
     $ game_events.add_event("cozinha_escura", "evento_cap8_cozinha", 11, [1, 2, 3])
+    $ game_events.add_event("predio_adm", "evento_cap8_wendell", 12, [1, 2, 3])
 
 label loop_mapa_cap8:
     if dia_atual >= 13:
@@ -92,15 +93,17 @@ label loop_mapa_cap8:
     if evt_label:
         if evt_label == "evento_cap8_biblioteca":
             $ add_shared_memory("cap8_obra", ["samantha", "huey"], "Planejamos a arquitetura da reforma na base de vídeos de tutorial do YouTube.")
+        elif evt_label == "evento_cap8_wendell":
+            $ add_shared_memory("cap8_wendell", ["nicole"], "Roubei a caneta do Wendell num ato de desespero cômico.")
         elif evt_label == "evento_cap8_cozinha":
             $ add_shared_memory("cap8_cozinha", ["camille", "larissa"], "Sobrevivi à grande guerra de farinha no meio do canteiro de obras.")
             
-        call expression evt_label from _call_expression_7
+        call expression evt_label
         
         $ game_events.mark_completed(evt_label)
     else:
         narrator "Fui até [local_escolhido], peguei alguns baldes de tinta e varri o chão."
         $ update_player_stat("energy", -5)
         
-    call avancar_tempo(15) from _call_avancar_tempo_14
+    call avancar_tempo(15)
     jump loop_mapa_cap8

@@ -54,7 +54,13 @@ label start:
             persistent.language = "en"
             renpy.change_language("english")
     
-    # Sua história começa aqui
-    jump prologo  # ou o label inicial da sua VN
+    # Pergunta o nome do jogador antes de abrir a UI do Flowchart
+    scene black
+    $ nome = renpy.input("Digite seu nome (ou deixe em branco para 'Jogador'):", length=20).strip()
+    if nome == "":
+        $ nome = "Jogador"
+        
+    # Sua história começa aqui (pelo Flowchart)
+    jump flowchart_demo
 
 

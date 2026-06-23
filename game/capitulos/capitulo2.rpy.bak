@@ -118,12 +118,12 @@ label loop_mapa_cap2:
         elif evt_label == "evento_larissa_pista":
             $ add_shared_memory("larissa_track", ["larissa"], "Vi Larissa ir além dos próprios limites físicos.")
             
-        call expression evt_label from _call_expression_1
+        call expression evt_label
         
         $ game_events.mark_completed(evt_label)
-        call avancar_tempo(15) from _call_avancar_tempo_2
+        call avancar_tempo(15)
     else:
-        call local_sem_evento(local_escolhido) from _call_local_sem_evento_1
-        call avancar_tempo(15) from _call_avancar_tempo_3
+        call local_sem_evento(local_escolhido)
+        call avancar_tempo(15)
         
     jump loop_mapa_cap2

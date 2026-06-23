@@ -69,12 +69,12 @@ label loop_mapa_cap4:
         elif evt_label == "evento_nicole_sobrecarga":
             $ add_shared_memory("nicole_colapso", ["nicole"], "Ajudei Nicole a não enlouquecer com o acúmulo de tarefas domésticas.")
             
-        call expression evt_label from _call_expression_3
+        call expression evt_label
         
         $ game_events.mark_completed(evt_label)
-        call avancar_tempo(15) from _call_avancar_tempo_6
+        call avancar_tempo(15)
     else:
-        call local_sem_evento(local_escolhido) from _call_local_sem_evento_3
-        call avancar_tempo(15) from _call_avancar_tempo_7
+        call local_sem_evento(local_escolhido)
+        call avancar_tempo(15)
         
     jump loop_mapa_cap4

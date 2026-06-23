@@ -98,4 +98,4 @@ label capitulo4_quadra:
     if "capitulo5" not in persistent.unlocked_chapters:
         $ persistent.unlocked_chapters.append("capitulo5")
         
-    call end_of_chapter_validation("capitulo5") from _call_end_of_chapter_validation_9
+    call end_of_chapter_validation("capitulo5")

@@ -34,9 +34,9 @@ image nicole blush = "images/characters/nicole/nicole_blush.png" if renpy.exists
 image nicole bikini = "images/characters/nicole/nicole_bikini.png" if renpy.exists("images/characters/nicole/nicole_bikini.png") else "images/characters/shadow.png"
 
 image katia neutral = "images/characters/katia/katia_neutral.png" if renpy.exists("images/characters/katia/katia_neutral.png") else "images/characters/shadow.png"
-image katia blush = "images/characters/katia/katia_angry.png" if renpy.exists("images/characters/katia/katia_blush.png") else "images/characters/shadow.png"
+image katia blush = "images/characters/katia/katia_blush.png" if renpy.exists("images/characters/katia/katia_blush.png") else "images/characters/katia/katia_happy.png"
 image katia angry = "images/characters/katia/katia_angry.png" if renpy.exists("images/characters/katia/katia_angry.png") else "images/characters/shadow.png"
-image katia sad = "images/characters/katia/katia_sad.png" if renpy.exists("images/characters/katia/katia_sad.png") else "images/characters/shadow.png"
+image katia sad = "images/characters/katia/katia_sad.png" if renpy.exists("images/characters/katia/katia_sad.png") else "images/characters/katia/katia_angry.png"
 image katia happy = "images/characters/katia/katia_happy.png" if renpy.exists("images/characters/katia/katia_happy.png") else "images/characters/shadow.png"
 image katia bikini = "images/characters/katia/katia_bikini.png" if renpy.exists("images/characters/katia/katia_bikini.png") else "images/characters/shadow.png"
 
@@ -84,4 +84,5 @@ image p happy = "images/characters/shadow.png"
 image p neutral = "images/characters/shadow.png"
 
 # Adicione esta linha no seu personagens.rpy
+default nome = "Protagonista"
 define mc = Character("[nome]", color="#ffffff")
