@@ -1,5 +1,6 @@
 label evento_cap8_biblioteca:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "A biblioteca do campus cheirava a poeira, mas na mesa do fundo, Samantha e Huey quebravam o silêncio com o barulho alto de um vídeo no YouTube."
     

@@ -1,5 +1,6 @@
 label evento_nicole_limpeza:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "A biblioteca da Solária era normalmente silenciosa, mas eu podia ouvir o som furioso de páginas sendo viradas vindo da seção de Arquitetura."
     

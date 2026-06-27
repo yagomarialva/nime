@@ -1,5 +1,6 @@
 label capitulo10_huey:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "A prova de Estrutura de Dados e Análise Algorítmica era o terror da faculdade. Mas Huey geralmente sorria diante dela."
     narrator "Não hoje."

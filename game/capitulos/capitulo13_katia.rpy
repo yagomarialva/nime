@@ -11,6 +11,7 @@ label capitulo13_katia:
         
     elif status_katia == "amizade":
         scene bg biblioteca with fade
+        play music "music/biblioteca.mp3" fadein 1.0
         narrator "O reitor venceu. O Grêmio Estudantil e o Clube de Cinema foram dissolvidos para sempre."
         show katia neutral at center
         narrator "Katia mudou-se para os fundos da biblioteca. Cercada por pilhas de códigos civis e livros de doutrina, ela estudava como uma máquina."

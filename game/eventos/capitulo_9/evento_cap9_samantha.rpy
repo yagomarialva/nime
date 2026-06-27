@@ -1,5 +1,6 @@
 label evento_cap9_samantha:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "A biblioteca do campus abriu o pátio externo para o festival. Samantha havia montado uma LAN party impressionante com monitores CRT e consoles dos anos 90."
     

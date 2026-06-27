@@ -1,5 +1,6 @@
 label capitulo10_katia:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "A biblioteca do campus parecia uma panela de pressão prestes a explodir, e o epicentro era a mesa de Katia."
     

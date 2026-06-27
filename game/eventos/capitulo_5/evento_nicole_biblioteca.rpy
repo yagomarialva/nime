@@ -1,5 +1,6 @@
 label evento_nicole_biblioteca:
     scene bg biblioteca with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     narrator "Livros de Direito Civil estavam espalhados pelo chão da biblioteca como se tivessem explodido."
     

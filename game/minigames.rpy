@@ -96,6 +96,7 @@ screen minigame_corrida(target_clicks=30, time_limit=10.0):
 
 label minigame_biblioteca:
     scene expression "images/cenarios/biblioteca.png" with dissolve
+    play music "music/biblioteca.mp3" fadein 1.0
     
     menu:
         "Você encontrou uma oportunidade para organizar os livros da biblioteca. Isso renderá algum dinheiro."
