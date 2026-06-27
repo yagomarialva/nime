@@ -65,6 +65,11 @@ init python:
     flowchart_system.add_node(ChapterNode("capitulo8", "Capítulo 8", "O Retorno e a Reforma", required_stats={"energy": 80, "money": 100}, required_affinity={"samantha": 30, "nicole": 30}))
     flowchart_system.add_node(ChapterNode("capitulo9", "Capítulo 9", "A Defesa da República", required_stats={"intelligence": 80, "charisma": 80}, required_affinity={"camille": 40, "katia": 40}))
     flowchart_system.add_node(ChapterNode("capitulo10", "Capítulo 10", "Despedidas", required_stats={"fitness": 50}, required_affinity={"huey": 50, "larissa": 50}))
+    flowchart_system.add_node(ChapterNode("capitulo11", "Capítulo 11", "Fim de Ano", required_stats={}, required_affinity={}))
+    flowchart_system.add_node(ChapterNode("capitulo12", "Capítulo 12", "O Retorno", required_stats={}, required_affinity={}))
+    flowchart_system.add_node(ChapterNode("capitulo13", "Capítulo 13", "Decisões", required_stats={}, required_affinity={}))
+    flowchart_system.add_node(ChapterNode("capitulo14", "Capítulo 14", "O Fim se Aproxima", required_stats={}, required_affinity={}))
+    flowchart_system.add_node(ChapterNode("capitulo15", "Capítulo 15", "Para Sempre", required_stats={}, required_affinity={}))
     flowchart_system.add_node(ChapterNode("epilogo", "Epílogo", "A Carta", required_stats={}))
 
 # ==============================================================================

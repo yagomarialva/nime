@@ -7,6 +7,8 @@ define huey = Character("Aline (Hu Wei)", color="#00CED1")
 define samantha = Character("Samantha", color="#FF4500")
 define camille = Character("Camille", color="#32CD32")
 define professor_wendell = Character("Professor Wendell", color="#6202bbff")
+define wendell = professor_wendell
+define reitor = Character("Reitor", color="#A52A2A")
 define ex_camille = Character("Ex de Camille", color="#6A5ACD")
 define ex_samantha = Character("Ex de Samantha", color="#FFD700")
 define ex_nicole = Character("Ex de Nicole", color="#00CED1")

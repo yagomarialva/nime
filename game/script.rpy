@@ -26,6 +26,14 @@ default romance_camille = False
 default romance_larissa = False
 default romance_katia = False
 
+default status_samantha = "none"
+default status_nicole = "none"
+default status_huey = "none"
+default status_camille = "none"
+default status_larissa = "none"
+default status_katia = "none"
+default status_harem = "none"
+
 # === SISTEMA NAKIGE (MOMENTOS EMOCIONAIS) ===
 default emotional_moments_unlocked = []  # Lista de momentos emocionais desbloqueados
 default player_empathy_level = 0  # Nível de empatia do jogador (afeta diálogos)
